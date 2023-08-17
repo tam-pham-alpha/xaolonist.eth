@@ -63,7 +63,7 @@ const PostTemplate = ({ pageContext: context }: any) => {
 
 export const Head = ({ pageContext: context }: any) => {
   const post = context.post;
-  const url = 'https://xaolonist.io';
+  const url = 'https://xaolonist.com';
   const link = `${url}/blog/${post.slug}`;
   const cover = `${url}${post.cover}`;
   const title = post.title;
