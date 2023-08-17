@@ -12,6 +12,18 @@ const ScHeader = styled.header`
   top: 0;
   z-index: 98;
   background: #0b0b0f;
+
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #0b0b0f,
+    #000000 35%
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #0b0b0f,
+    #000000 35%
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 `;
 
 const ScNavBar = styled.nav`
@@ -36,46 +48,6 @@ const ScLogo = styled(Link)`
   }
 `;
 
-const ScLinkComp = css`
-  color: #f7f8f8;
-  font-size: 14px;
-  line-height: 1.4;
-  line-height: 40px;
-  margin-right: 24px;
-  transition: all 0.3s;
-  display: block;
-  user-select: none;
-  font-weight: bold;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 24px;
-  padding-right: 24px;
-  border-radius: 6px;
-
-  &:hover {
-    text-decoration: none;
-    opacity: 0.75;
-    color: #d8e9a8;
-    background: #1e5128;
-  }
-
-  > span {
-    margin-left: 8px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    display: inline-block;
-
-    > span {
-      display: none;
-    }
-  }
-`;
-
-const ScNavLink = styled(Link)`
-  ${ScLinkComp}
-`;
-
 export const NavBar = () => {
   return (
     <>
@@ -84,9 +56,8 @@ export const NavBar = () => {
           <ScNavBar>
             <ScLogo to="/">
               <img src="/images/icon.png" loading="eager" />
-              Gatsby
+              Xaolonist
             </ScLogo>
-            <ScNavLink to="/blog/">Blog</ScNavLink>
           </ScNavBar>
         </Container>
       </ScHeader>

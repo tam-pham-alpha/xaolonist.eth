@@ -54,6 +54,7 @@ export const createPages = ({ actions, graphql }: any) => {
       ) {
         edges {
           node {
+            html
             featuredImg {
               childImageSharp {
                 fluid(maxWidth: 800, quality: 100) {
@@ -105,7 +106,7 @@ export const createPages = ({ actions, graphql }: any) => {
         return {
           ...node,
           ...frontmatter,
-          cover: frontmatter.cover,
+          cover: node.featuredImg.childImageSharp.fluid.srcWebp,
           markdown: true,
         };
       })
@@ -117,6 +118,7 @@ export const createPages = ({ actions, graphql }: any) => {
         component: path.resolve(`./src/templates/post.tsx`),
         context: {
           slug: post.slug,
+          post,
         },
       });
     });

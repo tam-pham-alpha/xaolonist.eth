@@ -14,20 +14,20 @@ export const ScMain = styled.div`
 export const ScCategoryText = styled.div`
   font-size: 14px;
   color: #868f97;
-  max-width: 640px;
+  max-width: 820px;
   margin-left: auto;
   margin-right: auto;
 `;
 
 export const ScHeaderWrapper = styled.div`
-  max-width: 640px;
+  max-width: 820px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3rem;
 `;
 
 export const ScHeader = styled.h1`
-  max-width: 640px;
+  max-width: 820px;
   margin-left: auto;
   margin-right: auto;
   font-size: 24px;
@@ -41,11 +41,12 @@ export const ScHeader = styled.h1`
 
 export const ScContent = styled.section`
   font-size: 20px;
-  max-width: 640px;
+  max-width: 820px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 16px;
+  font-size: 17px;
   color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
 
   h2,
   h3 {
@@ -76,7 +77,6 @@ export const ScContent = styled.section`
   }
 
   p {
-    font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 2em;
   }

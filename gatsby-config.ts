@@ -47,7 +47,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "static/images/icon.png",
       },
     },
     // "gatsby-plugin-mdx",

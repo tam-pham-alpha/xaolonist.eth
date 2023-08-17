@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Helmet } from "react-helmet";
-import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import { Container } from "../components/Grid";
@@ -14,6 +12,7 @@ import {
   ScMain,
 } from "./styled";
 import { normalizeNotionFrontMatter } from "../utils/normalizeNotionBlog";
+import { SEO } from "../components/SEO";
 
 const ScRoot = styled.div`
   background-color: var(--darkmode);
@@ -22,7 +21,7 @@ const ScRoot = styled.div`
 const ScFeature = styled.div`
   margin-bottom: 3rem;
   text-align: center;
-  max-width: 800px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
 
@@ -31,46 +30,28 @@ const ScFeature = styled.div`
   }
 `;
 
-const PostTemplate = ({ data }: any) => {
-  const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { frontmatter: frontmatterSrc, html } = markdownRemark;
-  const frontmatter = normalizeNotionFrontMatter(frontmatterSrc);
-  const cover = frontmatter.cover;
-  const link = `https://example.com/blog/${frontmatter.slug}`;
+const PostTemplate = ({ pageContext: context }: any) => {
+  const post = context.post;
 
   return (
     <Layout>
       <ScRoot>
-        <Helmet titleTemplate="%s | Blog">
-          <title>{frontmatter.title}</title>
-          <meta property="og:image" content={cover} />
-          <meta property="og:url" content={link} />
-          <meta property="og:title" content={frontmatter.title} />
-          <meta property="og:description" content={frontmatter.summary} />
-          <meta name="twitter:image" content={cover} />
-          <meta name="twitter:url" content={link} />
-          <meta name="twitter:title" content={frontmatter.title} />
-          <meta name="twitter:description" content={frontmatter.summary} />
-        </Helmet>
         <Container>
           <ScMain>
             <ScHeaderWrapper>
-              <ScHeader>{frontmatter.title}</ScHeader>
-              <ScCategoryText>{frontmatter.date}</ScCategoryText>
+              <ScHeader>{post.title}</ScHeader>
+              <ScCategoryText>{post.date}</ScCategoryText>
             </ScHeaderWrapper>
 
             <ScFeature>
               <Img
-                fluid={markdownRemark.featuredImg.childImageSharp.fluid}
-                alt={frontmatter.title}
+                fluid={post.featuredImg.childImageSharp.fluid}
+                alt={post.title}
               />
             </ScFeature>
 
-            <ScContent className="post-full-content">
-              <div
-                className="post-content"
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
+            <ScContent>
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </ScContent>
           </ScMain>
         </Container>
@@ -79,48 +60,16 @@ const PostTemplate = ({ data }: any) => {
   );
 };
 
-export default PostTemplate;
 
-export const pageQuery = graphql`
-  query ($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
-      featuredImg {
-        childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
-            base64
-            aspectRatio
-            src
-            srcSet
-            srcWebp
-            srcSetWebp
-            sizes
-          }
-        }
-      }
-      frontmatter {
-        author {
-          name
-        }
-        category {
-          name
-        }
-        cover {
-          file {
-            url
-          }
-          name
-        }
-        publish_date {
-          start(formatString: "MMMM DD, YYYY")
-        }
-        slug
-        status {
-          name
-        }
-        summary
-        title
-      }
-    }
-  }
-`;
+export const Head = ({ pageContext: context }: any) => {
+  const post = context.post;
+  const url = 'https://xaolonist.io';
+  const link = `${url}/blog/${post.slug}`;
+  const cover = `${url}${post.cover}`;
+  const title = post.title;
+  const desc = post.summary;
+
+  return <SEO title={title} cover={cover} desc={desc} url={link} />;
+};
+
+export default PostTemplate;

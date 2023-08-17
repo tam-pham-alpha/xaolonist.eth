@@ -10,7 +10,7 @@ const ScMain = styled.div`
   max-width: 500px;
   margin-bottom: 4rem;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 960px) {
     margin-left: 24px;
     margin-right: 24px;
     width: calc(33.33% - 48px);
@@ -39,8 +39,8 @@ const ScFeature = styled.div`
     }
   }
 
-  @media screen and (min-width: 992px) {
-    height: 240px;
+  @media screen and (min-width: 960px) {
+    height: 220px;
   }
 `;
 
@@ -58,7 +58,7 @@ const ScTitle = styled.h4`
     }
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 960px) {
     margin-top: 16px;
     margin-top: 12px;
   }
@@ -69,7 +69,7 @@ const ScOverview = styled.p`
   margin-bottom: 0.5em;
   color: #b3b3b3;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 960px) {
     margin-bottom: 12px;
   }
 `;
