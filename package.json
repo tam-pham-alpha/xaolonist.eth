@@ -8,6 +8,7 @@
     "gatsby"
   ],
   "scripts": {
+    "build:prod": "gatsby build",
     "develop": "env-cmd -f .env gatsby develop",
     "start": "env-cmd -f .env gatsby develop",
     "build": "env-cmd -f .env gatsby build",
