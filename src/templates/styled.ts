@@ -58,10 +58,6 @@ export const ScContent = styled.section`
     color: #f7f8f8;
   }
 
-  h3 {
-    font-size: 20px;
-  }
-
   h4,
   h5 {
     font-size: 18px;
@@ -101,6 +97,14 @@ export const ScContent = styled.section`
     tr td {
       padding: 12px;
     }
+  }
+
+  li {
+    margin-bottom: 1em;
+  }
+
+  hr {
+    opacity: 0.25;
   }
 
   table,
