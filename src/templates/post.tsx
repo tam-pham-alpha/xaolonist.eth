@@ -11,7 +11,6 @@ import {
   ScHeader,
   ScMain,
 } from "./styled";
-import { normalizeNotionFrontMatter } from "../utils/normalizeNotionBlog";
 import { SEO } from "../components/SEO";
 
 const ScRoot = styled.div`
@@ -34,7 +33,7 @@ const PostTemplate = ({ pageContext: context }: any) => {
   const post = context.post;
 
   return (
-    <Layout>
+    <Layout blur={true}>
       <ScRoot>
         <Container>
           <ScMain>
@@ -60,10 +59,9 @@ const PostTemplate = ({ pageContext: context }: any) => {
   );
 };
 
-
 export const Head = ({ pageContext: context }: any) => {
   const post = context.post;
-  const url = 'https://xaolonist.com';
+  const url = "https://xaolonist.com";
   const link = `${url}/blog/${post.slug}`;
   const cover = `${url}${post.cover}`;
   const title = post.title;

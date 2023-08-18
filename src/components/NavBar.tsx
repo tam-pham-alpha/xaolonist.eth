@@ -37,6 +37,7 @@ const ScLogo = styled(Link)`
   align-items: center;
   font-weight: bold;
   margin-right: 24px;
+  transition: all 0.3s;
 
   img {
     height: 32px;
@@ -45,19 +46,39 @@ const ScLogo = styled(Link)`
 
   &:hover {
     text-decoration: none;
+    opacity: 1;
+
+    span {
+      opacity: 1;
+    }
   }
 `;
 
-export const NavBar = () => {
+const ScLogoBlur = styled(ScLogo)`
+  opacity: 0.5;
+
+  span {
+    opacity: 0.1;
+  }
+`;
+
+export const NavBar = ({ blur }: { blur?: boolean }) => {
   return (
     <>
       <ScHeader>
         <Container>
           <ScNavBar>
-            <ScLogo to="/">
-              <img src="/images/icon.png" loading="eager" />
-              Xaolonist
-            </ScLogo>
+            {blur ? (
+              <ScLogoBlur to="/">
+                <img src="/images/icon.png" loading="eager" />
+                <span>xaolonist</span>
+              </ScLogoBlur>
+            ) : (
+              <ScLogo to="/">
+                <img src="/images/icon.png" loading="eager" />
+                <span>xaolonist</span>
+              </ScLogo>
+            )}
           </ScNavBar>
         </Container>
       </ScHeader>

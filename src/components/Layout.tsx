@@ -52,11 +52,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const Layout = ({ children }: React.PropsWithChildren<{}>) => {
+export const Layout = ({ children, blur }: React.PropsWithChildren<{blur: boolean}>) => {
   return (
     <main>
       <GlobalStyle />
-      <NavBar />
+      <NavBar blur={blur} />
       {children}
       <Footer />
     </main>
