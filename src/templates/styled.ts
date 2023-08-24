@@ -83,6 +83,8 @@ export const ScContent = styled.section`
 
   a {
     color: #ffc436;
+    white-space: break;
+    word-wrap: break-word;
   }
 
   table {

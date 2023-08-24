@@ -98,7 +98,7 @@ const IndexPage = ({ data }: any) => {
     .filter((i: any) => i.status === "published");
 
   return (
-    <Layout>
+    <Layout blur={false}>
       <ScRoot>
         <Container>
           <ScMain>
