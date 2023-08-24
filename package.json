@@ -8,13 +8,13 @@
     "gatsby"
   ],
   "scripts": {
-    "build:prod": "gatsby build",
     "develop": "env-cmd -f .env gatsby develop",
     "start": "env-cmd -f .env gatsby develop",
     "build": "env-cmd -f .env gatsby build",
     "serve": "env-cmd -f .env gatsby serve",
     "clean": "env-cmd -f .env gatsby clean",
     "deploy": "yarn run clean && yarn run build && surge ./public https://gatsby-notion-starter.surge.sh",
+    "build:prod": "gatsby build",
     "typecheck": "tsc --noEmit"
   },
   "license": "0BSD",
