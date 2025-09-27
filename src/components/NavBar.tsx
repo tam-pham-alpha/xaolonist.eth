@@ -71,12 +71,12 @@ export const NavBar = ({ blur }: { blur?: boolean }) => {
             {blur ? (
               <ScLogoBlur to="/">
                 <img src="/images/icon.png" loading="eager" />
-                <span>xaolonist</span>
+                <span>anh4gs</span>
               </ScLogoBlur>
             ) : (
               <ScLogo to="/">
                 <img src="/images/icon.png" loading="eager" />
-                <span>xaolonist</span>
+                <span>anh4gs</span>
               </ScLogo>
             )}
           </ScNavBar>

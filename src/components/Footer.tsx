@@ -31,7 +31,7 @@ export const Footer = () => {
     <ScMain>
       <Container>
         <ScContent>
-          <div>@2023 Xaolonist</div>
+          <div>@2023 anh4gs</div>
         </ScContent>
       </Container>
     </ScMain>

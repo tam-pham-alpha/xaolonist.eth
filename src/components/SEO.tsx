@@ -13,12 +13,11 @@ export const SEO = ({
   title?: string;
   desc?: string;
 }) => {
-  const displayedTitle = title || "xaolonist";
-  const displayedUrl = url || "https://xaolonist.com";
+  const displayedTitle = title || "anh4gs";
+  const displayedUrl = url || "https://anh4gs.xyz";
   const displayedDesc =
     desc || "he is a scientist, an anthropologist, a psychologist...";
-  const displayedCover =
-    cover || `https://xaolonist.com/images/xaolonist-social.jpg`;
+  const displayedCover = cover || `https://anh4gs.xyz/images/anh4gs-social.jpg`;
 
   return (
     <>
@@ -31,12 +30,12 @@ export const SEO = ({
       <meta name="HandheldFriendly" content="True" />
       <meta name="description" content={displayedDesc} />
 
-      <meta property="og:site_name" content="xaolonist" />
+      <meta property="og:site_name" content="anh4gs" />
       <meta property="og:type" content="website" />
       <meta property="og:image:width" content="1500" />
       <meta property="og:image:height" content="500" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="xaolonist" />
+      <meta name="twitter:site" content="anh4gs" />
 
       <meta property="og:title" content={displayedTitle} />
       <meta property="og:description" content={displayedDesc} />
