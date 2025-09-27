@@ -67,7 +67,17 @@ export const Head = ({ pageContext: context }: any) => {
   const title = post.title;
   const desc = post.summary;
 
-  return <SEO title={title} cover={cover} desc={desc} url={link} />;
+  return (
+    <SEO
+      title={title}
+      cover={cover}
+      desc={desc}
+      url={link}
+      type="article"
+      publishedTime={post.date}
+      author="anh4gs"
+    />
+  );
 };
 
 export default PostTemplate;

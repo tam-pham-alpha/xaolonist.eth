@@ -28,6 +28,10 @@ const config: GatsbyConfig = {
             resolve: "gatsby-remark-images-anywhere",
             options: {
               backgroundColor: "transparent",
+              formats: ["auto", "jpg", "png"],
+              quality: 80,
+              withWebp: false,
+              withAvif: false,
             },
           },
         ],
@@ -51,7 +55,23 @@ const config: GatsbyConfig = {
       },
     },
     // "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        defaults: {
+          formats: ["auto", "jpg", "png"],
+          placeholder: "blurred",
+          quality: 80,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: "transparent",
+        },
+        // Disable WebP for social sharing images
+        forceBase64Format: "jpg",
+        useMozJpeg: true,
+        stripMetadata: true,
+        defaultQuality: 80,
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",

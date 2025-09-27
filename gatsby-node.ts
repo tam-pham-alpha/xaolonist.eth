@@ -57,13 +57,11 @@ export const createPages = ({ actions, graphql }: any) => {
             html
             featuredImg {
               childImageSharp {
-                fluid(maxWidth: 800, quality: 100) {
+                fluid(maxWidth: 800, quality: 80, toFormat: JPG) {
                   base64
                   aspectRatio
                   src
                   srcSet
-                  srcWebp
-                  srcSetWebp
                   sizes
                 }
               }
@@ -106,7 +104,7 @@ export const createPages = ({ actions, graphql }: any) => {
         return {
           ...node,
           ...frontmatter,
-          cover: node.featuredImg.childImageSharp.fluid.srcWebp,
+          cover: node.featuredImg.childImageSharp.fluid.src,
           markdown: true,
         };
       })
