@@ -36,18 +36,24 @@ export const SEO = ({
       <meta name="HandheldFriendly" content="True" />
       <meta name="description" content={displayedDesc} />
 
-      {/* Open Graph / Facebook */}
+      {/* Open Graph / Facebook - Explicit and complete */}
       <meta property="og:site_name" content="anh4gs" />
       <meta property="og:type" content={type} />
       <meta property="og:locale" content="vi_VN" />
       <meta property="og:title" content={displayedTitle} />
       <meta property="og:description" content={displayedDesc} />
       <meta property="og:url" content={displayedUrl} />
+      
+      {/* Explicit og:image with all required properties */}
       <meta property="og:image" content={displayedCover} />
+      <meta property="og:image:secure_url" content={displayedCover} />
+      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:alt" content={displayedTitle} />
+      
+      {/* Facebook App ID for better tracking (optional) */}
+      <meta property="fb:app_id" content="" />
       
       {/* Article specific tags for blog posts */}
       {type === "article" && publishedTime && (
