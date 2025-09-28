@@ -1,0 +1,13 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Allow social media crawlers
+/blog/*
+  X-Robots-Tag: index, follow
+
+# Ensure images are accessible
+/static/*
+  Cache-Control: public, max-age=31536000
+  Access-Control-Allow-Origin: *
