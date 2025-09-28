@@ -3,9 +3,10 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
-# Allow social media crawlers for all pages
+# Allow social media crawlers for all pages - NO user-agent discrimination
 /*
   X-Robots-Tag: index, follow
+  Vary: Accept-Encoding
 
 # Blog pages - ensure social crawlers can access
 /blog/*
