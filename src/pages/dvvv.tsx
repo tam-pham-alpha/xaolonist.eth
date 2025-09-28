@@ -94,7 +94,7 @@ export const pageQuery = graphql`
   }
 `;
 
-const IndexPage = ({ data }: any) => {
+const Anh4gsPage = ({ data }: any) => {
   console.log("data", data);
 
   const posts: any[] = data.allMarkdownRemark.edges
@@ -107,14 +107,14 @@ const IndexPage = ({ data }: any) => {
         markdown: true,
       };
     })
-    .filter((i: any) => i.status === "published" && i.category === "blog");
+    .filter((i: any) => i.status === "published" && i.category === "anh4gs");
 
   return (
     <Layout blur={false}>
       <ScRoot>
         <Container>
           <ScMain>
-            <ScTitle>ban ngày viết code</ScTitle>
+            <ScTitle>đêm về viết văn</ScTitle>
             <ScPostList>
               {posts.map((i) => (
                 <Card key={i.id} post={i} />
@@ -127,6 +127,12 @@ const IndexPage = ({ data }: any) => {
   );
 };
 
-export const Head: HeadFC = () => <SEO />;
+export const Head: HeadFC = () => (
+  <SEO
+    title="đêm về viết văn"
+    desc="đêm về viết văn"
+    url="https://anh4gs.xyz/anh4gs"
+  />
+);
 
-export default IndexPage;
+export default Anh4gsPage;

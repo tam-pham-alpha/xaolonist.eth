@@ -29,7 +29,35 @@ const ScHeader = styled.header`
 const ScNavBar = styled.nav`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 64px;
+`;
+
+const ScNavLinks = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
+`;
+
+const ScNavLink = styled(Link)`
+  color: var(--text-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+`;
+
+const ScNavLinkBlur = styled(ScNavLink)`
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
 `;
 
 const ScLogo = styled(Link)`
@@ -79,6 +107,20 @@ export const NavBar = ({ blur }: { blur?: boolean }) => {
                 <span>anh4gs</span>
               </ScLogo>
             )}
+
+            <ScNavLinks>
+              {blur ? (
+                <>
+                  <ScNavLinkBlur to="/">bnvc</ScNavLinkBlur>
+                  <ScNavLinkBlur to="/dvvv">dvvv</ScNavLinkBlur>
+                </>
+              ) : (
+                <>
+                  <ScNavLink to="/">bnvc</ScNavLink>
+                  <ScNavLink to="/dvvv">dvvv</ScNavLink>
+                </>
+              )}
+            </ScNavLinks>
           </ScNavBar>
         </Container>
       </ScHeader>
