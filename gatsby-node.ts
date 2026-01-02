@@ -21,9 +21,9 @@ export const onCreateNode = async ({
   getCache,
 }: any) => {
   if (node.internal.type === "MarkdownRemark") {
-    const cover = node.frontmatter.cover[0];
+    const cover = node.frontmatter.cover?.[0];
 
-    if (cover.file.url.startsWith("http")) {
+    if (cover?.file?.url?.startsWith("http")) {
       const fileNode = await createRemoteFileNode({
         url: cover.file.url,
         parentNodeId: node.id,
@@ -104,7 +104,9 @@ export const createPages = ({ actions, graphql }: any) => {
         return {
           ...node,
           ...frontmatter,
-          cover: node.featuredImg.childImageSharp.fluid.src,
+          cover:
+            node.featuredImg?.childImageSharp.fluid.src ||
+            "/images/anh4gs-social.jpg",
           markdown: true,
         };
       })

@@ -42,12 +42,14 @@ const PostTemplate = ({ pageContext: context }: any) => {
               <ScCategoryText>{post.date}</ScCategoryText>
             </ScHeaderWrapper>
 
-            <ScFeature>
-              <Img
-                fluid={post.featuredImg.childImageSharp.fluid}
-                alt={post.title}
-              />
-            </ScFeature>
+            {post.featuredImg?.childImageSharp?.fluid && (
+              <ScFeature>
+                <Img
+                  fluid={post.featuredImg.childImageSharp.fluid}
+                  alt={post.title}
+                />
+              </ScFeature>
+            )}
 
             <ScContent>
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
