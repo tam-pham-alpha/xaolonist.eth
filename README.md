@@ -7,19 +7,19 @@
   Gatsby Notion Minimal TypeScript Starter
 </h1>
 
-## Why Notion?
+## Architecture: Local Markdown Files
 
-![Notion database](/readme/notion.png)
+This blog now builds directly from local Markdown files stored in `content/blog/` instead of fetching remotely from the Notion API.
 
-- Easy to draft/publish content
-- Suitable for writer
-- Cost effective
+### Features
+- Offline development and faster builds.
+- Local cover images processed via `gatsby-transformer-sharp`.
+- Inline post images optimized automatically using `gatsby-remark-images`.
 
+## ✍️ How to Add a New Post
 
-## Features
-
-- Optimize cover img from notion
-- Optimize all images in the article
+To add a new blog post, please refer to the detailed instructions in the agent rules:
+- See [.github/copilot-instructions.md](file:///Users/phamtam/projects/xaolonist.eth/.github/copilot-instructions.md) for directory layout, frontmatter schema, and image path guidelines.
 
 
 ## 🚀 Quick start
