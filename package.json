@@ -13,7 +13,7 @@
     "build": "env-cmd -f .env gatsby build",
     "serve": "env-cmd -f .env gatsby serve",
     "clean": "env-cmd -f .env gatsby clean",
-    "release": "yarn run clean && yarn run build && yarn run deploy",
+    "release": "yarn run build && yarn run deploy",
     "deploy": "surge ./public https://anh4gs.xyz",
     "build:prod": "gatsby build",
     "typecheck": "tsc --noEmit"
