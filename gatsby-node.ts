@@ -1,46 +1,26 @@
 import path from "path";
 
 import { Post } from "./src/types/Post";
-import { normalizeNotionFrontMatter } from "./src/utils/normalizeNotionBlog";
-import { createRemoteFileNode } from "gatsby-source-filesystem";
 
 export const createSchemaCustomization = ({ actions }: any) => {
   const { createTypes } = actions;
 
   createTypes(`
     type MarkdownRemark implements Node {
-      featuredImg: File @link(from: "fields.coverImageLocal")
+      frontmatter: MarkdownRemarkFrontmatter
+    }
+    type MarkdownRemarkFrontmatter {
+      slug: String
+      title: String
+      status: String
+      author: String
+      category: String
+      date: String
+      summary: String
+      lang: String
+      cover: File @fileByRelativePath
     }
   `);
-};
-
-export const onCreateNode = async ({
-  node,
-  actions: { createNode, createNodeField },
-  createNodeId,
-  getCache,
-}: any) => {
-  if (node.internal.type === "MarkdownRemark") {
-    const cover = node.frontmatter.cover?.[0];
-
-    if (cover?.file?.url?.startsWith("http")) {
-      const fileNode = await createRemoteFileNode({
-        url: cover.file.url,
-        parentNodeId: node.id,
-        createNode,
-        createNodeId,
-        getCache,
-      });
-
-      if (fileNode) {
-        createNodeField({
-          node: node,
-          name: "coverImageLocal",
-          value: fileNode.id,
-        });
-      }
-    }
-  }
 };
 
 export const createPages = ({ actions, graphql }: any) => {
@@ -49,45 +29,31 @@ export const createPages = ({ actions, graphql }: any) => {
   return graphql(`
     {
       allMarkdownRemark(
-        sort: { frontmatter: { publish_date: { start: DESC } } }
+        sort: { frontmatter: { date: DESC } }
         limit: 1000
       ) {
         edges {
           node {
             html
-            featuredImg {
-              childImageSharp {
-                fluid(maxWidth: 800, quality: 80, toFormat: JPG) {
-                  base64
-                  aspectRatio
-                  src
-                  srcSet
-                  sizes
-                }
-              }
-            }
             frontmatter {
               slug
-              status {
-                name
-              }
               title
-              author {
-                name
-              }
-              category {
-                name
-              }
-              cover {
-                file {
-                  url
-                }
-                name
-              }
-              publish_date {
-                start(formatString: "MMMM DD, YYYY")
-              }
+              status
+              author
+              category
+              date
               summary
+              cover {
+                childImageSharp {
+                  fluid(maxWidth: 800, quality: 80, toFormat: JPG) {
+                    base64
+                    aspectRatio
+                    src
+                    srcSet
+                    sizes
+                  }
+                }
+              }
             }
           }
         }
@@ -100,13 +66,20 @@ export const createPages = ({ actions, graphql }: any) => {
 
     const allPosts: Post[] = result.data.allMarkdownRemark.edges
       .map(({ node }: any) => {
-        const frontmatter = normalizeNotionFrontMatter(node.frontmatter);
+        const fm = node.frontmatter;
         return {
           ...node,
-          ...frontmatter,
+          slug: fm.slug,
+          title: fm.title,
+          status: fm.status || "published",
+          author: fm.author || "anh4gs",
+          category: fm.category || "blog",
+          date: fm.date || "",
+          summary: fm.summary || "",
           cover:
-            node.featuredImg?.childImageSharp.fluid.src ||
+            fm.cover?.childImageSharp?.fluid?.src ||
             "/images/anh4gs-social.jpg",
+          featuredImg: fm.cover,
           markdown: true,
         };
       })

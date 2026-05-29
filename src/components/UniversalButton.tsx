@@ -36,7 +36,7 @@ export const UniversalButton = ({
 
   if (to) {
     return (
-      <Link to={from ? withPathname : to} {...props}>
+      <Link to={to} state={from ? { from } : undefined} {...props}>
         {children}
       </Link>
     );

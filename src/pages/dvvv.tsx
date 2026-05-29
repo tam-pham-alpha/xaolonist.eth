@@ -5,7 +5,6 @@ import { Card } from "../components/Card";
 import { Container } from "../components/Grid";
 import { Layout } from "../components/Layout";
 import { HeadFC, graphql } from "gatsby";
-import { normalizeNotionFrontMatter } from "../utils/normalizeNotionBlog";
 import { SEO } from "../components/SEO";
 
 const ScRoot = styled.div`
@@ -47,46 +46,32 @@ const ScTitle = styled.h1`
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
-      sort: { frontmatter: { publish_date: { start: DESC } } }
+      sort: { frontmatter: { date: DESC } }
       limit: 1000
     ) {
       edges {
         node {
-          featuredImg {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                base64
-                aspectRatio
-                src
-                srcSet
-                srcWebp
-                srcSetWebp
-                sizes
-              }
-            }
-          }
           frontmatter {
             slug
-            status {
-              name
-            }
+            status
             title
-            author {
-              name
-            }
-            category {
-              name
-            }
-            cover {
-              file {
-                url
-              }
-              name
-            }
-            publish_date {
-              start(formatString: "MMMM DD, YYYY")
-            }
+            author
+            category
+            date
             summary
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  base64
+                  aspectRatio
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                  sizes
+                }
+              }
+            }
           }
         }
       }
@@ -99,11 +84,20 @@ const Anh4gsPage = ({ data }: any) => {
 
   const posts: any[] = data.allMarkdownRemark.edges
     .map(({ node }: any) => {
-      const frontmatter = normalizeNotionFrontMatter(node.frontmatter);
+      const fm = node.frontmatter;
       return {
         ...node,
-        ...frontmatter,
-        cover: frontmatter.cover,
+        slug: fm.slug,
+        title: fm.title,
+        status: fm.status || "published",
+        author: fm.author || "anh4gs",
+        category: fm.category || "blog",
+        date: fm.date || "",
+        summary: fm.summary || "",
+        cover:
+          fm.cover?.childImageSharp?.fluid?.src ||
+          "/images/anh4gs-social.jpg",
+        featuredImg: fm.cover,
         markdown: true,
       };
     })

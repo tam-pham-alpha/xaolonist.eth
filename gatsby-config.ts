@@ -1,7 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
 
-const { NOTION_TOKEN, NOTION_DATABASE_ID } = process.env;
-
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `gatsby notion`,
@@ -14,24 +12,17 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
-      resolve: "gatsby-source-notion-api",
-      options: {
-        token: NOTION_TOKEN,
-        databaseId: NOTION_DATABASE_ID,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-images-anywhere",
+            resolve: `gatsby-remark-images`,
             options: {
-              backgroundColor: "transparent",
-              formats: ["auto", "jpg", "png"],
+              maxWidth: 800,
               quality: 80,
               withWebp: false,
               withAvif: false,
+              backgroundColor: "transparent",
             },
           },
         ],
@@ -88,6 +79,14 @@ const config: GatsbyConfig = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
+        path: "./content/blog/",
+      },
+      __key: "blog",
     },
   ],
 };
