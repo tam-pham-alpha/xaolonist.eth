@@ -50,10 +50,10 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-sharp",
       options: {
         defaults: {
-          formats: ["auto", "jpg", "png"],
+          formats: ["auto"],
           placeholder: "blurred",
           quality: 80,
-          breakpoints: [750, 1080, 1366, 1920],
+          breakpoints: [400, 800, 1200],
           backgroundColor: "transparent",
         },
         // Disable WebP for social sharing images
