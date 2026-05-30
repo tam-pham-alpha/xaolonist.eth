@@ -36,14 +36,13 @@ content/blog/<slug>/
 ```
 Hắn dùng `gatsby-source-filesystem` kết hợp với `gatsby-transformer-remark` để Gatsby tự động scan và tạo node cho các file Markdown này. Việc truy vấn qua GraphQL giờ đây diễn ra hoàn toàn ở local, tốc độ build giảm từ gần 1 phút xuống còn chưa đầy 7 giây.
 
-### Bước 4: Deploy lên Cloudflare Pages
-Cuối cùng, hắn đưa toàn bộ code lên GitHub và kết nối với Cloudflare Pages:
-1. Tạo một dự án Pages mới trên Cloudflare Dashboard.
-2. Kết nối repo GitHub của blog.
-3. Chọn framework preset là **Gatsby**.
-4. Cấu hình build command là `yarn build` và output directory là `public`.
+### Bước 4: Deploy lên Cloudflare Pages & Workers Static Assets
+Cuối cùng, hắn chuyển hẳn sang dùng Cloudflare Workers Static Assets kết hợp với Wrangler để triển khai nhanh nhất:
+1. Cấu hình file `wrangler.jsonc` để định nghĩa thư mục assets trỏ thẳng vào thư mục `public` sau khi build
+2. Thay thế lệnh deploy cũ bằng `wrangler deploy` trong file `package.json`
+3. Thực hiện quá trình đóng gói và upload trực tiếp từ máy cá nhân hoặc qua CI/CD của GitHub Actions
 
-Mỗi lần hắn hoàn thành một bài viết mới tại local, hắn chỉ cần commit và push lên GitHub. Cloudflare Pages sẽ tự động trigger build và deploy chỉ trong vòng chưa đầy 1 phút. Hoàn toàn tự động, nhanh chóng, bảo mật và quan trọng nhất là hoàn toàn miễn phí.
+Giờ đây, quá trình build ứng dụng chỉ mất vỏn vẹn 20 giây và thời gian deploy lên mạng lưới toàn cầu của Cloudflare chỉ tốn 16 giây. Toàn bộ quy trình diễn ra nhanh chóng, nhẹ nhàng và hoàn toàn tự động
 
 Cuộc di cư này giúp hắn nhận ra đôi khi sự phức tạp của API hay database đám mây không mang lại nhiều giá trị bằng sự đơn giản, tin cậy của các file tĩnh (plain text). Cảm giác sở hữu hoàn toàn nội dung của mình dưới dạng file vật lý nằm trên máy tính cá nhân thật sự rất yên tâm.
 
@@ -76,14 +75,13 @@ content/blog/<slug>/
 ```
 He used `gatsby-source-filesystem` along with `gatsby-transformer-remark` to let Gatsby automatically scan and create nodes for these Markdown files. Querying via GraphQL now happens entirely locally, reducing build time from nearly 1 minute to less than 7 seconds.
 
-### Step 4: Deploy to Cloudflare Pages
-Finally, he pushed all the code to GitHub and connected it with Cloudflare Pages:
-1. Create a new Pages project on the Cloudflare Dashboard.
-2. Connect the blog's GitHub repository.
-3. Select the **Gatsby** framework preset.
-4. Configure the build command as `yarn build` and the output directory as `public`.
+### Step 4: Deploy to Cloudflare Pages & Workers Static Assets
+Finally, he switched completely to Cloudflare Workers Static Assets combined with Wrangler for the fastest deployment:
+1. Configure `wrangler.jsonc` to point the static assets directory directly to the compiled `public` folder
+2. Update the deploy script in `package.json` to utilize `wrangler deploy`
+3. Execute the build and deploy processes directly from local or via GitHub Actions CI/CD pipeline
 
-Every time he completes a new post locally, he simply commits and pushes it to GitHub. Cloudflare Pages automatically triggers the build and deploys in less than a minute. Completely automated, fast, secure, and most importantly, completely free.
+Now, building the application takes a mere 20 seconds, and deploying it to Cloudflare's global edge network takes only 16 seconds. The entire workflow is fast, lightweight, and fully automated
 
 This migration helped him realize that sometimes the complexity of cloud APIs or databases doesn't offer as much value as the simplicity and reliability of static files (plain text). Having complete ownership of his content as physical files on his personal computer brings true peace of mind.
 
