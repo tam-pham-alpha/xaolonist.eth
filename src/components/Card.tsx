@@ -79,10 +79,12 @@ type PtPostWithImage = Post & {
 };
 
 export const Card = ({ post }: { post: PtPostWithImage }) => {
+  const postLink = post.lang === "en" ? `/en/blog/${post.slug}` : `/blog/${post.slug}`;
+
   return (
     <ScMain>
       <ScFeature>
-        <Link to={`/blog/${post.slug}`}>
+        <Link to={postLink}>
           <ScFeatureImg>
             <Img fluid={post.featuredImg.childImageSharp.fluid} />
           </ScFeatureImg>
@@ -90,7 +92,7 @@ export const Card = ({ post }: { post: PtPostWithImage }) => {
       </ScFeature>
       <ScPanelContent>
         <ScTitle>
-          <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+          <Link to={postLink}>{post.title}</Link>
         </ScTitle>
         <ScOverview>{post.summary}</ScOverview>
         <ScAuthor>

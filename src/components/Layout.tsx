@@ -52,13 +52,13 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const Layout = ({ children, blur }: React.PropsWithChildren<{blur: boolean}>) => {
+export const Layout = ({ children, blur, lang }: React.PropsWithChildren<{blur: boolean; lang?: string}>) => {
   return (
     <main>
       <GlobalStyle />
-      <NavBar blur={blur} />
+      <NavBar blur={blur} lang={lang} />
       {children}
-      <Footer />
+      <Footer lang={lang} />
     </main>
   );
 };

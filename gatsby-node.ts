@@ -45,6 +45,7 @@ export const createPages = ({ actions, graphql }: any) => {
               category
               date(formatString: "MMMM D, YYYY")
               summary
+              lang
               cover {
                 childImageSharp {
                   fluid(maxWidth: 800, quality: 80, toFormat: JPG) {
@@ -79,9 +80,10 @@ export const createPages = ({ actions, graphql }: any) => {
           category: fm.category || "blog",
           date: fm.date || "",
           summary: fm.summary || "",
+          lang: fm.lang || "vn",
           cover:
-            fm.cover?.childImageSharp?.fluid?.src ||
-            "/images/anh4gs-social.jpg",
+              fm.cover?.childImageSharp?.fluid?.src ||
+              "/images/anh4gs-social.jpg",
           featuredImg: fm.cover,
           markdown: true,
         };
@@ -89,8 +91,9 @@ export const createPages = ({ actions, graphql }: any) => {
       .filter((i: any) => i.status === "published");
 
     return allPosts.forEach((post: Post) => {
+      const pagePath = post.lang === "en" ? `en/blog/${post.slug}` : `blog/${post.slug}`;
       createPage({
-        path: `blog/${post.slug}`,
+        path: pagePath,
         component: path.resolve(`./src/templates/post.tsx`),
         context: {
           slug: post.slug,

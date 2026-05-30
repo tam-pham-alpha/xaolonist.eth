@@ -11,4 +11,5 @@ export type Post = {
   html: string;
   markdown: boolean;
   status: "draft" | "published";
+  lang?: string;
 };

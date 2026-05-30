@@ -90,20 +90,53 @@ const ScLogoBlur = styled(ScLogo)`
   }
 `;
 
-export const NavBar = ({ blur }: { blur?: boolean }) => {
+const ScLangSwitcher = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+
+  a {
+    font-size: 1.2rem;
+    line-height: 1;
+    text-decoration: none !important;
+    opacity: 0.3;
+    filter: grayscale(100%);
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 1;
+      filter: none;
+      text-decoration: none !important;
+    }
+
+    &.active {
+      opacity: 0.5;
+      filter: none;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+`;
+
+export const NavBar = ({ blur, lang }: { blur?: boolean; lang?: string }) => {
+  const isEn = lang === "en";
+  const viPath = typeof window !== "undefined" ? window.location.pathname.replace(/^\/en/, "") || "/" : "/";
+  const enPath = typeof window !== "undefined" ? `/en${window.location.pathname.replace(/^\/en/, "")}` : "/en/";
+
   return (
     <>
       <ScHeader>
         <Container>
           <ScNavBar>
             {blur ? (
-              <ScLogoBlur to="/">
-                <img src="/images/icon.png" loading="eager" />
+              <ScLogoBlur to={isEn ? "/en/" : "/"}>
+                <img src="/images/icon.png" loading="eager" alt="logo" />
                 <span>anh4gs</span>
               </ScLogoBlur>
             ) : (
-              <ScLogo to="/">
-                <img src="/images/icon.png" loading="eager" />
+              <ScLogo to={isEn ? "/en/" : "/"}>
+                <img src="/images/icon.png" loading="eager" alt="logo" />
                 <span>anh4gs</span>
               </ScLogo>
             )}
@@ -111,13 +144,21 @@ export const NavBar = ({ blur }: { blur?: boolean }) => {
             <ScNavLinks>
               {blur ? (
                 <>
-                  <ScNavLinkBlur to="/">bnvc</ScNavLinkBlur>
-                  <ScNavLinkBlur to="/dvvv">dvvv</ScNavLinkBlur>
+                  <ScNavLinkBlur to={isEn ? "/en/" : "/"}>bnvc</ScNavLinkBlur>
+                  <ScNavLinkBlur to={isEn ? "/en/dvvv" : "/dvvv"}>dvvv</ScNavLinkBlur>
+                  <ScLangSwitcher>
+                    <Link to={viPath} className={!isEn ? "active" : ""} title="Tiếng Việt">🇻🇳</Link>
+                    <Link to={enPath} className={isEn ? "active" : ""} title="English">🇬🇧</Link>
+                  </ScLangSwitcher>
                 </>
               ) : (
                 <>
-                  <ScNavLink to="/">bnvc</ScNavLink>
-                  <ScNavLink to="/dvvv">dvvv</ScNavLink>
+                  <ScNavLink to={isEn ? "/en/" : "/"}>bnvc</ScNavLink>
+                  <ScNavLink to={isEn ? "/en/dvvv" : "/dvvv"}>dvvv</ScNavLink>
+                  <ScLangSwitcher>
+                    <Link to={viPath} className={!isEn ? "active" : ""} title="Tiếng Việt">🇻🇳</Link>
+                    <Link to={enPath} className={isEn ? "active" : ""} title="English">🇬🇧</Link>
+                  </ScLangSwitcher>
                 </>
               )}
             </ScNavLinks>

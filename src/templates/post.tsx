@@ -33,7 +33,7 @@ const PostTemplate = ({ pageContext: context }: any) => {
   const post = context.post;
 
   return (
-    <Layout blur={true}>
+    <Layout blur={true} lang={post.lang}>
       <ScRoot>
         <Container>
           <ScMain>
@@ -67,7 +67,7 @@ const PostTemplate = ({ pageContext: context }: any) => {
 export const Head = ({ pageContext: context }: any) => {
   const post = context.post;
   const url = "https://anh4gs.xyz";
-  const link = `${url}/blog/${post.slug}/`;
+  const link = post.lang === "en" ? `${url}/en/blog/${post.slug}/` : `${url}/blog/${post.slug}/`;
   const cover = `${url}${post.cover}`;
   const title = post.title;
   const desc = post.summary;

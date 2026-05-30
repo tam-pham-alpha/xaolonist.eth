@@ -60,6 +60,7 @@ export const pageQuery = graphql`
             category
             date(formatString: "MMMM D, YYYY")
             summary
+            lang
             cover {
               childImageSharp {
                 fluid(maxWidth: 800, quality: 80) {
@@ -80,8 +81,11 @@ export const pageQuery = graphql`
   }
 `;
 
-const IndexPage = ({ data }: any) => {
+const IndexPage = ({ data, location }: any) => {
   console.log("data", data);
+
+  const isEn = location?.pathname?.startsWith("/en") || false;
+  const targetLang = isEn ? "en" : "vn";
 
   const posts: any[] = data.allMarkdownRemark.edges
     .map(({ node }: any) => {
@@ -96,6 +100,7 @@ const IndexPage = ({ data }: any) => {
         category: fm.category || "blog",
         date: fm.date || "",
         summary: fm.summary || "",
+        lang: fm.lang || "vn",
         cover:
           fm.cover?.childImageSharp?.fluid?.src ||
           "/images/anh4gs-social.jpg",
@@ -103,14 +108,14 @@ const IndexPage = ({ data }: any) => {
         markdown: true,
       };
     })
-    .filter((i: any) => i.status === "published" && i.category === "blog");
+    .filter((i: any) => i.status === "published" && i.category === "blog" && i.lang === targetLang);
 
   return (
-    <Layout blur={false}>
+    <Layout blur={false} lang={isEn ? "en" : "vn"}>
       <ScRoot>
         <Container>
           <ScMain>
-            <ScTitle>ban ngày viết code</ScTitle>
+            <ScTitle>{isEn ? "writing code by day" : "ban ngày viết code"}</ScTitle>
             <ScPostList>
               {posts.map((i) => (
                 <Card key={i.id} post={i} />

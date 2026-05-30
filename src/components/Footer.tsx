@@ -33,14 +33,14 @@ const ScContent = styled.div`
   }
 `;
 
-export const Footer = () => {
+export const Footer = ({ lang }: { lang?: string }) => {
   return (
     <ScMain>
       <Container>
         <ScContent>
           <div>
-            @2023 • <Link to="/">anh4gs</Link> •{" "}
-            <Link to="/aethery">aethery</Link>
+            @2023 • <Link to={lang === "en" ? "/en/" : "/"}>anh4gs</Link> •{" "}
+            <Link to={lang === "en" ? "/en/aethery" : "/aethery"}>aethery</Link>
           </div>
         </ScContent>
       </Container>
