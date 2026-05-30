@@ -3,3 +3,6 @@ node_modules/
 public
 src/gatsby-types.d.ts
 *.env
+
+# Yarn 4
+.yarn/install-state.gz
