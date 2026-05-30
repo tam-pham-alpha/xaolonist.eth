@@ -8,14 +8,13 @@
     "gatsby"
   ],
   "scripts": {
-    "dev": "env-cmd -f .env gatsby develop",
-    "start": "env-cmd -f .env gatsby develop",
-    "build": "env-cmd -f .env gatsby build",
-    "serve": "env-cmd -f .env gatsby serve",
-    "clean": "env-cmd -f .env gatsby clean",
+    "dev": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
     "release": "yarn run build && yarn run deploy",
     "deploy": "surge ./public https://anh4gs.xyz",
-    "build:prod": "gatsby build",
     "typecheck": "tsc --noEmit"
   },
   "license": "0BSD",
@@ -48,7 +47,6 @@
     "@types/react-dom": "^18.0.11",
     "@types/react-helmet": "^6.1.6",
     "@types/styled-components": "^5.1.26",
-    "env-cmd": "^10.1.0",
     "typescript": "^5.0.4"
   },
   "packageManager": "yarn@4.15.0+sha512.07ec708ac11e2eaa4ea2b04cfbb272812f7e74a753f1595eaef4486c663a98306a30cca3e6fc40f7a0b168dcfb3a2490b6a5e0501e20fb69cc36f563dd161c53"
