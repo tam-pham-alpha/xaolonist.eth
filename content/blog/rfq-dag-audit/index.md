@@ -5,7 +5,7 @@ summary: "Hắn nuôi heo, trồng chuối, định ra mắt thương hiệu \"L
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "November 16, 2025"
+date: "2025-11-16"
 cover: "./cover.png"
 lang: "vn"
 ---

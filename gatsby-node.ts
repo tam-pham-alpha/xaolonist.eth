@@ -15,7 +15,7 @@ export const createSchemaCustomization = ({ actions }: any) => {
       status: String
       author: String
       category: String
-      date: String
+      date: Date @dateformat
       summary: String
       lang: String
       cover: File @fileByRelativePath
@@ -41,7 +41,7 @@ export const createPages = ({ actions, graphql }: any) => {
               status
               author
               category
-              date
+              date(formatString: "MMMM D, YYYY")
               summary
               cover {
                 childImageSharp {

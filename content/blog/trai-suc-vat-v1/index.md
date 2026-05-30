@@ -5,7 +5,7 @@ summary: "Lũ heo, chúng biết rằng, chẳng có cách nào đơn giản hơ
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "January 10, 2025"
+date: "2025-01-10"
 cover: "./cover.jpg"
 lang: "vn"
 ---

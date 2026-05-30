@@ -57,7 +57,7 @@ export const pageQuery = graphql`
             title
             author
             category
-            date
+            date(formatString: "MMMM D, YYYY")
             summary
             cover {
               childImageSharp {

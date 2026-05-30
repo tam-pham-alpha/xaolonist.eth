@@ -5,7 +5,7 @@ summary: "Em là cô bé khó chiều, vì cuộc sống lắm khi những đi�
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "February 23, 2022"
+date: "2022-02-23"
 cover: "./cover.png"
 ---
 

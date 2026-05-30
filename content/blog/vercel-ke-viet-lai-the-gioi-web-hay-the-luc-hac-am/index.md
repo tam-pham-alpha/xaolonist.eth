@@ -5,7 +5,7 @@ summary: "Một vài năm trước, hắn biết đến Vercel là một cậu l
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "April 23, 2025"
+date: "2025-04-23"
 cover: "./cover.png"
 lang: "vn"
 ---

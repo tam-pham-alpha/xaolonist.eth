@@ -5,7 +5,7 @@ summary: "Hắn hay đùa với bản thân rằng, sau này nếu không viết
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "June 18, 2024"
+date: "2024-06-18"
 cover: "./cover.jpg"
 lang: "vn"
 ---

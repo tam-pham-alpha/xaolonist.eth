@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn, té ra là Anne with an E cũng hay lèm bèm v�
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "August 8, 2024"
+date: "2024-08-08"
 cover: "./cover.jpg"
 lang: "vn"
 ---

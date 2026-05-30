@@ -5,7 +5,7 @@ summary: "Sau khi bật sếp, và nói chuyện kỹ thuật chuyên sâu với
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "August 13, 2024"
+date: "2024-08-13"
 cover: "./cover.jpg"
 lang: "vn"
 ---

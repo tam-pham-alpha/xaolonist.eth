@@ -45,7 +45,7 @@ summary: "A brief summary of the post."
 author: "Tam Pham"
 category: "blog"          # "blog" → homepage, "anh4gs" → /dvvv/ page
 status: "published"       # "published" or "draft"
-date: "May 30, 2026"      # Month DD, YYYY
+date: "2026-05-30"        # YYYY-MM-DD
 cover: "./cover.jpg"      # Relative path to cover image
 lang: "vn"                # "vn" or "en"
 ---

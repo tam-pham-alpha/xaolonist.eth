@@ -5,7 +5,7 @@ summary: "Bài viết này là những quan sát, suy nghĩ chủ quan của mì
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "August 18, 2023"
+date: "2023-08-18"
 cover: "./cover.jpg"
 ---
 

@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn đây, sau gần 4 năm lên núi ở ẩn, hấp
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "May 11, 2025"
+date: "2025-05-11"
 cover: "./cover.jpg"
 lang: "vn"
 ---

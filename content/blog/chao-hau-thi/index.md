@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn đây, chí, nay Thị nấu cho hắn cháo hàu
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "November 1, 2025"
+date: "2025-11-01"
 cover: "./cover.webp"
 lang: "vn"
 ---

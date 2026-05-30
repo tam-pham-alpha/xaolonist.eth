@@ -5,7 +5,7 @@ summary: "Có ngay trên đầu ngón tay, và có thể chuyển thẳng đến
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "September 6, 2024"
+date: "2024-09-06"
 cover: "./cover.jpg"
 lang: "vn"
 ---

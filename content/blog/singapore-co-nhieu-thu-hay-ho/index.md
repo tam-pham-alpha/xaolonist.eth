@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn đây, và hắn có kế hoạch ở Singapore c
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "May 16, 2025"
+date: "2025-05-16"
 cover: "./cover.jpg"
 lang: "vn"
 ---

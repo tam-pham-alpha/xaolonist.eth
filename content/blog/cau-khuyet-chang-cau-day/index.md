@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn đây, và hắn vẫn ở đây để kể nhữ
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "April 19, 2025"
+date: "2025-04-19"
 cover: "./cover.jpg"
 lang: "vn"
 ---

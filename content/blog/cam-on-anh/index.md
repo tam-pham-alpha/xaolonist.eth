@@ -5,7 +5,7 @@ summary: "Hey lại là hắn đây, và những câu chuyện kể về Eimi ch
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "December 20, 2024"
+date: "2024-12-20"
 cover: "./cover.jpg"
 lang: "vn"
 ---

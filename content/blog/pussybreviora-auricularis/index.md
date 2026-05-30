@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn đây, @anh4gs, hắn có một niềm đam mê m
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "September 27, 2025"
+date: "2025-09-27"
 cover: "./cover.jpg"
 lang: "vn"
 ---

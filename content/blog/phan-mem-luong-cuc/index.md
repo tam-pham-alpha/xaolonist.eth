@@ -5,7 +5,7 @@ summary: "Để bắt đầu thì hôm nay, mình sẽ nói về những sản p
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "December 12, 2020"
+date: "2020-12-12"
 cover: "./cover.jpeg"
 ---
 

@@ -5,7 +5,7 @@ summary: "Lang thang trên mạng tìm hướng rẽ cuộc đời, phân vân g
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "January 7, 2025"
+date: "2025-01-07"
 cover: "./cover.jpg"
 lang: "vn"
 ---

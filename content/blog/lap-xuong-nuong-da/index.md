@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn, và Lạp Xưởng Nướng Đá 13k của bà T
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "December 14, 2024"
+date: "2024-12-14"
 cover: "./cover.jpg"
 lang: "vn"
 ---

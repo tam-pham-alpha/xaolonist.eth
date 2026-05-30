@@ -5,7 +5,7 @@ summary: "Đồng Đô La đang đối mặt với một trận chiến cuối c
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "October 22, 2024"
+date: "2024-10-22"
 cover: "./cover.jpg"
 lang: "vn"
 ---

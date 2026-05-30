@@ -5,7 +5,7 @@ summary: "Hey, là hắn - chí, vừa đá xong bát cháo hành, hắn quay sa
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "October 30, 2025"
+date: "2025-10-30"
 cover: "./cover.webp"
 lang: "vn"
 ---

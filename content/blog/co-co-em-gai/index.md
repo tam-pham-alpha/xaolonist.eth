@@ -5,7 +5,7 @@ summary: "Hồi cấp 2, chị dẫn hắn vào thư viện, hắn đọc ngấu
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "February 21, 2025"
+date: "2025-02-21"
 cover: "./cover.jpg"
 lang: "vn"
 ---

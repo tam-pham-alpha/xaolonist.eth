@@ -5,7 +5,7 @@ summary: "Hey lại là hắn đây, một kẻ lang thang đi tìm ý nghĩa cu
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "March 19, 2025"
+date: "2025-03-19"
 cover: "./cover.jpg"
 lang: "vn"
 ---

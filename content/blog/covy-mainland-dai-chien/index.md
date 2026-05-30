@@ -5,7 +5,7 @@ summary: "Bài viết chỉ dựa trên 10% sự thật, còn lại là Bia. C�
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "December 12, 2020"
+date: "2020-12-12"
 cover: "./cover.jpeg"
 ---
 

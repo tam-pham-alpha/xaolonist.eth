@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn đây, hắn lại đi chữa lành. Cái mặt d
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "July 22, 2024"
+date: "2024-07-22"
 cover: "./cover.jpg"
 lang: "vn"
 ---

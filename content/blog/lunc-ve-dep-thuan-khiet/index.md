@@ -5,7 +5,7 @@ summary: "LUNC, sự sụp đổ vĩ đại, con mãnh thú đang ngủ, chờ n
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "July 1, 2024"
+date: "2024-07-01"
 cover: "./cover.webp"
 lang: "vn"
 ---

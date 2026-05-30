@@ -5,7 +5,7 @@ summary: "Hey lại là hắn đây, anh Tư giáo sư, biết đâu một lần
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "February 16, 2025"
+date: "2025-02-16"
 cover: "./cover.jpg"
 lang: "vn"
 ---

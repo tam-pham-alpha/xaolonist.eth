@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn đây, và hắn đã ở trong vùng an toàn qu
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "March 29, 2025"
+date: "2025-03-29"
 cover: "./cover.jpg"
 lang: "vn"
 ---

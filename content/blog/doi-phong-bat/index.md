@@ -5,7 +5,7 @@ summary: "Hey lại là hắn đây, châm 1 điếu thảo mộc, bật nắp H
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "February 25, 2025"
+date: "2025-02-25"
 cover: "./cover.jpg"
 lang: "vn"
 ---

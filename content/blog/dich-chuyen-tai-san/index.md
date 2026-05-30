@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn đây và tạo ra tài sản tốn thời gian, 
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "August 2, 2025"
+date: "2025-08-02"
 cover: "./cover.jpg"
 lang: "vn"
 ---

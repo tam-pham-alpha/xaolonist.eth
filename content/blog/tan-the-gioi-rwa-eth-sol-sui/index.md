@@ -5,7 +5,7 @@ summary: "Dù muốn dù không, thế giới chúng ta đang sống đang đứ
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "November 20, 2024"
+date: "2024-11-20"
 cover: "./cover.jpg"
 lang: "vn"
 ---

@@ -5,7 +5,7 @@ summary: "Sau khi chứng kiến sự bùng nổ của v0.dev, hắn biết rằ
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "April 19, 2025"
+date: "2025-04-19"
 cover: "./cover.png"
 lang: "vn"
 ---

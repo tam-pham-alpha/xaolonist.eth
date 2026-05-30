@@ -6,7 +6,7 @@ gọi hôm nay là ngày Thống Nhất Đất Nước."
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "December 18, 2020"
+date: "2020-12-18"
 cover: "./cover.jpeg"
 ---
 

@@ -5,7 +5,7 @@ summary: "Bẵng đi một thời gian không ở trong thị trường việc l
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "May 25, 2025"
+date: "2025-05-25"
 cover: "./cover.jpg"
 lang: "vn"
 ---

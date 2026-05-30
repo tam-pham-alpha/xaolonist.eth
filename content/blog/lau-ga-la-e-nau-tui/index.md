@@ -5,7 +5,7 @@ summary: "Hắn đói, hắn ghé quán lẩu gà lá é - Nậu Tui, quán mà 
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "November 18, 2024"
+date: "2024-11-18"
 cover: "./cover.jpg"
 lang: "vn"
 ---

@@ -5,7 +5,7 @@ summary: "Sự già hoá dân số mới là quả bom hẹn giờ lớn nhất 
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "March 4, 2025"
+date: "2025-03-04"
 cover: "./cover.jpg"
 lang: "vn"
 ---

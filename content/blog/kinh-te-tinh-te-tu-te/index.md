@@ -5,7 +5,7 @@ summary: "Hey lại là hắn đây, và đàn ông bây giờ khổ quá hén, 
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "November 26, 2024"
+date: "2024-11-26"
 cover: "./cover.jpg"
 lang: "vn"
 ---

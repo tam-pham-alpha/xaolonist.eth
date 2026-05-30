@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn, có người gọi hắn là anh Tư, kẻ khác
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "June 18, 2024"
+date: "2024-06-18"
 cover: "./cover.jpg"
 lang: "vn"
 ---

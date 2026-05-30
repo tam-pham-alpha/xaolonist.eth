@@ -5,7 +5,7 @@ summary: "Mọi thứ là năng lượng, và đó là tất cả. Hãy điều 
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "April 27, 2025"
+date: "2025-04-27"
 cover: "./cover.jpg"
 lang: "vn"
 ---

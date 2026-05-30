@@ -5,7 +5,7 @@ summary: "Hey, lại là hắn, hắn kể về người con gái đã ở bên 
 author: "Tam Pham"
 category: "anh4gs"
 status: "published"
-date: "July 5, 2024"
+date: "2024-07-05"
 cover: "./cover.jpg"
 lang: "vn"
 ---

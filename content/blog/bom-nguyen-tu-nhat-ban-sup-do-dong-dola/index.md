@@ -5,7 +5,7 @@ summary: "Sự sụp đổ của đồng Đô La có thật sự đang diễn ra
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "August 23, 2023"
+date: "2023-08-23"
 cover: "./cover.jpg"
 lang: "en, jp, vn"
 ---

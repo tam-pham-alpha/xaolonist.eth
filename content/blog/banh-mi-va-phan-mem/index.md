@@ -5,7 +5,7 @@ summary: "Mình là Xaolonist, mình yêu màu tím, thích màu nâu, và chuy�
 author: "Tam Pham"
 category: "blog"
 status: "published"
-date: "December 12, 2020"
+date: "2020-12-12"
 cover: "./cover.jpeg"
 ---
 
