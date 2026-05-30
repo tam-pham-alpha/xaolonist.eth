@@ -1,6 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/Container.astro';
 
@@ -20,8 +20,12 @@ const { Content } = await render(post);
 
 const siteUrl = 'https://anh4gs.xyz';
 const postUrl = `${siteUrl}/blog/${data.slug}/`;
-const coverSrc = typeof data.cover === 'string' ? data.cover : data.cover.src;
-const ogCover = coverSrc.startsWith('http') ? coverSrc : `${siteUrl}${coverSrc}`;
+
+// Generate a JPEG version of the cover for social sharing (OG/Twitter)
+// Social crawlers often don't support WebP
+const ogImage = await getImage({ src: data.cover, width: 1200, format: 'jpg', quality: 80 });
+const ogCover = `${siteUrl}${ogImage.src}`;
+
 const formattedDate = new Date(data.date).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
