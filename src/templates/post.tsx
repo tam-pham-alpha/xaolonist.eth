@@ -39,7 +39,10 @@ const PostTemplate = ({ pageContext: context }: any) => {
           <ScMain>
             <ScHeaderWrapper>
               <ScHeader>{post.title}</ScHeader>
-              <ScCategoryText>{post.date}</ScCategoryText>
+              <ScCategoryText>
+                {post.date}
+                {post.cowriter ? ` • ${post.cowriter}` : null}
+              </ScCategoryText>
             </ScHeaderWrapper>
 
             {post.featuredImg?.childImageSharp?.fluid && (

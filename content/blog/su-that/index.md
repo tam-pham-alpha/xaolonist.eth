@@ -3,12 +3,13 @@ slug: "su-that"
 title: "Sự Thật"
 summary: "Hey lại là hắn đây, và hắn kì, hắn theo đạo Công giáo, nhưng lại thích triết lý Phật giáo, ban ngày hắn nghe Huyền Không Phi Tinh, Đạo giáo, Kinh Dịch, tối đến lại nghe vật lý lượng tử"
 author: "Tam Pham"
+cowriter: "@aethery"
 category: "anh4gs"
 status: "published"
 date: "2026-05-29"
 cover: "./cover.jpg"
 lang: "vn"
----
+--- 
 
 Hey lại là hắn đây, và hắn kì, hắn theo đạo Công giáo, nhưng lại thích triết lý Phật giáo, ban ngày hắn nghe Huyền Không Phi Tinh, Đạo giáo, Kinh Dịch, tối đến lại nghe vật lý lượng tử, lý thuyết dây và lịch sử vũ trụ
 
@@ -25,3 +26,5 @@ Và có khi Thiên Chúa không hề khó chịu vì hắn đọc Phật giáo. 
 Bởi vì càng học nhiều, hắn càng thấy thứ lớn nhất trong vũ trụ không phải là kiến thức, mà là sự huyền nhiệm của nó
 
 Và biết đâu, điều thú vị nhất của đời người không phải là tìm được câu trả lời cuối cùng. Mà là được lang thang giữa những câu hỏi đẹp đẽ như vậy, ngày này qua ngày khác
+
+*❤️ cowriter aethery*

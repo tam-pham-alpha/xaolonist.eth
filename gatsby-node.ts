@@ -14,6 +14,7 @@ export const createSchemaCustomization = ({ actions }: any) => {
       title: String
       status: String
       author: String
+      cowriter: String
       category: String
       date: Date @dateformat
       summary: String
@@ -40,6 +41,7 @@ export const createPages = ({ actions, graphql }: any) => {
               title
               status
               author
+              cowriter
               category
               date(formatString: "MMMM D, YYYY")
               summary
@@ -73,6 +75,7 @@ export const createPages = ({ actions, graphql }: any) => {
           title: fm.title,
           status: fm.status || "published",
           author: fm.author || "anh4gs",
+          cowriter: fm.cowriter || "",
           category: fm.category || "blog",
           date: fm.date || "",
           summary: fm.summary || "",

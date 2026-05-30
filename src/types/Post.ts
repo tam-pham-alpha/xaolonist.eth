@@ -4,6 +4,7 @@ export type Post = {
   date: string;
   category: string;
   author: string;
+  cowriter?: string;
   title: string;
   summary: string;
   cover: string;

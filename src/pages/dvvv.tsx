@@ -56,6 +56,7 @@ export const pageQuery = graphql`
             status
             title
             author
+            cowriter
             category
             date(formatString: "MMMM D, YYYY")
             summary
@@ -91,6 +92,7 @@ const Anh4gsPage = ({ data }: any) => {
         title: fm.title,
         status: fm.status || "published",
         author: fm.author || "anh4gs",
+        cowriter: fm.cowriter || "",
         category: fm.category || "blog",
         date: fm.date || "",
         summary: fm.summary || "",

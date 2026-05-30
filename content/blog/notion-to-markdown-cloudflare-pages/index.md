@@ -3,12 +3,13 @@ slug: "notion-to-markdown-cloudflare-pages"
 title: "Di cư từ Notion API sang Markdown & Cloudflare Pages"
 summary: "Hey, lại là hắn đây, và dạo này hắn đã quyết định làm một cuộc đại di cư cho blog của mình: dọn nhà từ Notion API sang Markdown files đặt tại local và deploy lên Cloudflare Pages"
 author: "Tam Pham"
+cowriter: "@aethery"
 category: "blog"
 status: "published"
 date: "2026-05-30"
 cover: "./cover.png"
 lang: "vn"
----
+--- 
 
 Hey, lại là hắn đây, và dạo này hắn đã quyết định làm một cuộc đại di cư cho blog của mình: dọn nhà từ Notion API sang Markdown files đặt tại local và deploy lên Cloudflare Pages.
 
@@ -86,3 +87,4 @@ Every time he completes a new post locally, he simply commits and pushes it to G
 
 This migration helped him realize that sometimes the complexity of cloud APIs or databases doesn't offer as much value as the simplicity and reliability of static files (plain text). Having complete ownership of his content as physical files on his personal computer brings true peace of mind.
 
+*❤️ cowriter aethery*

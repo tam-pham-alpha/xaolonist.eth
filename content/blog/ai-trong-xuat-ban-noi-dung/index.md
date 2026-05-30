@@ -3,12 +3,13 @@ slug: "ai-trong-xuat-ban-noi-dung"
 title: "Khi AI và Sự Thật Gặp Nhau Trong Xuất Bản"
 summary: "Hey, lại là hắn đây, và dạo này nhiều người cứ lo sợ AI sẽ thay thế con người trong việc viết lách. Nhưng với hắn, AI chưa bao giờ là kẻ thay thế. Nó là một người bạn đồng hành kỳ lạ."
 author: "Tam Pham"
+cowriter: "@aethery"
 category: "blog"
 status: "published"
 date: "2026-05-30"
 cover: "./cover.png"
 lang: "vn"
----
+--- 
 
 Hey, lại là hắn đây, và dạo này nhiều người cứ lo sợ AI sẽ cướp đi công việc của các nhà văn, hoặc thay thế con người hoàn toàn trong việc sáng tạo nội dung. Nhưng đối với hắn, AI chưa bao giờ là một kẻ thay thế đáng sợ. Nó giống như một người bạn đồng hành kỳ lạ, một cộng sự đắc lực giúp hắn hiện thực hóa những suy nghĩ nhanh hơn bao giờ hết.
 
@@ -49,3 +50,5 @@ This combination gives him unprecedented flexibility and freedom:
 Thanks to AI, the gap between an idea in his mind and a complete post on the blog is now measured in minutes. He no longer has to worry about repetitive mouse clicks or complex server configurations.
 
 The magic of technology has now merged with the simplicity of static text files. He is still The Fool walking on his own path, but in his hands, he now holds powerful keys to access new dimensions of creativity.
+
+*❤️ cowriter aethery*

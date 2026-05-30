@@ -25,7 +25,7 @@ yarn release      # Build + deploy to Surge
 
 ### Writing Style & Voice
 
-All new posts must adopt the unique writing style modeled after the book **"Đạo Trading"** (Zen, self-reflective, third-person narrator using "hắn" and "Thị"). Before writing or generating new articles, review and follow the instructions in [styleguide.md](file:///Users/phamtam/projects/xaolonist.eth/content/styleguide/styleguide.md). Note: Do NOT use em-dashes (`—`) in the writing; use commas or colons instead. LLM Agents are highly encouraged to use `python3 scripts/query_book.py <keywords>` to search the source book, or `python3 scripts/query_book.py --md <keywords>` to query existing posts for vocabulary and stylistic alignment.
+All new posts must adopt the unique writing style modeled after the book **"Đạo Trading"** (Zen, self-reflective, third-person narrator using "hắn" and "Thị"). Before writing or generating new articles, review and follow the instructions in [styleguide.md](file:///Users/phamtam/projects/xaolonist.eth/content/styleguide/styleguide.md). Note: Do NOT use em-dashes (`—`) in the writing; use commas or colons instead. LLM Agents are highly encouraged to use `python3 scripts/query_book.py <keywords>` to search the source book, or `python3 scripts/query_book.py --md <keywords>` to query existing posts for vocabulary and stylistic alignment. Additionally, any posts written/co-written by the LLM must set `cowriter: "@aethery"` in the frontmatter, and append the signature `*❤️ cowriter aethery*` on a new line at the very end of the markdown body.
 
 ### 1. Create the post directory
 
@@ -47,6 +47,7 @@ slug: "my-post-slug"
 title: "My Post Title"
 summary: "A brief summary of the post."
 author: "Tam Pham"
+cowriter: "@aethery"      # (Optional) "@aethery" if co-written by LLM
 category: "blog"          # "blog" → homepage, "anh4gs" → /dvvv/ page
 status: "published"       # "published" or "draft"
 date: "2026-05-30"        # YYYY-MM-DD

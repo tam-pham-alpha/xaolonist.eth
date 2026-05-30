@@ -93,7 +93,10 @@ export const Card = ({ post }: { post: PtPostWithImage }) => {
           <Link to={`/blog/${post.slug}`}>{post.title}</Link>
         </ScTitle>
         <ScOverview>{post.summary}</ScOverview>
-        <ScAuthor>{post.date ? <span>{post.date}</span> : null}</ScAuthor>
+        <ScAuthor>
+          {post.date ? <span>{post.date}</span> : null}
+          {post.cowriter ? <span> • {post.cowriter}</span> : null}
+        </ScAuthor>
       </ScPanelContent>
     </ScMain>
   );
