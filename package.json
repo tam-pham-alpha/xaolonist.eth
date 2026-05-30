@@ -14,8 +14,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "release": "yarn run build && yarn run deploy",
-    "deploy": "surge ./public https://anh4gs.xyz",
-    "typecheck": "tsc --noEmit"
+    "deploy": "yarn run build && wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "preview": "yarn run build && wrangler dev"
   },
   "license": "0BSD",
   "dependencies": {
@@ -47,7 +48,8 @@
     "@types/react-dom": "^18.0.11",
     "@types/react-helmet": "^6.1.6",
     "@types/styled-components": "^5.1.26",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "wrangler": "^4.95.0"
   },
   "packageManager": "yarn@4.15.0+sha512.07ec708ac11e2eaa4ea2b04cfbb272812f7e74a753f1595eaef4486c663a98306a30cca3e6fc40f7a0b168dcfb3a2490b6a5e0501e20fb69cc36f563dd161c53"
 }
