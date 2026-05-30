@@ -67,10 +67,11 @@ lang: "vn"                # "vn" or "en"
 
 If the user has attached/provided an image in their request, use that image directly as the cover (`cover.jpg` or `cover.png`) and do NOT generate a new one.
 
-- **Style**: Simple, realistic, photographic feel — avoid overly digital or AI-looking renders. Prefer a 1950s cinematic film still aesthetic (vintage film grain, desaturated/faded color palettes, classic analog camera feel).
-- **Themes to draw from**: Tarot cards, Harry Potter, Game of Thrones — mystical, earthy, cinematic
-- **Tone**: Warm, moody, atmospheric, low-saturation (fewer/muted colors) — think candlelight, parchment, nature, medieval aesthetics
-- **Avoid**: Vibrant/neon colors, futuristic/sci-fi looks, cluttered compositions, text overlays
+- **Style**: Watercolor or acrylic painting, iconic/symbolic composition — focus on one or two central symbols that represent the post's theme. Simple, clean, airy. Think editorial illustration, not photorealism
+- **Composition**: Minimalist, uncluttered — let the subject breathe with generous white/negative space. One focal symbol is better than a busy scene
+- **Palette**: Soft, muted watercolor tones — light washes, gentle bleeds, translucent layers. Favor warm earth tones, faded indigos, soft greens, dusty rose
+- **Texture**: Visible watercolor paper grain, natural paint bleeds and edges, subtle ink outlines. Should feel hand-painted and organic
+- **Avoid**: Photorealistic renders, vibrant/neon colors, cluttered compositions, text overlays, heavy digital effects, futuristic/sci-fi looks
 - **Format**: Save as `cover.jpg` or `cover.png` in the post directory
 
 ### 4. Category routing
