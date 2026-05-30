@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 import { Container } from "./Grid";
 
@@ -12,6 +13,12 @@ const ScMain = styled.footer`
 
   a {
     color: #d6d7dc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: white;
+    }
 
     &:active {
       color: #d6d7dc;
@@ -31,7 +38,10 @@ export const Footer = () => {
     <ScMain>
       <Container>
         <ScContent>
-          <div>@2023 anh4gs</div>
+          <div>
+            @2023 • <Link to="/">anh4gs</Link> •{" "}
+            <Link to="/aethery">aethery</Link>
+          </div>
         </ScContent>
       </Container>
     </ScMain>
