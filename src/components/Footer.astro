@@ -1,0 +1,21 @@
+---
+import Container from './Container.astro';
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'vn' } = Astro.props;
+const linkClass = 'text-[#d6d7dc] no-underline hover:text-white active:text-[#d6d7dc] transition-colors duration-200';
+---
+
+<footer class="text-base text-[#d6d7dc] bg-[#0b0b0f] pt-[100px] pb-12">
+  <Container>
+    <div class="lg:flex lg:items-center">
+      <div>
+        @2023 • <a href={lang === 'en' ? '/en/' : '/'} class={linkClass}>anh4gs</a> •{' '}
+        <a href={lang === 'en' ? '/en/aethery' : '/aethery'} class={linkClass}>aethery</a>
+      </div>
+    </div>
+  </Container>
+</footer>

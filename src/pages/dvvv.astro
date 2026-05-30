@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+import Card from '../components/Card.astro';
+
+const allPosts = await getCollection('blog', ({ data }) =>
+  data.status === 'published' && data.category === 'anh4gs' && data.lang === 'vn'
+);
+
+const posts = allPosts.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<Layout
+  title="đêm về viết văn"
+  description="đêm về viết văn"
+  url="https://anh4gs.xyz/dvvv"
+  blur={false}
+  lang="vn"
+>
+  <div class="bg-darkmode pt-[1px]">
+    <Container>
+      <div class="mt-12 mb-20 lg:mt-12 lg:mb-40">
+        <h1 class="text-textColor text-[1.8rem] mb-[1.5em] text-center font-normal lg:text-[2rem]">
+          đêm về viết văn
+        </h1>
+        <div class="lg:flex lg:flex-wrap lg:-mx-6">
+          {posts.map((post) => (
+            <Card post={post} />
+          ))}
+        </div>
+      </div>
+    </Container>
+  </div>
+</Layout>

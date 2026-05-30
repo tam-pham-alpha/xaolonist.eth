@@ -1,0 +1,74 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import Container from '../../components/Container.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) =>
+    data.status === 'published' && data.lang === 'vn'
+  );
+  return posts.map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { data } = post;
+const { Content } = await render(post);
+
+const siteUrl = 'https://anh4gs.xyz';
+const postUrl = `${siteUrl}/blog/${data.slug}/`;
+const coverSrc = typeof data.cover === 'string' ? data.cover : data.cover.src;
+const ogCover = coverSrc.startsWith('http') ? coverSrc : `${siteUrl}${coverSrc}`;
+const formattedDate = new Date(data.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<Layout
+  title={data.title}
+  description={data.summary}
+  cover={ogCover}
+  url={postUrl}
+  type="article"
+  publishedTime={data.date}
+  author="anh4gs"
+  blur={true}
+  lang={data.lang}
+>
+  <div class="bg-darkmode">
+    <Container>
+      <div class="mt-8 mb-16 relative lg:mt-[80px] lg:mb-40">
+        <div class="max-w-[760px] mx-auto mb-12">
+          <h1 class="max-w-[760px] mx-auto text-2xl leading-tight mb-3 lg:text-[40px] font-bold">
+            {data.title}
+          </h1>
+          <div class="text-[14px] text-[#868f97] max-w-[760px] mx-auto">
+            {formattedDate}
+            {data.cowriter ? ` • ${data.cowriter}` : null}
+          </div>
+        </div>
+
+        {data.cover && (
+          <div class="mb-12 text-center max-w-[960px] mx-auto">
+            <Image
+              src={data.cover}
+              alt={data.title}
+              width={960}
+              quality={80}
+              format="webp"
+            />
+          </div>
+        )}
+
+        <section class="text-[17px] text-[rgba(255,255,255,0.8)] leading-[1.5] max-w-[760px] mx-auto markdown-content">
+          <Content />
+        </section>
+      </div>
+    </Container>
+  </div>
+</Layout>

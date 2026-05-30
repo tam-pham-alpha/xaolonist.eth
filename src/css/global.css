@@ -1,6 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-darkmode: #0b0b0f;
+  --color-textColor: white;
+  --font-sans: "Inter", sans-serif;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
 
 :root {
   --darkmode: #0b0b0f;
