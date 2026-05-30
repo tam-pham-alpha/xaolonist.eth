@@ -59,6 +59,18 @@ body {
   @apply opacity-25 my-8;
 }
 
+.markdown-content code {
+  @apply text-[#ffc436] px-1.5 py-0.5 bg-white/5 text-[0.9em] rounded font-mono break-all;
+}
+
+.markdown-content pre {
+  @apply bg-black/40 p-4 rounded-lg overflow-x-auto my-6 border border-white/5;
+}
+
+.markdown-content pre code {
+  @apply p-0 bg-transparent border-none text-white text-[0.95em] leading-relaxed break-normal;
+}
+
 .nav-header {
   background: #000000;
   background: -webkit-linear-gradient(to left, #0b0b0f, #000000 35%);
