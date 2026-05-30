@@ -53,8 +53,20 @@ lang: "vn"                # "vn" or "en"
 
 ### 3. Image references
 
-- **Cover**: Place in the post folder, reference as `./cover.jpg` in frontmatter
+- **Cover**: Place in the post folder, reference as `./cover.jpg` (or `.png`) in frontmatter
 - **Inline**: Place in `images/` subfolder, reference as `![alt](./images/name.jpg)` in markdown body
+
+### Cover Image Style Guide
+
+If the user has attached/provided an image in their request, use that image directly as the cover (`cover.jpg` or `cover.png`) and do NOT generate a new one. 
+
+Otherwise, when generating a cover image for a new post:
+
+- **Style**: Simple, realistic, photographic feel — avoid overly digital or AI-looking renders
+- **Themes to draw from**: Tarot cards, Harry Potter, Game of Thrones — mystical, earthy, cinematic
+- **Tone**: Warm, moody, atmospheric — think candlelight, parchment, nature, medieval aesthetics
+- **Avoid**: Neon colors, futuristic/sci-fi looks, cluttered compositions, text overlays
+- **Format**: Save as `cover.jpg` or `cover.png` in the post directory
 
 ### 4. Category routing
 
