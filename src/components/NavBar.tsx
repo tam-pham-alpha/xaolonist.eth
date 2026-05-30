@@ -1,172 +1,54 @@
 import React from "react";
-import styled, { css } from "styled-components";
 import { Link } from "gatsby";
 
 import { Container } from "./Grid";
-
-const ScHeader = styled.header`
-  font-family: "Inter", sans-serif;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 98;
-  background: #0b0b0f;
-
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to left,
-    #0b0b0f,
-    #000000 35%
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #0b0b0f,
-    #000000 35%
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-`;
-
-const ScNavBar = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-`;
-
-const ScNavLinks = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 24px;
-`;
-
-const ScNavLink = styled(Link)`
-  color: var(--text-color);
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s;
-  opacity: 0.8;
-
-  &:hover {
-    opacity: 1;
-    text-decoration: none;
-  }
-`;
-
-const ScNavLinkBlur = styled(ScNavLink)`
-  opacity: 0.3;
-
-  &:hover {
-    opacity: 0.6;
-  }
-`;
-
-const ScLogo = styled(Link)`
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  margin-right: 24px;
-  transition: all 0.3s;
-
-  img {
-    height: 32px;
-    margin-right: 8px;
-  }
-
-  &:hover {
-    text-decoration: none;
-    opacity: 1;
-
-    span {
-      opacity: 1;
-    }
-  }
-`;
-
-const ScLogoBlur = styled(ScLogo)`
-  opacity: 0.5;
-
-  span {
-    opacity: 0.1;
-  }
-`;
-
-const ScLangSwitcher = styled.div`
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-
-  a {
-    font-size: 1.2rem;
-    line-height: 1;
-    text-decoration: none !important;
-    opacity: 0.3;
-    filter: grayscale(100%);
-    transition: all 0.3s;
-
-    &:hover {
-      opacity: 1;
-      filter: none;
-      text-decoration: none !important;
-    }
-
-    &.active {
-      opacity: 0.5;
-      filter: none;
-      pointer-events: none;
-      cursor: default;
-    }
-  }
-`;
 
 export const NavBar = ({ blur, lang }: { blur?: boolean; lang?: string }) => {
   const isEn = lang === "en";
   const viPath = typeof window !== "undefined" ? window.location.pathname.replace(/^\/en/, "") || "/" : "/";
   const enPath = typeof window !== "undefined" ? `/en${window.location.pathname.replace(/^\/en/, "")}` : "/en/";
 
+  const navLinkClass = blur
+    ? "text-white font-medium no-underline transition-all duration-300 opacity-30 hover:opacity-60 hover:no-underline"
+    : "text-white font-medium no-underline transition-all duration-300 opacity-80 hover:opacity-100 hover:no-underline";
+
+  const logoClass = blur
+    ? "flex items-center font-bold mr-6 transition-all duration-300 no-underline hover:no-underline text-white opacity-50 hover:opacity-100 group"
+    : "flex items-center font-bold mr-6 transition-all duration-300 no-underline hover:no-underline text-white hover:opacity-100 group";
+
+  const logoSpanClass = blur
+    ? "text-white opacity-10 group-hover:opacity-100 transition-all duration-300"
+    : "text-white transition-all duration-300";
+
+  const getLangLinkClass = (active: boolean) =>
+    active
+      ? "text-[1.2rem] leading-none no-underline hover:no-underline opacity-50 grayscale-0 pointer-events-none cursor-default transition-all duration-300"
+      : "text-[1.2rem] leading-none no-underline hover:no-underline opacity-30 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300";
+
   return (
     <>
-      <ScHeader>
+      <header className="font-sans fixed left-0 right-0 top-0 z-[98] nav-header w-full">
         <Container>
-          <ScNavBar>
-            {blur ? (
-              <ScLogoBlur to={isEn ? "/en/" : "/"}>
-                <img src="/images/icon.png" loading="eager" alt="logo" />
-                <span>anh4gs</span>
-              </ScLogoBlur>
-            ) : (
-              <ScLogo to={isEn ? "/en/" : "/"}>
-                <img src="/images/icon.png" loading="eager" alt="logo" />
-                <span>anh4gs</span>
-              </ScLogo>
-            )}
+          <nav className="flex items-center justify-between h-16">
+            <Link to={isEn ? "/en/" : "/"} className={logoClass}>
+              <img src="/images/icon.png" loading="eager" alt="logo" className="h-8 mr-2" />
+              <span className={logoSpanClass}>anh4gs</span>
+            </Link>
 
-            <ScNavLinks>
-              {blur ? (
-                <>
-                  <ScNavLinkBlur to={isEn ? "/en/" : "/"}>bnvc</ScNavLinkBlur>
-                  <ScNavLinkBlur to={isEn ? "/en/dvvv" : "/dvvv"}>dvvv</ScNavLinkBlur>
-                  <ScLangSwitcher>
-                    <Link to={viPath} className={!isEn ? "active" : ""} title="Tiếng Việt">🇻🇳</Link>
-                    <Link to={enPath} className={isEn ? "active" : ""} title="English">🇬🇧</Link>
-                  </ScLangSwitcher>
-                </>
-              ) : (
-                <>
-                  <ScNavLink to={isEn ? "/en/" : "/"}>bnvc</ScNavLink>
-                  <ScNavLink to={isEn ? "/en/dvvv" : "/dvvv"}>dvvv</ScNavLink>
-                  <ScLangSwitcher>
-                    <Link to={viPath} className={!isEn ? "active" : ""} title="Tiếng Việt">🇻🇳</Link>
-                    <Link to={enPath} className={isEn ? "active" : ""} title="English">🇬🇧</Link>
-                  </ScLangSwitcher>
-                </>
-              )}
-            </ScNavLinks>
-          </ScNavBar>
+            <div className="flex items-center gap-6">
+              <Link to={isEn ? "/en/" : "/"} className={navLinkClass}>bnvc</Link>
+              <Link to={isEn ? "/en/dvvv" : "/dvvv"} className={navLinkClass}>dvvv</Link>
+              <div className="inline-flex items-center gap-3 cursor-pointer">
+                <Link to={viPath} className={getLangLinkClass(!isEn)} title="Tiếng Việt">🇻🇳</Link>
+                <Link to={enPath} className={getLangLinkClass(isEn)} title="English">🇬🇧</Link>
+              </div>
+            </div>
+          </nav>
         </Container>
-      </ScHeader>
+      </header>
 
-      <div style={{ height: 64 }}></div>
+      <div className="h-16"></div>
     </>
   );
 };
+

@@ -1,47 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 
 import { Card } from "../components/Card";
 import { Container } from "../components/Grid";
 import { Layout } from "../components/Layout";
 import { HeadFC, graphql } from "gatsby";
 import { SEO } from "../components/SEO";
-
-const ScRoot = styled.div`
-  background-color: var(--darkmode);
-  padding-top: 1px;
-`;
-
-const ScMain = styled.div`
-  margin-top: 3rem;
-  margin-bottom: 5rem;
-
-  @media screen and (min-width: 992px) {
-    margin-top: 3rem;
-    margin-bottom: 10rem;
-  }
-`;
-
-const ScPostList = styled.div`
-  @media screen and (min-width: 992px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -24px;
-    margin-right: -24px;
-  }
-`;
-
-const ScTitle = styled.h1`
-  color: var(--text-color);
-  font-size: 1.8rem;
-  margin-bottom: 1.5em;
-  text-align: center;
-  font-weight: 400;
-
-  @media screen and (min-width: 992px) {
-    font-size: 2rem;
-  }
-`;
 
 export const pageQuery = graphql`
   {
@@ -112,18 +75,20 @@ const IndexPage = ({ data, location }: any) => {
 
   return (
     <Layout blur={false} lang={isEn ? "en" : "vn"}>
-      <ScRoot>
+      <div className="bg-darkmode pt-[1px]">
         <Container>
-          <ScMain>
-            <ScTitle>{isEn ? "writing code by day" : "ban ngày viết code"}</ScTitle>
-            <ScPostList>
+          <div className="mt-12 mb-20 lg:mt-12 lg:mb-40">
+            <h1 className="text-textColor text-[1.8rem] mb-[1.5em] text-center font-normal lg:text-[2rem]">
+              {isEn ? "writing code by day" : "ban ngày viết code"}
+            </h1>
+            <div className="lg:flex lg:flex-wrap lg:-mx-6">
               {posts.map((i) => (
                 <Card key={i.id} post={i} />
               ))}
-            </ScPostList>
-          </ScMain>
+            </div>
+          </div>
         </Container>
-      </ScRoot>
+      </div>
     </Layout>
   );
 };
@@ -131,3 +96,4 @@ const IndexPage = ({ data, location }: any) => {
 export const Head: HeadFC = () => <SEO />;
 
 export default IndexPage;
+

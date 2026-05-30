@@ -1,78 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 import { Post } from "../types/Post";
-import { ScAuthor } from "../templates/styled";
-
-const ScMain = styled.div`
-  max-width: 500px;
-  margin-bottom: 4rem;
-
-  @media screen and (min-width: 960px) {
-    margin-left: 24px;
-    margin-right: 24px;
-    width: calc(33.33% - 48px);
-    margin-bottom: 36px;
-  }
-`;
-
-const ScFeatureImg = styled.div``;
-const ScFeature = styled.div`
-  margin-bottom: 16px;
-  height: 220px;
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-
-  ${ScFeatureImg} {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-
-    img {
-      width: 100%;
-    }
-  }
-
-  @media screen and (min-width: 960px) {
-    height: 220px;
-  }
-`;
-
-const ScPanelContent = styled.div``;
-
-const ScTitle = styled.h4`
-  font-size: 18px;
-  margin-bottom: 12px;
-
-  a {
-    color: white;
-
-    &:hover {
-      color: white;
-    }
-  }
-
-  @media screen and (min-width: 960px) {
-    margin-top: 16px;
-    margin-top: 12px;
-  }
-`;
-
-const ScOverview = styled.p`
-  margin-top: 12px;
-  margin-bottom: 0.5em;
-  color: #b3b3b3;
-
-  @media screen and (min-width: 960px) {
-    margin-bottom: 12px;
-  }
-`;
 
 type PtPostWithImage = Post & {
   featuredImg: any;
@@ -82,24 +12,24 @@ export const Card = ({ post }: { post: PtPostWithImage }) => {
   const postLink = post.lang === "en" ? `/en/blog/${post.slug}` : `/blog/${post.slug}`;
 
   return (
-    <ScMain>
-      <ScFeature>
+    <div className="max-w-[500px] mb-16 lg:mx-6 lg:w-[calc(33.33%-48px)] lg:mb-9">
+      <div className="mb-4 h-[220px] rounded-lg overflow-hidden relative">
         <Link to={postLink}>
-          <ScFeatureImg>
+          <div className="w-full absolute left-0 right-0 top-1/2 -translate-y-1/2">
             <Img fluid={post.featuredImg.childImageSharp.fluid} />
-          </ScFeatureImg>
+          </div>
         </Link>
-      </ScFeature>
-      <ScPanelContent>
-        <ScTitle>
-          <Link to={postLink}>{post.title}</Link>
-        </ScTitle>
-        <ScOverview>{post.summary}</ScOverview>
-        <ScAuthor>
-          {post.date ? <span>{post.date}</span> : null}
-          {post.cowriter ? <span> • {post.cowriter}</span> : null}
-        </ScAuthor>
-      </ScPanelContent>
-    </ScMain>
+      </div>
+      <div>
+        <h4 className="text-[18px] mb-3 lg:mt-3">
+          <Link to={postLink} className="text-white hover:text-white hover:no-underline">{post.title}</Link>
+        </h4>
+        <p className="mt-3 mb-[0.5em] text-[#b3b3b3] lg:mb-3">{post.summary}</p>
+        <div className="text-[12px]">
+          {post.date ? <span className="text-[#868f97]">{post.date}</span> : null}
+          {post.cowriter ? <span className="text-[#868f97]"> • {post.cowriter}</span> : null}
+        </div>
+      </div>
+    </div>
   );
 };

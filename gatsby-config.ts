@@ -29,7 +29,7 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-styled-components",
+    "gatsby-plugin-postcss",
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {

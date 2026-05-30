@@ -1,49 +1,21 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "gatsby";
 
 import { Container } from "./Grid";
 
-const ScMain = styled.footer`
-  font-size: 16px;
-  color: #d6d7dc;
-  background: #0b0b0f;
-  padding-top: 100px;
-  padding-bottom: 48px;
-
-  a {
-    color: #d6d7dc;
-    text-decoration: none;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: white;
-    }
-
-    &:active {
-      color: #d6d7dc;
-    }
-  }
-`;
-
-const ScContent = styled.div`
-  @media screen and (min-width: 992px) {
-    display: flex;
-    align-items: center;
-  }
-`;
-
 export const Footer = ({ lang }: { lang?: string }) => {
+  const linkClass = "text-[#d6d7dc] no-underline hover:text-white active:text-[#d6d7dc] transition-colors duration-200";
+
   return (
-    <ScMain>
+    <footer className="text-base text-[#d6d7dc] bg-[#0b0b0f] pt-[100px] pb-12">
       <Container>
-        <ScContent>
+        <div className="lg:flex lg:items-center">
           <div>
-            @2023 • <Link to={lang === "en" ? "/en/" : "/"}>anh4gs</Link> •{" "}
-            <Link to={lang === "en" ? "/en/aethery" : "/aethery"}>aethery</Link>
+            @2023 • <Link to={lang === "en" ? "/en/" : "/"} className={linkClass}>anh4gs</Link> •{" "}
+            <Link to={lang === "en" ? "/en/aethery" : "/aethery"} className={linkClass}>aethery</Link>
           </div>
-        </ScContent>
+        </div>
       </Container>
-    </ScMain>
+    </footer>
   );
 };

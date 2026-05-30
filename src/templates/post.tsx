@@ -1,65 +1,43 @@
 import React from "react";
-import styled from "styled-components";
 import Img from "gatsby-image";
 
 import { Container } from "../components/Grid";
 import { Layout } from "../components/Layout";
-import {
-  ScCategoryText,
-  ScContent,
-  ScHeaderWrapper,
-  ScHeader,
-  ScMain,
-} from "./styled";
 import { SEO } from "../components/SEO";
-
-const ScRoot = styled.div`
-  background-color: var(--darkmode);
-`;
-
-const ScFeature = styled.div`
-  margin-bottom: 3rem;
-  text-align: center;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-
-  img {
-    max-width: 100%;
-  }
-`;
 
 const PostTemplate = ({ pageContext: context }: any) => {
   const post = context.post;
 
   return (
     <Layout blur={true} lang={post.lang}>
-      <ScRoot>
+      <div className="bg-darkmode">
         <Container>
-          <ScMain>
-            <ScHeaderWrapper>
-              <ScHeader>{post.title}</ScHeader>
-              <ScCategoryText>
+          <div className="mt-8 mb-16 relative lg:mt-[80px] lg:mb-40">
+            <div className="max-w-[760px] mx-auto mb-12">
+              <h1 className="max-w-[760px] mx-auto text-2xl leading-tight mb-3 lg:text-[40px] font-bold">
+                {post.title}
+              </h1>
+              <div className="text-[14px] text-[#868f97] max-w-[760px] mx-auto">
                 {post.date}
                 {post.cowriter ? ` • ${post.cowriter}` : null}
-              </ScCategoryText>
-            </ScHeaderWrapper>
+              </div>
+            </div>
 
             {post.featuredImg?.childImageSharp?.fluid && (
-              <ScFeature>
+              <div className="mb-12 text-center max-w-[960px] mx-auto">
                 <Img
                   fluid={post.featuredImg.childImageSharp.fluid}
                   alt={post.title}
                 />
-              </ScFeature>
+              </div>
             )}
 
-            <ScContent>
+            <section className="text-[17px] text-[rgba(255,255,255,0.8)] leading-[1.5] max-w-[760px] mx-auto markdown-content">
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            </ScContent>
-          </ScMain>
+            </section>
+          </div>
         </Container>
-      </ScRoot>
+      </div>
     </Layout>
   );
 };
@@ -86,3 +64,4 @@ export const Head = ({ pageContext: context }: any) => {
 };
 
 export default PostTemplate;
+

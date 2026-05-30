@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --darkmode: #0b0b0f;
+  --text-color: #ffffff;
+}
+
+body {
+  @apply bg-[#0b0b0f] text-white font-sans antialiased overflow-x-hidden;
+}
+
+/* Custom Markdown Content styles (migrated from templates/styled.ts) */
+.markdown-content h2,
+.markdown-content h3 {
+  @apply text-2xl font-medium mt-[2em] mb-[1em] leading-tight text-[#f7f8f8];
+}
+
+.markdown-content h4,
+.markdown-content h5 {
+  @apply text-lg font-medium mt-[2em] mb-[1em] leading-tight text-[#f7f8f8];
+}
+
+.markdown-content h5 {
+  @apply text-base;
+}
+
+.markdown-content p {
+  @apply text-[rgba(255,255,255,0.8)] mb-[2em] leading-relaxed;
+}
+
+.markdown-content img {
+  @apply w-full;
+}
+
+.markdown-content a {
+  @apply text-[#ffc436] break-all;
+}
+
+.markdown-content table {
+  @apply w-full border border-gray-500 border-collapse my-6;
+}
+
+.markdown-content th,
+.markdown-content td {
+  @apply border border-gray-500 p-3;
+}
+
+.markdown-content thead {
+  @apply text-left;
+}
+
+.markdown-content li {
+  @apply mb-[1em] list-disc list-inside;
+}
+
+.markdown-content hr {
+  @apply opacity-25 my-8;
+}
+
+.nav-header {
+  background: #000000;
+  background: -webkit-linear-gradient(to left, #0b0b0f, #000000 35%);
+  background: linear-gradient(to left, #0b0b0f, #000000 35%);
+}

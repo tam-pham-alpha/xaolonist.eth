@@ -1,12 +1,9 @@
-import styled from "styled-components";
+import React from "react";
 
-export const Container = styled.div`
-  max-width: 1200px;
-  width: calc(100% - 40px);
-  margin-left: auto;
-  margin-right: auto;
-
-  .post-full {
-    margin-top: 36px;
-  }
-`;
+export const Container = ({ children }: React.PropsWithChildren<{}>) => {
+  return (
+    <div className="max-w-[1200px] w-[calc(100%-40px)] mx-auto">
+      {children}
+    </div>
+  );
+};

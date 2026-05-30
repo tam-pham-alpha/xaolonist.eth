@@ -1,94 +1,31 @@
 import * as React from "react"
 import { Link, HeadFC, PageProps } from "gatsby"
-import styled from "styled-components"
 import { Container } from "../components/Grid"
 import { Layout } from "../components/Layout"
-
-const ScRoot = styled.div`
-  background-color: #0b0b0f;
-  padding-top: 1px;
-`
-
-const ScMain = styled.div`
-  margin-top: 4rem;
-  margin-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-  text-align: center;
-
-  @media screen and (min-width: 992px) {
-    margin-top: 6rem;
-    margin-bottom: 8rem;
-  }
-`
-
-const ScHeading = styled.h1`
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
-`
-
-const ScText = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 480px;
-`
-
-const ScCode = styled.code`
-  color: #ffffff;
-  padding: 4px 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-  font-size: 0.95rem;
-  border-radius: 4px;
-  font-family: Courier, monospace;
-`
-
-const ScButton = styled(Link)`
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: #ffffff;
-  color: #000000;
-  font-weight: 500;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  text-decoration: none !important;
-
-  &:hover {
-    background-color: #e0e0e0;
-    text-decoration: none !important;
-    transform: translateY(-1px);
-  }
-`
 
 const NotFoundPage: React.FC<PageProps> = ({ location }) => {
   const isEn = location?.pathname?.startsWith("/en") || false
 
   return (
     <Layout blur={false} lang={isEn ? "en" : "vn"}>
-      <ScRoot>
+      <div className="bg-[#0b0b0f] pt-[1px]">
         <Container>
-          <ScMain>
-            <ScHeading>Page not found</ScHeading>
-            <ScText>
+          <div className="mt-16 mb-20 flex flex-col items-center justify-center min-h-[60vh] text-center lg:mt-24 lg:mb-32">
+            <h1 className="text-[2.5rem] mb-6 font-semibold text-white">Page not found</h1>
+            <p className="text-[1.1rem] leading-[1.8] mb-8 text-[rgba(255,255,255,0.8)] max-w-[480px]">
               Sorry 😔, we couldn’t find what you were looking for.
               {process.env.NODE_ENV === "development" ? (
                 <>
                   <br />
                   <br />
-                  Try creating a page in <ScCode>src/pages/</ScCode>.
+                  Try creating a page in <code className="text-white px-2 py-1 bg-white/10 text-[0.95rem] rounded font-mono">src/pages/</code>.
                 </>
               ) : null}
-            </ScText>
-            <ScButton to={isEn ? "/en/" : "/"}>Go home</ScButton>
-          </ScMain>
+            </p>
+            <Link to={isEn ? "/en/" : "/"} className="inline-block px-7 py-3 bg-white text-black font-medium rounded-md transition-all duration-300 no-underline hover:no-underline hover:bg-[#e0e0e0] hover:-translate-y-px">Go home</Link>
+          </div>
         </Container>
-      </ScRoot>
+      </div>
     </Layout>
   )
 }
@@ -96,3 +33,4 @@ const NotFoundPage: React.FC<PageProps> = ({ location }) => {
 export default NotFoundPage
 
 export const Head: HeadFC = () => <title>Page Not Found</title>
+
