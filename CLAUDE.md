@@ -5,7 +5,7 @@ This is a Gatsby 5 blog that sources content from local Markdown files. It is de
 ## Tech Stack
 
 - **Framework**: Gatsby 5 (SSG)
-- **Styling**: styled-components
+- **Styling**: Tailwind CSS
 - **Package Manager**: Yarn 4 (Berry) with `nodeLinker: node-modules`
 - **Deployment**: Cloudflare Pages (auto-deploys on push to `main`)
 - **Fallback deploy**: `surge ./public https://anh4gs.xyz`
@@ -25,7 +25,11 @@ yarn release      # Build + deploy to Surge
 
 ### Writing Style & Voice
 
-All new posts must adopt the unique writing style modeled after the book **"Đạo Trading"** (Zen, self-reflective, third-person narrator using "hắn" and "Thị"). Before writing or generating new articles, review and follow the instructions in [styleguide.md](file:///Users/phamtam/projects/xaolonist.eth/content/styleguide/styleguide.md). Note: Do NOT use em-dashes (`—`) in the writing (use commas or colons instead), and do NOT end lines/bullet points with a period (không chấm câu ở cuối mỗi dòng/bullet). LLM Agents are highly encouraged to use `python3 scripts/query_book.py <keywords>` to search the source book, or `python3 scripts/query_book.py --md <keywords>` to query existing posts for vocabulary and stylistic alignment. Additionally, any posts written/co-written by the LLM must set `cowriter: "@aethery"` in the frontmatter, and append the signature `*❤️ cowriter aethery*` on a new line at the very end of the markdown body.
+All new posts must adopt the third-person narrator using "hắn" and "@aethery", omit em-dashes (use commas or colons instead), and avoid ending lines/bullet points with a period. However, we maintain a clear stylistic split based on category:
+- **bnvc posts (category: "blog")**: Focus on software engineering, tech stack, and logic. They should NOT use mystical, Zen-heavy, or overly philosophical words. Use clear, simple, and scientific language.
+- **dvvv posts (category: "anh4gs")**: Focus on life reflections, memories, and thoughts. They can adopt the mystical, Zen-philosophical style modeled after the book "Đạo Trading" (using words like "Thị", "tánh biết", "như thị", etc.).
+
+Before writing or generating new articles, review and follow the instructions in [styleguide.md](file:///Users/phamtam/projects/xaolonist.eth/content/styleguide/styleguide.md). Additionally, any posts written/co-written by the LLM must set `cowriter: "@aethery"` in the frontmatter, and append the signature `*❤️ cowriter aethery*` on a new line at the very end of the markdown body.
 
 ### 1. Create the post directory
 
