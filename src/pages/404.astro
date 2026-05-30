@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+
+const pathname = Astro.url.pathname;
+const isEn = pathname.startsWith('/en');
+---
+
+<Layout title="Page Not Found" blur={false} lang={isEn ? 'en' : 'vn'}>
+  <div class="bg-[#0b0b0f] pt-[1px]">
+    <Container>
+      <div class="mt-16 mb-20 flex flex-col items-center justify-center min-h-[60vh] text-center lg:mt-24 lg:mb-32">
+        <h1 class="text-[2.5rem] mb-6 font-semibold text-white">Page not found</h1>
+        <p class="text-[1.1rem] leading-[1.8] mb-8 text-[rgba(255,255,255,0.8)] max-w-[480px]">
+          Sorry 😔, we couldn't find what you were looking for.
+        </p>
+        <a
+          href={isEn ? '/en/' : '/'}
+          class="inline-block px-7 py-3 bg-white text-black font-medium rounded-md transition-all duration-300 no-underline hover:no-underline hover:bg-[#e0e0e0] hover:-translate-y-px"
+        >Go home</a>
+      </div>
+    </Container>
+  </div>
+</Layout>

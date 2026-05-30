@@ -1,0 +1,98 @@
+---
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+import '../css/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  cover?: string;
+  url?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  author?: string;
+  blur?: boolean;
+  lang?: string;
+}
+
+const {
+  title = 'anh4gs',
+  description = 'he is a scientist, an anthropologist, a psychologist...',
+  cover = 'https://anh4gs.xyz/images/anh4gs-social.jpg',
+  url = 'https://anh4gs.xyz',
+  type = 'website',
+  publishedTime,
+  author,
+  blur = false,
+  lang = 'vn',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang === 'en' ? 'en' : 'vi'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>{title}</title>
+
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="anh4gs" />
+    <meta property="og:type" content={type} />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+
+    <meta property="og:image" content={cover} />
+    <meta property="og:image:secure_url" content={cover} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+
+    <meta property="fb:app_id" content="" />
+
+    {type === 'article' && publishedTime && (
+      <meta property="article:published_time" content={publishedTime} />
+    )}
+    {type === 'article' && author && (
+      <meta property="article:author" content={author} />
+    )}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@anh4gs" />
+    <meta name="twitter:creator" content="@anh4gs" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:url" content={url} />
+    <meta name="twitter:image" content={cover} />
+    <meta name="twitter:image:alt" content={title} />
+
+    <!-- LinkedIn -->
+    <meta property="og:updated_time" content={publishedTime || new Date().toISOString()} />
+
+    <link rel="icon" type="image/png" href="/images/icon.png" />
+
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PVCZMHD');
+    </script>
+  </head>
+  <body>
+    <main>
+      <NavBar blur={blur} lang={lang} />
+      <slot />
+      <Footer lang={lang} />
+    </main>
+  </body>
+</html>
