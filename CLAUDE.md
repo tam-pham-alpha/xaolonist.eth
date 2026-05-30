@@ -23,6 +23,10 @@ yarn release      # Build + deploy to Surge
 
 ## Adding a New Blog Post
 
+### Writing Style & Voice
+
+All new posts must adopt the unique writing style modeled after the book **"Đạo Trading"** (Zen, self-reflective, third-person narrator using "hắn" and "Thị"). Before writing or generating new articles, review and follow the instructions in [styleguide.md](file:///Users/phamtam/projects/xaolonist.eth/content/styleguide/styleguide.md).
+
 ### 1. Create the post directory
 
 ```
