@@ -7,6 +7,7 @@ category: "blog"
 status: "published"
 date: "2022-02-23"
 cover: "./cover.jpeg"
+lang: "vn"
 ---
 
 Và hôm nay a sẽ nói về cuộc đời<br/>

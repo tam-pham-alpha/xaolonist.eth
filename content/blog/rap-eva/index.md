@@ -7,6 +7,7 @@ category: "blog"
 status: "published"
 date: "2022-02-23"
 cover: "./cover.png"
+lang: "vn"
 ---
 
 Em là cô bé khó chiều<br/>
