@@ -1,64 +1,50 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Notion Minimal TypeScript Starter
-</h1>
+# xaolonist.eth
 
-## Architecture: Local Markdown Files
+A personal blog built with Gatsby 5 and styled-components. Content is authored in local Markdown files and deployed to Cloudflare Pages.
 
-This blog now builds directly from local Markdown files stored in `content/blog/` instead of fetching remotely from the Notion API.
+🌐 **[anh4gs.xyz](https://anh4gs.xyz)**
 
-### Features
-- Offline development and faster builds.
-- Local cover images processed via `gatsby-transformer-sharp`.
-- Inline post images optimized automatically using `gatsby-remark-images`.
+## Quick Start
 
-## ✍️ How to Add a New Post
+```bash
+yarn install      # Install dependencies (Yarn 4)
+yarn dev          # Start dev server → http://localhost:8000
+yarn build        # Production build → ./public
+yarn typecheck    # TypeScript check
+```
 
-To add a new blog post, please refer to the detailed instructions in the agent rules:
-- See [.github/copilot-instructions.md](file:///Users/phamtam/projects/xaolonist.eth/.github/copilot-instructions.md) for directory layout, frontmatter schema, and image path guidelines.
+## Adding a New Post
 
+Create a directory under `content/blog/<slug>/` with an `index.md` and a `cover.jpg`:
 
-## 🚀 Quick start
+```
+content/blog/my-new-post/
+├── index.md
+├── cover.jpg
+└── images/        # (optional) inline images
+```
 
-1. **Create a Gatsby site.**
+See [CLAUDE.md](./CLAUDE.md) for the full frontmatter schema and conventions.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Tech Stack
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+- **Framework**: [Gatsby 5](https://www.gatsbyjs.com/) (SSG)
+- **Styling**: [styled-components](https://styled-components.com/)
+- **Package Manager**: Yarn 4 (Berry)
+- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/) (auto-deploys on push to `main`)
 
-2. **Start developing.**
+## Project Structure
 
-    Navigate into your new site’s directory and start it up.
+```
+content/blog/           # Markdown posts + images
+src/pages/index.tsx     # Homepage — category "blog"
+src/pages/dvvv.tsx      # Writing page — category "anh4gs"
+src/templates/post.tsx  # Individual post template
+src/components/         # Reusable components
+gatsby-config.ts        # Gatsby plugin config
+gatsby-node.ts          # Schema customization + page creation
+```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## License
 
-3. **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4. **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/tampham47/gatsby-notion-starter)
+0BSD
