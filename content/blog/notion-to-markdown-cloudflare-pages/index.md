@@ -14,7 +14,7 @@ Hey, lại là hắn đây, và dạo này hắn đã quyết định làm một
 
 Trước đây hắn từng rất thích dùng Notion làm CMS vì nó tiện, viết lách trực quan và giao diện kéo thả mượt mà. Tuy nhiên, sau một thời gian, Notion API bắt đầu bộc lộ những giới hạn khó chịu: tốc độ query chậm, thi thoảng dính rate limit, và mỗi lần rebuild blog là lại phải đợi kéo data qua mạng rất mất thời gian.
 
-Vì thế, hắn đã quyết định chuyển sang giải pháp thuần túy SSG (Static Site Generation) truyền thống: viết Markdown và lưu tại repo GitHub [tam-pham-alpha/xaolonist.eth](https://github.com/tam-pham-alpha/xaolonist.eth). Một phần là để tiết kiệm chi phí subscription hàng tháng của Notion, nhưng lý do lớn hơn chính là sự linh hoạt và khả năng tận dụng sức mạnh của AI trong việc xuất bản các bài viết mới — tiện lợi và linh hoạt hơn rất nhiều so với quy trình dùng Notion truyền thống. Dưới đây là tóm tắt các bước hắn đã làm để hoàn tất cuộc di cư này.
+Vì thế, hắn đã quyết định chuyển sang giải pháp thuần túy SSG (Static Site Generation) truyền thống: viết Markdown và lưu tại repo GitHub [tam-pham-alpha/xaolonist.eth](https://github.com/tam-pham-alpha/xaolonist.eth). Một phần là để tiết kiệm chi phí subscription hàng tháng của Notion, nhưng lý do lớn hơn chính là sự linh hoạt và khả năng tận dụng sức mạnh của AI trong việc xuất bản các bài viết mới, tiện lợi và linh hoạt hơn rất nhiều so với quy trình dùng Notion truyền thống. Dưới đây là tóm tắt các bước hắn đã làm để hoàn tất cuộc di cư này.
 
 ### Bước 1: Export dữ liệu từ Notion
 Đầu tiên, hắn export toàn bộ database bài viết từ Notion dưới dạng Markdown & CSV. Notion sẽ nén toàn bộ bài viết thành một file `.zip` chứa các file `.md` cùng thư mục ảnh đi kèm.
@@ -54,7 +54,7 @@ Hey, it's him again, and recently he decided to make a major migration for his b
 
 Previously, he loved using Notion as a CMS because it was convenient, visual, and had a smooth drag-and-drop interface. However, over time, the Notion API began to show frustrating limitations: slow query speeds, occasional rate limits, and having to wait to fetch data over the network every time the blog rebuilt, which took a lot of time.
 
-Therefore, he decided to switch to a traditional, pure SSG (Static Site Generation) solution: writing Markdown and storing it in the GitHub repository [tam-pham-alpha/xaolonist.eth](https://github.com/tam-pham-alpha/xaolonist.eth). Partly to save on Notion's monthly subscription fee, but the bigger reason was the flexibility and the ability to leverage AI's power to publish new posts—much more convenient and flexible than the traditional Notion workflow. Here is a summary of the steps he took to complete this migration.
+Therefore, he decided to switch to a traditional, pure SSG (Static Site Generation) solution: writing Markdown and storing it in the GitHub repository [tam-pham-alpha/xaolonist.eth](https://github.com/tam-pham-alpha/xaolonist.eth). Partly to save on Notion's monthly subscription fee, but the bigger reason was the flexibility and the ability to leverage AI's power to publish new posts, which is much more convenient and flexible than the traditional Notion workflow. Here is a summary of the steps he took to complete this migration.
 
 ### Step 1: Export data from Notion
 First, he exported the entire post database from Notion as Markdown & CSV. Notion compresses all posts into a `.zip` file containing `.md` files along with the accompanying images folder.

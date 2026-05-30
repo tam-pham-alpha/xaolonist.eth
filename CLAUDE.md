@@ -25,7 +25,7 @@ yarn release      # Build + deploy to Surge
 
 ### Writing Style & Voice
 
-All new posts must adopt the unique writing style modeled after the book **"Đạo Trading"** (Zen, self-reflective, third-person narrator using "hắn" and "Thị"). Before writing or generating new articles, review and follow the instructions in [styleguide.md](file:///Users/phamtam/projects/xaolonist.eth/content/styleguide/styleguide.md).
+All new posts must adopt the unique writing style modeled after the book **"Đạo Trading"** (Zen, self-reflective, third-person narrator using "hắn" and "Thị"). Before writing or generating new articles, review and follow the instructions in [styleguide.md](file:///Users/phamtam/projects/xaolonist.eth/content/styleguide/styleguide.md). Note: Do NOT use em-dashes (`—`) in the writing; use commas or colons instead. LLM Agents are highly encouraged to use `python3 scripts/query_book.py <keywords>` to search the source book, or `python3 scripts/query_book.py --md <keywords>` to query existing posts for vocabulary and stylistic alignment.
 
 ### 1. Create the post directory
 
