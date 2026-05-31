@@ -1,0 +1,1944 @@
+{
+  "aligned_words": [
+    {
+      "word": "Hey, ",
+      "success": true,
+      "start_s": 0.0,
+      "end_s": 0.86643,
+      "p_align": 0.99
+    },
+    {
+      "word": "it’s ",
+      "success": true,
+      "start_s": 0.86643,
+      "end_s": 1.73285,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 1.73285,
+      "end_s": 2.59928,
+      "p_align": 0.99
+    },
+    {
+      "word": "again, ",
+      "success": true,
+      "start_s": 2.59928,
+      "end_s": 3.4657,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 3.4657,
+      "end_s": 4.33213,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 4.33213,
+      "end_s": 5.19856,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 5.19856,
+      "end_s": 6.06498,
+      "p_align": 0.99
+    },
+    {
+      "word": "strange: ",
+      "success": true,
+      "start_s": 6.06498,
+      "end_s": 6.93141,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 6.93141,
+      "end_s": 7.79783,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 7.79783,
+      "end_s": 8.66426,
+      "p_align": 0.99
+    },
+    {
+      "word": "Catholic, ",
+      "success": true,
+      "start_s": 8.66426,
+      "end_s": 9.53069,
+      "p_align": 0.99
+    },
+    {
+      "word": "but ",
+      "success": true,
+      "start_s": 9.53069,
+      "end_s": 10.39711,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 10.39711,
+      "end_s": 11.26354,
+      "p_align": 0.99
+    },
+    {
+      "word": "likes ",
+      "success": true,
+      "start_s": 11.26354,
+      "end_s": 12.12996,
+      "p_align": 0.99
+    },
+    {
+      "word": "Buddhist ",
+      "success": true,
+      "start_s": 12.12996,
+      "end_s": 12.99639,
+      "p_align": 0.99
+    },
+    {
+      "word": "philosophy. ",
+      "success": true,
+      "start_s": 12.99639,
+      "end_s": 13.86282,
+      "p_align": 0.99
+    },
+    {
+      "word": "By ",
+      "success": true,
+      "start_s": 13.86282,
+      "end_s": 14.72924,
+      "p_align": 0.99
+    },
+    {
+      "word": "day ",
+      "success": true,
+      "start_s": 14.72924,
+      "end_s": 15.59567,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 15.59567,
+      "end_s": 16.46209,
+      "p_align": 0.99
+    },
+    {
+      "word": "listens ",
+      "success": true,
+      "start_s": 16.46209,
+      "end_s": 17.32852,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 17.32852,
+      "end_s": 18.19495,
+      "p_align": 0.99
+    },
+    {
+      "word": "Xuan ",
+      "success": true,
+      "start_s": 18.19495,
+      "end_s": 19.06137,
+      "p_align": 0.99
+    },
+    {
+      "word": "Kong ",
+      "success": true,
+      "start_s": 19.06137,
+      "end_s": 19.9278,
+      "p_align": 0.99
+    },
+    {
+      "word": "Fei ",
+      "success": true,
+      "start_s": 19.9278,
+      "end_s": 20.79422,
+      "p_align": 0.99
+    },
+    {
+      "word": "Xing, ",
+      "success": true,
+      "start_s": 20.79422,
+      "end_s": 21.66065,
+      "p_align": 0.99
+    },
+    {
+      "word": "Taoism, ",
+      "success": true,
+      "start_s": 21.66065,
+      "end_s": 22.52708,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 22.52708,
+      "end_s": 23.3935,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 23.3935,
+      "end_s": 24.25993,
+      "p_align": 0.99
+    },
+    {
+      "word": "I ",
+      "success": true,
+      "start_s": 24.25993,
+      "end_s": 25.12635,
+      "p_align": 0.99
+    },
+    {
+      "word": "Ching; ",
+      "success": true,
+      "start_s": 25.12635,
+      "end_s": 25.99278,
+      "p_align": 0.99
+    },
+    {
+      "word": "at ",
+      "success": true,
+      "start_s": 25.99278,
+      "end_s": 26.85921,
+      "p_align": 0.99
+    },
+    {
+      "word": "night ",
+      "success": true,
+      "start_s": 26.85921,
+      "end_s": 27.72563,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 27.72563,
+      "end_s": 28.59206,
+      "p_align": 0.99
+    },
+    {
+      "word": "listens ",
+      "success": true,
+      "start_s": 28.59206,
+      "end_s": 29.45848,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 29.45848,
+      "end_s": 30.32491,
+      "p_align": 0.99
+    },
+    {
+      "word": "quantum ",
+      "success": true,
+      "start_s": 30.32491,
+      "end_s": 31.19134,
+      "p_align": 0.99
+    },
+    {
+      "word": "physics, ",
+      "success": true,
+      "start_s": 31.19134,
+      "end_s": 32.05776,
+      "p_align": 0.99
+    },
+    {
+      "word": "string ",
+      "success": true,
+      "start_s": 32.05776,
+      "end_s": 32.92419,
+      "p_align": 0.99
+    },
+    {
+      "word": "theory, ",
+      "success": true,
+      "start_s": 32.92419,
+      "end_s": 33.79061,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 33.79061,
+      "end_s": 34.65704,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 34.65704,
+      "end_s": 35.52347,
+      "p_align": 0.99
+    },
+    {
+      "word": "history ",
+      "success": true,
+      "start_s": 35.52347,
+      "end_s": 36.38989,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 36.38989,
+      "end_s": 37.25632,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 37.25632,
+      "end_s": 38.12274,
+      "p_align": 0.99
+    },
+    {
+      "word": "universe\n\n",
+      "success": true,
+      "start_s": 38.12274,
+      "end_s": 38.98917,
+      "p_align": 0.99
+    },
+    {
+      "word": "Perhaps, ",
+      "success": true,
+      "start_s": 38.98917,
+      "end_s": 39.8556,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 39.8556,
+      "end_s": 40.72202,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 40.72202,
+      "end_s": 41.58845,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 41.58845,
+      "end_s": 42.45487,
+      "p_align": 0.99
+    },
+    {
+      "word": "searching ",
+      "success": true,
+      "start_s": 42.45487,
+      "end_s": 43.3213,
+      "p_align": 0.99
+    },
+    {
+      "word": "for ",
+      "success": true,
+      "start_s": 43.3213,
+      "end_s": 44.18773,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 44.18773,
+      "end_s": 45.05415,
+      "p_align": 0.99
+    },
+    {
+      "word": "religion, ",
+      "success": true,
+      "start_s": 45.05415,
+      "end_s": 45.92058,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 45.92058,
+      "end_s": 46.787,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 46.787,
+      "end_s": 47.65343,
+      "p_align": 0.99
+    },
+    {
+      "word": "searching ",
+      "success": true,
+      "start_s": 47.65343,
+      "end_s": 48.51986,
+      "p_align": 0.99
+    },
+    {
+      "word": "for ",
+      "success": true,
+      "start_s": 48.51986,
+      "end_s": 49.38628,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 49.38628,
+      "end_s": 50.25271,
+      "p_align": 0.99
+    },
+    {
+      "word": "truth\n\n",
+      "success": true,
+      "start_s": 50.25271,
+      "end_s": 51.11913,
+      "p_align": 0.99
+    },
+    {
+      "word": "Catholicism ",
+      "success": true,
+      "start_s": 51.11913,
+      "end_s": 51.98556,
+      "p_align": 0.99
+    },
+    {
+      "word": "attracts ",
+      "success": true,
+      "start_s": 51.98556,
+      "end_s": 52.85199,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 52.85199,
+      "end_s": 53.71841,
+      "p_align": 0.99
+    },
+    {
+      "word": "with ",
+      "success": true,
+      "start_s": 53.71841,
+      "end_s": 54.58484,
+      "p_align": 0.99
+    },
+    {
+      "word": "love, ",
+      "success": true,
+      "start_s": 54.58484,
+      "end_s": 55.45126,
+      "p_align": 0.99
+    },
+    {
+      "word": "mercy, ",
+      "success": true,
+      "start_s": 55.45126,
+      "end_s": 56.31769,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 56.31769,
+      "end_s": 57.18412,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 57.18412,
+      "end_s": 58.05054,
+      "p_align": 0.99
+    },
+    {
+      "word": "connection ",
+      "success": true,
+      "start_s": 58.05054,
+      "end_s": 58.91697,
+      "p_align": 0.99
+    },
+    {
+      "word": "between ",
+      "success": true,
+      "start_s": 58.91697,
+      "end_s": 59.78339,
+      "p_align": 0.99
+    },
+    {
+      "word": "humanity ",
+      "success": true,
+      "start_s": 59.78339,
+      "end_s": 60.64982,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 60.64982,
+      "end_s": 61.51625,
+      "p_align": 0.99
+    },
+    {
+      "word": "God. ",
+      "success": true,
+      "start_s": 61.51625,
+      "end_s": 62.38267,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 62.38267,
+      "end_s": 63.2491,
+      "p_align": 0.99
+    },
+    {
+      "word": "likes ",
+      "success": true,
+      "start_s": 63.2491,
+      "end_s": 64.11552,
+      "p_align": 0.99
+    },
+    {
+      "word": "Buddhist ",
+      "success": true,
+      "start_s": 64.11552,
+      "end_s": 64.98195,
+      "p_align": 0.99
+    },
+    {
+      "word": "philosophy ",
+      "success": true,
+      "start_s": 64.98195,
+      "end_s": 65.84838,
+      "p_align": 0.99
+    },
+    {
+      "word": "because ",
+      "success": true,
+      "start_s": 65.84838,
+      "end_s": 66.7148,
+      "p_align": 0.99
+    },
+    {
+      "word": "it ",
+      "success": true,
+      "start_s": 66.7148,
+      "end_s": 67.58123,
+      "p_align": 0.99
+    },
+    {
+      "word": "speaks ",
+      "success": true,
+      "start_s": 67.58123,
+      "end_s": 68.44765,
+      "p_align": 0.99
+    },
+    {
+      "word": "much ",
+      "success": true,
+      "start_s": 68.44765,
+      "end_s": 69.31408,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 69.31408,
+      "end_s": 70.18051,
+      "p_align": 0.99
+    },
+    {
+      "word": "suffering, ",
+      "success": true,
+      "start_s": 70.18051,
+      "end_s": 71.04693,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 71.04693,
+      "end_s": 71.91336,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 71.91336,
+      "end_s": 72.77978,
+      "p_align": 0.99
+    },
+    {
+      "word": "how ",
+      "success": true,
+      "start_s": 72.77978,
+      "end_s": 73.64621,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 73.64621,
+      "end_s": 74.51264,
+      "p_align": 0.99
+    },
+    {
+      "word": "observe ",
+      "success": true,
+      "start_s": 74.51264,
+      "end_s": 75.37906,
+      "p_align": 0.99
+    },
+    {
+      "word": "one’s ",
+      "success": true,
+      "start_s": 75.37906,
+      "end_s": 76.24549,
+      "p_align": 0.99
+    },
+    {
+      "word": "own ",
+      "success": true,
+      "start_s": 76.24549,
+      "end_s": 77.11191,
+      "p_align": 0.99
+    },
+    {
+      "word": "mind\n\n",
+      "success": true,
+      "start_s": 77.11191,
+      "end_s": 77.97834,
+      "p_align": 0.99
+    },
+    {
+      "word": "By ",
+      "success": true,
+      "start_s": 77.97834,
+      "end_s": 78.84477,
+      "p_align": 0.99
+    },
+    {
+      "word": "day ",
+      "success": true,
+      "start_s": 78.84477,
+      "end_s": 79.71119,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 79.71119,
+      "end_s": 80.57762,
+      "p_align": 0.99
+    },
+    {
+      "word": "listens ",
+      "success": true,
+      "start_s": 80.57762,
+      "end_s": 81.44404,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 81.44404,
+      "end_s": 82.31047,
+      "p_align": 0.99
+    },
+    {
+      "word": "Xuan ",
+      "success": true,
+      "start_s": 82.31047,
+      "end_s": 83.1769,
+      "p_align": 0.99
+    },
+    {
+      "word": "Kong ",
+      "success": true,
+      "start_s": 83.1769,
+      "end_s": 84.04332,
+      "p_align": 0.99
+    },
+    {
+      "word": "Fei ",
+      "success": true,
+      "start_s": 84.04332,
+      "end_s": 84.90975,
+      "p_align": 0.99
+    },
+    {
+      "word": "Xing ",
+      "success": true,
+      "start_s": 84.90975,
+      "end_s": 85.77617,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 85.77617,
+      "end_s": 86.6426,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 86.6426,
+      "end_s": 87.50903,
+      "p_align": 0.99
+    },
+    {
+      "word": "I ",
+      "success": true,
+      "start_s": 87.50903,
+      "end_s": 88.37545,
+      "p_align": 0.99
+    },
+    {
+      "word": "Ching ",
+      "success": true,
+      "start_s": 88.37545,
+      "end_s": 89.24188,
+      "p_align": 0.99
+    },
+    {
+      "word": "out ",
+      "success": true,
+      "start_s": 89.24188,
+      "end_s": 90.1083,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 90.1083,
+      "end_s": 90.97473,
+      "p_align": 0.99
+    },
+    {
+      "word": "curiosity ",
+      "success": true,
+      "start_s": 90.97473,
+      "end_s": 91.84116,
+      "p_align": 0.99
+    },
+    {
+      "word": "about ",
+      "success": true,
+      "start_s": 91.84116,
+      "end_s": 92.70758,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 92.70758,
+      "end_s": 93.57401,
+      "p_align": 0.99
+    },
+    {
+      "word": "laws ",
+      "success": true,
+      "start_s": 93.57401,
+      "end_s": 94.44043,
+      "p_align": 0.99
+    },
+    {
+      "word": "governing ",
+      "success": true,
+      "start_s": 94.44043,
+      "end_s": 95.30686,
+      "p_align": 0.99
+    },
+    {
+      "word": "heaven ",
+      "success": true,
+      "start_s": 95.30686,
+      "end_s": 96.17329,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 96.17329,
+      "end_s": 97.03971,
+      "p_align": 0.99
+    },
+    {
+      "word": "earth. ",
+      "success": true,
+      "start_s": 97.03971,
+      "end_s": 97.90614,
+      "p_align": 0.99
+    },
+    {
+      "word": "At ",
+      "success": true,
+      "start_s": 97.90614,
+      "end_s": 98.77256,
+      "p_align": 0.99
+    },
+    {
+      "word": "night ",
+      "success": true,
+      "start_s": 98.77256,
+      "end_s": 99.63899,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 99.63899,
+      "end_s": 100.50542,
+      "p_align": 0.99
+    },
+    {
+      "word": "listens ",
+      "success": true,
+      "start_s": 100.50542,
+      "end_s": 101.37184,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 101.37184,
+      "end_s": 102.23827,
+      "p_align": 0.99
+    },
+    {
+      "word": "quantum ",
+      "success": true,
+      "start_s": 102.23827,
+      "end_s": 103.10469,
+      "p_align": 0.99
+    },
+    {
+      "word": "physics, ",
+      "success": true,
+      "start_s": 103.10469,
+      "end_s": 103.97112,
+      "p_align": 0.99
+    },
+    {
+      "word": "string ",
+      "success": true,
+      "start_s": 103.97112,
+      "end_s": 104.83755,
+      "p_align": 0.99
+    },
+    {
+      "word": "theory, ",
+      "success": true,
+      "start_s": 104.83755,
+      "end_s": 105.70397,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 105.70397,
+      "end_s": 106.5704,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 106.5704,
+      "end_s": 107.43682,
+      "p_align": 0.99
+    },
+    {
+      "word": "history ",
+      "success": true,
+      "start_s": 107.43682,
+      "end_s": 108.30325,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 108.30325,
+      "end_s": 109.16968,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 109.16968,
+      "end_s": 110.0361,
+      "p_align": 0.99
+    },
+    {
+      "word": "universe ",
+      "success": true,
+      "start_s": 110.0361,
+      "end_s": 110.90253,
+      "p_align": 0.99
+    },
+    {
+      "word": "because ",
+      "success": true,
+      "start_s": 110.90253,
+      "end_s": 111.76895,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 111.76895,
+      "end_s": 112.63538,
+      "p_align": 0.99
+    },
+    {
+      "word": "wants ",
+      "success": true,
+      "start_s": 112.63538,
+      "end_s": 113.50181,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 113.50181,
+      "end_s": 114.36823,
+      "p_align": 0.99
+    },
+    {
+      "word": "know ",
+      "success": true,
+      "start_s": 114.36823,
+      "end_s": 115.23466,
+      "p_align": 0.99
+    },
+    {
+      "word": "what ",
+      "success": true,
+      "start_s": 115.23466,
+      "end_s": 116.10108,
+      "p_align": 0.99
+    },
+    {
+      "word": "this ",
+      "success": true,
+      "start_s": 116.10108,
+      "end_s": 116.96751,
+      "p_align": 0.99
+    },
+    {
+      "word": "world ",
+      "success": true,
+      "start_s": 116.96751,
+      "end_s": 117.83394,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 117.83394,
+      "end_s": 118.70036,
+      "p_align": 0.99
+    },
+    {
+      "word": "woven ",
+      "success": true,
+      "start_s": 118.70036,
+      "end_s": 119.56679,
+      "p_align": 0.99
+    },
+    {
+      "word": "from\n\n",
+      "success": true,
+      "start_s": 119.56679,
+      "end_s": 120.43321,
+      "p_align": 0.99
+    },
+    {
+      "word": "It ",
+      "success": true,
+      "start_s": 120.43321,
+      "end_s": 121.29964,
+      "p_align": 0.99
+    },
+    {
+      "word": "sounds ",
+      "success": true,
+      "start_s": 121.29964,
+      "end_s": 122.16606,
+      "p_align": 0.99
+    },
+    {
+      "word": "chaotic, ",
+      "success": true,
+      "start_s": 122.16606,
+      "end_s": 123.03249,
+      "p_align": 0.99
+    },
+    {
+      "word": "but ",
+      "success": true,
+      "start_s": 123.03249,
+      "end_s": 123.89892,
+      "p_align": 0.99
+    },
+    {
+      "word": "upon ",
+      "success": true,
+      "start_s": 123.89892,
+      "end_s": 124.76534,
+      "p_align": 0.99
+    },
+    {
+      "word": "reflection, ",
+      "success": true,
+      "start_s": 124.76534,
+      "end_s": 125.63177,
+      "p_align": 0.99
+    },
+    {
+      "word": "it ",
+      "success": true,
+      "start_s": 125.63177,
+      "end_s": 126.49819,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 126.49819,
+      "end_s": 127.36462,
+      "p_align": 0.99
+    },
+    {
+      "word": "quite ",
+      "success": true,
+      "start_s": 127.36462,
+      "end_s": 128.23105,
+      "p_align": 0.99
+    },
+    {
+      "word": "consistent. ",
+      "success": true,
+      "start_s": 128.23105,
+      "end_s": 129.09747,
+      "p_align": 0.99
+    },
+    {
+      "word": "Because ",
+      "success": true,
+      "start_s": 129.09747,
+      "end_s": 129.9639,
+      "p_align": 0.99
+    },
+    {
+      "word": "all ",
+      "success": true,
+      "start_s": 129.9639,
+      "end_s": 130.83032,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 130.83032,
+      "end_s": 131.69675,
+      "p_align": 0.99
+    },
+    {
+      "word": "them ",
+      "success": true,
+      "start_s": 131.69675,
+      "end_s": 132.56318,
+      "p_align": 0.99
+    },
+    {
+      "word": "are ",
+      "success": true,
+      "start_s": 132.56318,
+      "end_s": 133.4296,
+      "p_align": 0.99
+    },
+    {
+      "word": "trying ",
+      "success": true,
+      "start_s": 133.4296,
+      "end_s": 134.29603,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 134.29603,
+      "end_s": 135.16245,
+      "p_align": 0.99
+    },
+    {
+      "word": "answer ",
+      "success": true,
+      "start_s": 135.16245,
+      "end_s": 136.02888,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 136.02888,
+      "end_s": 136.89531,
+      "p_align": 0.99
+    },
+    {
+      "word": "few ",
+      "success": true,
+      "start_s": 136.89531,
+      "end_s": 137.76173,
+      "p_align": 0.99
+    },
+    {
+      "word": "identical ",
+      "success": true,
+      "start_s": 137.76173,
+      "end_s": 138.62816,
+      "p_align": 0.99
+    },
+    {
+      "word": "questions: ",
+      "success": true,
+      "start_s": 138.62816,
+      "end_s": 139.49458,
+      "p_align": 0.99
+    },
+    {
+      "word": "Who ",
+      "success": true,
+      "start_s": 139.49458,
+      "end_s": 140.36101,
+      "p_align": 0.99
+    },
+    {
+      "word": "are ",
+      "success": true,
+      "start_s": 140.36101,
+      "end_s": 141.22744,
+      "p_align": 0.99
+    },
+    {
+      "word": "we? ",
+      "success": true,
+      "start_s": 141.22744,
+      "end_s": 142.09386,
+      "p_align": 0.99
+    },
+    {
+      "word": "What ",
+      "success": true,
+      "start_s": 142.09386,
+      "end_s": 142.96029,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 142.96029,
+      "end_s": 143.82671,
+      "p_align": 0.99
+    },
+    {
+      "word": "this ",
+      "success": true,
+      "start_s": 143.82671,
+      "end_s": 144.69314,
+      "p_align": 0.99
+    },
+    {
+      "word": "world? ",
+      "success": true,
+      "start_s": 144.69314,
+      "end_s": 145.55957,
+      "p_align": 0.99
+    },
+    {
+      "word": "And ",
+      "success": true,
+      "start_s": 145.55957,
+      "end_s": 146.42599,
+      "p_align": 0.99
+    },
+    {
+      "word": "why ",
+      "success": true,
+      "start_s": 146.42599,
+      "end_s": 147.29242,
+      "p_align": 0.99
+    },
+    {
+      "word": "does ",
+      "success": true,
+      "start_s": 147.29242,
+      "end_s": 148.15884,
+      "p_align": 0.99
+    },
+    {
+      "word": "everything ",
+      "success": true,
+      "start_s": 148.15884,
+      "end_s": 149.02527,
+      "p_align": 0.99
+    },
+    {
+      "word": "operate ",
+      "success": true,
+      "start_s": 149.02527,
+      "end_s": 149.8917,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 149.8917,
+      "end_s": 150.75812,
+      "p_align": 0.99
+    },
+    {
+      "word": "way ",
+      "success": true,
+      "start_s": 150.75812,
+      "end_s": 151.62455,
+      "p_align": 0.99
+    },
+    {
+      "word": "it ",
+      "success": true,
+      "start_s": 151.62455,
+      "end_s": 152.49097,
+      "p_align": 0.99
+    },
+    {
+      "word": "does?\n\n",
+      "success": true,
+      "start_s": 152.49097,
+      "end_s": 153.3574,
+      "p_align": 0.99
+    },
+    {
+      "word": "And ",
+      "success": true,
+      "start_s": 153.3574,
+      "end_s": 154.22383,
+      "p_align": 0.99
+    },
+    {
+      "word": "perhaps ",
+      "success": true,
+      "start_s": 154.22383,
+      "end_s": 155.09025,
+      "p_align": 0.99
+    },
+    {
+      "word": "God ",
+      "success": true,
+      "start_s": 155.09025,
+      "end_s": 155.95668,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 155.95668,
+      "end_s": 156.8231,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 156.8231,
+      "end_s": 157.68953,
+      "p_align": 0.99
+    },
+    {
+      "word": "at ",
+      "success": true,
+      "start_s": 157.68953,
+      "end_s": 158.55596,
+      "p_align": 0.99
+    },
+    {
+      "word": "all ",
+      "success": true,
+      "start_s": 158.55596,
+      "end_s": 159.42238,
+      "p_align": 0.99
+    },
+    {
+      "word": "annoyed ",
+      "success": true,
+      "start_s": 159.42238,
+      "end_s": 160.28881,
+      "p_align": 0.99
+    },
+    {
+      "word": "that ",
+      "success": true,
+      "start_s": 160.28881,
+      "end_s": 161.15523,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 161.15523,
+      "end_s": 162.02166,
+      "p_align": 0.99
+    },
+    {
+      "word": "reads ",
+      "success": true,
+      "start_s": 162.02166,
+      "end_s": 162.88809,
+      "p_align": 0.99
+    },
+    {
+      "word": "Buddhism. ",
+      "success": true,
+      "start_s": 162.88809,
+      "end_s": 163.75451,
+      "p_align": 0.99
+    },
+    {
+      "word": "Perhaps ",
+      "success": true,
+      "start_s": 163.75451,
+      "end_s": 164.62094,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 164.62094,
+      "end_s": 165.48736,
+      "p_align": 0.99
+    },
+    {
+      "word": "Buddha ",
+      "success": true,
+      "start_s": 165.48736,
+      "end_s": 166.35379,
+      "p_align": 0.99
+    },
+    {
+      "word": "does ",
+      "success": true,
+      "start_s": 166.35379,
+      "end_s": 167.22022,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 167.22022,
+      "end_s": 168.08664,
+      "p_align": 0.99
+    },
+    {
+      "word": "mind ",
+      "success": true,
+      "start_s": 168.08664,
+      "end_s": 168.95307,
+      "p_align": 0.99
+    },
+    {
+      "word": "either ",
+      "success": true,
+      "start_s": 168.95307,
+      "end_s": 169.81949,
+      "p_align": 0.99
+    },
+    {
+      "word": "that ",
+      "success": true,
+      "start_s": 169.81949,
+      "end_s": 170.68592,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 170.68592,
+      "end_s": 171.55235,
+      "p_align": 0.99
+    },
+    {
+      "word": "reads ",
+      "success": true,
+      "start_s": 171.55235,
+      "end_s": 172.41877,
+      "p_align": 0.99
+    },
+    {
+      "word": "physics. ",
+      "success": true,
+      "start_s": 172.41877,
+      "end_s": 173.2852,
+      "p_align": 0.99
+    },
+    {
+      "word": "Who ",
+      "success": true,
+      "start_s": 173.2852,
+      "end_s": 174.15162,
+      "p_align": 0.99
+    },
+    {
+      "word": "knows, ",
+      "success": true,
+      "start_s": 174.15162,
+      "end_s": 175.01805,
+      "p_align": 0.99
+    },
+    {
+      "word": "maybe ",
+      "success": true,
+      "start_s": 175.01805,
+      "end_s": 175.88448,
+      "p_align": 0.99
+    },
+    {
+      "word": "they ",
+      "success": true,
+      "start_s": 175.88448,
+      "end_s": 176.7509,
+      "p_align": 0.99
+    },
+    {
+      "word": "are ",
+      "success": true,
+      "start_s": 176.7509,
+      "end_s": 177.61733,
+      "p_align": 0.99
+    },
+    {
+      "word": "all ",
+      "success": true,
+      "start_s": 177.61733,
+      "end_s": 178.48375,
+      "p_align": 0.99
+    },
+    {
+      "word": "just ",
+      "success": true,
+      "start_s": 178.48375,
+      "end_s": 179.35018,
+      "p_align": 0.99
+    },
+    {
+      "word": "different ",
+      "success": true,
+      "start_s": 179.35018,
+      "end_s": 180.21661,
+      "p_align": 0.99
+    },
+    {
+      "word": "doors ",
+      "success": true,
+      "start_s": 180.21661,
+      "end_s": 181.08303,
+      "p_align": 0.99
+    },
+    {
+      "word": "leading ",
+      "success": true,
+      "start_s": 181.08303,
+      "end_s": 181.94946,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 181.94946,
+      "end_s": 182.81588,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 182.81588,
+      "end_s": 183.68231,
+      "p_align": 0.99
+    },
+    {
+      "word": "same ",
+      "success": true,
+      "start_s": 183.68231,
+      "end_s": 184.54874,
+      "p_align": 0.99
+    },
+    {
+      "word": "truth, ",
+      "success": true,
+      "start_s": 184.54874,
+      "end_s": 185.41516,
+      "p_align": 0.99
+    },
+    {
+      "word": "as ",
+      "success": true,
+      "start_s": 185.41516,
+      "end_s": 186.28159,
+      "p_align": 0.99
+    },
+    {
+      "word": "long ",
+      "success": true,
+      "start_s": 186.28159,
+      "end_s": 187.14801,
+      "p_align": 0.99
+    },
+    {
+      "word": "as ",
+      "success": true,
+      "start_s": 187.14801,
+      "end_s": 188.01444,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 188.01444,
+      "end_s": 188.88087,
+      "p_align": 0.99
+    },
+    {
+      "word": "maintains ",
+      "success": true,
+      "start_s": 188.88087,
+      "end_s": 189.74729,
+      "p_align": 0.99
+    },
+    {
+      "word": "humility ",
+      "success": true,
+      "start_s": 189.74729,
+      "end_s": 190.61372,
+      "p_align": 0.99
+    },
+    {
+      "word": "before ",
+      "success": true,
+      "start_s": 190.61372,
+      "end_s": 191.48014,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 191.48014,
+      "end_s": 192.34657,
+      "p_align": 0.99
+    },
+    {
+      "word": "things ",
+      "success": true,
+      "start_s": 192.34657,
+      "end_s": 193.213,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 193.213,
+      "end_s": 194.07942,
+      "p_align": 0.99
+    },
+    {
+      "word": "does ",
+      "success": true,
+      "start_s": 194.07942,
+      "end_s": 194.94585,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 194.94585,
+      "end_s": 195.81227,
+      "p_align": 0.99
+    },
+    {
+      "word": "yet ",
+      "success": true,
+      "start_s": 195.81227,
+      "end_s": 196.6787,
+      "p_align": 0.99
+    },
+    {
+      "word": "know\n\n",
+      "success": true,
+      "start_s": 196.6787,
+      "end_s": 197.54513,
+      "p_align": 0.99
+    },
+    {
+      "word": "Because ",
+      "success": true,
+      "start_s": 197.54513,
+      "end_s": 198.41155,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 198.41155,
+      "end_s": 199.27798,
+      "p_align": 0.99
+    },
+    {
+      "word": "more ",
+      "success": true,
+      "start_s": 199.27798,
+      "end_s": 200.1444,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 200.1444,
+      "end_s": 201.01083,
+      "p_align": 0.99
+    },
+    {
+      "word": "learns, ",
+      "success": true,
+      "start_s": 201.01083,
+      "end_s": 201.87726,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 201.87726,
+      "end_s": 202.74368,
+      "p_align": 0.99
+    },
+    {
+      "word": "more ",
+      "success": true,
+      "start_s": 202.74368,
+      "end_s": 203.61011,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 203.61011,
+      "end_s": 204.47653,
+      "p_align": 0.99
+    },
+    {
+      "word": "realizes ",
+      "success": true,
+      "start_s": 204.47653,
+      "end_s": 205.34296,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 205.34296,
+      "end_s": 206.20939,
+      "p_align": 0.99
+    },
+    {
+      "word": "greatest ",
+      "success": true,
+      "start_s": 206.20939,
+      "end_s": 207.07581,
+      "p_align": 0.99
+    },
+    {
+      "word": "thing ",
+      "success": true,
+      "start_s": 207.07581,
+      "end_s": 207.94224,
+      "p_align": 0.99
+    },
+    {
+      "word": "in ",
+      "success": true,
+      "start_s": 207.94224,
+      "end_s": 208.80866,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 208.80866,
+      "end_s": 209.67509,
+      "p_align": 0.99
+    },
+    {
+      "word": "universe ",
+      "success": true,
+      "start_s": 209.67509,
+      "end_s": 210.54152,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 210.54152,
+      "end_s": 211.40794,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 211.40794,
+      "end_s": 212.27437,
+      "p_align": 0.99
+    },
+    {
+      "word": "knowledge, ",
+      "success": true,
+      "start_s": 212.27437,
+      "end_s": 213.14079,
+      "p_align": 0.99
+    },
+    {
+      "word": "but ",
+      "success": true,
+      "start_s": 213.14079,
+      "end_s": 214.00722,
+      "p_align": 0.99
+    },
+    {
+      "word": "its ",
+      "success": true,
+      "start_s": 214.00722,
+      "end_s": 214.87365,
+      "p_align": 0.99
+    },
+    {
+      "word": "mystery\n\n",
+      "success": true,
+      "start_s": 214.87365,
+      "end_s": 215.74007,
+      "p_align": 0.99
+    },
+    {
+      "word": "And ",
+      "success": true,
+      "start_s": 215.74007,
+      "end_s": 216.6065,
+      "p_align": 0.99
+    },
+    {
+      "word": "who ",
+      "success": true,
+      "start_s": 216.6065,
+      "end_s": 217.47292,
+      "p_align": 0.99
+    },
+    {
+      "word": "knows, ",
+      "success": true,
+      "start_s": 217.47292,
+      "end_s": 218.33935,
+      "p_align": 0.99
+    },
+    {
+      "word": "maybe ",
+      "success": true,
+      "start_s": 218.33935,
+      "end_s": 219.20578,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 219.20578,
+      "end_s": 220.0722,
+      "p_align": 0.99
+    },
+    {
+      "word": "most ",
+      "success": true,
+      "start_s": 220.0722,
+      "end_s": 220.93863,
+      "p_align": 0.99
+    },
+    {
+      "word": "interesting ",
+      "success": true,
+      "start_s": 220.93863,
+      "end_s": 221.80505,
+      "p_align": 0.99
+    },
+    {
+      "word": "thing ",
+      "success": true,
+      "start_s": 221.80505,
+      "end_s": 222.67148,
+      "p_align": 0.99
+    },
+    {
+      "word": "in ",
+      "success": true,
+      "start_s": 222.67148,
+      "end_s": 223.53791,
+      "p_align": 0.99
+    },
+    {
+      "word": "life ",
+      "success": true,
+      "start_s": 223.53791,
+      "end_s": 224.40433,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 224.40433,
+      "end_s": 225.27076,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 225.27076,
+      "end_s": 226.13718,
+      "p_align": 0.99
+    },
+    {
+      "word": "finding ",
+      "success": true,
+      "start_s": 226.13718,
+      "end_s": 227.00361,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 227.00361,
+      "end_s": 227.87004,
+      "p_align": 0.99
+    },
+    {
+      "word": "final ",
+      "success": true,
+      "start_s": 227.87004,
+      "end_s": 228.73646,
+      "p_align": 0.99
+    },
+    {
+      "word": "answer, ",
+      "success": true,
+      "start_s": 228.73646,
+      "end_s": 229.60289,
+      "p_align": 0.99
+    },
+    {
+      "word": "but ",
+      "success": true,
+      "start_s": 229.60289,
+      "end_s": 230.46931,
+      "p_align": 0.99
+    },
+    {
+      "word": "being ",
+      "success": true,
+      "start_s": 230.46931,
+      "end_s": 231.33574,
+      "p_align": 0.99
+    },
+    {
+      "word": "able ",
+      "success": true,
+      "start_s": 231.33574,
+      "end_s": 232.20217,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 232.20217,
+      "end_s": 233.06859,
+      "p_align": 0.99
+    },
+    {
+      "word": "wander ",
+      "success": true,
+      "start_s": 233.06859,
+      "end_s": 233.93502,
+      "p_align": 0.99
+    },
+    {
+      "word": "among ",
+      "success": true,
+      "start_s": 233.93502,
+      "end_s": 234.80144,
+      "p_align": 0.99
+    },
+    {
+      "word": "such ",
+      "success": true,
+      "start_s": 234.80144,
+      "end_s": 235.66787,
+      "p_align": 0.99
+    },
+    {
+      "word": "beautiful ",
+      "success": true,
+      "start_s": 235.66787,
+      "end_s": 236.5343,
+      "p_align": 0.99
+    },
+    {
+      "word": "questions, ",
+      "success": true,
+      "start_s": 236.5343,
+      "end_s": 237.40072,
+      "p_align": 0.99
+    },
+    {
+      "word": "day ",
+      "success": true,
+      "start_s": 237.40072,
+      "end_s": 238.26715,
+      "p_align": 0.99
+    },
+    {
+      "word": "after ",
+      "success": true,
+      "start_s": 238.26715,
+      "end_s": 239.13357,
+      "p_align": 0.99
+    },
+    {
+      "word": "day",
+      "success": true,
+      "start_s": 239.13357,
+      "end_s": 240.0,
+      "p_align": 0.99
+    }
+  ],
+  "is_streamed": true
+}

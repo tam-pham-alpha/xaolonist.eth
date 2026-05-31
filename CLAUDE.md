@@ -19,6 +19,27 @@ yarn typecheck    # TypeScript + Astro check
 yarn deploy       # Build + deploy to Cloudflare via Wrangler
 ```
 
+## Planning Logs
+
+All implementation plans, technical proposals, and architectural decisions must be saved to the `_logs/` folder at the project root.
+
+### Rules
+- **Always create a log file** when you produce a plan, proposal, or significant design decision — without being asked
+- **Filename format**: `yy-mm-dd-<short-kebab-description>.md` (e.g. `26-05-31-suno-music-integration.md`)
+- **Date**: use today's local date in `yy-mm-dd` format
+- **Location**: always `_logs/<filename>.md` at the project root — never inside `src/`
+- If the user asks to update or revise a plan, update the existing `_logs/` file in place (don't create a duplicate)
+
+### Example
+```
+_logs/
+├── 26-05-30-gatsby-to-astro-migration.md
+├── 26-05-31-suno-music-integration.md
+└── 26-06-01-dark-mode-redesign.md
+```
+
+---
+
 ## Reference Texts
 
 Read these files before writing any new post:
@@ -59,10 +80,15 @@ Before writing or generating new articles, review and follow the instructions in
 
 ```
 src/content/blog/<slug>/
-├── index.md       # Post content with YAML frontmatter
-├── cover.jpg      # Cover image (jpg, jpeg, or png)
-└── images/        # (Optional) Inline images
-    └── ...
+├── index.md          # Post content with YAML frontmatter (VN)
+├── index.en.md       # (Optional) Post content with YAML frontmatter (EN)
+├── cover.jpg         # Cover image (jpg, jpeg, or png)
+├── audio.mp3         # (Optional) VN music track
+├── audio.en.mp3      # (Optional) EN music track
+├── lyrics.lrc        # (Optional) VN synced line subtitles
+├── lyrics.en.lrc     # (Optional) EN synced line subtitles
+├── lyrics.json       # (Optional) VN timestamped word subtitles
+└── lyrics.en.json    # (Optional) EN timestamped word subtitles
 ```
 
 ### 2. Frontmatter format
@@ -80,6 +106,7 @@ category: "blog"          # "blog" → homepage, "anh4gs" → /dvvv/ page
 status: "published"       # "published" or "draft"
 date: "2026-05-30"        # YYYY-MM-DD
 cover: "./cover.jpg"      # Relative path to cover image
+music: "./audio.mp3"      # (Optional) Relative path to audio, e.g. "./audio.mp3" or "./audio.en.mp3"
 lang: "vn"                # "vn" or "en"
 ---
 ```
@@ -141,6 +168,7 @@ z.object({
   status: z.enum(['published', 'draft']).default('published'),
   date: z.string(),
   cover: image(),      // Astro image optimization
+  music: z.string().optional(), // Relative path to audio, e.g. "./audio.mp3"
   lang: z.enum(['vn', 'en']).default('vn'),
 })
 ```
@@ -154,3 +182,13 @@ z.object({
 - **Build output** goes to `dist/` (not `public/`)
 - **Static assets** go in `public/` (served as-is, not processed)
 - **Missing image handling**: A custom remark plugin (`remark-strip-missing-images.mjs`) gracefully removes broken image references from legacy Notion-migrated posts
+
+## Suno Music & Lyrics Downloader
+
+To download a song and its aligned subtitles (JSON/LRC) from a Suno share URL directly into a post folder:
+```bash
+# Usage: python3 scripts/download_suno_lyrics.py <song_id_or_share_url> <output_dir> [vn_or_en]
+python3 scripts/download_suno_lyrics.py "https://suno.com/s/71sjtJMj4f6HCeei" src/content/blog/han-lai-ngua-nghe vn
+```
+This script requires a valid session cookie stored as `SUNO_COOKIE` in your `.env` file (containing Clerk `__session` token).
+

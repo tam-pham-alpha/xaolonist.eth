@@ -22,6 +22,7 @@ const blog = defineCollection({
       status: z.enum(['published', 'draft']).default('published'),
       date: z.string(),
       cover: image(),
+      music: z.string().optional(),
       lang: z.enum(['vn', 'en']).default('vn'),
     }),
 });

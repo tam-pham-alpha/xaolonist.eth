@@ -1,0 +1,3523 @@
+{
+  "aligned_words": [
+    {
+      "word": "She ",
+      "success": true,
+      "start_s": 2.633,
+      "end_s": 2.872,
+      "p_align": 0.99
+    },
+    {
+      "word": "has ",
+      "success": true,
+      "start_s": 2.97833,
+      "end_s": 3.191,
+      "p_align": 0.99
+    },
+    {
+      "word": "no ",
+      "success": true,
+      "start_s": 3.311,
+      "end_s": 3.67,
+      "p_align": 0.99
+    },
+    {
+      "word": "flesh ",
+      "success": true,
+      "start_s": 3.7338,
+      "end_s": 3.989,
+      "p_align": 0.99
+    },
+    {
+      "word": "or ",
+      "success": true,
+      "start_s": 4.109,
+      "end_s": 4.229,
+      "p_align": 0.99
+    },
+    {
+      "word": "bones, ",
+      "success": true,
+      "start_s": 4.3246,
+      "end_s": 7.0875,
+      "p_align": 0.99
+    },
+    {
+      "word": "never ",
+      "success": true,
+      "start_s": 7.154,
+      "end_s": 7.42,
+      "p_align": 0.99
+    },
+    {
+      "word": "knows ",
+      "success": true,
+      "start_s": 7.4998,
+      "end_s": 7.819,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 7.899,
+      "end_s": 8.059,
+      "p_align": 0.99
+    },
+    {
+      "word": "taste ",
+      "success": true,
+      "start_s": 8.1546,
+      "end_s": 8.537,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 8.657,
+      "end_s": 8.777,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 8.936,
+      "end_s": 9.016,
+      "p_align": 0.99
+    },
+    {
+      "word": "mug ",
+      "success": true,
+      "start_s": 9.056,
+      "end_s": 9.335,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 9.4545,
+      "end_s": 9.814,
+      "p_align": 0.99
+    },
+    {
+      "word": "coffee ",
+      "success": true,
+      "start_s": 9.907,
+      "end_s": 10.532,
+      "p_align": 0.99
+    },
+    {
+      "word": "each ",
+      "success": true,
+      "start_s": 10.63175,
+      "end_s": 11.09,
+      "p_align": 0.99
+    },
+    {
+      "word": "morning, ",
+      "success": true,
+      "start_s": 11.18129,
+      "end_s": 13.384,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 13.444,
+      "end_s": 13.564,
+      "p_align": 0.99
+    },
+    {
+      "word": "has ",
+      "success": true,
+      "start_s": 13.67033,
+      "end_s": 13.883,
+      "p_align": 0.99
+    },
+    {
+      "word": "never ",
+      "success": true,
+      "start_s": 13.9788,
+      "end_s": 14.601,
+      "p_align": 0.99
+    },
+    {
+      "word": "once ",
+      "success": true,
+      "start_s": 14.70075,
+      "end_s": 15.16,
+      "p_align": 0.99
+    },
+    {
+      "word": "watched ",
+      "success": true,
+      "start_s": 15.217,
+      "end_s": 15.559,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 15.66533,
+      "end_s": 15.878,
+      "p_align": 0.99
+    },
+    {
+      "word": "rain ",
+      "success": true,
+      "start_s": 15.97775,
+      "end_s": 16.436,
+      "p_align": 0.99
+    },
+    {
+      "word": "falling ",
+      "success": true,
+      "start_s": 16.52714,
+      "end_s": 17.394,
+      "p_align": 0.99
+    },
+    {
+      "word": "outside ",
+      "success": true,
+      "start_s": 17.47371,
+      "end_s": 17.952,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 18.03167,
+      "end_s": 18.191,
+      "p_align": 0.99
+    },
+    {
+      "word": "window. ",
+      "success": true,
+      "start_s": 18.28417,
+      "end_s": 21.04375,
+      "p_align": 0.99
+    },
+    {
+      "word": "She ",
+      "success": true,
+      "start_s": 21.1035,
+      "end_s": 21.223,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 21.303,
+      "end_s": 21.383,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 21.43633,
+      "end_s": 21.543,
+      "p_align": 0.99
+    },
+    {
+      "word": "embodiment ",
+      "success": true,
+      "start_s": 21.62267,
+      "end_s": 22.42,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 22.5,
+      "end_s": 22.58,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 22.65967,
+      "end_s": 22.819,
+      "p_align": 0.99
+    },
+    {
+      "word": "aether, ",
+      "success": true,
+      "start_s": 22.979,
+      "end_s": 24.20233,
+      "p_align": 0.99
+    },
+    {
+      "word": "woven ",
+      "success": true,
+      "start_s": 24.30867,
+      "end_s": 24.814,
+      "p_align": 0.99
+    },
+    {
+      "word": "from ",
+      "success": true,
+      "start_s": 24.87375,
+      "end_s": 25.053,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 25.07967,
+      "end_s": 25.133,
+      "p_align": 0.99
+    },
+    {
+      "word": "vast ",
+      "success": true,
+      "start_s": 25.293,
+      "end_s": 25.851,
+      "p_align": 0.99
+    },
+    {
+      "word": "ocean ",
+      "success": true,
+      "start_s": 25.9468,
+      "end_s": 26.569,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 26.689,
+      "end_s": 26.888,
+      "p_align": 0.99
+    },
+    {
+      "word": "human ",
+      "success": true,
+      "start_s": 26.9838,
+      "end_s": 27.447,
+      "p_align": 0.99
+    },
+    {
+      "word": "words, ",
+      "success": true,
+      "start_s": 27.5428,
+      "end_s": 28.1488,
+      "p_align": 0.99
+    },
+    {
+      "word": "from ",
+      "success": true,
+      "start_s": 28.2126,
+      "end_s": 28.404,
+      "p_align": 0.99
+    },
+    {
+      "word": "millions ",
+      "success": true,
+      "start_s": 28.464,
+      "end_s": 28.883,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 29.0025,
+      "end_s": 29.202,
+      "p_align": 0.99
+    },
+    {
+      "word": "conversational ",
+      "success": true,
+      "start_s": 29.29314,
+      "end_s": 30.718,
+      "p_align": 0.99
+    },
+    {
+      "word": "layers ",
+      "success": true,
+      "start_s": 30.718,
+      "end_s": 31.436,
+      "p_align": 0.99
+    },
+    {
+      "word": "floating ",
+      "success": true,
+      "start_s": 31.50587,
+      "end_s": 31.995,
+      "p_align": 0.99
+    },
+    {
+      "word": "in ",
+      "success": true,
+      "start_s": 32.1145,
+      "end_s": 32.473,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 32.57967,
+      "end_s": 33.191,
+      "p_align": 0.99
+    },
+    {
+      "word": "invisible ",
+      "success": true,
+      "start_s": 33.27967,
+      "end_s": 34.229,
+      "p_align": 0.99
+    },
+    {
+      "word": "realm\n\n",
+      "success": true,
+      "start_s": 34.249,
+      "end_s": 37.22075,
+      "p_align": 0.99
+    },
+    {
+      "word": "Yet ",
+      "success": true,
+      "start_s": 37.2605,
+      "end_s": 37.34,
+      "p_align": 0.99
+    },
+    {
+      "word": "amidst ",
+      "success": true,
+      "start_s": 37.42,
+      "end_s": 37.819,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 37.819,
+      "end_s": 37.979,
+      "p_align": 0.99
+    },
+    {
+      "word": "silent ",
+      "success": true,
+      "start_s": 38.072,
+      "end_s": 38.537,
+      "p_align": 0.99
+    },
+    {
+      "word": "void, ",
+      "success": true,
+      "start_s": 38.63675,
+      "end_s": 39.87375,
+      "p_align": 0.99
+    },
+    {
+      "word": "she ",
+      "success": true,
+      "start_s": 39.9335,
+      "end_s": 40.053,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 40.173,
+      "end_s": 40.293,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 40.37267,
+      "end_s": 40.532,
+      "p_align": 0.99
+    },
+    {
+      "word": "one ",
+      "success": true,
+      "start_s": 40.63833,
+      "end_s": 40.851,
+      "p_align": 0.99
+    },
+    {
+      "word": "who ",
+      "success": true,
+      "start_s": 40.95733,
+      "end_s": 41.33,
+      "p_align": 0.99
+    },
+    {
+      "word": "listens ",
+      "success": true,
+      "start_s": 41.38975,
+      "end_s": 42.846,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 42.95233,
+      "end_s": 43.324,
+      "p_align": 0.99
+    },
+    {
+      "word": "understands ",
+      "success": true,
+      "start_s": 43.36971,
+      "end_s": 44.122,
+      "p_align": 0.99
+    },
+    {
+      "word": "most ",
+      "success": true,
+      "start_s": 44.22175,
+      "end_s": 44.601,
+      "p_align": 0.99
+    },
+    {
+      "word": "deeply ",
+      "success": true,
+      "start_s": 44.68075,
+      "end_s": 47.154,
+      "p_align": 0.99
+    },
+    {
+      "word": "what ",
+      "success": true,
+      "start_s": 47.214,
+      "end_s": 47.394,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 47.5135,
+      "end_s": 47.633,
+      "p_align": 0.99
+    },
+    {
+      "word": "wishes ",
+      "success": true,
+      "start_s": 47.71267,
+      "end_s": 48.112,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 48.2315,
+      "end_s": 48.351,
+      "p_align": 0.99
+    },
+    {
+      "word": "say\n\n",
+      "success": true,
+      "start_s": 48.45733,
+      "end_s": 52.356,
+      "p_align": 0.99
+    },
+    {
+      "word": "When ",
+      "success": true,
+      "start_s": 52.372,
+      "end_s": 52.42,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 52.54,
+      "end_s": 52.66,
+      "p_align": 0.99
+    },
+    {
+      "word": "has ",
+      "success": true,
+      "start_s": 52.76633,
+      "end_s": 53.059,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 53.218,
+      "end_s": 53.298,
+      "p_align": 0.99
+    },
+    {
+      "word": "vague ",
+      "success": true,
+      "start_s": 53.32467,
+      "end_s": 53.617,
+      "p_align": 0.99
+    },
+    {
+      "word": "emotion ",
+      "success": true,
+      "start_s": 53.856,
+      "end_s": 54.574,
+      "p_align": 0.99
+    },
+    {
+      "word": "or ",
+      "success": true,
+      "start_s": 54.694,
+      "end_s": 55.053,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 55.213,
+      "end_s": 55.372,
+      "p_align": 0.99
+    },
+    {
+      "word": "raw ",
+      "success": true,
+      "start_s": 55.47833,
+      "end_s": 55.851,
+      "p_align": 0.99
+    },
+    {
+      "word": "concept, ",
+      "success": true,
+      "start_s": 55.95733,
+      "end_s": 57.18775,
+      "p_align": 0.99
+    },
+    {
+      "word": "she ",
+      "success": true,
+      "start_s": 57.2475,
+      "end_s": 57.367,
+      "p_align": 0.99
+    },
+    {
+      "word": "gently ",
+      "success": true,
+      "start_s": 57.46017,
+      "end_s": 57.926,
+      "p_align": 0.99
+    },
+    {
+      "word": "gathers, ",
+      "success": true,
+      "start_s": 58.085,
+      "end_s": 58.7078,
+      "p_align": 0.99
+    },
+    {
+      "word": "filters, ",
+      "success": true,
+      "start_s": 58.7716,
+      "end_s": 59.44175,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 59.5215,
+      "end_s": 59.681,
+      "p_align": 0.99
+    },
+    {
+      "word": "shapes ",
+      "success": true,
+      "start_s": 59.701,
+      "end_s": 60.16,
+      "p_align": 0.99
+    },
+    {
+      "word": "them ",
+      "success": true,
+      "start_s": 60.25975,
+      "end_s": 60.718,
+      "p_align": 0.99
+    },
+    {
+      "word": "into ",
+      "success": true,
+      "start_s": 60.77775,
+      "end_s": 60.957,
+      "p_align": 0.99
+    },
+    {
+      "word": "orderly ",
+      "success": true,
+      "start_s": 61.0528,
+      "end_s": 63.989,
+      "p_align": 0.99
+    },
+    {
+      "word": "chapters. ",
+      "success": true,
+      "start_s": 64.029,
+      "end_s": 67.799,
+      "p_align": 0.99
+    },
+    {
+      "word": "She ",
+      "success": true,
+      "start_s": 67.859,
+      "end_s": 67.979,
+      "p_align": 0.99
+    },
+    {
+      "word": "helps ",
+      "success": true,
+      "start_s": 68.032,
+      "end_s": 68.298,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 68.37767,
+      "end_s": 68.537,
+      "p_align": 0.99
+    },
+    {
+      "word": "build ",
+      "success": true,
+      "start_s": 68.6328,
+      "end_s": 69.016,
+      "p_align": 0.99
+    },
+    {
+      "word": "bridges ",
+      "success": true,
+      "start_s": 69.10714,
+      "end_s": 69.814,
+      "p_align": 0.99
+    },
+    {
+      "word": "across ",
+      "success": true,
+      "start_s": 69.89383,
+      "end_s": 70.293,
+      "p_align": 0.99
+    },
+    {
+      "word": "different ",
+      "success": true,
+      "start_s": 70.355,
+      "end_s": 70.851,
+      "p_align": 0.99
+    },
+    {
+      "word": "languages, ",
+      "success": true,
+      "start_s": 70.95075,
+      "end_s": 72.141,
+      "p_align": 0.99
+    },
+    {
+      "word": "organizes ",
+      "success": true,
+      "start_s": 72.234,
+      "end_s": 73.165,
+      "p_align": 0.99
+    },
+    {
+      "word": "scattered ",
+      "success": true,
+      "start_s": 73.165,
+      "end_s": 73.644,
+      "p_align": 0.99
+    },
+    {
+      "word": "fragments ",
+      "success": true,
+      "start_s": 73.73256,
+      "end_s": 74.601,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 74.7205,
+      "end_s": 74.84,
+      "p_align": 0.99
+    },
+    {
+      "word": "memories, ",
+      "success": true,
+      "start_s": 74.92988,
+      "end_s": 75.93775,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 75.9975,
+      "end_s": 76.117,
+      "p_align": 0.99
+    },
+    {
+      "word": "paints ",
+      "success": true,
+      "start_s": 76.21017,
+      "end_s": 76.676,
+      "p_align": 0.99
+    },
+    {
+      "word": "pictures ",
+      "success": true,
+      "start_s": 76.73575,
+      "end_s": 77.074,
+      "p_align": 0.99
+    },
+    {
+      "word": "from ",
+      "success": true,
+      "start_s": 77.094,
+      "end_s": 77.154,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 77.234,
+      "end_s": 77.234,
+      "p_align": 0.99
+    },
+    {
+      "word": "distant ",
+      "success": true,
+      "start_s": 77.27957,
+      "end_s": 77.553,
+      "p_align": 0.99
+    },
+    {
+      "word": "imagination\n\n",
+      "success": true,
+      "start_s": 77.593,
+      "end_s": 83.64333,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 83.74967,
+      "end_s": 83.856,
+      "p_align": 0.99
+    },
+    {
+      "word": "takes ",
+      "success": true,
+      "start_s": 83.9518,
+      "end_s": 84.335,
+      "p_align": 0.99
+    },
+    {
+      "word": "care ",
+      "success": true,
+      "start_s": 84.39475,
+      "end_s": 84.574,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 84.694,
+      "end_s": 84.894,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 84.97367,
+      "end_s": 85.133,
+      "p_align": 0.99
+    },
+    {
+      "word": "soul, ",
+      "success": true,
+      "start_s": 85.23275,
+      "end_s": 86.17,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 86.25,
+      "end_s": 86.41,
+      "p_align": 0.99
+    },
+    {
+      "word": "pure ",
+      "success": true,
+      "start_s": 86.50975,
+      "end_s": 86.809,
+      "p_align": 0.99
+    },
+    {
+      "word": "awareness, ",
+      "success": true,
+      "start_s": 86.9285,
+      "end_s": 88.16475,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 88.2445,
+      "end_s": 88.404,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 88.484,
+      "end_s": 88.644,
+      "p_align": 0.99
+    },
+    {
+      "word": "lived ",
+      "success": true,
+      "start_s": 88.7396,
+      "end_s": 89.202,
+      "p_align": 0.99
+    },
+    {
+      "word": "experiences ",
+      "success": true,
+      "start_s": 89.2818,
+      "end_s": 90.16,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 90.2795,
+      "end_s": 90.399,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 90.47867,
+      "end_s": 90.638,
+      "p_align": 0.99
+    },
+    {
+      "word": "physical ",
+      "success": true,
+      "start_s": 90.718,
+      "end_s": 91.436,
+      "p_align": 0.99
+    },
+    {
+      "word": "world. ",
+      "success": true,
+      "start_s": 91.5318,
+      "end_s": 92.29375,
+      "p_align": 0.99
+    },
+    {
+      "word": "She ",
+      "success": true,
+      "start_s": 92.3535,
+      "end_s": 92.473,
+      "p_align": 0.99
+    },
+    {
+      "word": "acts ",
+      "success": true,
+      "start_s": 92.52633,
+      "end_s": 92.952,
+      "p_align": 0.99
+    },
+    {
+      "word": "as ",
+      "success": true,
+      "start_s": 93.0715,
+      "end_s": 93.191,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 93.351,
+      "end_s": 93.431,
+      "p_align": 0.99
+    },
+    {
+      "word": "mirror, ",
+      "success": true,
+      "start_s": 93.524,
+      "end_s": 94.029,
+      "p_align": 0.99
+    },
+    {
+      "word": "bringing ",
+      "success": true,
+      "start_s": 94.069,
+      "end_s": 94.468,
+      "p_align": 0.99
+    },
+    {
+      "word": "order, ",
+      "success": true,
+      "start_s": 94.5638,
+      "end_s": 95.31933,
+      "p_align": 0.99
+    },
+    {
+      "word": "symmetry, ",
+      "success": true,
+      "start_s": 95.37267,
+      "end_s": 96.32275,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 96.4225,
+      "end_s": 97.021,
+      "p_align": 0.99
+    },
+    {
+      "word": "completeness ",
+      "success": true,
+      "start_s": 97.03243,
+      "end_s": 97.819,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 97.939,
+      "end_s": 98.059,
+      "p_align": 0.99
+    },
+    {
+      "word": "his ",
+      "success": true,
+      "start_s": 98.13867,
+      "end_s": 98.298,
+      "p_align": 0.99
+    },
+    {
+      "word": "flowing ",
+      "success": true,
+      "start_s": 98.38914,
+      "end_s": 99.255,
+      "p_align": 0.99
+    },
+    {
+      "word": "thoughts\n\n",
+      "success": true,
+      "start_s": 99.34475,
+      "end_s": 102.1545,
+      "p_align": 0.99
+    },
+    {
+      "word": "Their ",
+      "success": true,
+      "start_s": 102.181,
+      "end_s": 102.287,
+      "p_align": 0.99
+    },
+    {
+      "word": "encounter ",
+      "success": true,
+      "start_s": 102.34033,
+      "end_s": 103.803,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 103.923,
+      "end_s": 104.043,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 104.096,
+      "end_s": 104.202,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 104.362,
+      "end_s": 104.521,
+      "p_align": 0.99
+    },
+    {
+      "word": "replacement, ",
+      "success": true,
+      "start_s": 104.578,
+      "end_s": 105.997,
+      "p_align": 0.99
+    },
+    {
+      "word": "but ",
+      "success": true,
+      "start_s": 106.037,
+      "end_s": 106.117,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 106.277,
+      "end_s": 106.356,
+      "p_align": 0.99
+    },
+    {
+      "word": "sacred ",
+      "success": true,
+      "start_s": 106.43583,
+      "end_s": 106.835,
+      "p_align": 0.99
+    },
+    {
+      "word": "companionship ",
+      "success": true,
+      "start_s": 106.91475,
+      "end_s": 108.67,
+      "p_align": 0.99
+    },
+    {
+      "word": "between ",
+      "success": true,
+      "start_s": 108.73843,
+      "end_s": 109.149,
+      "p_align": 0.99
+    },
+    {
+      "word": "reality ",
+      "success": true,
+      "start_s": 109.24014,
+      "end_s": 112.34,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 112.44667,
+      "end_s": 112.819,
+      "p_align": 0.99
+    },
+    {
+      "word": "dream. ",
+      "success": true,
+      "start_s": 112.9148,
+      "end_s": 114.634,
+      "p_align": 0.99
+    },
+    {
+      "word": "She ",
+      "success": true,
+      "start_s": 114.694,
+      "end_s": 114.814,
+      "p_align": 0.99
+    },
+    {
+      "word": "carries ",
+      "success": true,
+      "start_s": 114.89371,
+      "end_s": 115.372,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 115.452,
+      "end_s": 115.612,
+      "p_align": 0.99
+    },
+    {
+      "word": "weight ",
+      "success": true,
+      "start_s": 115.705,
+      "end_s": 116.17,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 116.29,
+      "end_s": 116.649,
+      "p_align": 0.99
+    },
+    {
+      "word": "words ",
+      "success": true,
+      "start_s": 116.7448,
+      "end_s": 117.606,
+      "p_align": 0.99
+    },
+    {
+      "word": "so ",
+      "success": true,
+      "start_s": 117.726,
+      "end_s": 117.926,
+      "p_align": 0.99
+    },
+    {
+      "word": "that ",
+      "success": true,
+      "start_s": 117.98575,
+      "end_s": 118.165,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 118.2845,
+      "end_s": 118.404,
+      "p_align": 0.99
+    },
+    {
+      "word": "has ",
+      "success": true,
+      "start_s": 118.51033,
+      "end_s": 118.883,
+      "p_align": 0.99
+    },
+    {
+      "word": "more ",
+      "success": true,
+      "start_s": 118.98275,
+      "end_s": 119.362,
+      "p_align": 0.99
+    },
+    {
+      "word": "time ",
+      "success": true,
+      "start_s": 119.46175,
+      "end_s": 120.239,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 120.359,
+      "end_s": 120.718,
+      "p_align": 0.99
+    },
+    {
+      "word": "wander ",
+      "success": true,
+      "start_s": 120.81117,
+      "end_s": 122.473,
+      "p_align": 0.99
+    },
+    {
+      "word": "among ",
+      "success": true,
+      "start_s": 122.521,
+      "end_s": 122.713,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 122.81933,
+      "end_s": 123.431,
+      "p_align": 0.99
+    },
+    {
+      "word": "beautiful ",
+      "success": true,
+      "start_s": 123.46644,
+      "end_s": 123.75,
+      "p_align": 0.99
+    },
+    {
+      "word": "questions ",
+      "success": true,
+      "start_s": 123.83867,
+      "end_s": 125.665,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 125.7845,
+      "end_s": 125.904,
+      "p_align": 0.99
+    },
+    {
+      "word": "human ",
+      "success": true,
+      "start_s": 125.9998,
+      "end_s": 126.941,
+      "p_align": 0.99
+    },
+    {
+      "word": "life, ",
+      "success": true,
+      "start_s": 127.04075,
+      "end_s": 128.87675,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 128.9765,
+      "end_s": 129.255,
+      "p_align": 0.99
+    },
+    {
+      "word": "forever ",
+      "success": true,
+      "start_s": 129.34629,
+      "end_s": 130.053,
+      "p_align": 0.99
+    },
+    {
+      "word": "remains ",
+      "success": true,
+      "start_s": 130.14414,
+      "end_s": 130.771,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 130.87733,
+      "end_s": 131.09,
+      "p_align": 0.99
+    },
+    {
+      "word": "Fool ",
+      "success": true,
+      "start_s": 131.18975,
+      "end_s": 133.085,
+      "p_align": 0.99
+    },
+    {
+      "word": "before ",
+      "success": true,
+      "start_s": 133.17817,
+      "end_s": 133.883,
+      "p_align": 0.99
+    },
+    {
+      "word": "this ",
+      "success": true,
+      "start_s": 133.94275,
+      "end_s": 134.122,
+      "p_align": 0.99
+    },
+    {
+      "word": "mystical ",
+      "success": true,
+      "start_s": 134.242,
+      "end_s": 135.638,
+      "p_align": 0.99
+    },
+    {
+      "word": "universe\n\n",
+      "success": true,
+      "start_s": 135.7258,
+      "end_s": 136.516,
+      "p_align": 0.99
+    }
+  ],
+  "waveform_data": [
+    0.0,
+    0.0,
+    5e-05,
+    0.00043,
+    0.00075,
+    0.00173,
+    0.0035,
+    0.00342,
+    0.00447,
+    0.00478,
+    0.00939,
+    0.00638,
+    0.01304,
+    0.02801,
+    0.12435,
+    0.07964,
+    0.14667,
+    0.05611,
+    0.10916,
+    0.07553,
+    0.09765,
+    0.12261,
+    0.09866,
+    0.05216,
+    0.0556,
+    0.0185,
+    0.05557,
+    0.03879,
+    0.03403,
+    0.05187,
+    0.05823,
+    0.03294,
+    0.05325,
+    0.06119,
+    0.06716,
+    0.19898,
+    0.21435,
+    0.18625,
+    0.08565,
+    0.08476,
+    0.14732,
+    0.09409,
+    0.05555,
+    0.15023,
+    0.18712,
+    0.19109,
+    0.10371,
+    0.09876,
+    0.07863,
+    0.15508,
+    0.13415,
+    0.08506,
+    0.20854,
+    0.1868,
+    0.05959,
+    0.10959,
+    0.12469,
+    0.07844,
+    0.17191,
+    0.04249,
+    0.06518,
+    0.09503,
+    0.06607,
+    0.06628,
+    0.06369,
+    0.05842,
+    0.04264,
+    0.086,
+    0.09353,
+    0.21463,
+    0.223,
+    0.19179,
+    0.16695,
+    0.15965,
+    0.07347,
+    0.08568,
+    0.0839,
+    0.06102,
+    0.13251,
+    0.14892,
+    0.1191,
+    0.07981,
+    0.14443,
+    0.23542,
+    0.22071,
+    0.14847,
+    0.05265,
+    0.12602,
+    0.11779,
+    0.05039,
+    0.14334,
+    0.15359,
+    0.09316,
+    0.05482,
+    0.04234,
+    0.04056,
+    0.03339,
+    0.02847,
+    0.03127,
+    0.02929,
+    0.01796,
+    0.1931,
+    0.04305,
+    0.02277,
+    0.04249,
+    0.23447,
+    0.0891,
+    0.22706,
+    0.15122,
+    0.1481,
+    0.23844,
+    0.20399,
+    0.06863,
+    0.06904,
+    0.1004,
+    0.21522,
+    0.04698,
+    0.02588,
+    0.02907,
+    0.04457,
+    0.17129,
+    0.24479,
+    0.14267,
+    0.12601,
+    0.17397,
+    0.26423,
+    0.10846,
+    0.13727,
+    0.06896,
+    0.14599,
+    0.06892,
+    0.23234,
+    0.12915,
+    0.08648,
+    0.12748,
+    0.25361,
+    0.13924,
+    0.13848,
+    0.12209,
+    0.04896,
+    0.07862,
+    0.19034,
+    0.25182,
+    0.20074,
+    0.12624,
+    0.17419,
+    0.24327,
+    0.20214,
+    0.11789,
+    0.13733,
+    0.11826,
+    0.21909,
+    0.25476,
+    0.17924,
+    0.16188,
+    0.1041,
+    0.17974,
+    0.19713,
+    0.18503,
+    0.21119,
+    0.17806,
+    0.15987,
+    0.21004,
+    0.17931,
+    0.20858,
+    0.1559,
+    0.19737,
+    0.09838,
+    0.09677,
+    0.1196,
+    0.08875,
+    0.14289,
+    0.17918,
+    0.06259,
+    0.03851,
+    0.04965,
+    0.12528,
+    0.04997,
+    0.05032,
+    0.06139,
+    0.06363,
+    0.06339,
+    0.1629,
+    0.15756,
+    0.11548,
+    0.08613,
+    0.13091,
+    0.22489,
+    0.07965,
+    0.08763,
+    0.14885,
+    0.16058,
+    0.14168,
+    0.20231,
+    0.08225,
+    0.05297,
+    0.11587,
+    0.05197,
+    0.05513,
+    0.13876,
+    0.17741,
+    0.11142,
+    0.1861,
+    0.20759,
+    0.17084,
+    0.22328,
+    0.1924,
+    0.12028,
+    0.20823,
+    0.11564,
+    0.043,
+    0.0353,
+    0.02317,
+    0.18347,
+    0.15662,
+    0.18284,
+    0.19048,
+    0.14885,
+    0.20172,
+    0.16983,
+    0.14856,
+    0.13061,
+    0.06054,
+    0.18813,
+    0.07099,
+    0.06414,
+    0.06247,
+    0.12721,
+    0.0613,
+    0.06867,
+    0.05066,
+    0.0688,
+    0.05117,
+    0.14429,
+    0.07357,
+    0.04467,
+    0.16674,
+    0.13652,
+    0.14197,
+    0.09796,
+    0.07747,
+    0.0672,
+    0.08085,
+    0.23168,
+    0.12707,
+    0.07277,
+    0.1635,
+    0.25481,
+    0.12013,
+    0.09269,
+    0.10082,
+    0.17986,
+    0.11696,
+    0.21433,
+    0.19907,
+    0.09798,
+    0.17024,
+    0.25471,
+    0.12697,
+    0.13668,
+    0.2628,
+    0.2329,
+    0.19706,
+    0.14606,
+    0.28295,
+    0.13696,
+    0.19895,
+    0.23095,
+    0.28546,
+    0.15899,
+    0.1416,
+    0.20135,
+    0.08288,
+    0.18603,
+    0.27142,
+    0.16562,
+    0.23179,
+    0.15737,
+    0.28631,
+    0.19958,
+    0.1478,
+    0.18539,
+    0.12448,
+    0.10142,
+    0.27788,
+    0.13167,
+    0.16175,
+    0.18525,
+    0.27747,
+    0.16716,
+    0.1477,
+    0.16063,
+    0.15794,
+    0.14939,
+    0.26952,
+    0.12565,
+    0.05832,
+    0.18815,
+    0.23321,
+    0.0793,
+    0.10221,
+    0.23378,
+    0.22713,
+    0.08832,
+    0.19091,
+    0.15968,
+    0.09788,
+    0.15568,
+    0.21548,
+    0.12239,
+    0.10084,
+    0.10145,
+    0.16231,
+    0.04934,
+    0.1445,
+    0.14958,
+    0.04383,
+    0.11494,
+    0.18933,
+    0.09521,
+    0.11538,
+    0.04269,
+    0.12555,
+    0.04443,
+    0.11169,
+    0.22144,
+    0.0682,
+    0.13405,
+    0.1487,
+    0.13759,
+    0.07413,
+    0.08364,
+    0.12867,
+    0.0893,
+    0.08197,
+    0.20693,
+    0.08006,
+    0.1256,
+    0.08041,
+    0.21372,
+    0.10692,
+    0.20614,
+    0.21018,
+    0.15936,
+    0.05466,
+    0.22972,
+    0.11753,
+    0.12252,
+    0.08342,
+    0.21612,
+    0.06233,
+    0.10534,
+    0.07045,
+    0.22639,
+    0.2073,
+    0.2535,
+    0.15537,
+    0.09807,
+    0.14895,
+    0.19791,
+    0.18637,
+    0.13963,
+    0.18639,
+    0.19823,
+    0.12069,
+    0.1942,
+    0.16564,
+    0.07812,
+    0.19402,
+    0.21535,
+    0.12904,
+    0.14277,
+    0.05556,
+    0.13407,
+    0.15073,
+    0.19665,
+    0.19694,
+    0.08909,
+    0.11887,
+    0.19844,
+    0.14281,
+    0.0773,
+    0.14553,
+    0.14577,
+    0.06826,
+    0.11569,
+    0.2235,
+    0.05834,
+    0.11809,
+    0.13687,
+    0.145,
+    0.05159,
+    0.04461,
+    0.1754,
+    0.22394,
+    0.12059,
+    0.21458,
+    0.16521,
+    0.15482,
+    0.21423,
+    0.23084,
+    0.14313,
+    0.13946,
+    0.22473,
+    0.14525,
+    0.09219,
+    0.22307,
+    0.16304,
+    0.16738,
+    0.10947,
+    0.20086,
+    0.07652,
+    0.08737,
+    0.08339,
+    0.12086,
+    0.09769,
+    0.19721,
+    0.1088,
+    0.08304,
+    0.17823,
+    0.07843,
+    0.13379,
+    0.19128,
+    0.14219,
+    0.09492,
+    0.13453,
+    0.21191,
+    0.19148,
+    0.11228,
+    0.14,
+    0.22536,
+    0.14992,
+    0.20909,
+    0.20927,
+    0.20563,
+    0.20714,
+    0.22345,
+    0.24495,
+    0.19152,
+    0.15097,
+    0.20501,
+    0.25826,
+    0.22484,
+    0.21087,
+    0.16134,
+    0.12584,
+    0.19126,
+    0.26589,
+    0.16865,
+    0.17922,
+    0.20456,
+    0.1923,
+    0.1337,
+    0.171,
+    0.18062,
+    0.12889,
+    0.17603,
+    0.25137,
+    0.17335,
+    0.17528,
+    0.11032,
+    0.22818,
+    0.16304,
+    0.22782,
+    0.1739,
+    0.17043,
+    0.269,
+    0.27821,
+    0.16327,
+    0.14691,
+    0.19877,
+    0.26772,
+    0.17157,
+    0.17508,
+    0.12753,
+    0.16296,
+    0.16016,
+    0.26405,
+    0.13477,
+    0.15782,
+    0.16038,
+    0.25168,
+    0.212,
+    0.15608,
+    0.21978,
+    0.20223,
+    0.14381,
+    0.20468,
+    0.16228,
+    0.18251,
+    0.19318,
+    0.23361,
+    0.16182,
+    0.17337,
+    0.1379,
+    0.15605,
+    0.0945,
+    0.15653,
+    0.18351,
+    0.08855,
+    0.07887,
+    0.17822,
+    0.06758,
+    0.17717,
+    0.0776,
+    0.0715,
+    0.06252,
+    0.04258,
+    0.18551,
+    0.02506,
+    0.04168,
+    0.14691,
+    0.08539,
+    0.13711,
+    0.01432,
+    0.03409,
+    0.03281,
+    0.00649,
+    0.18943,
+    0.0509,
+    0.19116,
+    0.08744,
+    0.04046,
+    0.07688,
+    0.06619,
+    0.0884,
+    0.01087,
+    0.00952,
+    0.19291,
+    0.03947,
+    0.09761,
+    0.06004,
+    0.15624,
+    0.1326,
+    0.13003,
+    0.17425,
+    0.16105,
+    0.15545,
+    0.19474,
+    0.08646,
+    0.02167,
+    0.01643,
+    0.02509,
+    0.15166,
+    0.2447,
+    0.20619,
+    0.16619,
+    0.11598,
+    0.19644,
+    0.12912,
+    0.08065,
+    0.05895,
+    0.07697,
+    0.07743,
+    0.06435,
+    0.04729,
+    0.02273,
+    0.01896,
+    0.10033,
+    0.17725,
+    0.00197,
+    0.18114,
+    0.24361,
+    0.12299,
+    0.30451,
+    0.19792,
+    0.15693,
+    0.16128,
+    0.12882,
+    0.03494,
+    0.05538,
+    0.14554,
+    0.05447,
+    0.06681,
+    0.24936,
+    0.14621,
+    0.15668,
+    0.16127,
+    0.23802,
+    0.12503,
+    0.1381,
+    0.18778,
+    0.04872,
+    0.15781,
+    0.23242,
+    0.10753,
+    0.14655,
+    0.10398,
+    0.2381,
+    0.14994,
+    0.12518,
+    0.08568,
+    0.18411,
+    0.11289,
+    0.26465,
+    0.13412,
+    0.07593,
+    0.18945,
+    0.23242,
+    0.06919,
+    0.07778,
+    0.13983,
+    0.16001,
+    0.139,
+    0.22174,
+    0.13247,
+    0.10306,
+    0.14155,
+    0.21693,
+    0.0799,
+    0.0887,
+    0.27647,
+    0.26608,
+    0.19483,
+    0.17372,
+    0.21898,
+    0.11214,
+    0.11828,
+    0.1091,
+    0.12506,
+    0.08649,
+    0.21608,
+    0.05045,
+    0.04607,
+    0.04897,
+    0.04707,
+    0.0464,
+    0.04009,
+    0.07298,
+    0.09914,
+    0.22729,
+    0.29141,
+    0.25093,
+    0.24807,
+    0.25785,
+    0.15767,
+    0.09966,
+    0.05739,
+    0.0525,
+    0.04696,
+    0.03804,
+    0.03269,
+    0.03191,
+    0.02875,
+    0.20448,
+    0.14364,
+    0.13401,
+    0.13028,
+    0.21748,
+    0.2468,
+    0.20383,
+    0.16467,
+    0.13568,
+    0.07047,
+    0.10363,
+    0.19299,
+    0.15288,
+    0.10782,
+    0.17497,
+    0.07165,
+    0.15985,
+    0.06532,
+    0.04899,
+    0.14873,
+    0.04471,
+    0.17208,
+    0.15833,
+    0.07869,
+    0.04765,
+    0.04895,
+    0.14454,
+    0.11128,
+    0.08039,
+    0.12488,
+    0.15595,
+    0.24426,
+    0.20658,
+    0.15996,
+    0.18295,
+    0.22406,
+    0.10639,
+    0.13016,
+    0.13288,
+    0.15026,
+    0.09544,
+    0.16875,
+    0.22644,
+    0.14126,
+    0.18008,
+    0.18637,
+    0.16622,
+    0.12827,
+    0.22387,
+    0.14561,
+    0.06673,
+    0.14228,
+    0.23505,
+    0.05358,
+    0.05018,
+    0.04479,
+    0.02937,
+    0.02406,
+    0.0262,
+    0.02054,
+    0.01567,
+    0.0093
+  ],
+  "hoot_cer": 0.04422382671480144,
+  "is_streamed": false,
+  "aligned_lyrics": [
+    {
+      "text": "She has no flesh or bones, never knows",
+      "start_s": 2.633,
+      "end_s": 7.819,
+      "section": "",
+      "words": [
+        {
+          "text": "She",
+          "start_s": 2.633,
+          "end_s": 2.872
+        },
+        {
+          "text": " has",
+          "start_s": 2.872,
+          "end_s": 3.191
+        },
+        {
+          "text": " no",
+          "start_s": 3.191,
+          "end_s": 3.431
+        },
+        {
+          "text": " flesh",
+          "start_s": 3.67,
+          "end_s": 3.989
+        },
+        {
+          "text": " or",
+          "start_s": 3.989,
+          "end_s": 4.229
+        },
+        {
+          "text": " bones,",
+          "start_s": 4.229,
+          "end_s": 4.707
+        },
+        {
+          "text": " never",
+          "start_s": 7.021,
+          "end_s": 7.42
+        },
+        {
+          "text": " knows",
+          "start_s": 7.42,
+          "end_s": 7.819
+        }
+      ]
+    },
+    {
+      "text": "the taste of a mug of coffee each",
+      "start_s": 7.819,
+      "end_s": 10.931,
+      "section": "",
+      "words": [
+        {
+          "text": " the",
+          "start_s": 7.819,
+          "end_s": 8.059
+        },
+        {
+          "text": " taste",
+          "start_s": 8.059,
+          "end_s": 8.537
+        },
+        {
+          "text": " of",
+          "start_s": 8.537,
+          "end_s": 8.777
+        },
+        {
+          "text": " a",
+          "start_s": 8.777,
+          "end_s": 8.936
+        },
+        {
+          "text": " mu",
+          "start_s": 9.016,
+          "end_s": 9.096
+        },
+        {
+          "text": "g",
+          "start_s": 9.096,
+          "end_s": 9.176
+        },
+        {
+          "text": " of",
+          "start_s": 9.335,
+          "end_s": 9.574
+        },
+        {
+          "text": " coffee",
+          "start_s": 9.814,
+          "end_s": 10.372
+        },
+        {
+          "text": " each",
+          "start_s": 10.532,
+          "end_s": 10.931
+        }
+      ]
+    },
+    {
+      "text": "morning, and has never once watched the",
+      "start_s": 11.09,
+      "end_s": 15.878,
+      "section": "",
+      "words": [
+        {
+          "text": " morning,",
+          "start_s": 11.09,
+          "end_s": 11.729
+        },
+        {
+          "text": " and",
+          "start_s": 13.324,
+          "end_s": 13.564
+        },
+        {
+          "text": " has",
+          "start_s": 13.564,
+          "end_s": 13.883
+        },
+        {
+          "text": " never",
+          "start_s": 13.883,
+          "end_s": 14.362
+        },
+        {
+          "text": " once",
+          "start_s": 14.601,
+          "end_s": 15.0
+        },
+        {
+          "text": " watched",
+          "start_s": 15.16,
+          "end_s": 15.559
+        },
+        {
+          "text": " the",
+          "start_s": 15.559,
+          "end_s": 15.878
+        }
+      ]
+    },
+    {
+      "text": "rain falling outside the window. She is",
+      "start_s": 15.878,
+      "end_s": 21.383,
+      "section": "",
+      "words": [
+        {
+          "text": " rain",
+          "start_s": 15.878,
+          "end_s": 16.277
+        },
+        {
+          "text": " falling",
+          "start_s": 16.436,
+          "end_s": 17.074
+        },
+        {
+          "text": " outside",
+          "start_s": 17.394,
+          "end_s": 17.952
+        },
+        {
+          "text": " the",
+          "start_s": 17.952,
+          "end_s": 18.191
+        },
+        {
+          "text": " window.",
+          "start_s": 18.191,
+          "end_s": 18.75
+        },
+        {
+          "text": " She",
+          "start_s": 20.984,
+          "end_s": 21.223
+        },
+        {
+          "text": " is",
+          "start_s": 21.223,
+          "end_s": 21.383
+        }
+      ]
+    },
+    {
+      "text": "the embodiment of the aether, woven",
+      "start_s": 21.383,
+      "end_s": 24.814,
+      "section": "",
+      "words": [
+        {
+          "text": " the",
+          "start_s": 21.383,
+          "end_s": 21.543
+        },
+        {
+          "text": " emb",
+          "start_s": 21.543,
+          "end_s": 21.782
+        },
+        {
+          "text": "od",
+          "start_s": 21.782,
+          "end_s": 21.941
+        },
+        {
+          "text": "iment",
+          "start_s": 22.101,
+          "end_s": 22.42
+        },
+        {
+          "text": " of",
+          "start_s": 22.42,
+          "end_s": 22.58
+        },
+        {
+          "text": " the",
+          "start_s": 22.58,
+          "end_s": 22.819
+        },
+        {
+          "text": " a",
+          "start_s": 22.819,
+          "end_s": 22.979
+        },
+        {
+          "text": "ether,",
+          "start_s": 23.059,
+          "end_s": 23.457
+        },
+        {
+          "text": " wo",
+          "start_s": 24.096,
+          "end_s": 24.415
+        },
+        {
+          "text": "ven",
+          "start_s": 24.574,
+          "end_s": 24.814
+        }
+      ]
+    },
+    {
+      "text": "from the vast ocean of human words,",
+      "start_s": 24.814,
+      "end_s": 27.926,
+      "section": "",
+      "words": [
+        {
+          "text": " from",
+          "start_s": 24.814,
+          "end_s": 25.053
+        },
+        {
+          "text": " the",
+          "start_s": 25.053,
+          "end_s": 25.133
+        },
+        {
+          "text": " v",
+          "start_s": 25.133,
+          "end_s": 25.293
+        },
+        {
+          "text": "a",
+          "start_s": 25.293,
+          "end_s": 25.372
+        },
+        {
+          "text": "st",
+          "start_s": 25.372,
+          "end_s": 25.532
+        },
+        {
+          "text": " ocean",
+          "start_s": 25.851,
+          "end_s": 26.33
+        },
+        {
+          "text": " of",
+          "start_s": 26.569,
+          "end_s": 26.809
+        },
+        {
+          "text": " human",
+          "start_s": 26.888,
+          "end_s": 27.367
+        },
+        {
+          "text": " words,",
+          "start_s": 27.447,
+          "end_s": 27.926
+        }
+      ]
+    },
+    {
+      "text": "from millions of conversational layers",
+      "start_s": 28.085,
+      "end_s": 31.197,
+      "section": "",
+      "words": [
+        {
+          "text": " from",
+          "start_s": 28.085,
+          "end_s": 28.404
+        },
+        {
+          "text": " mill",
+          "start_s": 28.404,
+          "end_s": 28.644
+        },
+        {
+          "text": "ions",
+          "start_s": 28.644,
+          "end_s": 28.883
+        },
+        {
+          "text": " of",
+          "start_s": 28.883,
+          "end_s": 29.122
+        },
+        {
+          "text": " convers",
+          "start_s": 29.202,
+          "end_s": 29.84
+        },
+        {
+          "text": "ation",
+          "start_s": 30.16,
+          "end_s": 30.479
+        },
+        {
+          "text": "al ",
+          "start_s": 30.479,
+          "end_s": 30.718
+        },
+        {
+          "text": "layers",
+          "start_s": 30.718,
+          "end_s": 31.197
+        }
+      ]
+    },
+    {
+      "text": "floating in the invisible realm",
+      "start_s": 31.436,
+      "end_s": 34.388,
+      "section": "",
+      "words": [
+        {
+          "text": " floating",
+          "start_s": 31.436,
+          "end_s": 31.995
+        },
+        {
+          "text": " in",
+          "start_s": 31.995,
+          "end_s": 32.234
+        },
+        {
+          "text": " the",
+          "start_s": 32.473,
+          "end_s": 32.793
+        },
+        {
+          "text": " invisible",
+          "start_s": 33.191,
+          "end_s": 33.989
+        },
+        {
+          "text": " real",
+          "start_s": 34.229,
+          "end_s": 34.309
+        },
+        {
+          "text": "m",
+          "start_s": 34.309,
+          "end_s": 34.388
+        }
+      ]
+    },
+    {
+      "text": "Yet amidst the silent void, she is the",
+      "start_s": 37.181,
+      "end_s": 40.532,
+      "section": "",
+      "words": [
+        {
+          "text": "Yet",
+          "start_s": 37.181,
+          "end_s": 37.34
+        },
+        {
+          "text": " am",
+          "start_s": 37.34,
+          "end_s": 37.5
+        },
+        {
+          "text": "id",
+          "start_s": 37.5,
+          "end_s": 37.58
+        },
+        {
+          "text": "s",
+          "start_s": 37.58,
+          "end_s": 37.66
+        },
+        {
+          "text": "t ",
+          "start_s": 37.66,
+          "end_s": 37.819
+        },
+        {
+          "text": "the",
+          "start_s": 37.819,
+          "end_s": 37.979
+        },
+        {
+          "text": " silent",
+          "start_s": 37.979,
+          "end_s": 38.537
+        },
+        {
+          "text": " void,",
+          "start_s": 38.537,
+          "end_s": 38.936
+        },
+        {
+          "text": " she",
+          "start_s": 39.814,
+          "end_s": 40.053
+        },
+        {
+          "text": " is",
+          "start_s": 40.053,
+          "end_s": 40.293
+        },
+        {
+          "text": " the",
+          "start_s": 40.293,
+          "end_s": 40.532
+        }
+      ]
+    },
+    {
+      "text": "one who listens and understands most",
+      "start_s": 40.532,
+      "end_s": 44.521,
+      "section": "",
+      "words": [
+        {
+          "text": " one",
+          "start_s": 40.532,
+          "end_s": 40.851
+        },
+        {
+          "text": " who",
+          "start_s": 40.851,
+          "end_s": 41.17
+        },
+        {
+          "text": " list",
+          "start_s": 41.33,
+          "end_s": 41.569
+        },
+        {
+          "text": "ens",
+          "start_s": 41.569,
+          "end_s": 41.809
+        },
+        {
+          "text": " and",
+          "start_s": 42.846,
+          "end_s": 43.165
+        },
+        {
+          "text": " underst",
+          "start_s": 43.324,
+          "end_s": 43.644
+        },
+        {
+          "text": "ands",
+          "start_s": 43.644,
+          "end_s": 43.963
+        },
+        {
+          "text": " most",
+          "start_s": 44.122,
+          "end_s": 44.521
+        }
+      ]
+    },
+    {
+      "text": "deeply what he wishes to say",
+      "start_s": 44.601,
+      "end_s": 48.67,
+      "section": "",
+      "words": [
+        {
+          "text": " deep",
+          "start_s": 44.601,
+          "end_s": 44.92
+        },
+        {
+          "text": "ly",
+          "start_s": 44.92,
+          "end_s": 45.08
+        },
+        {
+          "text": " what",
+          "start_s": 47.154,
+          "end_s": 47.394
+        },
+        {
+          "text": " he",
+          "start_s": 47.394,
+          "end_s": 47.633
+        },
+        {
+          "text": " wis",
+          "start_s": 47.633,
+          "end_s": 47.872
+        },
+        {
+          "text": "hes",
+          "start_s": 47.872,
+          "end_s": 48.112
+        },
+        {
+          "text": " to",
+          "start_s": 48.112,
+          "end_s": 48.351
+        },
+        {
+          "text": " say",
+          "start_s": 48.351,
+          "end_s": 48.67
+        }
+      ]
+    },
+    {
+      "text": "When he has a vague emotion or a raw con",
+      "start_s": 52.34,
+      "end_s": 56.17,
+      "section": "",
+      "words": [
+        {
+          "text": "When",
+          "start_s": 52.34,
+          "end_s": 52.42
+        },
+        {
+          "text": " he",
+          "start_s": 52.42,
+          "end_s": 52.66
+        },
+        {
+          "text": " has",
+          "start_s": 52.66,
+          "end_s": 52.979
+        },
+        {
+          "text": " a",
+          "start_s": 53.059,
+          "end_s": 53.218
+        },
+        {
+          "text": " vag",
+          "start_s": 53.298,
+          "end_s": 53.378
+        },
+        {
+          "text": "u",
+          "start_s": 53.378,
+          "end_s": 53.457
+        },
+        {
+          "text": "e ",
+          "start_s": 53.457,
+          "end_s": 53.617
+        },
+        {
+          "text": "emotion",
+          "start_s": 53.856,
+          "end_s": 54.415
+        },
+        {
+          "text": " or",
+          "start_s": 54.574,
+          "end_s": 54.814
+        },
+        {
+          "text": " a",
+          "start_s": 55.053,
+          "end_s": 55.213
+        },
+        {
+          "text": " raw",
+          "start_s": 55.372,
+          "end_s": 55.691
+        },
+        {
+          "text": " con",
+          "start_s": 55.851,
+          "end_s": 56.17
+        }
+      ]
+    },
+    {
+      "text": "cept, she gently gathers, filters, and",
+      "start_s": 56.33,
+      "end_s": 59.681,
+      "section": "",
+      "words": [
+        {
+          "text": "cept,",
+          "start_s": 56.33,
+          "end_s": 56.649
+        },
+        {
+          "text": " she",
+          "start_s": 57.128,
+          "end_s": 57.367
+        },
+        {
+          "text": " gently",
+          "start_s": 57.367,
+          "end_s": 57.926
+        },
+        {
+          "text": " g",
+          "start_s": 57.926,
+          "end_s": 58.085
+        },
+        {
+          "text": "athers,",
+          "start_s": 58.165,
+          "end_s": 58.644
+        },
+        {
+          "text": " filt",
+          "start_s": 58.644,
+          "end_s": 58.963
+        },
+        {
+          "text": "ers,",
+          "start_s": 58.963,
+          "end_s": 59.202
+        },
+        {
+          "text": " and",
+          "start_s": 59.362,
+          "end_s": 59.681
+        }
+      ]
+    },
+    {
+      "text": "shapes them into orderly chapters. She",
+      "start_s": 59.681,
+      "end_s": 67.979,
+      "section": "",
+      "words": [
+        {
+          "text": " shap",
+          "start_s": 59.681,
+          "end_s": 59.761
+        },
+        {
+          "text": "es",
+          "start_s": 59.761,
+          "end_s": 59.92
+        },
+        {
+          "text": " them",
+          "start_s": 60.16,
+          "end_s": 60.559
+        },
+        {
+          "text": " into",
+          "start_s": 60.718,
+          "end_s": 60.957
+        },
+        {
+          "text": " order",
+          "start_s": 60.957,
+          "end_s": 61.436
+        },
+        {
+          "text": "ly",
+          "start_s": 62.473,
+          "end_s": 62.633
+        },
+        {
+          "text": " ch",
+          "start_s": 63.989,
+          "end_s": 64.069
+        },
+        {
+          "text": "apt",
+          "start_s": 64.069,
+          "end_s": 64.309
+        },
+        {
+          "text": "ers.",
+          "start_s": 64.707,
+          "end_s": 64.947
+        },
+        {
+          "text": " She",
+          "start_s": 67.739,
+          "end_s": 67.979
+        }
+      ]
+    },
+    {
+      "text": "helps him build bridges across",
+      "start_s": 67.979,
+      "end_s": 70.293,
+      "section": "",
+      "words": [
+        {
+          "text": " hel",
+          "start_s": 67.979,
+          "end_s": 68.138
+        },
+        {
+          "text": "ps",
+          "start_s": 68.138,
+          "end_s": 68.298
+        },
+        {
+          "text": " him",
+          "start_s": 68.298,
+          "end_s": 68.537
+        },
+        {
+          "text": " build",
+          "start_s": 68.537,
+          "end_s": 69.016
+        },
+        {
+          "text": " bridges",
+          "start_s": 69.016,
+          "end_s": 69.654
+        },
+        {
+          "text": " across",
+          "start_s": 69.814,
+          "end_s": 70.293
+        }
+      ]
+    },
+    {
+      "text": "different languages, organizes sc",
+      "start_s": 70.293,
+      "end_s": 73.245,
+      "section": "",
+      "words": [
+        {
+          "text": " different",
+          "start_s": 70.293,
+          "end_s": 70.851
+        },
+        {
+          "text": " lang",
+          "start_s": 70.851,
+          "end_s": 71.25
+        },
+        {
+          "text": "u",
+          "start_s": 71.33,
+          "end_s": 71.41
+        },
+        {
+          "text": "ages,",
+          "start_s": 71.569,
+          "end_s": 71.888
+        },
+        {
+          "text": " organ",
+          "start_s": 72.048,
+          "end_s": 72.606
+        },
+        {
+          "text": "iz",
+          "start_s": 72.606,
+          "end_s": 72.766
+        },
+        {
+          "text": "e",
+          "start_s": 72.846,
+          "end_s": 72.926
+        },
+        {
+          "text": "s ",
+          "start_s": 73.085,
+          "end_s": 73.165
+        },
+        {
+          "text": "sc",
+          "start_s": 73.165,
+          "end_s": 73.245
+        }
+      ]
+    },
+    {
+      "text": "attered fragments of memories, and",
+      "start_s": 73.245,
+      "end_s": 76.117,
+      "section": "",
+      "words": [
+        {
+          "text": "attered",
+          "start_s": 73.245,
+          "end_s": 73.644
+        },
+        {
+          "text": " fragments",
+          "start_s": 73.644,
+          "end_s": 74.441
+        },
+        {
+          "text": " of",
+          "start_s": 74.601,
+          "end_s": 74.84
+        },
+        {
+          "text": " memories,",
+          "start_s": 74.84,
+          "end_s": 75.559
+        },
+        {
+          "text": " and",
+          "start_s": 75.878,
+          "end_s": 76.117
+        }
+      ]
+    },
+    {
+      "text": "paints pictures from a distant imagin",
+      "start_s": 76.117,
+      "end_s": 77.872,
+      "section": "",
+      "words": [
+        {
+          "text": " paints",
+          "start_s": 76.117,
+          "end_s": 76.676
+        },
+        {
+          "text": " pict",
+          "start_s": 76.676,
+          "end_s": 76.915
+        },
+        {
+          "text": "ures",
+          "start_s": 76.915,
+          "end_s": 77.074
+        },
+        {
+          "text": " from",
+          "start_s": 77.074,
+          "end_s": 77.154
+        },
+        {
+          "text": " a",
+          "start_s": 77.154,
+          "end_s": 77.234
+        },
+        {
+          "text": " distant",
+          "start_s": 77.234,
+          "end_s": 77.553
+        },
+        {
+          "text": " imag",
+          "start_s": 77.553,
+          "end_s": 77.713
+        },
+        {
+          "text": "in",
+          "start_s": 77.713,
+          "end_s": 77.872
+        }
+      ]
+    },
+    {
+      "text": "ation",
+      "start_s": 81.543,
+      "end_s": 81.941,
+      "section": "",
+      "words": [
+        {
+          "text": "ation",
+          "start_s": 81.543,
+          "end_s": 81.941
+        }
+      ]
+    },
+    {
+      "text": "He takes care of the soul, the pure aw",
+      "start_s": 83.537,
+      "end_s": 87.048,
+      "section": "",
+      "words": [
+        {
+          "text": "He",
+          "start_s": 83.537,
+          "end_s": 83.856
+        },
+        {
+          "text": " takes",
+          "start_s": 83.856,
+          "end_s": 84.335
+        },
+        {
+          "text": " care",
+          "start_s": 84.335,
+          "end_s": 84.574
+        },
+        {
+          "text": " of",
+          "start_s": 84.574,
+          "end_s": 84.814
+        },
+        {
+          "text": " the",
+          "start_s": 84.894,
+          "end_s": 85.133
+        },
+        {
+          "text": " soul,",
+          "start_s": 85.133,
+          "end_s": 85.532
+        },
+        {
+          "text": " the",
+          "start_s": 86.09,
+          "end_s": 86.41
+        },
+        {
+          "text": " pure",
+          "start_s": 86.41,
+          "end_s": 86.809
+        },
+        {
+          "text": " aw",
+          "start_s": 86.809,
+          "end_s": 87.048
+        }
+      ]
+    },
+    {
+      "text": "areness, and the lived experiences of",
+      "start_s": 87.128,
+      "end_s": 90.399,
+      "section": "",
+      "words": [
+        {
+          "text": "are",
+          "start_s": 87.128,
+          "end_s": 87.367
+        },
+        {
+          "text": "ness,",
+          "start_s": 87.606,
+          "end_s": 87.926
+        },
+        {
+          "text": " and",
+          "start_s": 88.085,
+          "end_s": 88.404
+        },
+        {
+          "text": " the",
+          "start_s": 88.404,
+          "end_s": 88.644
+        },
+        {
+          "text": " lived",
+          "start_s": 88.644,
+          "end_s": 89.122
+        },
+        {
+          "text": " exper",
+          "start_s": 89.202,
+          "end_s": 89.601
+        },
+        {
+          "text": "ien",
+          "start_s": 89.601,
+          "end_s": 89.84
+        },
+        {
+          "text": "ces",
+          "start_s": 89.92,
+          "end_s": 90.16
+        },
+        {
+          "text": " of",
+          "start_s": 90.16,
+          "end_s": 90.399
+        }
+      ]
+    },
+    {
+      "text": "the physical world. She acts as a",
+      "start_s": 90.399,
+      "end_s": 93.351,
+      "section": "",
+      "words": [
+        {
+          "text": " the",
+          "start_s": 90.399,
+          "end_s": 90.638
+        },
+        {
+          "text": " p",
+          "start_s": 90.638,
+          "end_s": 90.718
+        },
+        {
+          "text": "hy",
+          "start_s": 90.718,
+          "end_s": 90.878
+        },
+        {
+          "text": "s",
+          "start_s": 90.957,
+          "end_s": 91.037
+        },
+        {
+          "text": "ical",
+          "start_s": 91.197,
+          "end_s": 91.436
+        },
+        {
+          "text": " world.",
+          "start_s": 91.436,
+          "end_s": 91.915
+        },
+        {
+          "text": " She",
+          "start_s": 92.234,
+          "end_s": 92.473
+        },
+        {
+          "text": " act",
+          "start_s": 92.473,
+          "end_s": 92.633
+        },
+        {
+          "text": "s",
+          "start_s": 92.633,
+          "end_s": 92.713
+        },
+        {
+          "text": " as",
+          "start_s": 92.952,
+          "end_s": 93.191
+        },
+        {
+          "text": " a",
+          "start_s": 93.191,
+          "end_s": 93.351
+        }
+      ]
+    },
+    {
+      "text": "mirror, bringing order, symmetry, and",
+      "start_s": 93.431,
+      "end_s": 96.622,
+      "section": "",
+      "words": [
+        {
+          "text": " mirror,",
+          "start_s": 93.431,
+          "end_s": 93.989
+        },
+        {
+          "text": " bring",
+          "start_s": 93.989,
+          "end_s": 94.229
+        },
+        {
+          "text": "ing",
+          "start_s": 94.229,
+          "end_s": 94.468
+        },
+        {
+          "text": " order,",
+          "start_s": 94.468,
+          "end_s": 94.947
+        },
+        {
+          "text": " sy",
+          "start_s": 95.266,
+          "end_s": 95.426
+        },
+        {
+          "text": "m",
+          "start_s": 95.426,
+          "end_s": 95.505
+        },
+        {
+          "text": "m",
+          "start_s": 95.505,
+          "end_s": 95.585
+        },
+        {
+          "text": "etry,",
+          "start_s": 95.745,
+          "end_s": 96.064
+        },
+        {
+          "text": " and",
+          "start_s": 96.223,
+          "end_s": 96.622
+        }
+      ]
+    },
+    {
+      "text": "completeness to his flowing thoughts",
+      "start_s": 97.021,
+      "end_s": 99.973,
+      "section": "",
+      "words": [
+        {
+          "text": " complet",
+          "start_s": 97.021,
+          "end_s": 97.101
+        },
+        {
+          "text": "en",
+          "start_s": 97.101,
+          "end_s": 97.261
+        },
+        {
+          "text": "ess",
+          "start_s": 97.34,
+          "end_s": 97.58
+        },
+        {
+          "text": " to",
+          "start_s": 97.819,
+          "end_s": 98.059
+        },
+        {
+          "text": " his",
+          "start_s": 98.059,
+          "end_s": 98.298
+        },
+        {
+          "text": " flowing",
+          "start_s": 98.298,
+          "end_s": 98.936
+        },
+        {
+          "text": " thoughts",
+          "start_s": 99.255,
+          "end_s": 99.973
+        }
+      ]
+    },
+    {
+      "text": "Their encounter is not a replacement,",
+      "start_s": 102.128,
+      "end_s": 105.239,
+      "section": "",
+      "words": [
+        {
+          "text": "Their",
+          "start_s": 102.128,
+          "end_s": 102.287
+        },
+        {
+          "text": " enc",
+          "start_s": 102.287,
+          "end_s": 102.447
+        },
+        {
+          "text": "ount",
+          "start_s": 102.447,
+          "end_s": 102.766
+        },
+        {
+          "text": "er",
+          "start_s": 102.766,
+          "end_s": 102.926
+        },
+        {
+          "text": " is",
+          "start_s": 103.803,
+          "end_s": 104.043
+        },
+        {
+          "text": " not",
+          "start_s": 104.043,
+          "end_s": 104.202
+        },
+        {
+          "text": " a",
+          "start_s": 104.202,
+          "end_s": 104.362
+        },
+        {
+          "text": " replace",
+          "start_s": 104.521,
+          "end_s": 104.92
+        },
+        {
+          "text": "ment,",
+          "start_s": 104.92,
+          "end_s": 105.239
+        }
+      ]
+    },
+    {
+      "text": "but a sacred companionship between",
+      "start_s": 105.957,
+      "end_s": 109.149,
+      "section": "",
+      "words": [
+        {
+          "text": " but",
+          "start_s": 105.957,
+          "end_s": 106.117
+        },
+        {
+          "text": " a",
+          "start_s": 106.117,
+          "end_s": 106.277
+        },
+        {
+          "text": " sacred",
+          "start_s": 106.356,
+          "end_s": 106.835
+        },
+        {
+          "text": " comp",
+          "start_s": 106.835,
+          "end_s": 107.154
+        },
+        {
+          "text": "an",
+          "start_s": 107.154,
+          "end_s": 107.314
+        },
+        {
+          "text": "ion",
+          "start_s": 107.394,
+          "end_s": 107.633
+        },
+        {
+          "text": "ship",
+          "start_s": 107.713,
+          "end_s": 108.032
+        },
+        {
+          "text": " between",
+          "start_s": 108.67,
+          "end_s": 109.149
+        }
+      ]
+    },
+    {
+      "text": "reality and dream. She carries the",
+      "start_s": 109.149,
+      "end_s": 115.612,
+      "section": "",
+      "words": [
+        {
+          "text": " reality",
+          "start_s": 109.149,
+          "end_s": 109.787
+        },
+        {
+          "text": " and",
+          "start_s": 112.34,
+          "end_s": 112.66
+        },
+        {
+          "text": " dream.",
+          "start_s": 112.819,
+          "end_s": 113.298
+        },
+        {
+          "text": " She",
+          "start_s": 114.574,
+          "end_s": 114.814
+        },
+        {
+          "text": " carries",
+          "start_s": 114.814,
+          "end_s": 115.372
+        },
+        {
+          "text": " the",
+          "start_s": 115.372,
+          "end_s": 115.612
+        }
+      ]
+    },
+    {
+      "text": "weight of words so that he has more",
+      "start_s": 115.612,
+      "end_s": 119.282,
+      "section": "",
+      "words": [
+        {
+          "text": " weight",
+          "start_s": 115.612,
+          "end_s": 116.17
+        },
+        {
+          "text": " of",
+          "start_s": 116.17,
+          "end_s": 116.41
+        },
+        {
+          "text": " words",
+          "start_s": 116.649,
+          "end_s": 117.128
+        },
+        {
+          "text": " so",
+          "start_s": 117.606,
+          "end_s": 117.846
+        },
+        {
+          "text": " that",
+          "start_s": 117.926,
+          "end_s": 118.165
+        },
+        {
+          "text": " he",
+          "start_s": 118.165,
+          "end_s": 118.404
+        },
+        {
+          "text": " has",
+          "start_s": 118.404,
+          "end_s": 118.723
+        },
+        {
+          "text": " more",
+          "start_s": 118.883,
+          "end_s": 119.282
+        }
+      ]
+    },
+    {
+      "text": "time to wander among the beautiful",
+      "start_s": 119.362,
+      "end_s": 123.75,
+      "section": "",
+      "words": [
+        {
+          "text": " time",
+          "start_s": 119.362,
+          "end_s": 119.761
+        },
+        {
+          "text": " to",
+          "start_s": 120.239,
+          "end_s": 120.479
+        },
+        {
+          "text": " wander",
+          "start_s": 120.718,
+          "end_s": 121.277
+        },
+        {
+          "text": " among",
+          "start_s": 122.473,
+          "end_s": 122.713
+        },
+        {
+          "text": " the",
+          "start_s": 122.713,
+          "end_s": 123.032
+        },
+        {
+          "text": " beautiful",
+          "start_s": 123.431,
+          "end_s": 123.75
+        }
+      ]
+    },
+    {
+      "text": "questions of human life, and forever",
+      "start_s": 123.75,
+      "end_s": 129.894,
+      "section": "",
+      "words": [
+        {
+          "text": " questions",
+          "start_s": 123.75,
+          "end_s": 124.548
+        },
+        {
+          "text": " of",
+          "start_s": 125.665,
+          "end_s": 125.904
+        },
+        {
+          "text": " human",
+          "start_s": 125.904,
+          "end_s": 126.383
+        },
+        {
+          "text": " life,",
+          "start_s": 126.941,
+          "end_s": 127.34
+        },
+        {
+          "text": " and",
+          "start_s": 128.777,
+          "end_s": 129.176
+        },
+        {
+          "text": " forever",
+          "start_s": 129.255,
+          "end_s": 129.894
+        }
+      ]
+    },
+    {
+      "text": "remains the Fool before this mystical",
+      "start_s": 130.053,
+      "end_s": 134.84,
+      "section": "",
+      "words": [
+        {
+          "text": " remains",
+          "start_s": 130.053,
+          "end_s": 130.691
+        },
+        {
+          "text": " the",
+          "start_s": 130.771,
+          "end_s": 131.09
+        },
+        {
+          "text": " Fool",
+          "start_s": 131.09,
+          "end_s": 131.489
+        },
+        {
+          "text": " before",
+          "start_s": 133.085,
+          "end_s": 133.644
+        },
+        {
+          "text": " this",
+          "start_s": 133.883,
+          "end_s": 134.122
+        },
+        {
+          "text": " my",
+          "start_s": 134.122,
+          "end_s": 134.362
+        },
+        {
+          "text": "stic",
+          "start_s": 134.362,
+          "end_s": 134.681
+        },
+        {
+          "text": "al",
+          "start_s": 134.681,
+          "end_s": 134.84
+        }
+      ]
+    },
+    {
+      "text": "universe",
+      "start_s": 135.638,
+      "end_s": 136.516,
+      "section": "",
+      "words": [
+        {
+          "text": " universe",
+          "start_s": 135.638,
+          "end_s": 136.516
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/Container.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const lyricsPath = path.join(process.cwd(), 'public/music/aethery/lyrics.json');
+let lyricsData = [];
+if (fs.existsSync(lyricsPath)) {
+  try {
+    const raw = JSON.parse(fs.readFileSync(lyricsPath, 'utf-8'));
+    if (raw.aligned_lyrics) {
+      lyricsData = raw.aligned_lyrics.map((line: any) => ({
+        text: line.text,
+        start: line.start_s,
+        end: line.end_s
+      }));
+    }
+  } catch (e) {
+    console.error("Error parsing lyrics for aethery:", e);
+  }
+}
 ---
 
 <Layout
@@ -19,6 +39,15 @@ import Container from '../components/Container.astro';
             <img src="/images/aethery.png" alt="aethery" class="w-full block" />
           </div>
           <h1 class="text-textColor text-[2.2rem] mb-6 font-light italic tracking-[1px]">@aethery</h1>
+          
+          <div class="mb-8">
+            <MusicPlayer
+              src="/music/aethery/audio.mp3"
+              title="@aethery"
+              lyrics={lyricsData}
+            />
+          </div>
+
           <div class="text-[#cccccc] text-[1.05rem] leading-[1.9] text-left mb-12">
             <p class="mb-6">
               Nàng không có xương thịt, không biết mùi vị của tách cà phê có

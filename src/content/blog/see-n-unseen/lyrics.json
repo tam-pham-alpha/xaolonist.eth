@@ -1,0 +1,999 @@
+{
+  "aligned_words": [
+    {
+      "word": "Hey ",
+      "success": true,
+      "start_s": 0.0,
+      "end_s": 0.84507,
+      "p_align": 0.99
+    },
+    {
+      "word": "hey, ",
+      "success": true,
+      "start_s": 0.84507,
+      "end_s": 1.69014,
+      "p_align": 0.99
+    },
+    {
+      "word": "lại ",
+      "success": true,
+      "start_s": 1.69014,
+      "end_s": 2.53521,
+      "p_align": 0.99
+    },
+    {
+      "word": "là ",
+      "success": true,
+      "start_s": 2.53521,
+      "end_s": 3.38028,
+      "p_align": 0.99
+    },
+    {
+      "word": "hắn ",
+      "success": true,
+      "start_s": 3.38028,
+      "end_s": 4.22535,
+      "p_align": 0.99
+    },
+    {
+      "word": "đây, ",
+      "success": true,
+      "start_s": 4.22535,
+      "end_s": 5.07042,
+      "p_align": 0.99
+    },
+    {
+      "word": "trước ",
+      "success": true,
+      "start_s": 5.07042,
+      "end_s": 5.91549,
+      "p_align": 0.99
+    },
+    {
+      "word": "đây ",
+      "success": true,
+      "start_s": 5.91549,
+      "end_s": 6.76056,
+      "p_align": 0.99
+    },
+    {
+      "word": "hắn ",
+      "success": true,
+      "start_s": 6.76056,
+      "end_s": 7.60563,
+      "p_align": 0.99
+    },
+    {
+      "word": "nghĩ ",
+      "success": true,
+      "start_s": 7.60563,
+      "end_s": 8.4507,
+      "p_align": 0.99
+    },
+    {
+      "word": "rằng, ",
+      "success": true,
+      "start_s": 8.4507,
+      "end_s": 9.29577,
+      "p_align": 0.99
+    },
+    {
+      "word": "có ",
+      "success": true,
+      "start_s": 9.29577,
+      "end_s": 10.14085,
+      "p_align": 0.99
+    },
+    {
+      "word": "càng ",
+      "success": true,
+      "start_s": 10.14085,
+      "end_s": 10.98592,
+      "p_align": 0.99
+    },
+    {
+      "word": "nhiều ",
+      "success": true,
+      "start_s": 10.98592,
+      "end_s": 11.83099,
+      "p_align": 0.99
+    },
+    {
+      "word": "kiến ",
+      "success": true,
+      "start_s": 11.83099,
+      "end_s": 12.67606,
+      "p_align": 0.99
+    },
+    {
+      "word": "thức ",
+      "success": true,
+      "start_s": 12.67606,
+      "end_s": 13.52113,
+      "p_align": 0.99
+    },
+    {
+      "word": "càng ",
+      "success": true,
+      "start_s": 13.52113,
+      "end_s": 14.3662,
+      "p_align": 0.99
+    },
+    {
+      "word": "tốt. ",
+      "success": true,
+      "start_s": 14.3662,
+      "end_s": 15.21127,
+      "p_align": 0.99
+    },
+    {
+      "word": "Nhưng ",
+      "success": true,
+      "start_s": 15.21127,
+      "end_s": 16.05634,
+      "p_align": 0.99
+    },
+    {
+      "word": "và ",
+      "success": true,
+      "start_s": 16.05634,
+      "end_s": 16.90141,
+      "p_align": 0.99
+    },
+    {
+      "word": "rồi, ",
+      "success": true,
+      "start_s": 16.90141,
+      "end_s": 17.74648,
+      "p_align": 0.99
+    },
+    {
+      "word": "hắn ",
+      "success": true,
+      "start_s": 17.74648,
+      "end_s": 18.59155,
+      "p_align": 0.99
+    },
+    {
+      "word": "nhận ",
+      "success": true,
+      "start_s": 18.59155,
+      "end_s": 19.43662,
+      "p_align": 0.99
+    },
+    {
+      "word": "ra ",
+      "success": true,
+      "start_s": 19.43662,
+      "end_s": 20.28169,
+      "p_align": 0.99
+    },
+    {
+      "word": "rằng, ",
+      "success": true,
+      "start_s": 20.28169,
+      "end_s": 21.12676,
+      "p_align": 0.99
+    },
+    {
+      "word": "có ",
+      "success": true,
+      "start_s": 21.12676,
+      "end_s": 21.97183,
+      "p_align": 0.99
+    },
+    {
+      "word": "những ",
+      "success": true,
+      "start_s": 21.97183,
+      "end_s": 22.8169,
+      "p_align": 0.99
+    },
+    {
+      "word": "kiến ",
+      "success": true,
+      "start_s": 22.8169,
+      "end_s": 23.66197,
+      "p_align": 0.99
+    },
+    {
+      "word": "thức ",
+      "success": true,
+      "start_s": 23.66197,
+      "end_s": 24.50704,
+      "p_align": 0.99
+    },
+    {
+      "word": "rồi ",
+      "success": true,
+      "start_s": 24.50704,
+      "end_s": 25.35211,
+      "p_align": 0.99
+    },
+    {
+      "word": "cũng ",
+      "success": true,
+      "start_s": 25.35211,
+      "end_s": 26.19718,
+      "p_align": 0.99
+    },
+    {
+      "word": "trở ",
+      "success": true,
+      "start_s": 26.19718,
+      "end_s": 27.04225,
+      "p_align": 0.99
+    },
+    {
+      "word": "nên ",
+      "success": true,
+      "start_s": 27.04225,
+      "end_s": 27.88732,
+      "p_align": 0.99
+    },
+    {
+      "word": "lỗi ",
+      "success": true,
+      "start_s": 27.88732,
+      "end_s": 28.73239,
+      "p_align": 0.99
+    },
+    {
+      "word": "thời, ",
+      "success": true,
+      "start_s": 28.73239,
+      "end_s": 29.57746,
+      "p_align": 0.99
+    },
+    {
+      "word": "hoặc ",
+      "success": true,
+      "start_s": 29.57746,
+      "end_s": 30.42254,
+      "p_align": 0.99
+    },
+    {
+      "word": "cơ ",
+      "success": true,
+      "start_s": 30.42254,
+      "end_s": 31.26761,
+      "p_align": 0.99
+    },
+    {
+      "word": "bản ",
+      "success": true,
+      "start_s": 31.26761,
+      "end_s": 32.11268,
+      "p_align": 0.99
+    },
+    {
+      "word": "là ",
+      "success": true,
+      "start_s": 32.11268,
+      "end_s": 32.95775,
+      "p_align": 0.99
+    },
+    {
+      "word": "không ",
+      "success": true,
+      "start_s": 32.95775,
+      "end_s": 33.80282,
+      "p_align": 0.99
+    },
+    {
+      "word": "còn ",
+      "success": true,
+      "start_s": 33.80282,
+      "end_s": 34.64789,
+      "p_align": 0.99
+    },
+    {
+      "word": "phù ",
+      "success": true,
+      "start_s": 34.64789,
+      "end_s": 35.49296,
+      "p_align": 0.99
+    },
+    {
+      "word": "hợp ",
+      "success": true,
+      "start_s": 35.49296,
+      "end_s": 36.33803,
+      "p_align": 0.99
+    },
+    {
+      "word": "nữa\n\n",
+      "success": true,
+      "start_s": 36.33803,
+      "end_s": 37.1831,
+      "p_align": 0.99
+    },
+    {
+      "word": "Giống ",
+      "success": true,
+      "start_s": 37.1831,
+      "end_s": 38.02817,
+      "p_align": 0.99
+    },
+    {
+      "word": "như ",
+      "success": true,
+      "start_s": 38.02817,
+      "end_s": 38.87324,
+      "p_align": 0.99
+    },
+    {
+      "word": "trời ",
+      "success": true,
+      "start_s": 38.87324,
+      "end_s": 39.71831,
+      "p_align": 0.99
+    },
+    {
+      "word": "đất ",
+      "success": true,
+      "start_s": 39.71831,
+      "end_s": 40.56338,
+      "p_align": 0.99
+    },
+    {
+      "word": "có ",
+      "success": true,
+      "start_s": 40.56338,
+      "end_s": 41.40845,
+      "p_align": 0.99
+    },
+    {
+      "word": "sáng ",
+      "success": true,
+      "start_s": 41.40845,
+      "end_s": 42.25352,
+      "p_align": 0.99
+    },
+    {
+      "word": "có ",
+      "success": true,
+      "start_s": 42.25352,
+      "end_s": 43.09859,
+      "p_align": 0.99
+    },
+    {
+      "word": "tối, ",
+      "success": true,
+      "start_s": 43.09859,
+      "end_s": 43.94366,
+      "p_align": 0.99
+    },
+    {
+      "word": "cây ",
+      "success": true,
+      "start_s": 43.94366,
+      "end_s": 44.78873,
+      "p_align": 0.99
+    },
+    {
+      "word": "cối ",
+      "success": true,
+      "start_s": 44.78873,
+      "end_s": 45.6338,
+      "p_align": 0.99
+    },
+    {
+      "word": "có ",
+      "success": true,
+      "start_s": 45.6338,
+      "end_s": 46.47887,
+      "p_align": 0.99
+    },
+    {
+      "word": "quang ",
+      "success": true,
+      "start_s": 46.47887,
+      "end_s": 47.32394,
+      "p_align": 0.99
+    },
+    {
+      "word": "hợp ",
+      "success": true,
+      "start_s": 47.32394,
+      "end_s": 48.16901,
+      "p_align": 0.99
+    },
+    {
+      "word": "rồi ",
+      "success": true,
+      "start_s": 48.16901,
+      "end_s": 49.01408,
+      "p_align": 0.99
+    },
+    {
+      "word": "lại ",
+      "success": true,
+      "start_s": 49.01408,
+      "end_s": 49.85915,
+      "p_align": 0.99
+    },
+    {
+      "word": "hô ",
+      "success": true,
+      "start_s": 49.85915,
+      "end_s": 50.70423,
+      "p_align": 0.99
+    },
+    {
+      "word": "hấp, ",
+      "success": true,
+      "start_s": 50.70423,
+      "end_s": 51.5493,
+      "p_align": 0.99
+    },
+    {
+      "word": "con ",
+      "success": true,
+      "start_s": 51.5493,
+      "end_s": 52.39437,
+      "p_align": 0.99
+    },
+    {
+      "word": "người ",
+      "success": true,
+      "start_s": 52.39437,
+      "end_s": 53.23944,
+      "p_align": 0.99
+    },
+    {
+      "word": "cũng ",
+      "success": true,
+      "start_s": 53.23944,
+      "end_s": 54.08451,
+      "p_align": 0.99
+    },
+    {
+      "word": "vậy, ",
+      "success": true,
+      "start_s": 54.08451,
+      "end_s": 54.92958,
+      "p_align": 0.99
+    },
+    {
+      "word": "learn ",
+      "success": true,
+      "start_s": 54.92958,
+      "end_s": 55.77465,
+      "p_align": 0.99
+    },
+    {
+      "word": "và ",
+      "success": true,
+      "start_s": 55.77465,
+      "end_s": 56.61972,
+      "p_align": 0.99
+    },
+    {
+      "word": "unlearn, ",
+      "success": true,
+      "start_s": 56.61972,
+      "end_s": 57.46479,
+      "p_align": 0.99
+    },
+    {
+      "word": "see ",
+      "success": true,
+      "start_s": 57.46479,
+      "end_s": 58.30986,
+      "p_align": 0.99
+    },
+    {
+      "word": "và ",
+      "success": true,
+      "start_s": 58.30986,
+      "end_s": 59.15493,
+      "p_align": 0.99
+    },
+    {
+      "word": "unseen, ",
+      "success": true,
+      "start_s": 59.15493,
+      "end_s": 60.0,
+      "p_align": 0.99
+    },
+    {
+      "word": "yêu ",
+      "success": true,
+      "start_s": 60.0,
+      "end_s": 60.84507,
+      "p_align": 0.99
+    },
+    {
+      "word": "và ",
+      "success": true,
+      "start_s": 60.84507,
+      "end_s": 61.69014,
+      "p_align": 0.99
+    },
+    {
+      "word": "được ",
+      "success": true,
+      "start_s": 61.69014,
+      "end_s": 62.53521,
+      "p_align": 0.99
+    },
+    {
+      "word": "yêu, ",
+      "success": true,
+      "start_s": 62.53521,
+      "end_s": 63.38028,
+      "p_align": 0.99
+    },
+    {
+      "word": "mọi ",
+      "success": true,
+      "start_s": 63.38028,
+      "end_s": 64.22535,
+      "p_align": 0.99
+    },
+    {
+      "word": "thứ ",
+      "success": true,
+      "start_s": 64.22535,
+      "end_s": 65.07042,
+      "p_align": 0.99
+    },
+    {
+      "word": "cứ ",
+      "success": true,
+      "start_s": 65.07042,
+      "end_s": 65.91549,
+      "p_align": 0.99
+    },
+    {
+      "word": "đan ",
+      "success": true,
+      "start_s": 65.91549,
+      "end_s": 66.76056,
+      "p_align": 0.99
+    },
+    {
+      "word": "vào ",
+      "success": true,
+      "start_s": 66.76056,
+      "end_s": 67.60563,
+      "p_align": 0.99
+    },
+    {
+      "word": "nhau, ",
+      "success": true,
+      "start_s": 67.60563,
+      "end_s": 68.4507,
+      "p_align": 0.99
+    },
+    {
+      "word": "không ",
+      "success": true,
+      "start_s": 68.4507,
+      "end_s": 69.29577,
+      "p_align": 0.99
+    },
+    {
+      "word": "tách ",
+      "success": true,
+      "start_s": 69.29577,
+      "end_s": 70.14085,
+      "p_align": 0.99
+    },
+    {
+      "word": "rời\n\n",
+      "success": true,
+      "start_s": 70.14085,
+      "end_s": 70.98592,
+      "p_align": 0.99
+    },
+    {
+      "word": "Đó ",
+      "success": true,
+      "start_s": 70.98592,
+      "end_s": 71.83099,
+      "p_align": 0.99
+    },
+    {
+      "word": "là ",
+      "success": true,
+      "start_s": 71.83099,
+      "end_s": 72.67606,
+      "p_align": 0.99
+    },
+    {
+      "word": "những ",
+      "success": true,
+      "start_s": 72.67606,
+      "end_s": 73.52113,
+      "p_align": 0.99
+    },
+    {
+      "word": "xoay ",
+      "success": true,
+      "start_s": 73.52113,
+      "end_s": 74.3662,
+      "p_align": 0.99
+    },
+    {
+      "word": "vòng ",
+      "success": true,
+      "start_s": 74.3662,
+      "end_s": 75.21127,
+      "p_align": 0.99
+    },
+    {
+      "word": "rất ",
+      "success": true,
+      "start_s": 75.21127,
+      "end_s": 76.05634,
+      "p_align": 0.99
+    },
+    {
+      "word": "cơ ",
+      "success": true,
+      "start_s": 76.05634,
+      "end_s": 76.90141,
+      "p_align": 0.99
+    },
+    {
+      "word": "bản ",
+      "success": true,
+      "start_s": 76.90141,
+      "end_s": 77.74648,
+      "p_align": 0.99
+    },
+    {
+      "word": "của ",
+      "success": true,
+      "start_s": 77.74648,
+      "end_s": 78.59155,
+      "p_align": 0.99
+    },
+    {
+      "word": "vũ ",
+      "success": true,
+      "start_s": 78.59155,
+      "end_s": 79.43662,
+      "p_align": 0.99
+    },
+    {
+      "word": "trụ, ",
+      "success": true,
+      "start_s": 79.43662,
+      "end_s": 80.28169,
+      "p_align": 0.99
+    },
+    {
+      "word": "nơi ",
+      "success": true,
+      "start_s": 80.28169,
+      "end_s": 81.12676,
+      "p_align": 0.99
+    },
+    {
+      "word": "tiếp ",
+      "success": true,
+      "start_s": 81.12676,
+      "end_s": 81.97183,
+      "p_align": 0.99
+    },
+    {
+      "word": "nhận ",
+      "success": true,
+      "start_s": 81.97183,
+      "end_s": 82.8169,
+      "p_align": 0.99
+    },
+    {
+      "word": "cái ",
+      "success": true,
+      "start_s": 82.8169,
+      "end_s": 83.66197,
+      "p_align": 0.99
+    },
+    {
+      "word": "mới, ",
+      "success": true,
+      "start_s": 83.66197,
+      "end_s": 84.50704,
+      "p_align": 0.99
+    },
+    {
+      "word": "chắt ",
+      "success": true,
+      "start_s": 84.50704,
+      "end_s": 85.35211,
+      "p_align": 0.99
+    },
+    {
+      "word": "lọc ",
+      "success": true,
+      "start_s": 85.35211,
+      "end_s": 86.19718,
+      "p_align": 0.99
+    },
+    {
+      "word": "và ",
+      "success": true,
+      "start_s": 86.19718,
+      "end_s": 87.04225,
+      "p_align": 0.99
+    },
+    {
+      "word": "đào ",
+      "success": true,
+      "start_s": 87.04225,
+      "end_s": 87.88732,
+      "p_align": 0.99
+    },
+    {
+      "word": "thải ",
+      "success": true,
+      "start_s": 87.88732,
+      "end_s": 88.73239,
+      "p_align": 0.99
+    },
+    {
+      "word": "những ",
+      "success": true,
+      "start_s": 88.73239,
+      "end_s": 89.57746,
+      "p_align": 0.99
+    },
+    {
+      "word": "thứ ",
+      "success": true,
+      "start_s": 89.57746,
+      "end_s": 90.42254,
+      "p_align": 0.99
+    },
+    {
+      "word": "không ",
+      "success": true,
+      "start_s": 90.42254,
+      "end_s": 91.26761,
+      "p_align": 0.99
+    },
+    {
+      "word": "còn ",
+      "success": true,
+      "start_s": 91.26761,
+      "end_s": 92.11268,
+      "p_align": 0.99
+    },
+    {
+      "word": "phù ",
+      "success": true,
+      "start_s": 92.11268,
+      "end_s": 92.95775,
+      "p_align": 0.99
+    },
+    {
+      "word": "hợp ",
+      "success": true,
+      "start_s": 92.95775,
+      "end_s": 93.80282,
+      "p_align": 0.99
+    },
+    {
+      "word": "luôn ",
+      "success": true,
+      "start_s": 93.80282,
+      "end_s": 94.64789,
+      "p_align": 0.99
+    },
+    {
+      "word": "đi ",
+      "success": true,
+      "start_s": 94.64789,
+      "end_s": 95.49296,
+      "p_align": 0.99
+    },
+    {
+      "word": "cùng ",
+      "success": true,
+      "start_s": 95.49296,
+      "end_s": 96.33803,
+      "p_align": 0.99
+    },
+    {
+      "word": "nhau, ",
+      "success": true,
+      "start_s": 96.33803,
+      "end_s": 97.1831,
+      "p_align": 0.99
+    },
+    {
+      "word": "để ",
+      "success": true,
+      "start_s": 97.1831,
+      "end_s": 98.02817,
+      "p_align": 0.99
+    },
+    {
+      "word": "mỗi ",
+      "success": true,
+      "start_s": 98.02817,
+      "end_s": 98.87324,
+      "p_align": 0.99
+    },
+    {
+      "word": "người ",
+      "success": true,
+      "start_s": 98.87324,
+      "end_s": 99.71831,
+      "p_align": 0.99
+    },
+    {
+      "word": "dần ",
+      "success": true,
+      "start_s": 99.71831,
+      "end_s": 100.56338,
+      "p_align": 0.99
+    },
+    {
+      "word": "trở ",
+      "success": true,
+      "start_s": 100.56338,
+      "end_s": 101.40845,
+      "p_align": 0.99
+    },
+    {
+      "word": "thành ",
+      "success": true,
+      "start_s": 101.40845,
+      "end_s": 102.25352,
+      "p_align": 0.99
+    },
+    {
+      "word": "một ",
+      "success": true,
+      "start_s": 102.25352,
+      "end_s": 103.09859,
+      "p_align": 0.99
+    },
+    {
+      "word": "phiên ",
+      "success": true,
+      "start_s": 103.09859,
+      "end_s": 103.94366,
+      "p_align": 0.99
+    },
+    {
+      "word": "bản ",
+      "success": true,
+      "start_s": 103.94366,
+      "end_s": 104.78873,
+      "p_align": 0.99
+    },
+    {
+      "word": "vững ",
+      "success": true,
+      "start_s": 104.78873,
+      "end_s": 105.6338,
+      "p_align": 0.99
+    },
+    {
+      "word": "chắc ",
+      "success": true,
+      "start_s": 105.6338,
+      "end_s": 106.47887,
+      "p_align": 0.99
+    },
+    {
+      "word": "hơn ",
+      "success": true,
+      "start_s": 106.47887,
+      "end_s": 107.32394,
+      "p_align": 0.99
+    },
+    {
+      "word": "của ",
+      "success": true,
+      "start_s": 107.32394,
+      "end_s": 108.16901,
+      "p_align": 0.99
+    },
+    {
+      "word": "chính ",
+      "success": true,
+      "start_s": 108.16901,
+      "end_s": 109.01408,
+      "p_align": 0.99
+    },
+    {
+      "word": "mình, ",
+      "success": true,
+      "start_s": 109.01408,
+      "end_s": 109.85915,
+      "p_align": 0.99
+    },
+    {
+      "word": "và ",
+      "success": true,
+      "start_s": 109.85915,
+      "end_s": 110.70423,
+      "p_align": 0.99
+    },
+    {
+      "word": "phù ",
+      "success": true,
+      "start_s": 110.70423,
+      "end_s": 111.5493,
+      "p_align": 0.99
+    },
+    {
+      "word": "hợp ",
+      "success": true,
+      "start_s": 111.5493,
+      "end_s": 112.39437,
+      "p_align": 0.99
+    },
+    {
+      "word": "hơn ",
+      "success": true,
+      "start_s": 112.39437,
+      "end_s": 113.23944,
+      "p_align": 0.99
+    },
+    {
+      "word": "với ",
+      "success": true,
+      "start_s": 113.23944,
+      "end_s": 114.08451,
+      "p_align": 0.99
+    },
+    {
+      "word": "hiện ",
+      "success": true,
+      "start_s": 114.08451,
+      "end_s": 114.92958,
+      "p_align": 0.99
+    },
+    {
+      "word": "tại, ",
+      "success": true,
+      "start_s": 114.92958,
+      "end_s": 115.77465,
+      "p_align": 0.99
+    },
+    {
+      "word": "hãy ",
+      "success": true,
+      "start_s": 115.77465,
+      "end_s": 116.61972,
+      "p_align": 0.99
+    },
+    {
+      "word": "mãi ",
+      "success": true,
+      "start_s": 116.61972,
+      "end_s": 117.46479,
+      "p_align": 0.99
+    },
+    {
+      "word": "là ",
+      "success": true,
+      "start_s": 117.46479,
+      "end_s": 118.30986,
+      "p_align": 0.99
+    },
+    {
+      "word": "Thằng ",
+      "success": true,
+      "start_s": 118.30986,
+      "end_s": 119.15493,
+      "p_align": 0.99
+    },
+    {
+      "word": "Khờ",
+      "success": true,
+      "start_s": 119.15493,
+      "end_s": 120.0,
+      "p_align": 0.99
+    }
+  ],
+  "is_streamed": true
+}

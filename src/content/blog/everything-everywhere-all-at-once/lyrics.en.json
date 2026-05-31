@@ -1,0 +1,1916 @@
+{
+  "aligned_words": [
+    {
+      "word": "Last ",
+      "success": true,
+      "start_s": 3.032,
+      "end_s": 3.91,
+      "p_align": 0.99
+    },
+    {
+      "word": "weekend, ",
+      "success": true,
+      "start_s": 4.00114,
+      "end_s": 4.867,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 4.947,
+      "end_s": 5.027,
+      "p_align": 0.99
+    },
+    {
+      "word": "accidentally ",
+      "success": true,
+      "start_s": 5.08,
+      "end_s": 5.665,
+      "p_align": 0.99
+    },
+    {
+      "word": "subscribed ",
+      "success": true,
+      "start_s": 5.705,
+      "end_s": 6.223,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 6.263,
+      "end_s": 6.303,
+      "p_align": 0.99
+    },
+    {
+      "word": "Google’",
+      "success": true,
+      "start_s": 6.383,
+      "end_s": 6.622,
+      "p_align": 0.99
+    },
+    {
+      "word": "s ",
+      "success": true,
+      "start_s": 6.622,
+      "end_s": 6.702,
+      "p_align": 0.99
+    },
+    {
+      "word": "Antigravity ",
+      "success": true,
+      "start_s": 6.75533,
+      "end_s": 7.5,
+      "p_align": 0.99
+    },
+    {
+      "word": "Ultra ",
+      "success": true,
+      "start_s": 7.55333,
+      "end_s": 7.819,
+      "p_align": 0.99
+    },
+    {
+      "word": "package\n\n",
+      "success": true,
+      "start_s": 7.879,
+      "end_s": 9.548,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 9.601,
+      "end_s": 9.654,
+      "p_align": 0.99
+    },
+    {
+      "word": "had ",
+      "success": true,
+      "start_s": 9.70733,
+      "end_s": 9.814,
+      "p_align": 0.99
+    },
+    {
+      "word": "been ",
+      "success": true,
+      "start_s": 9.85375,
+      "end_s": 9.973,
+      "p_align": 0.99
+    },
+    {
+      "word": "using ",
+      "success": true,
+      "start_s": 10.053,
+      "end_s": 10.293,
+      "p_align": 0.99
+    },
+    {
+      "word": "AI ",
+      "success": true,
+      "start_s": 10.4125,
+      "end_s": 10.771,
+      "p_align": 0.99
+    },
+    {
+      "word": "daily ",
+      "success": true,
+      "start_s": 10.8508,
+      "end_s": 11.17,
+      "p_align": 0.99
+    },
+    {
+      "word": "for ",
+      "success": true,
+      "start_s": 11.22333,
+      "end_s": 11.33,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 11.35667,
+      "end_s": 11.41,
+      "p_align": 0.99
+    },
+    {
+      "word": "past ",
+      "success": true,
+      "start_s": 11.50975,
+      "end_s": 11.809,
+      "p_align": 0.99
+    },
+    {
+      "word": "year, ",
+      "success": true,
+      "start_s": 11.9085,
+      "end_s": 12.88575,
+      "p_align": 0.99
+    },
+    {
+      "word": "yet ",
+      "success": true,
+      "start_s": 12.9255,
+      "end_s": 13.005,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 13.085,
+      "end_s": 13.165,
+      "p_align": 0.99
+    },
+    {
+      "word": "felt ",
+      "success": true,
+      "start_s": 13.22475,
+      "end_s": 13.404,
+      "p_align": 0.99
+    },
+    {
+      "word": "as ",
+      "success": true,
+      "start_s": 13.444,
+      "end_s": 13.484,
+      "p_align": 0.99
+    },
+    {
+      "word": "if ",
+      "success": true,
+      "start_s": 13.524,
+      "end_s": 13.564,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 13.6835,
+      "end_s": 13.803,
+      "p_align": 0.99
+    },
+    {
+      "word": "had ",
+      "success": true,
+      "start_s": 13.85633,
+      "end_s": 13.963,
+      "p_align": 0.99
+    },
+    {
+      "word": "just ",
+      "success": true,
+      "start_s": 14.00275,
+      "end_s": 14.122,
+      "p_align": 0.99
+    },
+    {
+      "word": "gained ",
+      "success": true,
+      "start_s": 14.202,
+      "end_s": 14.441,
+      "p_align": 0.99
+    },
+    {
+      "word": "access ",
+      "success": true,
+      "start_s": 14.521,
+      "end_s": 15.0,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 15.08,
+      "end_s": 15.16,
+      "p_align": 0.99
+    },
+    {
+      "word": "god ",
+      "success": true,
+      "start_s": 15.23967,
+      "end_s": 15.399,
+      "p_align": 0.99
+    },
+    {
+      "word": "mode\n\n",
+      "success": true,
+      "start_s": 15.49875,
+      "end_s": 17.05475,
+      "p_align": 0.99
+    },
+    {
+      "word": "Put ",
+      "success": true,
+      "start_s": 17.1145,
+      "end_s": 17.234,
+      "p_align": 0.99
+    },
+    {
+      "word": "simply, ",
+      "success": true,
+      "start_s": 17.29375,
+      "end_s": 18.37733,
+      "p_align": 0.99
+    },
+    {
+      "word": "AI ",
+      "success": true,
+      "start_s": 18.48367,
+      "end_s": 18.67,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 18.75,
+      "end_s": 18.83,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 18.883,
+      "end_s": 18.989,
+      "p_align": 0.99
+    },
+    {
+      "word": "only ",
+      "success": true,
+      "start_s": 19.08875,
+      "end_s": 19.388,
+      "p_align": 0.99
+    },
+    {
+      "word": "smarter, ",
+      "success": true,
+      "start_s": 19.436,
+      "end_s": 20.70475,
+      "p_align": 0.99
+    },
+    {
+      "word": "but ",
+      "success": true,
+      "start_s": 20.7445,
+      "end_s": 20.824,
+      "p_align": 0.99
+    },
+    {
+      "word": "also ",
+      "success": true,
+      "start_s": 20.92375,
+      "end_s": 21.223,
+      "p_align": 0.99
+    },
+    {
+      "word": "ten ",
+      "success": true,
+      "start_s": 21.303,
+      "end_s": 21.463,
+      "p_align": 0.99
+    },
+    {
+      "word": "times ",
+      "success": true,
+      "start_s": 21.5428,
+      "end_s": 21.862,
+      "p_align": 0.99
+    },
+    {
+      "word": "faster, ",
+      "success": true,
+      "start_s": 21.955,
+      "end_s": 23.72367,
+      "p_align": 0.99
+    },
+    {
+      "word": "granting ",
+      "success": true,
+      "start_s": 23.75033,
+      "end_s": 24.096,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 24.149,
+      "end_s": 24.255,
+      "p_align": 0.99
+    },
+    {
+      "word": "access ",
+      "success": true,
+      "start_s": 24.36133,
+      "end_s": 24.814,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 24.8935,
+      "end_s": 24.973,
+      "p_align": 0.99
+    },
+    {
+      "word": "higher ",
+      "success": true,
+      "start_s": 25.02633,
+      "end_s": 25.293,
+      "p_align": 0.99
+    },
+    {
+      "word": "dimensions\n\n",
+      "success": true,
+      "start_s": 25.346,
+      "end_s": 28.07755,
+      "p_align": 0.99
+    },
+    {
+      "word": "Everything ",
+      "success": true,
+      "start_s": 28.15009,
+      "end_s": 28.803,
+      "p_align": 0.99
+    },
+    {
+      "word": "Everywhere ",
+      "success": true,
+      "start_s": 28.827,
+      "end_s": 29.043,
+      "p_align": 0.99
+    },
+    {
+      "word": "All ",
+      "success": true,
+      "start_s": 29.12267,
+      "end_s": 29.282,
+      "p_align": 0.99
+    },
+    {
+      "word": "at ",
+      "success": true,
+      "start_s": 29.4015,
+      "end_s": 29.521,
+      "p_align": 0.99
+    },
+    {
+      "word": "Once: ",
+      "success": true,
+      "start_s": 29.561,
+      "end_s": 29.70767,
+      "p_align": 0.99
+    },
+    {
+      "word": "we ",
+      "success": true,
+      "start_s": 29.73433,
+      "end_s": 29.761,
+      "p_align": 0.99
+    },
+    {
+      "word": "no ",
+      "success": true,
+      "start_s": 29.8005,
+      "end_s": 29.84,
+      "p_align": 0.99
+    },
+    {
+      "word": "longer ",
+      "success": true,
+      "start_s": 29.85333,
+      "end_s": 29.92,
+      "p_align": 0.99
+    },
+    {
+      "word": "live ",
+      "success": true,
+      "start_s": 29.94,
+      "end_s": 30.0,
+      "p_align": 0.99
+    },
+    {
+      "word": "in ",
+      "success": true,
+      "start_s": 30.04,
+      "end_s": 30.08,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 30.16,
+      "end_s": 30.16,
+      "p_align": 0.99
+    },
+    {
+      "word": "linear ",
+      "success": true,
+      "start_s": 30.21975,
+      "end_s": 30.479,
+      "p_align": 0.99
+    },
+    {
+      "word": "reality ",
+      "success": true,
+      "start_s": 30.57875,
+      "end_s": 34.787,
+      "p_align": 0.99
+    },
+    {
+      "word": "where ",
+      "success": true,
+      "start_s": 34.819,
+      "end_s": 34.947,
+      "p_align": 0.99
+    },
+    {
+      "word": "everything ",
+      "success": true,
+      "start_s": 35.0188,
+      "end_s": 35.665,
+      "p_align": 0.99
+    },
+    {
+      "word": "used ",
+      "success": true,
+      "start_s": 35.72475,
+      "end_s": 35.904,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 36.024,
+      "end_s": 36.463,
+      "p_align": 0.99
+    },
+    {
+      "word": "unfold ",
+      "success": true,
+      "start_s": 36.556,
+      "end_s": 37.021,
+      "p_align": 0.99
+    },
+    {
+      "word": "along ",
+      "success": true,
+      "start_s": 37.069,
+      "end_s": 37.261,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 37.42,
+      "end_s": 37.5,
+      "p_align": 0.99
+    },
+    {
+      "word": "clear ",
+      "success": true,
+      "start_s": 37.5958,
+      "end_s": 38.138,
+      "p_align": 0.99
+    },
+    {
+      "word": "axis. ",
+      "success": true,
+      "start_s": 38.298,
+      "end_s": 41.11075,
+      "p_align": 0.99
+    },
+    {
+      "word": "Now, ",
+      "success": true,
+      "start_s": 41.2105,
+      "end_s": 41.609,
+      "p_align": 0.99
+    },
+    {
+      "word": "countless ",
+      "success": true,
+      "start_s": 41.649,
+      "end_s": 42.128,
+      "p_align": 0.99
+    },
+    {
+      "word": "streams ",
+      "success": true,
+      "start_s": 42.17357,
+      "end_s": 42.447,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 42.5665,
+      "end_s": 42.686,
+      "p_align": 0.99
+    },
+    {
+      "word": "influence ",
+      "success": true,
+      "start_s": 42.766,
+      "end_s": 43.484,
+      "p_align": 0.99
+    },
+    {
+      "word": "from ",
+      "success": true,
+      "start_s": 43.524,
+      "end_s": 43.644,
+      "p_align": 0.99
+    },
+    {
+      "word": "multiple ",
+      "success": true,
+      "start_s": 43.69717,
+      "end_s": 44.122,
+      "p_align": 0.99
+    },
+    {
+      "word": "dimensions ",
+      "success": true,
+      "start_s": 44.17533,
+      "end_s": 44.92,
+      "p_align": 0.99
+    },
+    {
+      "word": "are ",
+      "success": true,
+      "start_s": 45.02633,
+      "end_s": 45.319,
+      "p_align": 0.99
+    },
+    {
+      "word": "simultaneously ",
+      "success": true,
+      "start_s": 45.37233,
+      "end_s": 46.516,
+      "p_align": 0.99
+    },
+    {
+      "word": "overlapping ",
+      "success": true,
+      "start_s": 46.59575,
+      "end_s": 47.314,
+      "p_align": 0.99
+    },
+    {
+      "word": "onto ",
+      "success": true,
+      "start_s": 47.39375,
+      "end_s": 47.633,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 47.68633,
+      "end_s": 47.793,
+      "p_align": 0.99
+    },
+    {
+      "word": "present, ",
+      "success": true,
+      "start_s": 47.88414,
+      "end_s": 49.66783,
+      "p_align": 0.99
+    },
+    {
+      "word": "right ",
+      "success": true,
+      "start_s": 49.70767,
+      "end_s": 49.867,
+      "p_align": 0.99
+    },
+    {
+      "word": "at ",
+      "success": true,
+      "start_s": 49.947,
+      "end_s": 50.027,
+      "p_align": 0.99
+    },
+    {
+      "word": "this ",
+      "success": true,
+      "start_s": 50.08675,
+      "end_s": 50.266,
+      "p_align": 0.99
+    },
+    {
+      "word": "moment\n\n",
+      "success": true,
+      "start_s": 50.359,
+      "end_s": 52.63975,
+      "p_align": 0.99
+    },
+    {
+      "word": "The ",
+      "success": true,
+      "start_s": 52.6995,
+      "end_s": 52.819,
+      "p_align": 0.99
+    },
+    {
+      "word": "change ",
+      "success": true,
+      "start_s": 52.8855,
+      "end_s": 53.218,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 53.298,
+      "end_s": 53.378,
+      "p_align": 0.99
+    },
+    {
+      "word": "incredibly ",
+      "success": true,
+      "start_s": 53.48433,
+      "end_s": 54.415,
+      "p_align": 0.99
+    },
+    {
+      "word": "fierce, ",
+      "success": true,
+      "start_s": 54.508,
+      "end_s": 57.50675,
+      "p_align": 0.99
+    },
+    {
+      "word": "yet ",
+      "success": true,
+      "start_s": 57.5665,
+      "end_s": 57.686,
+      "p_align": 0.99
+    },
+    {
+      "word": "also ",
+      "success": true,
+      "start_s": 57.78575,
+      "end_s": 58.085,
+      "p_align": 0.99
+    },
+    {
+      "word": "incredibly ",
+      "success": true,
+      "start_s": 58.16467,
+      "end_s": 59.441,
+      "p_align": 0.99
+    },
+    {
+      "word": "fascinating\n\n",
+      "success": true,
+      "start_s": 59.521,
+      "end_s": 60.718,
+      "p_align": 0.99
+    }
+  ],
+  "waveform_data": [
+    0.00217,
+    0.0097,
+    0.00663,
+    0.0064,
+    0.07527,
+    0.01756,
+    0.01682,
+    0.01106,
+    0.02223,
+    0.01918,
+    0.0237,
+    0.08422,
+    0.03467,
+    0.021,
+    0.02027,
+    0.02895,
+    0.0249,
+    0.12352,
+    0.16839,
+    0.17984,
+    0.1581,
+    0.04596,
+    0.05927,
+    0.05616,
+    0.14127,
+    0.06206,
+    0.22752,
+    0.14641,
+    0.09556,
+    0.14626,
+    0.07979,
+    0.15371,
+    0.15982,
+    0.14108,
+    0.08567,
+    0.10635,
+    0.12779,
+    0.07267,
+    0.05403,
+    0.07139,
+    0.06383,
+    0.0352,
+    0.02304,
+    0.01602,
+    0.01867,
+    0.00693,
+    0.01576,
+    0.05903,
+    0.23335,
+    0.27577,
+    0.19473,
+    0.14973,
+    0.16532,
+    0.15118,
+    0.15909,
+    0.13081,
+    0.07681,
+    0.10746,
+    0.20267,
+    0.10281,
+    0.05863,
+    0.05505,
+    0.13987,
+    0.02605,
+    0.21509,
+    0.15913,
+    0.17281,
+    0.10192,
+    0.12675,
+    0.1374,
+    0.08676,
+    0.17547,
+    0.07532,
+    0.21016,
+    0.05049,
+    0.08677,
+    0.16552,
+    0.08748,
+    0.18982,
+    0.0373,
+    0.19202,
+    0.04808,
+    0.05377,
+    0.11712,
+    0.08661,
+    0.09054,
+    0.1637,
+    0.22911,
+    0.03088,
+    0.05435,
+    0.04093,
+    0.18108,
+    0.1902,
+    0.18775,
+    0.22133,
+    0.17302,
+    0.08108,
+    0.13402,
+    0.14105,
+    0.0216,
+    0.05432,
+    0.0919,
+    0.19976,
+    0.10367,
+    0.12981,
+    0.18564,
+    0.2364,
+    0.2398,
+    0.13381,
+    0.21949,
+    0.08402,
+    0.10806,
+    0.14908,
+    0.08159,
+    0.07228,
+    0.06662,
+    0.17405,
+    0.05702,
+    0.13559,
+    0.13144,
+    0.1705,
+    0.16453,
+    0.11968,
+    0.17096,
+    0.07886,
+    0.10555,
+    0.11692,
+    0.15189,
+    0.08173,
+    0.04829,
+    0.11371,
+    0.09613,
+    0.06099,
+    0.05734,
+    0.08045,
+    0.0586,
+    0.0533,
+    0.04514,
+    0.0436,
+    0.05568,
+    0.14226,
+    0.19688,
+    0.15894,
+    0.21512,
+    0.13825,
+    0.2743,
+    0.19666,
+    0.20192,
+    0.24567,
+    0.10175,
+    0.23078,
+    0.10885,
+    0.26981,
+    0.07542,
+    0.10858,
+    0.08124,
+    0.33922,
+    0.27519,
+    0.25091,
+    0.30794,
+    0.18247,
+    0.24211,
+    0.23664,
+    0.31093,
+    0.20965,
+    0.28656,
+    0.22989,
+    0.27814,
+    0.18786,
+    0.13519,
+    0.22508,
+    0.0471,
+    0.04817,
+    0.10105,
+    0.29248,
+    0.13141,
+    0.26794,
+    0.33427,
+    0.10764,
+    0.25911,
+    0.23542,
+    0.24366,
+    0.19034,
+    0.12309,
+    0.27201,
+    0.22652,
+    0.07499,
+    0.13122,
+    0.28198,
+    0.10241,
+    0.14125,
+    0.07759,
+    0.21813,
+    0.13967,
+    0.17973,
+    0.22586,
+    0.11133,
+    0.07209,
+    0.04572,
+    0.19794,
+    0.04362,
+    0.05248,
+    0.10456,
+    0.24338,
+    0.20944,
+    0.15413,
+    0.18276,
+    0.14673,
+    0.25837,
+    0.08656,
+    0.30641,
+    0.21221,
+    0.16557,
+    0.2648,
+    0.14347,
+    0.099,
+    0.06664,
+    0.29642,
+    0.14343,
+    0.11677,
+    0.16043,
+    0.20527,
+    0.23516,
+    0.1466,
+    0.24887,
+    0.08443,
+    0.1671,
+    0.13623,
+    0.23222,
+    0.15926,
+    0.06814,
+    0.23192,
+    0.14426,
+    0.0914,
+    0.11866,
+    0.20848,
+    0.09396,
+    0.22917,
+    0.08494,
+    0.23591,
+    0.04718,
+    0.05074,
+    0.17042,
+    0.02631,
+    0.03141,
+    0.03861,
+    0.23444,
+    0.03396,
+    0.10487,
+    0.05433,
+    0.07842,
+    0.09695,
+    0.02936,
+    0.02207,
+    0.02181,
+    0.01705,
+    0.01241,
+    0.00636,
+    0.00323,
+    0.00154,
+    0.21963,
+    0.04497,
+    0.03015,
+    0.10914,
+    0.28612,
+    0.13045,
+    0.16066,
+    0.20295,
+    0.19854,
+    0.07264,
+    0.11092,
+    0.14407,
+    0.13236,
+    0.06589,
+    0.03586,
+    0.23247,
+    0.02346,
+    0.06444,
+    0.12682,
+    0.02837,
+    0.22159,
+    0.02822,
+    0.22319,
+    0.04132,
+    0.02767,
+    0.01369,
+    0.01433,
+    0.11639,
+    0.12525,
+    0.15783,
+    0.17752,
+    0.12615,
+    0.12101,
+    0.11693,
+    0.08605,
+    0.00297,
+    0.05776,
+    0.11447,
+    0.17893,
+    0.21317,
+    0.15109,
+    0.12924,
+    0.00217,
+    0.14551,
+    0.30704,
+    0.04244,
+    0.01706,
+    0.10341,
+    0.0096,
+    0.26459,
+    0.01799,
+    0.3329,
+    0.10335,
+    0.28488,
+    0.10708,
+    0.01088,
+    0.00104,
+    0.00011
+  ],
+  "hoot_cer": 0.1305785123966942,
+  "is_streamed": false,
+  "aligned_lyrics": [
+    {
+      "text": "Last weekend, he accidentally subscribed",
+      "start_s": 3.032,
+      "end_s": 6.144,
+      "section": "",
+      "words": [
+        {
+          "text": "Last",
+          "start_s": 3.032,
+          "end_s": 3.351
+        },
+        {
+          "text": " weekend,",
+          "start_s": 3.91,
+          "end_s": 4.548
+        },
+        {
+          "text": " he",
+          "start_s": 4.787,
+          "end_s": 5.027
+        },
+        {
+          "text": " acc",
+          "start_s": 5.027,
+          "end_s": 5.186
+        },
+        {
+          "text": "ident",
+          "start_s": 5.186,
+          "end_s": 5.505
+        },
+        {
+          "text": "ally",
+          "start_s": 5.505,
+          "end_s": 5.665
+        },
+        {
+          "text": " su",
+          "start_s": 5.665,
+          "end_s": 5.745
+        },
+        {
+          "text": "bs",
+          "start_s": 5.745,
+          "end_s": 5.824
+        },
+        {
+          "text": "c",
+          "start_s": 5.824,
+          "end_s": 5.904
+        },
+        {
+          "text": "rib",
+          "start_s": 5.904,
+          "end_s": 5.984
+        },
+        {
+          "text": "ed",
+          "start_s": 5.984,
+          "end_s": 6.144
+        }
+      ]
+    },
+    {
+      "text": "to Google’s Antigravity Ultra package",
+      "start_s": 6.223,
+      "end_s": 8.298,
+      "section": "",
+      "words": [
+        {
+          "text": " to",
+          "start_s": 6.223,
+          "end_s": 6.303
+        },
+        {
+          "text": " G",
+          "start_s": 6.303,
+          "end_s": 6.383
+        },
+        {
+          "text": "oo",
+          "start_s": 6.383,
+          "end_s": 6.463
+        },
+        {
+          "text": "g",
+          "start_s": 6.463,
+          "end_s": 6.543
+        },
+        {
+          "text": "le’",
+          "start_s": 6.543,
+          "end_s": 6.622
+        },
+        {
+          "text": "s",
+          "start_s": 6.622,
+          "end_s": 6.702
+        },
+        {
+          "text": " Ant",
+          "start_s": 6.702,
+          "end_s": 6.862
+        },
+        {
+          "text": "i",
+          "start_s": 6.862,
+          "end_s": 6.941
+        },
+        {
+          "text": "gravity",
+          "start_s": 7.101,
+          "end_s": 7.5
+        },
+        {
+          "text": " Ult",
+          "start_s": 7.5,
+          "end_s": 7.66
+        },
+        {
+          "text": "ra",
+          "start_s": 7.66,
+          "end_s": 7.819
+        },
+        {
+          "text": " pack",
+          "start_s": 7.819,
+          "end_s": 8.059
+        },
+        {
+          "text": "age",
+          "start_s": 8.059,
+          "end_s": 8.298
+        }
+      ]
+    },
+    {
+      "text": "He had been using AI daily for the past",
+      "start_s": 9.495,
+      "end_s": 11.809,
+      "section": "",
+      "words": [
+        {
+          "text": "He",
+          "start_s": 9.495,
+          "end_s": 9.654
+        },
+        {
+          "text": " had",
+          "start_s": 9.654,
+          "end_s": 9.814
+        },
+        {
+          "text": " been",
+          "start_s": 9.814,
+          "end_s": 9.973
+        },
+        {
+          "text": " us",
+          "start_s": 9.973,
+          "end_s": 10.133
+        },
+        {
+          "text": "ing",
+          "start_s": 10.133,
+          "end_s": 10.293
+        },
+        {
+          "text": " AI",
+          "start_s": 10.293,
+          "end_s": 10.532
+        },
+        {
+          "text": " daily",
+          "start_s": 10.771,
+          "end_s": 11.17
+        },
+        {
+          "text": " for",
+          "start_s": 11.17,
+          "end_s": 11.33
+        },
+        {
+          "text": " the",
+          "start_s": 11.33,
+          "end_s": 11.41
+        },
+        {
+          "text": " past",
+          "start_s": 11.41,
+          "end_s": 11.809
+        }
+      ]
+    },
+    {
+      "text": "year, yet he felt as if he had just g",
+      "start_s": 11.809,
+      "end_s": 14.202,
+      "section": "",
+      "words": [
+        {
+          "text": " year,",
+          "start_s": 11.809,
+          "end_s": 12.207
+        },
+        {
+          "text": " yet",
+          "start_s": 12.846,
+          "end_s": 13.005
+        },
+        {
+          "text": " he",
+          "start_s": 13.005,
+          "end_s": 13.165
+        },
+        {
+          "text": " felt",
+          "start_s": 13.165,
+          "end_s": 13.404
+        },
+        {
+          "text": " as",
+          "start_s": 13.404,
+          "end_s": 13.484
+        },
+        {
+          "text": " if",
+          "start_s": 13.484,
+          "end_s": 13.564
+        },
+        {
+          "text": " he",
+          "start_s": 13.564,
+          "end_s": 13.803
+        },
+        {
+          "text": " had",
+          "start_s": 13.803,
+          "end_s": 13.963
+        },
+        {
+          "text": " just",
+          "start_s": 13.963,
+          "end_s": 14.122
+        },
+        {
+          "text": " g",
+          "start_s": 14.122,
+          "end_s": 14.202
+        }
+      ]
+    },
+    {
+      "text": "ained access to god mode",
+      "start_s": 14.202,
+      "end_s": 15.798,
+      "section": "",
+      "words": [
+        {
+          "text": "ained",
+          "start_s": 14.202,
+          "end_s": 14.441
+        },
+        {
+          "text": " acc",
+          "start_s": 14.441,
+          "end_s": 14.681
+        },
+        {
+          "text": "ess",
+          "start_s": 14.681,
+          "end_s": 14.92
+        },
+        {
+          "text": " to",
+          "start_s": 15.0,
+          "end_s": 15.16
+        },
+        {
+          "text": " god",
+          "start_s": 15.16,
+          "end_s": 15.399
+        },
+        {
+          "text": " mode",
+          "start_s": 15.399,
+          "end_s": 15.798
+        }
+      ]
+    },
+    {
+      "text": "Put simply, AI is not only smarter, but",
+      "start_s": 16.995,
+      "end_s": 20.824,
+      "section": "",
+      "words": [
+        {
+          "text": "Put",
+          "start_s": 16.995,
+          "end_s": 17.234
+        },
+        {
+          "text": " simp",
+          "start_s": 17.234,
+          "end_s": 17.473
+        },
+        {
+          "text": "ly,",
+          "start_s": 17.473,
+          "end_s": 17.633
+        },
+        {
+          "text": " AI",
+          "start_s": 18.271,
+          "end_s": 18.59
+        },
+        {
+          "text": " is",
+          "start_s": 18.67,
+          "end_s": 18.83
+        },
+        {
+          "text": " not",
+          "start_s": 18.83,
+          "end_s": 18.989
+        },
+        {
+          "text": " only",
+          "start_s": 18.989,
+          "end_s": 19.388
+        },
+        {
+          "text": " smart",
+          "start_s": 19.388,
+          "end_s": 19.628
+        },
+        {
+          "text": "er,",
+          "start_s": 19.628,
+          "end_s": 19.787
+        },
+        {
+          "text": " but",
+          "start_s": 20.665,
+          "end_s": 20.824
+        }
+      ]
+    },
+    {
+      "text": "also ten times faster, granting him acc",
+      "start_s": 20.824,
+      "end_s": 24.574,
+      "section": "",
+      "words": [
+        {
+          "text": " also",
+          "start_s": 20.824,
+          "end_s": 21.223
+        },
+        {
+          "text": " ten",
+          "start_s": 21.223,
+          "end_s": 21.463
+        },
+        {
+          "text": " times",
+          "start_s": 21.463,
+          "end_s": 21.862
+        },
+        {
+          "text": " faster,",
+          "start_s": 21.862,
+          "end_s": 22.42
+        },
+        {
+          "text": " gr",
+          "start_s": 23.697,
+          "end_s": 23.777
+        },
+        {
+          "text": "ant",
+          "start_s": 23.777,
+          "end_s": 23.936
+        },
+        {
+          "text": "ing",
+          "start_s": 23.936,
+          "end_s": 24.096
+        },
+        {
+          "text": " him",
+          "start_s": 24.096,
+          "end_s": 24.255
+        },
+        {
+          "text": " acc",
+          "start_s": 24.255,
+          "end_s": 24.574
+        }
+      ]
+    },
+    {
+      "text": "ess to higher dimensions",
+      "start_s": 24.574,
+      "end_s": 26.011,
+      "section": "",
+      "words": [
+        {
+          "text": "ess",
+          "start_s": 24.574,
+          "end_s": 24.814
+        },
+        {
+          "text": " to",
+          "start_s": 24.814,
+          "end_s": 24.973
+        },
+        {
+          "text": " higher",
+          "start_s": 24.973,
+          "end_s": 25.293
+        },
+        {
+          "text": " dim",
+          "start_s": 25.293,
+          "end_s": 25.452
+        },
+        {
+          "text": "ens",
+          "start_s": 25.452,
+          "end_s": 25.691
+        },
+        {
+          "text": "ions",
+          "start_s": 25.691,
+          "end_s": 26.011
+        }
+      ]
+    },
+    {
+      "text": "Everything Everywhere All at Once: we no",
+      "start_s": 28.005,
+      "end_s": 29.84,
+      "section": "",
+      "words": [
+        {
+          "text": "Everything",
+          "start_s": 28.005,
+          "end_s": 28.803
+        },
+        {
+          "text": " Everywhere",
+          "start_s": 28.803,
+          "end_s": 29.043
+        },
+        {
+          "text": " All",
+          "start_s": 29.043,
+          "end_s": 29.282
+        },
+        {
+          "text": " at",
+          "start_s": 29.282,
+          "end_s": 29.521
+        },
+        {
+          "text": " Once:",
+          "start_s": 29.521,
+          "end_s": 29.681
+        },
+        {
+          "text": " we",
+          "start_s": 29.681,
+          "end_s": 29.761
+        },
+        {
+          "text": " no",
+          "start_s": 29.761,
+          "end_s": 29.84
+        }
+      ]
+    },
+    {
+      "text": "longer live in a linear reality where",
+      "start_s": 29.84,
+      "end_s": 34.947,
+      "section": "",
+      "words": [
+        {
+          "text": " longer",
+          "start_s": 29.84,
+          "end_s": 29.92
+        },
+        {
+          "text": " live",
+          "start_s": 29.92,
+          "end_s": 30.0
+        },
+        {
+          "text": " in",
+          "start_s": 30.0,
+          "end_s": 30.08
+        },
+        {
+          "text": " a",
+          "start_s": 30.08,
+          "end_s": 30.16
+        },
+        {
+          "text": " line",
+          "start_s": 30.16,
+          "end_s": 30.399
+        },
+        {
+          "text": "ar",
+          "start_s": 30.399,
+          "end_s": 30.479
+        },
+        {
+          "text": " real",
+          "start_s": 30.479,
+          "end_s": 30.878
+        },
+        {
+          "text": "ity",
+          "start_s": 33.91,
+          "end_s": 34.149
+        },
+        {
+          "text": " where",
+          "start_s": 34.787,
+          "end_s": 34.947
+        }
+      ]
+    },
+    {
+      "text": "everything used to unfold along a clear",
+      "start_s": 34.947,
+      "end_s": 37.979,
+      "section": "",
+      "words": [
+        {
+          "text": " everything",
+          "start_s": 34.947,
+          "end_s": 35.665
+        },
+        {
+          "text": " used",
+          "start_s": 35.665,
+          "end_s": 35.904
+        },
+        {
+          "text": " to",
+          "start_s": 35.904,
+          "end_s": 36.144
+        },
+        {
+          "text": " unfold",
+          "start_s": 36.463,
+          "end_s": 37.021
+        },
+        {
+          "text": " along",
+          "start_s": 37.021,
+          "end_s": 37.261
+        },
+        {
+          "text": " a",
+          "start_s": 37.261,
+          "end_s": 37.42
+        },
+        {
+          "text": " clear",
+          "start_s": 37.5,
+          "end_s": 37.979
+        }
+      ]
+    },
+    {
+      "text": "axis. Now, countless streams of influ",
+      "start_s": 38.138,
+      "end_s": 43.085,
+      "section": "",
+      "words": [
+        {
+          "text": " a",
+          "start_s": 38.138,
+          "end_s": 38.298
+        },
+        {
+          "text": "x",
+          "start_s": 38.298,
+          "end_s": 38.378
+        },
+        {
+          "text": "is.",
+          "start_s": 38.537,
+          "end_s": 38.697
+        },
+        {
+          "text": " Now,",
+          "start_s": 41.011,
+          "end_s": 41.41
+        },
+        {
+          "text": " count",
+          "start_s": 41.569,
+          "end_s": 41.809
+        },
+        {
+          "text": "less",
+          "start_s": 41.809,
+          "end_s": 42.128
+        },
+        {
+          "text": " streams",
+          "start_s": 42.128,
+          "end_s": 42.447
+        },
+        {
+          "text": " of",
+          "start_s": 42.447,
+          "end_s": 42.686
+        },
+        {
+          "text": " inf",
+          "start_s": 42.686,
+          "end_s": 42.926
+        },
+        {
+          "text": "lu",
+          "start_s": 42.926,
+          "end_s": 43.085
+        }
+      ]
+    },
+    {
+      "text": "ence from multiple dimensions are simult",
+      "start_s": 43.085,
+      "end_s": 45.718,
+      "section": "",
+      "words": [
+        {
+          "text": "ence",
+          "start_s": 43.085,
+          "end_s": 43.404
+        },
+        {
+          "text": " from",
+          "start_s": 43.484,
+          "end_s": 43.644
+        },
+        {
+          "text": " multip",
+          "start_s": 43.644,
+          "end_s": 43.963
+        },
+        {
+          "text": "le",
+          "start_s": 43.963,
+          "end_s": 44.122
+        },
+        {
+          "text": " dim",
+          "start_s": 44.122,
+          "end_s": 44.282
+        },
+        {
+          "text": "ens",
+          "start_s": 44.282,
+          "end_s": 44.521
+        },
+        {
+          "text": "ions",
+          "start_s": 44.601,
+          "end_s": 44.92
+        },
+        {
+          "text": " are",
+          "start_s": 44.92,
+          "end_s": 45.239
+        },
+        {
+          "text": " sim",
+          "start_s": 45.319,
+          "end_s": 45.479
+        },
+        {
+          "text": "ult",
+          "start_s": 45.479,
+          "end_s": 45.718
+        }
+      ]
+    },
+    {
+      "text": "aneously overlapping onto the present,",
+      "start_s": 45.718,
+      "end_s": 48.431,
+      "section": "",
+      "words": [
+        {
+          "text": "ane",
+          "start_s": 45.718,
+          "end_s": 45.957
+        },
+        {
+          "text": "ous",
+          "start_s": 46.037,
+          "end_s": 46.277
+        },
+        {
+          "text": "ly",
+          "start_s": 46.277,
+          "end_s": 46.436
+        },
+        {
+          "text": " over",
+          "start_s": 46.516,
+          "end_s": 46.835
+        },
+        {
+          "text": "l",
+          "start_s": 46.835,
+          "end_s": 46.915
+        },
+        {
+          "text": "apping",
+          "start_s": 47.074,
+          "end_s": 47.314
+        },
+        {
+          "text": " onto",
+          "start_s": 47.314,
+          "end_s": 47.633
+        },
+        {
+          "text": " the",
+          "start_s": 47.633,
+          "end_s": 47.793
+        },
+        {
+          "text": " present,",
+          "start_s": 47.793,
+          "end_s": 48.431
+        }
+      ]
+    },
+    {
+      "text": "right at this moment",
+      "start_s": 49.628,
+      "end_s": 50.824,
+      "section": "",
+      "words": [
+        {
+          "text": " right",
+          "start_s": 49.628,
+          "end_s": 49.867
+        },
+        {
+          "text": " at",
+          "start_s": 49.867,
+          "end_s": 50.027
+        },
+        {
+          "text": " this",
+          "start_s": 50.027,
+          "end_s": 50.266
+        },
+        {
+          "text": " moment",
+          "start_s": 50.266,
+          "end_s": 50.824
+        }
+      ]
+    },
+    {
+      "text": "The change is incredibly fierce, yet",
+      "start_s": 52.58,
+      "end_s": 57.686,
+      "section": "",
+      "words": [
+        {
+          "text": "The",
+          "start_s": 52.58,
+          "end_s": 52.819
+        },
+        {
+          "text": " change",
+          "start_s": 52.819,
+          "end_s": 53.218
+        },
+        {
+          "text": " is",
+          "start_s": 53.218,
+          "end_s": 53.378
+        },
+        {
+          "text": " inc",
+          "start_s": 53.378,
+          "end_s": 53.697
+        },
+        {
+          "text": "red",
+          "start_s": 53.697,
+          "end_s": 53.936
+        },
+        {
+          "text": "ib",
+          "start_s": 53.936,
+          "end_s": 54.096
+        },
+        {
+          "text": "ly",
+          "start_s": 54.096,
+          "end_s": 54.255
+        },
+        {
+          "text": " fierce,",
+          "start_s": 54.415,
+          "end_s": 54.973
+        },
+        {
+          "text": " yet",
+          "start_s": 57.447,
+          "end_s": 57.686
+        }
+      ]
+    },
+    {
+      "text": "also incredibly fascinating",
+      "start_s": 57.686,
+      "end_s": 60.718,
+      "section": "",
+      "words": [
+        {
+          "text": " also",
+          "start_s": 57.686,
+          "end_s": 58.085
+        },
+        {
+          "text": " inc",
+          "start_s": 58.085,
+          "end_s": 58.324
+        },
+        {
+          "text": "red",
+          "start_s": 58.324,
+          "end_s": 58.564
+        },
+        {
+          "text": "ib",
+          "start_s": 58.564,
+          "end_s": 58.723
+        },
+        {
+          "text": "ly",
+          "start_s": 58.803,
+          "end_s": 58.963
+        },
+        {
+          "text": " f",
+          "start_s": 59.441,
+          "end_s": 59.521
+        },
+        {
+          "text": "as",
+          "start_s": 59.521,
+          "end_s": 59.681
+        },
+        {
+          "text": "cin",
+          "start_s": 59.681,
+          "end_s": 59.92
+        },
+        {
+          "text": "ating",
+          "start_s": 60.16,
+          "end_s": 60.718
+        }
+      ]
+    }
+  ]
+}
