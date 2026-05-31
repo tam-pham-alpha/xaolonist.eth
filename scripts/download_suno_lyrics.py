@@ -37,15 +37,13 @@ def format_time(seconds):
     ms = int((seconds % 1) * 100)
     return f"[{minutes:02d}:{secs:02d}.{ms:02d}]"
 
-def download_file(url, dest_path):
-    req = urllib.request.Request(
-        url, 
-        headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
-    )
-    with urllib.request.urlopen(req) as resp, open(dest_path, 'wb') as out_file:
-        out_file.write(resp.read())
+import subprocess
 
-def extract_uuid_from_url(url):
+def download_file(url, dest_path):
+    # Use system curl to download the file to bypass urllib connection blocks
+    subprocess.run(["curl", "-sL", url, "-o", dest_path], check=True)
+
+def extract_uuid_and_html_from_url(url):
     req = urllib.request.Request(
         url,
         headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
@@ -55,12 +53,12 @@ def extract_uuid_from_url(url):
             html = resp.read().decode('utf-8', errors='ignore')
     except Exception as e:
         print(f"Error fetching URL {url}: {e}", file=sys.stderr)
-        return None
+        return None, None
         
     # Try finding the song URL pattern in rel="canonical" or JSON scripts: e.g. suno.com/song/<uuid>
     match = re.search(r'suno\.com/song/([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})', html)
     if match:
-        return match.group(1)
+        return match.group(1), html
         
     # Fallback to general UUID regex match in the HTML
     uuid_pattern = re.compile(r'[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}')
@@ -69,9 +67,9 @@ def extract_uuid_from_url(url):
         # Avoid UUIDs starting with '019' if possible
         for m in matches:
             if not m.startswith('019'):
-                return m
-        return matches[0]
-    return None
+                return m, html
+        return matches[0], html
+    return None, None
 
 def main():
     if len(sys.argv) < 3:
@@ -82,9 +80,11 @@ def main():
     output_dir = sys.argv[2]
     lang = sys.argv[3].lower() if len(sys.argv) > 3 else "vn"
     
+    song_id = None
+    html = None
     if url_or_uuid.startswith("http://") or url_or_uuid.startswith("https://"):
         print(f"Resolving Suno share URL: {url_or_uuid}...")
-        song_id = extract_uuid_from_url(url_or_uuid)
+        song_id, html = extract_uuid_and_html_from_url(url_or_uuid)
         if not song_id:
             print("Error: Could not resolve song UUID from share URL.", file=sys.stderr)
             sys.exit(1)
@@ -106,8 +106,23 @@ def main():
     audio_filename = "audio.mp3" if lang == "vn" else "audio.en.mp3"
     lyrics_prefix = "lyrics" if lang == "vn" else "lyrics.en"
     
-    # 1. Download MP3 audio from Suno CDN
-    audio_url = f"https://audiopipe.suno.ai/?item_id={song_id}"
+    # Resolve the audio download URL
+    audio_url = None
+    if html:
+        # Search for direct CDN URL
+        pattern = rf'https://cdn[0-9]\.suno\.ai/{song_id}\.mp3'
+        match = re.search(pattern, html)
+        if match:
+            audio_url = match.group(0)
+        else:
+            escaped_pattern = rf'https:\\/\\/cdn[0-9]\.suno\.ai\\/{song_id}\.mp3'
+            match = re.search(escaped_pattern, html)
+            if match:
+                audio_url = match.group(0).replace(r'\/', '/')
+    
+    if not audio_url:
+        audio_url = f"https://audiopipe.suno.ai/?item_id={song_id}"
+        
     audio_dest = os.path.join(output_dir, audio_filename)
     print(f"Downloading MP3 from {audio_url} to: {audio_dest} ...")
     try:
