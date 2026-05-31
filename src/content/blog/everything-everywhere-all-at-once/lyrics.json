@@ -1,0 +1,2553 @@
+{
+  "aligned_words": [
+    {
+      "word": "Cuối ",
+      "success": true,
+      "start_s": 0.0,
+      "end_s": 5.027,
+      "p_align": 0.99
+    },
+    {
+      "word": "tuần ",
+      "success": true,
+      "start_s": 5.0665,
+      "end_s": 5.266,
+      "p_align": 0.99
+    },
+    {
+      "word": "vừa ",
+      "success": true,
+      "start_s": 5.346,
+      "end_s": 5.585,
+      "p_align": 0.99
+    },
+    {
+      "word": "rồi, ",
+      "success": true,
+      "start_s": 5.69133,
+      "end_s": 7.39333,
+      "p_align": 0.99
+    },
+    {
+      "word": "và ",
+      "success": true,
+      "start_s": 7.44667,
+      "end_s": 7.5,
+      "p_align": 0.99
+    },
+    {
+      "word": "hắn ",
+      "success": true,
+      "start_s": 7.58,
+      "end_s": 7.739,
+      "p_align": 0.99
+    },
+    {
+      "word": "đã ",
+      "success": true,
+      "start_s": 7.819,
+      "end_s": 7.899,
+      "p_align": 0.99
+    },
+    {
+      "word": "accidentally ",
+      "success": true,
+      "start_s": 7.95233,
+      "end_s": 8.697,
+      "p_align": 0.99
+    },
+    {
+      "word": "subscribed ",
+      "success": true,
+      "start_s": 8.7765,
+      "end_s": 9.335,
+      "p_align": 0.99
+    },
+    {
+      "word": "vào ",
+      "success": true,
+      "start_s": 9.38833,
+      "end_s": 9.495,
+      "p_align": 0.99
+    },
+    {
+      "word": "gói ",
+      "success": true,
+      "start_s": 9.574,
+      "end_s": 10.452,
+      "p_align": 0.99
+    },
+    {
+      "word": "Antigravity ",
+      "success": true,
+      "start_s": 10.53167,
+      "end_s": 11.489,
+      "p_align": 0.99
+    },
+    {
+      "word": "Ultra ",
+      "success": true,
+      "start_s": 11.569,
+      "end_s": 12.287,
+      "p_align": 0.99
+    },
+    {
+      "word": "của ",
+      "success": true,
+      "start_s": 12.367,
+      "end_s": 12.527,
+      "p_align": 0.99
+    },
+    {
+      "word": "Google\n\n",
+      "success": true,
+      "start_s": 12.606,
+      "end_s": 14.72075,
+      "p_align": 0.99
+    },
+    {
+      "word": "Một ",
+      "success": true,
+      "start_s": 14.7605,
+      "end_s": 14.84,
+      "p_align": 0.99
+    },
+    {
+      "word": "năm ",
+      "success": true,
+      "start_s": 14.89333,
+      "end_s": 15.0,
+      "p_align": 0.99
+    },
+    {
+      "word": "vừa ",
+      "success": true,
+      "start_s": 15.08,
+      "end_s": 15.319,
+      "p_align": 0.99
+    },
+    {
+      "word": "rồi ",
+      "success": true,
+      "start_s": 15.42533,
+      "end_s": 15.638,
+      "p_align": 0.99
+    },
+    {
+      "word": "hắn ",
+      "success": true,
+      "start_s": 15.718,
+      "end_s": 15.957,
+      "p_align": 0.99
+    },
+    {
+      "word": "vẫn ",
+      "success": true,
+      "start_s": 16.01033,
+      "end_s": 16.117,
+      "p_align": 0.99
+    },
+    {
+      "word": "dùng ",
+      "success": true,
+      "start_s": 16.197,
+      "end_s": 16.436,
+      "p_align": 0.99
+    },
+    {
+      "word": "AI ",
+      "success": true,
+      "start_s": 16.556,
+      "end_s": 16.676,
+      "p_align": 0.99
+    },
+    {
+      "word": "mỗi ",
+      "success": true,
+      "start_s": 16.755,
+      "end_s": 17.074,
+      "p_align": 0.99
+    },
+    {
+      "word": "ngày, ",
+      "success": true,
+      "start_s": 17.17375,
+      "end_s": 17.912,
+      "p_align": 0.99
+    },
+    {
+      "word": "vậy ",
+      "success": true,
+      "start_s": 17.952,
+      "end_s": 18.112,
+      "p_align": 0.99
+    },
+    {
+      "word": "mà ",
+      "success": true,
+      "start_s": 18.1515,
+      "end_s": 18.191,
+      "p_align": 0.99
+    },
+    {
+      "word": "hắn ",
+      "success": true,
+      "start_s": 18.271,
+      "end_s": 18.511,
+      "p_align": 0.99
+    },
+    {
+      "word": "lại ",
+      "success": true,
+      "start_s": 18.59067,
+      "end_s": 18.75,
+      "p_align": 0.99
+    },
+    {
+      "word": "cảm ",
+      "success": true,
+      "start_s": 18.79,
+      "end_s": 18.91,
+      "p_align": 0.99
+    },
+    {
+      "word": "giác ",
+      "success": true,
+      "start_s": 18.9495,
+      "end_s": 19.309,
+      "p_align": 0.99
+    },
+    {
+      "word": "như ",
+      "success": true,
+      "start_s": 19.362,
+      "end_s": 19.468,
+      "p_align": 0.99
+    },
+    {
+      "word": "vừa ",
+      "success": true,
+      "start_s": 19.548,
+      "end_s": 19.867,
+      "p_align": 0.99
+    },
+    {
+      "word": "được ",
+      "success": true,
+      "start_s": 19.92675,
+      "end_s": 20.106,
+      "p_align": 0.99
+    },
+    {
+      "word": "access ",
+      "success": true,
+      "start_s": 20.186,
+      "end_s": 20.665,
+      "p_align": 0.99
+    },
+    {
+      "word": "vào ",
+      "success": true,
+      "start_s": 20.718,
+      "end_s": 20.824,
+      "p_align": 0.99
+    },
+    {
+      "word": "chế ",
+      "success": true,
+      "start_s": 20.864,
+      "end_s": 21.064,
+      "p_align": 0.99
+    },
+    {
+      "word": "độ ",
+      "success": true,
+      "start_s": 21.144,
+      "end_s": 21.383,
+      "p_align": 0.99
+    },
+    {
+      "word": "thần ",
+      "success": true,
+      "start_s": 21.423,
+      "end_s": 21.782,
+      "p_align": 0.99
+    },
+    {
+      "word": "thánh\n\n",
+      "success": true,
+      "start_s": 21.822,
+      "end_s": 23.56367,
+      "p_align": 0.99
+    },
+    {
+      "word": "Hiểu ",
+      "success": true,
+      "start_s": 23.59033,
+      "end_s": 23.936,
+      "p_align": 0.99
+    },
+    {
+      "word": "nôm ",
+      "success": true,
+      "start_s": 24.016,
+      "end_s": 24.255,
+      "p_align": 0.99
+    },
+    {
+      "word": "na ",
+      "success": true,
+      "start_s": 24.375,
+      "end_s": 24.495,
+      "p_align": 0.99
+    },
+    {
+      "word": "thì ",
+      "success": true,
+      "start_s": 24.5745,
+      "end_s": 24.734,
+      "p_align": 0.99
+    },
+    {
+      "word": "AI ",
+      "success": true,
+      "start_s": 24.814,
+      "end_s": 24.894,
+      "p_align": 0.99
+    },
+    {
+      "word": "không ",
+      "success": true,
+      "start_s": 24.9418,
+      "end_s": 25.133,
+      "p_align": 0.99
+    },
+    {
+      "word": "chỉ ",
+      "success": true,
+      "start_s": 25.15967,
+      "end_s": 25.213,
+      "p_align": 0.99
+    },
+    {
+      "word": "thông ",
+      "success": true,
+      "start_s": 25.253,
+      "end_s": 25.452,
+      "p_align": 0.99
+    },
+    {
+      "word": "minh ",
+      "success": true,
+      "start_s": 25.47867,
+      "end_s": 25.691,
+      "p_align": 0.99
+    },
+    {
+      "word": "hơn, ",
+      "success": true,
+      "start_s": 25.771,
+      "end_s": 26.03733,
+      "p_align": 0.99
+    },
+    {
+      "word": "mà ",
+      "success": true,
+      "start_s": 26.06367,
+      "end_s": 26.09,
+      "p_align": 0.99
+    },
+    {
+      "word": "tốc ",
+      "success": true,
+      "start_s": 26.17,
+      "end_s": 26.41,
+      "p_align": 0.99
+    },
+    {
+      "word": "độ ",
+      "success": true,
+      "start_s": 26.489,
+      "end_s": 26.809,
+      "p_align": 0.99
+    },
+    {
+      "word": "còn ",
+      "success": true,
+      "start_s": 26.88867,
+      "end_s": 27.048,
+      "p_align": 0.99
+    },
+    {
+      "word": "nhanh ",
+      "success": true,
+      "start_s": 27.088,
+      "end_s": 27.287,
+      "p_align": 0.99
+    },
+    {
+      "word": "hơn ",
+      "success": true,
+      "start_s": 27.367,
+      "end_s": 27.606,
+      "p_align": 0.99
+    },
+    {
+      "word": "gấp 10, ",
+      "success": true,
+      "start_s": 27.686,
+      "end_s": 28.524,
+      "p_align": 0.99
+    },
+    {
+      "word": "cho ",
+      "success": true,
+      "start_s": 28.564,
+      "end_s": 28.644,
+      "p_align": 0.99
+    },
+    {
+      "word": "hắn ",
+      "success": true,
+      "start_s": 28.723,
+      "end_s": 29.043,
+      "p_align": 0.99
+    },
+    {
+      "word": "quyền ",
+      "success": true,
+      "start_s": 29.0825,
+      "end_s": 29.441,
+      "p_align": 0.99
+    },
+    {
+      "word": "truy ",
+      "success": true,
+      "start_s": 29.46767,
+      "end_s": 29.681,
+      "p_align": 0.99
+    },
+    {
+      "word": "cập ",
+      "success": true,
+      "start_s": 29.761,
+      "end_s": 30.0,
+      "p_align": 0.99
+    },
+    {
+      "word": "vào ",
+      "success": true,
+      "start_s": 30.10633,
+      "end_s": 30.319,
+      "p_align": 0.99
+    },
+    {
+      "word": "higher ",
+      "success": true,
+      "start_s": 30.41217,
+      "end_s": 30.957,
+      "p_align": 0.99
+    },
+    {
+      "word": "dimensions\n\n",
+      "success": true,
+      "start_s": 31.06367,
+      "end_s": 33.598,
+      "p_align": 0.99
+    },
+    {
+      "word": "Everything ",
+      "success": true,
+      "start_s": 33.685,
+      "end_s": 34.468,
+      "p_align": 0.99
+    },
+    {
+      "word": "Everywhere ",
+      "success": true,
+      "start_s": 34.4999,
+      "end_s": 34.787,
+      "p_align": 0.99
+    },
+    {
+      "word": "All ",
+      "success": true,
+      "start_s": 34.867,
+      "end_s": 35.027,
+      "p_align": 0.99
+    },
+    {
+      "word": "at ",
+      "success": true,
+      "start_s": 35.1465,
+      "end_s": 35.266,
+      "p_align": 0.99
+    },
+    {
+      "word": "Once, ",
+      "success": true,
+      "start_s": 35.36575,
+      "end_s": 35.69167,
+      "p_align": 0.99
+    },
+    {
+      "word": "chúng ",
+      "success": true,
+      "start_s": 35.71833,
+      "end_s": 35.984,
+      "p_align": 0.99
+    },
+    {
+      "word": "ta ",
+      "success": true,
+      "start_s": 36.1035,
+      "end_s": 36.303,
+      "p_align": 0.99
+    },
+    {
+      "word": "không ",
+      "success": true,
+      "start_s": 36.335,
+      "end_s": 36.463,
+      "p_align": 0.99
+    },
+    {
+      "word": "còn ",
+      "success": true,
+      "start_s": 36.516,
+      "end_s": 36.622,
+      "p_align": 0.99
+    },
+    {
+      "word": "sống ",
+      "success": true,
+      "start_s": 36.702,
+      "end_s": 36.862,
+      "p_align": 0.99
+    },
+    {
+      "word": "trong ",
+      "success": true,
+      "start_s": 36.9015,
+      "end_s": 37.021,
+      "p_align": 0.99
+    },
+    {
+      "word": "thực ",
+      "success": true,
+      "start_s": 37.061,
+      "end_s": 37.261,
+      "p_align": 0.99
+    },
+    {
+      "word": "tại ",
+      "success": true,
+      "start_s": 37.34,
+      "end_s": 37.5,
+      "p_align": 0.99
+    },
+    {
+      "word": "tuyến ",
+      "success": true,
+      "start_s": 37.54,
+      "end_s": 37.739,
+      "p_align": 0.99
+    },
+    {
+      "word": "tính ",
+      "success": true,
+      "start_s": 37.819,
+      "end_s": 38.059,
+      "p_align": 0.99
+    },
+    {
+      "word": "nữa, ",
+      "success": true,
+      "start_s": 38.138,
+      "end_s": 38.597,
+      "p_align": 0.99
+    },
+    {
+      "word": "nơi ",
+      "success": true,
+      "start_s": 38.657,
+      "end_s": 38.777,
+      "p_align": 0.99
+    },
+    {
+      "word": "mọi ",
+      "success": true,
+      "start_s": 38.856,
+      "end_s": 38.936,
+      "p_align": 0.99
+    },
+    {
+      "word": "thứ ",
+      "success": true,
+      "start_s": 39.096,
+      "end_s": 39.495,
+      "p_align": 0.99
+    },
+    {
+      "word": "từng ",
+      "success": true,
+      "start_s": 39.55475,
+      "end_s": 39.734,
+      "p_align": 0.99
+    },
+    {
+      "word": "diễn ",
+      "success": true,
+      "start_s": 39.774,
+      "end_s": 40.133,
+      "p_align": 0.99
+    },
+    {
+      "word": "ra ",
+      "success": true,
+      "start_s": 40.2525,
+      "end_s": 40.452,
+      "p_align": 0.99
+    },
+    {
+      "word": "theo ",
+      "success": true,
+      "start_s": 40.53175,
+      "end_s": 40.771,
+      "p_align": 0.99
+    },
+    {
+      "word": "một ",
+      "success": true,
+      "start_s": 40.851,
+      "end_s": 41.011,
+      "p_align": 0.99
+    },
+    {
+      "word": "trục ",
+      "success": true,
+      "start_s": 41.0505,
+      "end_s": 41.33,
+      "p_align": 0.99
+    },
+    {
+      "word": "rõ ",
+      "success": true,
+      "start_s": 41.41,
+      "end_s": 41.888,
+      "p_align": 0.99
+    },
+    {
+      "word": "ràng, ",
+      "success": true,
+      "start_s": 41.968,
+      "end_s": 43.03233,
+      "p_align": 0.99
+    },
+    {
+      "word": "mà ",
+      "success": true,
+      "start_s": 43.13867,
+      "end_s": 43.245,
+      "p_align": 0.99
+    },
+    {
+      "word": "giờ ",
+      "success": true,
+      "start_s": 43.32467,
+      "end_s": 43.484,
+      "p_align": 0.99
+    },
+    {
+      "word": "đây, ",
+      "success": true,
+      "start_s": 43.59033,
+      "end_s": 43.843,
+      "p_align": 0.99
+    },
+    {
+      "word": "vô ",
+      "success": true,
+      "start_s": 43.883,
+      "end_s": 44.122,
+      "p_align": 0.99
+    },
+    {
+      "word": "số ",
+      "success": true,
+      "start_s": 44.202,
+      "end_s": 44.441,
+      "p_align": 0.99
+    },
+    {
+      "word": "dòng ",
+      "success": true,
+      "start_s": 44.521,
+      "end_s": 44.84,
+      "p_align": 0.99
+    },
+    {
+      "word": "ảnh ",
+      "success": true,
+      "start_s": 44.92,
+      "end_s": 45.08,
+      "p_align": 0.99
+    },
+    {
+      "word": "hưởng ",
+      "success": true,
+      "start_s": 45.16,
+      "end_s": 45.399,
+      "p_align": 0.99
+    },
+    {
+      "word": "từ ",
+      "success": true,
+      "start_s": 45.479,
+      "end_s": 45.638,
+      "p_align": 0.99
+    },
+    {
+      "word": "nhiều ",
+      "success": true,
+      "start_s": 45.66467,
+      "end_s": 45.878,
+      "p_align": 0.99
+    },
+    {
+      "word": "chiều ",
+      "success": true,
+      "start_s": 45.90433,
+      "end_s": 46.436,
+      "p_align": 0.99
+    },
+    {
+      "word": "không ",
+      "success": true,
+      "start_s": 46.4998,
+      "end_s": 46.755,
+      "p_align": 0.99
+    },
+    {
+      "word": "gian ",
+      "success": true,
+      "start_s": 46.815,
+      "end_s": 46.995,
+      "p_align": 0.99
+    },
+    {
+      "word": "đang ",
+      "success": true,
+      "start_s": 47.074,
+      "end_s": 47.394,
+      "p_align": 0.99
+    },
+    {
+      "word": "cùng ",
+      "success": true,
+      "start_s": 47.43375,
+      "end_s": 47.553,
+      "p_align": 0.99
+    },
+    {
+      "word": "lúc ",
+      "success": true,
+      "start_s": 47.633,
+      "end_s": 47.952,
+      "p_align": 0.99
+    },
+    {
+      "word": "chồng ",
+      "success": true,
+      "start_s": 47.992,
+      "end_s": 48.271,
+      "p_align": 0.99
+    },
+    {
+      "word": "chập ",
+      "success": true,
+      "start_s": 48.311,
+      "end_s": 48.67,
+      "p_align": 0.99
+    },
+    {
+      "word": "lên ",
+      "success": true,
+      "start_s": 48.72333,
+      "end_s": 48.83,
+      "p_align": 0.99
+    },
+    {
+      "word": "hiện ",
+      "success": true,
+      "start_s": 48.87,
+      "end_s": 49.149,
+      "p_align": 0.99
+    },
+    {
+      "word": "tại, ",
+      "success": true,
+      "start_s": 49.229,
+      "end_s": 50.45233,
+      "p_align": 0.99
+    },
+    {
+      "word": "ngay ",
+      "success": true,
+      "start_s": 50.47867,
+      "end_s": 51.064,
+      "p_align": 0.99
+    },
+    {
+      "word": "lúc ",
+      "success": true,
+      "start_s": 51.144,
+      "end_s": 51.463,
+      "p_align": 0.99
+    },
+    {
+      "word": "này\n\n",
+      "success": true,
+      "start_s": 51.56933,
+      "end_s": 53.0985,
+      "p_align": 0.99
+    },
+    {
+      "word": "Sự ",
+      "success": true,
+      "start_s": 53.138,
+      "end_s": 53.218,
+      "p_align": 0.99
+    },
+    {
+      "word": "thay ",
+      "success": true,
+      "start_s": 53.258,
+      "end_s": 53.537,
+      "p_align": 0.99
+    },
+    {
+      "word": "đổi ",
+      "success": true,
+      "start_s": 53.617,
+      "end_s": 53.777,
+      "p_align": 0.99
+    },
+    {
+      "word": "quá ",
+      "success": true,
+      "start_s": 53.8165,
+      "end_s": 53.936,
+      "p_align": 0.99
+    },
+    {
+      "word": "khốc ",
+      "success": true,
+      "start_s": 53.976,
+      "end_s": 54.255,
+      "p_align": 0.99
+    },
+    {
+      "word": "liệt, ",
+      "success": true,
+      "start_s": 54.295,
+      "end_s": 55.42533,
+      "p_align": 0.99
+    },
+    {
+      "word": "và ",
+      "success": true,
+      "start_s": 55.47867,
+      "end_s": 55.532,
+      "p_align": 0.99
+    },
+    {
+      "word": "cũng ",
+      "success": true,
+      "start_s": 55.61175,
+      "end_s": 55.851,
+      "p_align": 0.99
+    },
+    {
+      "word": "quá ",
+      "success": true,
+      "start_s": 55.891,
+      "end_s": 56.011,
+      "p_align": 0.99
+    },
+    {
+      "word": "đỗi ",
+      "success": true,
+      "start_s": 56.09,
+      "end_s": 56.33,
+      "p_align": 0.99
+    },
+    {
+      "word": "thú ",
+      "success": true,
+      "start_s": 56.37,
+      "end_s": 56.729,
+      "p_align": 0.99
+    },
+    {
+      "word": "vị\n\n",
+      "success": true,
+      "start_s": 56.809,
+      "end_s": 57.048,
+      "p_align": 0.99
+    }
+  ],
+  "waveform_data": [
+    0.00093,
+    6e-05,
+    7e-05,
+    0.00562,
+    0.00098,
+    0.00445,
+    0.06084,
+    0.08967,
+    0.06617,
+    0.0719,
+    0.07228,
+    0.06883,
+    0.06053,
+    0.0993,
+    0.08766,
+    0.0735,
+    0.07918,
+    0.08432,
+    0.0907,
+    0.06488,
+    0.05108,
+    0.06026,
+    0.05912,
+    0.04733,
+    0.08287,
+    0.13715,
+    0.13655,
+    0.10678,
+    0.08985,
+    0.05679,
+    0.11871,
+    0.07092,
+    0.05786,
+    0.05147,
+    0.04988,
+    0.06521,
+    0.06446,
+    0.11862,
+    0.15415,
+    0.09106,
+    0.09771,
+    0.14463,
+    0.10147,
+    0.08738,
+    0.05544,
+    0.12098,
+    0.06858,
+    0.09792,
+    0.11654,
+    0.06694,
+    0.064,
+    0.05618,
+    0.11925,
+    0.0984,
+    0.10745,
+    0.10367,
+    0.09455,
+    0.10997,
+    0.07388,
+    0.06709,
+    0.07003,
+    0.05549,
+    0.08993,
+    0.06726,
+    0.03919,
+    0.02026,
+    0.02573,
+    0.02857,
+    0.05969,
+    0.23743,
+    0.0798,
+    0.04196,
+    0.17348,
+    0.07807,
+    0.25238,
+    0.13757,
+    0.15002,
+    0.10207,
+    0.14773,
+    0.17877,
+    0.12745,
+    0.09776,
+    0.27157,
+    0.1546,
+    0.13698,
+    0.2109,
+    0.20744,
+    0.13826,
+    0.06139,
+    0.05868,
+    0.10183,
+    0.19541,
+    0.08451,
+    0.05674,
+    0.23173,
+    0.10076,
+    0.17342,
+    0.20231,
+    0.12635,
+    0.24025,
+    0.09587,
+    0.06564,
+    0.11312,
+    0.08088,
+    0.20167,
+    0.11954,
+    0.04849,
+    0.25001,
+    0.10639,
+    0.10057,
+    0.20612,
+    0.12816,
+    0.2092,
+    0.06486,
+    0.05262,
+    0.08257,
+    0.17699,
+    0.01249,
+    0.11058,
+    0.1986,
+    0.20874,
+    0.14353,
+    0.10293,
+    0.19722,
+    0.24789,
+    0.1242,
+    0.16014,
+    0.1595,
+    0.15114,
+    0.21101,
+    0.12337,
+    0.09565,
+    0.23873,
+    0.09943,
+    0.15465,
+    0.19788,
+    0.16691,
+    0.25435,
+    0.11907,
+    0.13725,
+    0.12005,
+    0.1395,
+    0.15644,
+    0.12247,
+    0.0481,
+    0.25589,
+    0.09487,
+    0.09366,
+    0.12283,
+    0.16915,
+    0.13762,
+    0.12081,
+    0.10581,
+    0.1042,
+    0.14094,
+    0.09497,
+    0.12131,
+    0.20547,
+    0.09596,
+    0.11575,
+    0.15953,
+    0.03836,
+    0.20548,
+    0.16236,
+    0.14536,
+    0.15304,
+    0.07053,
+    0.19529,
+    0.13491,
+    0.18719,
+    0.2384,
+    0.20701,
+    0.1641,
+    0.18842,
+    0.16838,
+    0.23322,
+    0.18325,
+    0.14682,
+    0.16192,
+    0.18819,
+    0.14608,
+    0.12463,
+    0.20021,
+    0.19587,
+    0.16833,
+    0.15003,
+    0.13747,
+    0.23166,
+    0.17187,
+    0.17943,
+    0.14605,
+    0.16747,
+    0.21595,
+    0.14846,
+    0.13098,
+    0.24695,
+    0.15895,
+    0.19192,
+    0.18589,
+    0.1336,
+    0.24193,
+    0.13864,
+    0.17771,
+    0.12423,
+    0.14946,
+    0.11991,
+    0.1187,
+    0.13602,
+    0.20901,
+    0.14539,
+    0.1453,
+    0.16853,
+    0.19042,
+    0.13008,
+    0.18935,
+    0.20199,
+    0.21125,
+    0.21196,
+    0.15532,
+    0.18121,
+    0.22121,
+    0.19553,
+    0.16861,
+    0.18237,
+    0.16371,
+    0.25657,
+    0.15707,
+    0.20055,
+    0.17259,
+    0.19664,
+    0.19435,
+    0.14899,
+    0.14686,
+    0.23308,
+    0.18988,
+    0.17894,
+    0.18792,
+    0.20066,
+    0.19587,
+    0.16568,
+    0.15439,
+    0.16894,
+    0.19093,
+    0.18597,
+    0.1503,
+    0.20214,
+    0.21029,
+    0.16239,
+    0.17612,
+    0.16567,
+    0.20743,
+    0.15842,
+    0.23903,
+    0.07703,
+    0.02067,
+    0.15309,
+    0.18115,
+    0.17872,
+    0.11653,
+    0.09889,
+    0.0886,
+    0.07079,
+    0.05401,
+    0.08155,
+    0.05711,
+    0.08884,
+    0.12754,
+    0.12409,
+    0.09578,
+    0.10197,
+    0.04394,
+    0.11296,
+    0.05494,
+    0.04764,
+    0.04065,
+    0.03459,
+    0.06255,
+    0.07165,
+    0.0862,
+    0.11962,
+    0.1094,
+    0.043,
+    0.11172,
+    0.07713,
+    0.01933,
+    0.00069,
+    0.0001,
+    4e-05,
+    2e-05,
+    1e-05
+  ],
+  "hoot_cer": 0.19093851132686085,
+  "is_streamed": false,
+  "aligned_lyrics": [
+    {
+      "text": "Cuối tuần vừa rồi, và hắn đã accident",
+      "start_s": 0.0,
+      "end_s": 8.457,
+      "section": "",
+      "words": [
+        {
+          "text": "Cu",
+          "start_s": 0.0,
+          "end_s": 0.16
+        },
+        {
+          "text": "ối",
+          "start_s": 4.867,
+          "end_s": 5.027
+        },
+        {
+          "text": " tu",
+          "start_s": 5.027,
+          "end_s": 5.106
+        },
+        {
+          "text": "ần",
+          "start_s": 5.106,
+          "end_s": 5.266
+        },
+        {
+          "text": " v",
+          "start_s": 5.266,
+          "end_s": 5.346
+        },
+        {
+          "text": "ừ",
+          "start_s": 5.346,
+          "end_s": 5.426
+        },
+        {
+          "text": "a",
+          "start_s": 5.426,
+          "end_s": 5.505
+        },
+        {
+          "text": " rồi,",
+          "start_s": 5.585,
+          "end_s": 5.904
+        },
+        {
+          "text": " và",
+          "start_s": 7.34,
+          "end_s": 7.5
+        },
+        {
+          "text": " h",
+          "start_s": 7.5,
+          "end_s": 7.58
+        },
+        {
+          "text": "ắ",
+          "start_s": 7.58,
+          "end_s": 7.66
+        },
+        {
+          "text": "n",
+          "start_s": 7.66,
+          "end_s": 7.739
+        },
+        {
+          "text": " đã",
+          "start_s": 7.739,
+          "end_s": 7.899
+        },
+        {
+          "text": " acc",
+          "start_s": 7.899,
+          "end_s": 8.059
+        },
+        {
+          "text": "ident",
+          "start_s": 8.059,
+          "end_s": 8.457
+        }
+      ]
+    },
+    {
+      "text": "ally subscribed vào gói Antigravity Ult",
+      "start_s": 8.457,
+      "end_s": 11.729,
+      "section": "",
+      "words": [
+        {
+          "text": "ally",
+          "start_s": 8.457,
+          "end_s": 8.697
+        },
+        {
+          "text": " su",
+          "start_s": 8.697,
+          "end_s": 8.856
+        },
+        {
+          "text": "bs",
+          "start_s": 8.856,
+          "end_s": 8.936
+        },
+        {
+          "text": "c",
+          "start_s": 8.936,
+          "end_s": 9.016
+        },
+        {
+          "text": "rib",
+          "start_s": 9.016,
+          "end_s": 9.096
+        },
+        {
+          "text": "ed",
+          "start_s": 9.096,
+          "end_s": 9.255
+        },
+        {
+          "text": " vào",
+          "start_s": 9.335,
+          "end_s": 9.495
+        },
+        {
+          "text": " g",
+          "start_s": 9.495,
+          "end_s": 9.574
+        },
+        {
+          "text": "ói",
+          "start_s": 9.574,
+          "end_s": 9.734
+        },
+        {
+          "text": " Ant",
+          "start_s": 10.452,
+          "end_s": 10.691
+        },
+        {
+          "text": "i",
+          "start_s": 10.691,
+          "end_s": 10.771
+        },
+        {
+          "text": "gravity",
+          "start_s": 10.931,
+          "end_s": 11.489
+        },
+        {
+          "text": " Ult",
+          "start_s": 11.489,
+          "end_s": 11.729
+        }
+      ]
+    },
+    {
+      "text": "ra của Google",
+      "start_s": 11.729,
+      "end_s": 13.005,
+      "section": "",
+      "words": [
+        {
+          "text": "ra",
+          "start_s": 11.729,
+          "end_s": 11.888
+        },
+        {
+          "text": " của",
+          "start_s": 12.287,
+          "end_s": 12.527
+        },
+        {
+          "text": " G",
+          "start_s": 12.527,
+          "end_s": 12.606
+        },
+        {
+          "text": "oo",
+          "start_s": 12.606,
+          "end_s": 12.766
+        },
+        {
+          "text": "gle",
+          "start_s": 12.766,
+          "end_s": 13.005
+        }
+      ]
+    },
+    {
+      "text": "Một năm vừa rồi hắn vẫn dùng AI mỗi",
+      "start_s": 14.681,
+      "end_s": 16.915,
+      "section": "",
+      "words": [
+        {
+          "text": "Một",
+          "start_s": 14.681,
+          "end_s": 14.84
+        },
+        {
+          "text": " năm",
+          "start_s": 14.84,
+          "end_s": 15.0
+        },
+        {
+          "text": " v",
+          "start_s": 15.0,
+          "end_s": 15.08
+        },
+        {
+          "text": "ừ",
+          "start_s": 15.08,
+          "end_s": 15.16
+        },
+        {
+          "text": "a",
+          "start_s": 15.16,
+          "end_s": 15.239
+        },
+        {
+          "text": " rồi",
+          "start_s": 15.319,
+          "end_s": 15.638
+        },
+        {
+          "text": " h",
+          "start_s": 15.638,
+          "end_s": 15.718
+        },
+        {
+          "text": "ắ",
+          "start_s": 15.718,
+          "end_s": 15.798
+        },
+        {
+          "text": "n",
+          "start_s": 15.798,
+          "end_s": 15.878
+        },
+        {
+          "text": " vẫn",
+          "start_s": 15.957,
+          "end_s": 16.117
+        },
+        {
+          "text": " d",
+          "start_s": 16.117,
+          "end_s": 16.197
+        },
+        {
+          "text": "ùng",
+          "start_s": 16.197,
+          "end_s": 16.436
+        },
+        {
+          "text": " AI",
+          "start_s": 16.436,
+          "end_s": 16.676
+        },
+        {
+          "text": " m",
+          "start_s": 16.676,
+          "end_s": 16.755
+        },
+        {
+          "text": "ỗi",
+          "start_s": 16.755,
+          "end_s": 16.915
+        }
+      ]
+    },
+    {
+      "text": "ngày, vậy mà hắn lại cảm giác như vừa",
+      "start_s": 17.074,
+      "end_s": 19.707,
+      "section": "",
+      "words": [
+        {
+          "text": " ngày,",
+          "start_s": 17.074,
+          "end_s": 17.473
+        },
+        {
+          "text": " v",
+          "start_s": 17.872,
+          "end_s": 17.952
+        },
+        {
+          "text": "ậ",
+          "start_s": 17.952,
+          "end_s": 18.032
+        },
+        {
+          "text": "y",
+          "start_s": 18.032,
+          "end_s": 18.112
+        },
+        {
+          "text": " mà",
+          "start_s": 18.112,
+          "end_s": 18.191
+        },
+        {
+          "text": " h",
+          "start_s": 18.191,
+          "end_s": 18.271
+        },
+        {
+          "text": "ắ",
+          "start_s": 18.271,
+          "end_s": 18.351
+        },
+        {
+          "text": "n",
+          "start_s": 18.351,
+          "end_s": 18.431
+        },
+        {
+          "text": " lại",
+          "start_s": 18.511,
+          "end_s": 18.75
+        },
+        {
+          "text": " cả",
+          "start_s": 18.75,
+          "end_s": 18.83
+        },
+        {
+          "text": "m",
+          "start_s": 18.83,
+          "end_s": 18.91
+        },
+        {
+          "text": " gi",
+          "start_s": 18.91,
+          "end_s": 18.989
+        },
+        {
+          "text": "ác",
+          "start_s": 18.989,
+          "end_s": 19.149
+        },
+        {
+          "text": " như",
+          "start_s": 19.309,
+          "end_s": 19.468
+        },
+        {
+          "text": " v",
+          "start_s": 19.468,
+          "end_s": 19.548
+        },
+        {
+          "text": "ừ",
+          "start_s": 19.548,
+          "end_s": 19.628
+        },
+        {
+          "text": "a",
+          "start_s": 19.628,
+          "end_s": 19.707
+        }
+      ]
+    },
+    {
+      "text": "được access vào chế độ thần thánh",
+      "start_s": 19.867,
+      "end_s": 22.101,
+      "section": "",
+      "words": [
+        {
+          "text": " được",
+          "start_s": 19.867,
+          "end_s": 20.106
+        },
+        {
+          "text": " acc",
+          "start_s": 20.106,
+          "end_s": 20.346
+        },
+        {
+          "text": "ess",
+          "start_s": 20.346,
+          "end_s": 20.585
+        },
+        {
+          "text": " vào",
+          "start_s": 20.665,
+          "end_s": 20.824
+        },
+        {
+          "text": " ch",
+          "start_s": 20.824,
+          "end_s": 20.904
+        },
+        {
+          "text": "ế",
+          "start_s": 20.904,
+          "end_s": 20.984
+        },
+        {
+          "text": " đ",
+          "start_s": 21.064,
+          "end_s": 21.144
+        },
+        {
+          "text": "ộ",
+          "start_s": 21.144,
+          "end_s": 21.223
+        },
+        {
+          "text": " th",
+          "start_s": 21.383,
+          "end_s": 21.463
+        },
+        {
+          "text": "ần",
+          "start_s": 21.463,
+          "end_s": 21.622
+        },
+        {
+          "text": " th",
+          "start_s": 21.782,
+          "end_s": 21.862
+        },
+        {
+          "text": "á",
+          "start_s": 21.862,
+          "end_s": 21.941
+        },
+        {
+          "text": "nh",
+          "start_s": 21.941,
+          "end_s": 22.101
+        }
+      ]
+    },
+    {
+      "text": "Hiểu nôm na thì AI không chỉ thông minh",
+      "start_s": 23.537,
+      "end_s": 25.612,
+      "section": "",
+      "words": [
+        {
+          "text": "Hi",
+          "start_s": 23.537,
+          "end_s": 23.617
+        },
+        {
+          "text": "ể",
+          "start_s": 23.617,
+          "end_s": 23.697
+        },
+        {
+          "text": "u",
+          "start_s": 23.697,
+          "end_s": 23.777
+        },
+        {
+          "text": " n",
+          "start_s": 23.936,
+          "end_s": 24.016
+        },
+        {
+          "text": "ô",
+          "start_s": 24.016,
+          "end_s": 24.096
+        },
+        {
+          "text": "m",
+          "start_s": 24.096,
+          "end_s": 24.176
+        },
+        {
+          "text": " na",
+          "start_s": 24.255,
+          "end_s": 24.495
+        },
+        {
+          "text": " th",
+          "start_s": 24.495,
+          "end_s": 24.654
+        },
+        {
+          "text": "ì AI",
+          "start_s": 24.654,
+          "end_s": 24.894
+        },
+        {
+          "text": " không",
+          "start_s": 24.894,
+          "end_s": 25.133
+        },
+        {
+          "text": " chỉ",
+          "start_s": 25.133,
+          "end_s": 25.213
+        },
+        {
+          "text": " th",
+          "start_s": 25.213,
+          "end_s": 25.293
+        },
+        {
+          "text": "ông",
+          "start_s": 25.293,
+          "end_s": 25.452
+        },
+        {
+          "text": " min",
+          "start_s": 25.452,
+          "end_s": 25.532
+        },
+        {
+          "text": "h",
+          "start_s": 25.532,
+          "end_s": 25.612
+        }
+      ]
+    },
+    {
+      "text": "hơn, mà tốc độ còn nhanh hơn gấp 10,",
+      "start_s": 25.691,
+      "end_s": 28.165,
+      "section": "",
+      "words": [
+        {
+          "text": " h",
+          "start_s": 25.691,
+          "end_s": 25.771
+        },
+        {
+          "text": "ơn,",
+          "start_s": 25.771,
+          "end_s": 25.931
+        },
+        {
+          "text": " mà",
+          "start_s": 26.011,
+          "end_s": 26.09
+        },
+        {
+          "text": " t",
+          "start_s": 26.09,
+          "end_s": 26.17
+        },
+        {
+          "text": "ố",
+          "start_s": 26.17,
+          "end_s": 26.25
+        },
+        {
+          "text": "c",
+          "start_s": 26.25,
+          "end_s": 26.33
+        },
+        {
+          "text": " đ",
+          "start_s": 26.41,
+          "end_s": 26.489
+        },
+        {
+          "text": "ộ",
+          "start_s": 26.489,
+          "end_s": 26.569
+        },
+        {
+          "text": " còn",
+          "start_s": 26.809,
+          "end_s": 27.048
+        },
+        {
+          "text": " nh",
+          "start_s": 27.048,
+          "end_s": 27.128
+        },
+        {
+          "text": "anh",
+          "start_s": 27.128,
+          "end_s": 27.287
+        },
+        {
+          "text": " h",
+          "start_s": 27.287,
+          "end_s": 27.367
+        },
+        {
+          "text": "ơn",
+          "start_s": 27.367,
+          "end_s": 27.527
+        },
+        {
+          "text": " g",
+          "start_s": 27.606,
+          "end_s": 27.686
+        },
+        {
+          "text": "ấ",
+          "start_s": 27.686,
+          "end_s": 27.766
+        },
+        {
+          "text": "p",
+          "start_s": 27.766,
+          "end_s": 27.846
+        },
+        {
+          "text": " 10,",
+          "start_s": 27.926,
+          "end_s": 28.165
+        }
+      ]
+    },
+    {
+      "text": "cho hắn quyền truy cập vào higher dim",
+      "start_s": 28.484,
+      "end_s": 31.277,
+      "section": "",
+      "words": [
+        {
+          "text": " cho",
+          "start_s": 28.484,
+          "end_s": 28.644
+        },
+        {
+          "text": " h",
+          "start_s": 28.644,
+          "end_s": 28.723
+        },
+        {
+          "text": "ắ",
+          "start_s": 28.723,
+          "end_s": 28.803
+        },
+        {
+          "text": "n",
+          "start_s": 28.803,
+          "end_s": 28.883
+        },
+        {
+          "text": " qu",
+          "start_s": 29.043,
+          "end_s": 29.122
+        },
+        {
+          "text": "y",
+          "start_s": 29.122,
+          "end_s": 29.202
+        },
+        {
+          "text": "ền",
+          "start_s": 29.202,
+          "end_s": 29.362
+        },
+        {
+          "text": " tru",
+          "start_s": 29.441,
+          "end_s": 29.521
+        },
+        {
+          "text": "y",
+          "start_s": 29.521,
+          "end_s": 29.601
+        },
+        {
+          "text": " c",
+          "start_s": 29.681,
+          "end_s": 29.761
+        },
+        {
+          "text": "ậ",
+          "start_s": 29.761,
+          "end_s": 29.84
+        },
+        {
+          "text": "p",
+          "start_s": 29.84,
+          "end_s": 29.92
+        },
+        {
+          "text": " vào",
+          "start_s": 30.0,
+          "end_s": 30.319
+        },
+        {
+          "text": " higher",
+          "start_s": 30.319,
+          "end_s": 30.878
+        },
+        {
+          "text": " dim",
+          "start_s": 30.957,
+          "end_s": 31.277
+        }
+      ]
+    },
+    {
+      "text": "ensions",
+      "start_s": 31.277,
+      "end_s": 32.234,
+      "section": "",
+      "words": [
+        {
+          "text": "ens",
+          "start_s": 31.277,
+          "end_s": 31.516
+        },
+        {
+          "text": "ions",
+          "start_s": 31.915,
+          "end_s": 32.234
+        }
+      ]
+    },
+    {
+      "text": "Everything Everywhere All at Once, chúng",
+      "start_s": 33.511,
+      "end_s": 35.984,
+      "section": "",
+      "words": [
+        {
+          "text": "Everything",
+          "start_s": 33.511,
+          "end_s": 34.468
+        },
+        {
+          "text": " Everywhere",
+          "start_s": 34.468,
+          "end_s": 34.787
+        },
+        {
+          "text": " All",
+          "start_s": 34.787,
+          "end_s": 35.027
+        },
+        {
+          "text": " at",
+          "start_s": 35.027,
+          "end_s": 35.266
+        },
+        {
+          "text": " Once,",
+          "start_s": 35.266,
+          "end_s": 35.665
+        },
+        {
+          "text": " ch",
+          "start_s": 35.665,
+          "end_s": 35.745
+        },
+        {
+          "text": "ú",
+          "start_s": 35.745,
+          "end_s": 35.824
+        },
+        {
+          "text": "ng",
+          "start_s": 35.824,
+          "end_s": 35.984
+        }
+      ]
+    },
+    {
+      "text": "ta không còn sống trong thực tại tuyến",
+      "start_s": 35.984,
+      "end_s": 37.739,
+      "section": "",
+      "words": [
+        {
+          "text": " ta",
+          "start_s": 35.984,
+          "end_s": 36.223
+        },
+        {
+          "text": " không",
+          "start_s": 36.303,
+          "end_s": 36.463
+        },
+        {
+          "text": " còn",
+          "start_s": 36.463,
+          "end_s": 36.622
+        },
+        {
+          "text": " s",
+          "start_s": 36.622,
+          "end_s": 36.702
+        },
+        {
+          "text": "ống",
+          "start_s": 36.702,
+          "end_s": 36.862
+        },
+        {
+          "text": " tr",
+          "start_s": 36.862,
+          "end_s": 36.941
+        },
+        {
+          "text": "ong",
+          "start_s": 36.941,
+          "end_s": 37.021
+        },
+        {
+          "text": " th",
+          "start_s": 37.021,
+          "end_s": 37.101
+        },
+        {
+          "text": "ự",
+          "start_s": 37.101,
+          "end_s": 37.181
+        },
+        {
+          "text": "c",
+          "start_s": 37.181,
+          "end_s": 37.261
+        },
+        {
+          "text": " t",
+          "start_s": 37.261,
+          "end_s": 37.34
+        },
+        {
+          "text": "ại",
+          "start_s": 37.34,
+          "end_s": 37.5
+        },
+        {
+          "text": " tu",
+          "start_s": 37.5,
+          "end_s": 37.58
+        },
+        {
+          "text": "y",
+          "start_s": 37.58,
+          "end_s": 37.66
+        },
+        {
+          "text": "ến",
+          "start_s": 37.66,
+          "end_s": 37.739
+        }
+      ]
+    },
+    {
+      "text": "tính nữa, nơi mọi thứ từng diễn ra theo",
+      "start_s": 37.739,
+      "end_s": 40.771,
+      "section": "",
+      "words": [
+        {
+          "text": " t",
+          "start_s": 37.739,
+          "end_s": 37.819
+        },
+        {
+          "text": "í",
+          "start_s": 37.819,
+          "end_s": 37.899
+        },
+        {
+          "text": "nh",
+          "start_s": 37.899,
+          "end_s": 38.059
+        },
+        {
+          "text": " n",
+          "start_s": 38.059,
+          "end_s": 38.138
+        },
+        {
+          "text": "ữ",
+          "start_s": 38.138,
+          "end_s": 38.218
+        },
+        {
+          "text": "a,",
+          "start_s": 38.298,
+          "end_s": 38.378
+        },
+        {
+          "text": " nơi",
+          "start_s": 38.537,
+          "end_s": 38.777
+        },
+        {
+          "text": " m",
+          "start_s": 38.777,
+          "end_s": 38.856
+        },
+        {
+          "text": "ọi",
+          "start_s": 38.856,
+          "end_s": 38.936
+        },
+        {
+          "text": " t",
+          "start_s": 38.936,
+          "end_s": 39.096
+        },
+        {
+          "text": "h",
+          "start_s": 39.096,
+          "end_s": 39.176
+        },
+        {
+          "text": "ứ",
+          "start_s": 39.176,
+          "end_s": 39.255
+        },
+        {
+          "text": " từng",
+          "start_s": 39.495,
+          "end_s": 39.734
+        },
+        {
+          "text": " di",
+          "start_s": 39.734,
+          "end_s": 39.814
+        },
+        {
+          "text": "ễ",
+          "start_s": 39.814,
+          "end_s": 39.894
+        },
+        {
+          "text": "n",
+          "start_s": 39.894,
+          "end_s": 39.973
+        },
+        {
+          "text": " ra",
+          "start_s": 40.133,
+          "end_s": 40.372
+        },
+        {
+          "text": " theo",
+          "start_s": 40.452,
+          "end_s": 40.771
+        }
+      ]
+    },
+    {
+      "text": "một trục rõ ràng, mà giờ đây, vô số d",
+      "start_s": 40.771,
+      "end_s": 44.521,
+      "section": "",
+      "words": [
+        {
+          "text": " một",
+          "start_s": 40.771,
+          "end_s": 41.011
+        },
+        {
+          "text": " tr",
+          "start_s": 41.011,
+          "end_s": 41.09
+        },
+        {
+          "text": "ụ",
+          "start_s": 41.09,
+          "end_s": 41.17
+        },
+        {
+          "text": "c",
+          "start_s": 41.17,
+          "end_s": 41.25
+        },
+        {
+          "text": " r",
+          "start_s": 41.33,
+          "end_s": 41.41
+        },
+        {
+          "text": "õ",
+          "start_s": 41.41,
+          "end_s": 41.489
+        },
+        {
+          "text": " r",
+          "start_s": 41.888,
+          "end_s": 41.968
+        },
+        {
+          "text": "àng,",
+          "start_s": 41.968,
+          "end_s": 42.207
+        },
+        {
+          "text": " mà",
+          "start_s": 42.926,
+          "end_s": 43.245
+        },
+        {
+          "text": " giờ",
+          "start_s": 43.245,
+          "end_s": 43.484
+        },
+        {
+          "text": " đây,",
+          "start_s": 43.484,
+          "end_s": 43.803
+        },
+        {
+          "text": " v",
+          "start_s": 43.803,
+          "end_s": 43.883
+        },
+        {
+          "text": "ô",
+          "start_s": 43.883,
+          "end_s": 43.963
+        },
+        {
+          "text": " s",
+          "start_s": 44.122,
+          "end_s": 44.202
+        },
+        {
+          "text": "ố",
+          "start_s": 44.202,
+          "end_s": 44.282
+        },
+        {
+          "text": " d",
+          "start_s": 44.441,
+          "end_s": 44.521
+        }
+      ]
+    },
+    {
+      "text": "òng ảnh hưởng từ nhiều chiều không gian",
+      "start_s": 44.521,
+      "end_s": 46.995,
+      "section": "",
+      "words": [
+        {
+          "text": "òng",
+          "start_s": 44.521,
+          "end_s": 44.761
+        },
+        {
+          "text": " ả",
+          "start_s": 44.84,
+          "end_s": 44.92
+        },
+        {
+          "text": "nh",
+          "start_s": 44.92,
+          "end_s": 45.08
+        },
+        {
+          "text": " h",
+          "start_s": 45.08,
+          "end_s": 45.16
+        },
+        {
+          "text": "ưởng",
+          "start_s": 45.16,
+          "end_s": 45.399
+        },
+        {
+          "text": " t",
+          "start_s": 45.399,
+          "end_s": 45.479
+        },
+        {
+          "text": "ừ",
+          "start_s": 45.479,
+          "end_s": 45.559
+        },
+        {
+          "text": " nhi",
+          "start_s": 45.638,
+          "end_s": 45.718
+        },
+        {
+          "text": "ều",
+          "start_s": 45.718,
+          "end_s": 45.878
+        },
+        {
+          "text": " chi",
+          "start_s": 45.878,
+          "end_s": 45.957
+        },
+        {
+          "text": "ều",
+          "start_s": 45.957,
+          "end_s": 46.117
+        },
+        {
+          "text": " không",
+          "start_s": 46.436,
+          "end_s": 46.755
+        },
+        {
+          "text": " gian",
+          "start_s": 46.755,
+          "end_s": 46.995
+        }
+      ]
+    },
+    {
+      "text": "đang cùng lúc chồng chập lên hiện tại,",
+      "start_s": 46.995,
+      "end_s": 49.388,
+      "section": "",
+      "words": [
+        {
+          "text": " đ",
+          "start_s": 46.995,
+          "end_s": 47.074
+        },
+        {
+          "text": "ang",
+          "start_s": 47.074,
+          "end_s": 47.314
+        },
+        {
+          "text": " cùng",
+          "start_s": 47.394,
+          "end_s": 47.553
+        },
+        {
+          "text": " l",
+          "start_s": 47.553,
+          "end_s": 47.633
+        },
+        {
+          "text": "úc",
+          "start_s": 47.633,
+          "end_s": 47.793
+        },
+        {
+          "text": " ch",
+          "start_s": 47.952,
+          "end_s": 48.032
+        },
+        {
+          "text": "ồng",
+          "start_s": 48.032,
+          "end_s": 48.271
+        },
+        {
+          "text": " ch",
+          "start_s": 48.271,
+          "end_s": 48.351
+        },
+        {
+          "text": "ậ",
+          "start_s": 48.351,
+          "end_s": 48.431
+        },
+        {
+          "text": "p",
+          "start_s": 48.431,
+          "end_s": 48.511
+        },
+        {
+          "text": " lên",
+          "start_s": 48.67,
+          "end_s": 48.83
+        },
+        {
+          "text": " hi",
+          "start_s": 48.83,
+          "end_s": 48.91
+        },
+        {
+          "text": "ệ",
+          "start_s": 48.91,
+          "end_s": 48.989
+        },
+        {
+          "text": "n",
+          "start_s": 48.989,
+          "end_s": 49.069
+        },
+        {
+          "text": " t",
+          "start_s": 49.149,
+          "end_s": 49.229
+        },
+        {
+          "text": "ại,",
+          "start_s": 49.229,
+          "end_s": 49.388
+        }
+      ]
+    },
+    {
+      "text": "ngay lúc này",
+      "start_s": 50.426,
+      "end_s": 51.782,
+      "section": "",
+      "words": [
+        {
+          "text": " ng",
+          "start_s": 50.426,
+          "end_s": 50.505
+        },
+        {
+          "text": "ay",
+          "start_s": 50.505,
+          "end_s": 50.665
+        },
+        {
+          "text": " l",
+          "start_s": 51.064,
+          "end_s": 51.144
+        },
+        {
+          "text": "úc",
+          "start_s": 51.144,
+          "end_s": 51.303
+        },
+        {
+          "text": " này",
+          "start_s": 51.463,
+          "end_s": 51.782
+        }
+      ]
+    },
+    {
+      "text": "Sự thay đổi quá khốc liệt, và cũng quá đ",
+      "start_s": 53.059,
+      "end_s": 56.09,
+      "section": "",
+      "words": [
+        {
+          "text": "S",
+          "start_s": 53.059,
+          "end_s": 53.138
+        },
+        {
+          "text": "ự",
+          "start_s": 53.138,
+          "end_s": 53.218
+        },
+        {
+          "text": " th",
+          "start_s": 53.218,
+          "end_s": 53.298
+        },
+        {
+          "text": "ay",
+          "start_s": 53.298,
+          "end_s": 53.457
+        },
+        {
+          "text": " đ",
+          "start_s": 53.537,
+          "end_s": 53.617
+        },
+        {
+          "text": "ổi",
+          "start_s": 53.617,
+          "end_s": 53.777
+        },
+        {
+          "text": " qu",
+          "start_s": 53.777,
+          "end_s": 53.856
+        },
+        {
+          "text": "á",
+          "start_s": 53.856,
+          "end_s": 53.936
+        },
+        {
+          "text": " kh",
+          "start_s": 53.936,
+          "end_s": 54.016
+        },
+        {
+          "text": "ố",
+          "start_s": 54.016,
+          "end_s": 54.096
+        },
+        {
+          "text": "c",
+          "start_s": 54.096,
+          "end_s": 54.176
+        },
+        {
+          "text": " li",
+          "start_s": 54.255,
+          "end_s": 54.335
+        },
+        {
+          "text": "ệt,",
+          "start_s": 54.335,
+          "end_s": 54.495
+        },
+        {
+          "text": " và",
+          "start_s": 55.372,
+          "end_s": 55.532
+        },
+        {
+          "text": " cũng",
+          "start_s": 55.532,
+          "end_s": 55.851
+        },
+        {
+          "text": " qu",
+          "start_s": 55.851,
+          "end_s": 55.931
+        },
+        {
+          "text": "á",
+          "start_s": 55.931,
+          "end_s": 56.011
+        },
+        {
+          "text": " đ",
+          "start_s": 56.011,
+          "end_s": 56.09
+        }
+      ]
+    },
+    {
+      "text": "ỗi thú vị",
+      "start_s": 56.09,
+      "end_s": 57.048,
+      "section": "",
+      "words": [
+        {
+          "text": "ỗi",
+          "start_s": 56.09,
+          "end_s": 56.25
+        },
+        {
+          "text": " th",
+          "start_s": 56.33,
+          "end_s": 56.41
+        },
+        {
+          "text": "ú",
+          "start_s": 56.41,
+          "end_s": 56.489
+        },
+        {
+          "text": " v",
+          "start_s": 56.729,
+          "end_s": 56.809
+        },
+        {
+          "text": "ị",
+          "start_s": 56.809,
+          "end_s": 57.048
+        }
+      ]
+    }
+  ]
+}

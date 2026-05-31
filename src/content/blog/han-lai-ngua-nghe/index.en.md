@@ -8,6 +8,7 @@ category: "anh4gs"
 status: "published"
 date: "2024-06-18"
 cover: "./cover.jpg"
+music: "./audio.en.mp3"
 lang: "en"
 ---
 

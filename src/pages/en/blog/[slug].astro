@@ -3,6 +3,9 @@ import { getCollection, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
 import Layout from '../../../layouts/Layout.astro';
 import Container from '../../../components/Container.astro';
+import MusicPlayer from '../../../components/MusicPlayer.astro';
+import fs from 'node:fs';
+import path from 'node:path';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) =>
@@ -30,6 +33,38 @@ const formattedDate = new Date(data.date).toLocaleDateString('en-US', {
   month: 'long',
   day: 'numeric',
 });
+
+// Resolve local audio files using Vite glob import
+const allAudio = import.meta.glob('/src/content/blog/**/*.mp3', { eager: true, import: 'default' });
+const slugDir = post.data.slug;
+let resolvedAudioUrl = '';
+
+if (data.music) {
+  const musicFilename = data.music.replace(/^\.\//, '');
+  const key = `/src/content/blog/${slugDir}/${musicFilename}`;
+  resolvedAudioUrl = allAudio[key] as string;
+}
+
+// Statically read and simplify lyrics JSON if it exists
+let lyricsData = [];
+if (data.music) {
+  const lyricsFilename = data.lang === 'en' ? 'lyrics.en.json' : 'lyrics.json';
+  const lyricsPath = path.join(process.cwd(), 'src/content/blog', slugDir, lyricsFilename);
+  if (fs.existsSync(lyricsPath)) {
+    try {
+      const raw = JSON.parse(fs.readFileSync(lyricsPath, 'utf-8'));
+      if (raw.aligned_lyrics) {
+        lyricsData = raw.aligned_lyrics.map((line: any) => ({
+          text: line.text,
+          start: line.start_s,
+          end: line.end_s
+        }));
+      }
+    } catch (e) {
+      console.error(`Error parsing lyrics for ${slugDir}:`, e);
+    }
+  }
+}
 ---
 
 <Layout
@@ -50,10 +85,18 @@ const formattedDate = new Date(data.date).toLocaleDateString('en-US', {
           <h1 class="max-w-[760px] mx-auto text-2xl leading-tight mb-3 lg:text-[40px] font-bold">
             {data.title}
           </h1>
-          <div class="text-[14px] text-[#868f97] max-w-[760px] mx-auto">
+          <div class="text-[14px] text-[#868f97] max-w-[760px] mx-auto mb-6">
             {formattedDate}
             {data.cowriter ? ` • ${data.cowriter}` : null}
           </div>
+
+          {resolvedAudioUrl && (
+            <MusicPlayer
+              src={resolvedAudioUrl}
+              title={data.title}
+              lyrics={lyricsData}
+            />
+          )}
         </div>
 
         {data.cover && (

@@ -1,0 +1,121 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const allPosts = await getCollection('blog', ({ data }) =>
+  data.status === 'published' && data.category === 'anh4gs' && data.lang === 'vn' && !!data.music
+);
+
+const posts = allPosts.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+// Resolve local audio files using Vite glob import
+const allAudio = import.meta.glob('/src/content/blog/**/*.mp3', { eager: true, import: 'default' });
+
+// Function to resolve audio path
+function getAudioUrl(slug: string, musicPath: string) {
+  const musicFilename = musicPath.replace(/^\.\//, '');
+  const key = `/src/content/blog/${slug}/${musicFilename}`;
+  return allAudio[key] as string;
+}
+
+// Function to parse simplified lyrics
+function getLyrics(slug: string, lang: string) {
+  const lyricsFilename = lang === 'en' ? 'lyrics.en.json' : 'lyrics.json';
+  const lyricsPath = path.join(process.cwd(), 'src/content/blog', slug, lyricsFilename);
+  if (fs.existsSync(lyricsPath)) {
+    try {
+      const raw = JSON.parse(fs.readFileSync(lyricsPath, 'utf-8'));
+      if (raw.aligned_lyrics) {
+        return raw.aligned_lyrics.map((line: any) => ({
+          text: line.text,
+          start: line.start_s,
+          end: line.end_s
+        }));
+      }
+    } catch (e) {
+      console.error(`Error parsing lyrics for ${slug}:`, e);
+    }
+  }
+  return [];
+}
+---
+
+<Layout
+  title="âm nhạc"
+  description="nhạc nền cho các bài viết"
+  url="https://anh4gs.xyz/music"
+  blur={false}
+  lang="vn"
+>
+  <div class="bg-darkmode pt-[1px]">
+    <Container>
+      <div class="mt-12 mb-20 lg:mt-12 lg:mb-40 max-w-[760px] mx-auto">
+        <h1 class="text-textColor text-[1.8rem] mb-[1.5em] text-center font-normal lg:text-[2rem]">
+          âm nhạc
+        </h1>
+        
+        <div class="flex flex-col gap-8">
+          {posts.map((post) => {
+            const audioUrl = getAudioUrl(post.data.slug, post.data.music!);
+            const lyricsData = getLyrics(post.data.slug, post.data.lang);
+            const postLink = `/blog/${post.data.slug}`;
+            
+            return (
+              <div class="flex flex-col md:flex-row gap-6 p-4 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all">
+                {/* Cover Thumbnail */}
+                <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 relative self-center md:self-start">
+                  <a href={postLink} class="block w-full h-full">
+                    <Image
+                      src={post.data.cover}
+                      alt={post.data.title}
+                      class="object-cover w-full h-full"
+                      width={200}
+                      quality={80}
+                      format="webp"
+                    />
+                  </a>
+                </div>
+                
+                {/* Details & Player */}
+                <div class="flex-1 min-w-0">
+                  <div class="mb-2">
+                    <h3 class="text-lg font-medium">
+                      <a href={postLink} class="text-white hover:text-[#ffc436] transition-colors decoration-none">
+                        {post.data.title}
+                      </a>
+                    </h3>
+                    <div class="text-xs text-white/40 mt-1">
+                      {new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                      {post.data.cowriter ? ` • ${post.data.cowriter}` : null}
+                    </div>
+                  </div>
+                  
+                  {audioUrl && (
+                    <MusicPlayer
+                      src={audioUrl}
+                      title={post.data.title}
+                      lyrics={lyricsData}
+                    />
+                  )}
+                </div>
+              </div>
+            );
+          })}
+          
+          {posts.length === 0 && (
+            <div class="text-center text-white/40 py-12">
+              Chưa có bản nhạc nào được đăng.
+            </div>
+          )}
+        </div>
+      </div>
+    </Container>
+  </div>
+</Layout>

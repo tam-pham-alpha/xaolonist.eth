@@ -21,10 +21,12 @@ src/content/blog/<slug>/
 ├── index.en.md       ← EN post (lang: "en")
 ├── cover.jpg
 ├── audio.mp3         ← VN music track (referenced in index.md)
-└── audio.en.mp3      ← EN music track (referenced in index.en.md)
+├── audio.en.mp3      ← EN music track (referenced in index.en.md)
+├── lyrics.lrc        ← Synced line-by-line subtitles in LRC format (optional)
+└── lyrics.json       ← Word/character-level subtitles in JSON format (optional)
 ```
 
-Both files are optional. A post can have only VN, only EN, both, or neither.
+These files are optional. A post can have only VN, only EN, both, or neither.
 
 ---
 
@@ -96,9 +98,16 @@ Add a `music` nav link between `dvvv` and the language switcher.
 
 ---
 
-### 6. CLAUDE.md Documentation
+### 6. Automation Scripts
 
-Document: `music` frontmatter field, file naming convention, Suno download process.
+#### [NEW] [download_suno_lyrics.py](file:///Users/phamtam/projects/xaolonist.eth/scripts/download_suno_lyrics.py)
+Unified downloader script that uses the `.env` Clerk token to retrieve aligned lyrics (JSON), standard LRC subtitles, and download the MP3 audio file from Suno CDN directly to the post's folder.
+
+---
+
+### 7. CLAUDE.md Documentation
+
+Document: `music` / `lyrics` frontmatter fields, file naming convention, Suno downloader scripts.
 
 ---
 
@@ -116,8 +125,12 @@ music: "./audio.en.mp3"
 
 ## What's Already Done
 
-- ✅ `audio.mp3` downloaded and saved to `src/content/blog/han-lai-ngua-nghe/audio.mp3`
+- ✅ `download_suno_lyrics.py` updated to resolve public share URLs (e.g. `suno.com/s/<shortid>`) into canonical UUIDs automatically.
+- ✅ VN audio track (`audio.mp3`) and timed lyrics (`lyrics.json`, `lyrics.lrc`) downloaded and integrated for `/blog/han-lai-ngua-nghe`.
+- ✅ EN audio track (`audio.en.mp3`) and timed lyrics (`lyrics.en.json`, `lyrics.en.lrc`) downloaded and integrated for `/en/blog/han-lai-ngua-nghe`.
+- ✅ Frontmatter `music` fields added to both `index.md` and `index.en.md` for `/blog/han-lai-ngua-nghe`.
 - ✅ The Suno CDN pattern confirmed: `https://cdn1.suno.ai/<uuid>.mp3`
+- ✅ Automation generation and lyrics downloader scripts implemented in `scripts/`
 
 ---
 

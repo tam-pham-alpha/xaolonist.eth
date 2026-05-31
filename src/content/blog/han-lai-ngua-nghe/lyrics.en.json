@@ -1,0 +1,5226 @@
+{
+  "aligned_words": [
+    {
+      "word": "Hey, ",
+      "success": true,
+      "start_s": 2.314,
+      "end_s": 4.73367,
+      "p_align": 0.99
+    },
+    {
+      "word": "it’",
+      "success": true,
+      "start_s": 4.76033,
+      "end_s": 4.787,
+      "p_align": 0.99
+    },
+    {
+      "word": "s ",
+      "success": true,
+      "start_s": 4.947,
+      "end_s": 4.947,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 5.02667,
+      "end_s": 5.186,
+      "p_align": 0.99
+    },
+    {
+      "word": "again: anh4",
+      "success": true,
+      "start_s": 5.2818,
+      "end_s": 7.261,
+      "p_align": 0.99
+    },
+    {
+      "word": "gs, ",
+      "success": true,
+      "start_s": 7.42,
+      "end_s": 8.0585,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 8.138,
+      "end_s": 8.138,
+      "p_align": 0.99
+    },
+    {
+      "word": "scientist. ",
+      "success": true,
+      "start_s": 8.218,
+      "end_s": 10.82433,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 10.87767,
+      "end_s": 10.931,
+      "p_align": 0.99
+    },
+    {
+      "word": "doesn’",
+      "success": true,
+      "start_s": 10.9628,
+      "end_s": 11.09,
+      "p_align": 0.99
+    },
+    {
+      "word": "t ",
+      "success": true,
+      "start_s": 11.25,
+      "end_s": 11.33,
+      "p_align": 0.99
+    },
+    {
+      "word": "remember ",
+      "success": true,
+      "start_s": 11.36988,
+      "end_s": 11.649,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 11.67567,
+      "end_s": 11.729,
+      "p_align": 0.99
+    },
+    {
+      "word": "last ",
+      "success": true,
+      "start_s": 11.80875,
+      "end_s": 12.048,
+      "p_align": 0.99
+    },
+    {
+      "word": "time ",
+      "success": true,
+      "start_s": 12.08775,
+      "end_s": 12.207,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 12.247,
+      "end_s": 12.287,
+      "p_align": 0.99
+    },
+    {
+      "word": "wrote ",
+      "success": true,
+      "start_s": 12.447,
+      "end_s": 12.686,
+      "p_align": 0.99
+    },
+    {
+      "word": "futile ",
+      "success": true,
+      "start_s": 12.73933,
+      "end_s": 13.165,
+      "p_align": 0.99
+    },
+    {
+      "word": "things, ",
+      "success": true,
+      "start_s": 13.258,
+      "end_s": 13.90275,
+      "p_align": 0.99
+    },
+    {
+      "word": "but ",
+      "success": true,
+      "start_s": 14.0025,
+      "end_s": 14.761,
+      "p_align": 0.99
+    },
+    {
+      "word": "today ",
+      "success": true,
+      "start_s": 14.8408,
+      "end_s": 15.16,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 15.2795,
+      "end_s": 15.399,
+      "p_align": 0.99
+    },
+    {
+      "word": "suddenly ",
+      "success": true,
+      "start_s": 15.45217,
+      "end_s": 15.878,
+      "p_align": 0.99
+    },
+    {
+      "word": "itches ",
+      "success": true,
+      "start_s": 15.9575,
+      "end_s": 16.277,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 16.3565,
+      "end_s": 16.436,
+      "p_align": 0.99
+    },
+    {
+      "word": "write ",
+      "success": true,
+      "start_s": 16.4998,
+      "end_s": 16.755,
+      "p_align": 0.99
+    },
+    {
+      "word": "again\n\n",
+      "success": true,
+      "start_s": 16.8508,
+      "end_s": 19.22867,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 19.30833,
+      "end_s": 19.388,
+      "p_align": 0.99
+    },
+    {
+      "word": "often ",
+      "success": true,
+      "start_s": 19.428,
+      "end_s": 19.707,
+      "p_align": 0.99
+    },
+    {
+      "word": "jokes ",
+      "success": true,
+      "start_s": 19.755,
+      "end_s": 19.947,
+      "p_align": 0.99
+    },
+    {
+      "word": "with ",
+      "success": true,
+      "start_s": 19.98675,
+      "end_s": 20.106,
+      "p_align": 0.99
+    },
+    {
+      "word": "himself ",
+      "success": true,
+      "start_s": 20.15933,
+      "end_s": 20.585,
+      "p_align": 0.99
+    },
+    {
+      "word": "that ",
+      "success": true,
+      "start_s": 20.625,
+      "end_s": 20.745,
+      "p_align": 0.99
+    },
+    {
+      "word": "in ",
+      "success": true,
+      "start_s": 20.7845,
+      "end_s": 20.824,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 20.87733,
+      "end_s": 20.984,
+      "p_align": 0.99
+    },
+    {
+      "word": "future, ",
+      "success": true,
+      "start_s": 21.07717,
+      "end_s": 21.915,
+      "p_align": 0.99
+    },
+    {
+      "word": "if ",
+      "success": true,
+      "start_s": 21.968,
+      "end_s": 22.021,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 22.101,
+      "end_s": 22.181,
+      "p_align": 0.99
+    },
+    {
+      "word": "no ",
+      "success": true,
+      "start_s": 22.2605,
+      "end_s": 22.34,
+      "p_align": 0.99
+    },
+    {
+      "word": "longer ",
+      "success": true,
+      "start_s": 22.39333,
+      "end_s": 22.66,
+      "p_align": 0.99
+    },
+    {
+      "word": "writes ",
+      "success": true,
+      "start_s": 22.71317,
+      "end_s": 22.979,
+      "p_align": 0.99
+    },
+    {
+      "word": "code, ",
+      "success": true,
+      "start_s": 23.05875,
+      "end_s": 23.351,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 23.404,
+      "end_s": 23.457,
+      "p_align": 0.99
+    },
+    {
+      "word": "will ",
+      "success": true,
+      "start_s": 23.537,
+      "end_s": 23.777,
+      "p_align": 0.99
+    },
+    {
+      "word": "become ",
+      "success": true,
+      "start_s": 23.79017,
+      "end_s": 23.856,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 24.016,
+      "end_s": 24.016,
+      "p_align": 0.99
+    },
+    {
+      "word": "writer ",
+      "success": true,
+      "start_s": 24.056,
+      "end_s": 25.053,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 25.133,
+      "end_s": 25.213,
+      "p_align": 0.99
+    },
+    {
+      "word": "write ",
+      "success": true,
+      "start_s": 25.2608,
+      "end_s": 25.452,
+      "p_align": 0.99
+    },
+    {
+      "word": "about ",
+      "success": true,
+      "start_s": 25.484,
+      "end_s": 25.612,
+      "p_align": 0.99
+    },
+    {
+      "word": "his ",
+      "success": true,
+      "start_s": 25.69167,
+      "end_s": 25.851,
+      "p_align": 0.99
+    },
+    {
+      "word": "life, ",
+      "success": true,
+      "start_s": 25.95075,
+      "end_s": 27.16775,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 27.2075,
+      "end_s": 27.287,
+      "p_align": 0.99
+    },
+    {
+      "word": "people ",
+      "success": true,
+      "start_s": 27.34017,
+      "end_s": 27.606,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 27.726,
+      "end_s": 27.846,
+      "p_align": 0.99
+    },
+    {
+      "word": "met, ",
+      "success": true,
+      "start_s": 27.95233,
+      "end_s": 29.32175,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 29.3615,
+      "end_s": 29.441,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 29.49433,
+      "end_s": 29.601,
+      "p_align": 0.99
+    },
+    {
+      "word": "roads ",
+      "success": true,
+      "start_s": 29.6488,
+      "end_s": 29.84,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 29.92,
+      "end_s": 30.0,
+      "p_align": 0.99
+    },
+    {
+      "word": "traveled\n\n",
+      "success": true,
+      "start_s": 30.03983,
+      "end_s": 32.77275,
+      "p_align": 0.99
+    },
+    {
+      "word": "Lately, ",
+      "success": true,
+      "start_s": 32.8325,
+      "end_s": 33.963,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 34.016,
+      "end_s": 34.069,
+      "p_align": 0.99
+    },
+    {
+      "word": "has ",
+      "success": true,
+      "start_s": 34.12233,
+      "end_s": 34.229,
+      "p_align": 0.99
+    },
+    {
+      "word": "been ",
+      "success": true,
+      "start_s": 34.26875,
+      "end_s": 34.388,
+      "p_align": 0.99
+    },
+    {
+      "word": "working ",
+      "success": true,
+      "start_s": 34.43357,
+      "end_s": 34.707,
+      "p_align": 0.99
+    },
+    {
+      "word": "out ",
+      "success": true,
+      "start_s": 34.787,
+      "end_s": 34.947,
+      "p_align": 0.99
+    },
+    {
+      "word": "quite ",
+      "success": true,
+      "start_s": 34.9948,
+      "end_s": 35.186,
+      "p_align": 0.99
+    },
+    {
+      "word": "regularly, ",
+      "success": true,
+      "start_s": 35.266,
+      "end_s": 36.64867,
+      "p_align": 0.99
+    },
+    {
+      "word": "which ",
+      "success": true,
+      "start_s": 36.67533,
+      "end_s": 36.782,
+      "p_align": 0.99
+    },
+    {
+      "word": "has ",
+      "success": true,
+      "start_s": 36.835,
+      "end_s": 36.941,
+      "p_align": 0.99
+    },
+    {
+      "word": "given ",
+      "success": true,
+      "start_s": 37.005,
+      "end_s": 37.261,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 37.314,
+      "end_s": 37.42,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 37.58,
+      "end_s": 37.58,
+      "p_align": 0.99
+    },
+    {
+      "word": "strong ",
+      "success": true,
+      "start_s": 37.63317,
+      "end_s": 37.899,
+      "p_align": 0.99
+    },
+    {
+      "word": "physique: ",
+      "success": true,
+      "start_s": 37.979,
+      "end_s": 38.79675,
+      "p_align": 0.99
+    },
+    {
+      "word": "broad ",
+      "success": true,
+      "start_s": 38.8165,
+      "end_s": 39.176,
+      "p_align": 0.99
+    },
+    {
+      "word": "chest, ",
+      "success": true,
+      "start_s": 39.2716,
+      "end_s": 39.674,
+      "p_align": 0.99
+    },
+    {
+      "word": "toned ",
+      "success": true,
+      "start_s": 39.694,
+      "end_s": 40.133,
+      "p_align": 0.99
+    },
+    {
+      "word": "glutes, ",
+      "success": true,
+      "start_s": 40.173,
+      "end_s": 40.731,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 40.771,
+      "end_s": 40.851,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 41.011,
+      "end_s": 41.011,
+      "p_align": 0.99
+    },
+    {
+      "word": "firm ",
+      "success": true,
+      "start_s": 41.09075,
+      "end_s": 41.33,
+      "p_align": 0.99
+    },
+    {
+      "word": "abdomen. ",
+      "success": true,
+      "start_s": 41.4495,
+      "end_s": 43.045,
+      "p_align": 0.99
+    },
+    {
+      "word": "The ",
+      "success": true,
+      "start_s": 43.085,
+      "end_s": 43.165,
+      "p_align": 0.99
+    },
+    {
+      "word": "target ",
+      "success": true,
+      "start_s": 43.24467,
+      "end_s": 43.564,
+      "p_align": 0.99
+    },
+    {
+      "word": "is 70 ",
+      "success": true,
+      "start_s": 43.6835,
+      "end_s": 44.322,
+      "p_align": 0.99
+    },
+    {
+      "word": "kilograms, ",
+      "success": true,
+      "start_s": 44.362,
+      "end_s": 44.952,
+      "p_align": 0.99
+    },
+    {
+      "word": "with ",
+      "success": true,
+      "start_s": 44.984,
+      "end_s": 45.08,
+      "p_align": 0.99
+    },
+    {
+      "word": "only 6.9 ",
+      "success": true,
+      "start_s": 45.17975,
+      "end_s": 47.33,
+      "p_align": 0.99
+    },
+    {
+      "word": "kg ",
+      "success": true,
+      "start_s": 47.394,
+      "end_s": 47.793,
+      "p_align": 0.99
+    },
+    {
+      "word": "left ",
+      "success": true,
+      "start_s": 47.85275,
+      "end_s": 48.032,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 48.1115,
+      "end_s": 48.191,
+      "p_align": 0.99
+    },
+    {
+      "word": "go\n\n",
+      "success": true,
+      "start_s": 48.311,
+      "end_s": 51.56933,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 51.67567,
+      "end_s": 51.782,
+      "p_align": 0.99
+    },
+    {
+      "word": "always ",
+      "success": true,
+      "start_s": 51.8085,
+      "end_s": 51.941,
+      "p_align": 0.99
+    },
+    {
+      "word": "tells ",
+      "success": true,
+      "start_s": 51.989,
+      "end_s": 52.181,
+      "p_align": 0.99
+    },
+    {
+      "word": "himself ",
+      "success": true,
+      "start_s": 52.234,
+      "end_s": 52.58,
+      "p_align": 0.99
+    },
+    {
+      "word": "that ",
+      "success": true,
+      "start_s": 52.61975,
+      "end_s": 52.739,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 52.79233,
+      "end_s": 52.899,
+      "p_align": 0.99
+    },
+    {
+      "word": "abdomen ",
+      "success": true,
+      "start_s": 52.979,
+      "end_s": 53.378,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 53.4975,
+      "end_s": 53.617,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 53.67033,
+      "end_s": 53.777,
+      "p_align": 0.99
+    },
+    {
+      "word": "most ",
+      "success": true,
+      "start_s": 53.87675,
+      "end_s": 54.255,
+      "p_align": 0.99
+    },
+    {
+      "word": "important ",
+      "success": true,
+      "start_s": 54.28167,
+      "end_s": 54.654,
+      "p_align": 0.99
+    },
+    {
+      "word": "part ",
+      "success": true,
+      "start_s": 54.714,
+      "end_s": 54.894,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 54.9735,
+      "end_s": 55.053,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 55.10633,
+      "end_s": 55.213,
+      "p_align": 0.99
+    },
+    {
+      "word": "body: ",
+      "success": true,
+      "start_s": 55.31275,
+      "end_s": 56.21,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 56.33,
+      "end_s": 56.33,
+      "p_align": 0.99
+    },
+    {
+      "word": "strong ",
+      "success": true,
+      "start_s": 56.3965,
+      "end_s": 56.729,
+      "p_align": 0.99
+    },
+    {
+      "word": "core ",
+      "success": true,
+      "start_s": 56.82875,
+      "end_s": 57.128,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 57.2475,
+      "end_s": 57.367,
+      "p_align": 0.99
+    },
+    {
+      "word": "necessary ",
+      "success": true,
+      "start_s": 57.447,
+      "end_s": 58.564,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 58.6435,
+      "end_s": 58.723,
+      "p_align": 0.99
+    },
+    {
+      "word": "bear ",
+      "success": true,
+      "start_s": 58.783,
+      "end_s": 58.963,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 58.98967,
+      "end_s": 59.043,
+      "p_align": 0.99
+    },
+    {
+      "word": "weight ",
+      "success": true,
+      "start_s": 59.08283,
+      "end_s": 59.282,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 59.3615,
+      "end_s": 59.441,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 59.49433,
+      "end_s": 59.601,
+      "p_align": 0.99
+    },
+    {
+      "word": "upper ",
+      "success": true,
+      "start_s": 59.681,
+      "end_s": 59.92,
+      "p_align": 0.99
+    },
+    {
+      "word": "half ",
+      "success": true,
+      "start_s": 60.01975,
+      "end_s": 60.319,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 60.42533,
+      "end_s": 60.718,
+      "p_align": 0.99
+    },
+    {
+      "word": "serves ",
+      "success": true,
+      "start_s": 60.77133,
+      "end_s": 61.117,
+      "p_align": 0.99
+    },
+    {
+      "word": "as ",
+      "success": true,
+      "start_s": 61.2365,
+      "end_s": 61.356,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 61.436,
+      "end_s": 61.596,
+      "p_align": 0.99
+    },
+    {
+      "word": "bridge ",
+      "success": true,
+      "start_s": 61.6625,
+      "end_s": 61.995,
+      "p_align": 0.99
+    },
+    {
+      "word": "for ",
+      "success": true,
+      "start_s": 62.048,
+      "end_s": 62.154,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 62.20733,
+      "end_s": 62.314,
+      "p_align": 0.99
+    },
+    {
+      "word": "body ",
+      "success": true,
+      "start_s": 62.39375,
+      "end_s": 62.633,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 62.7525,
+      "end_s": 62.952,
+      "p_align": 0.99
+    },
+    {
+      "word": "perform ",
+      "success": true,
+      "start_s": 63.009,
+      "end_s": 63.351,
+      "p_align": 0.99
+    },
+    {
+      "word": "complex, ",
+      "success": true,
+      "start_s": 63.44214,
+      "end_s": 65.0748,
+      "p_align": 0.99
+    },
+    {
+      "word": "high-paced ",
+      "success": true,
+      "start_s": 65.1226,
+      "end_s": 65.665,
+      "p_align": 0.99
+    },
+    {
+      "word": "movements. ",
+      "success": true,
+      "start_s": 65.72475,
+      "end_s": 67.61983,
+      "p_align": 0.99
+    },
+    {
+      "word": "Therefore, ",
+      "success": true,
+      "start_s": 67.65967,
+      "end_s": 68.32433,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 68.43067,
+      "end_s": 68.537,
+      "p_align": 0.99
+    },
+    {
+      "word": "prioritizes ",
+      "success": true,
+      "start_s": 68.697,
+      "end_s": 69.495,
+      "p_align": 0.99
+    },
+    {
+      "word": "core ",
+      "success": true,
+      "start_s": 69.57475,
+      "end_s": 69.814,
+      "p_align": 0.99
+    },
+    {
+      "word": "workouts: ",
+      "success": true,
+      "start_s": 69.87375,
+      "end_s": 70.67175,
+      "p_align": 0.99
+    },
+    {
+      "word": "training ",
+      "success": true,
+      "start_s": 70.7315,
+      "end_s": 71.011,
+      "p_align": 0.99
+    },
+    {
+      "word": "them ",
+      "success": true,
+      "start_s": 71.07075,
+      "end_s": 71.25,
+      "p_align": 0.99
+    },
+    {
+      "word": "more ",
+      "success": true,
+      "start_s": 71.32975,
+      "end_s": 71.569,
+      "p_align": 0.99
+    },
+    {
+      "word": "than ",
+      "success": true,
+      "start_s": 71.609,
+      "end_s": 71.729,
+      "p_align": 0.99
+    },
+    {
+      "word": "other ",
+      "success": true,
+      "start_s": 71.7928,
+      "end_s": 72.048,
+      "p_align": 0.99
+    },
+    {
+      "word": "areas. ",
+      "success": true,
+      "start_s": 72.12767,
+      "end_s": 72.46688,
+      "p_align": 0.99
+    },
+    {
+      "word": "Currently, ",
+      "success": true,
+      "start_s": 72.48675,
+      "end_s": 72.706,
+      "p_align": 0.99
+    },
+    {
+      "word": "his ",
+      "success": true,
+      "start_s": 72.726,
+      "end_s": 72.766,
+      "p_align": 0.99
+    },
+    {
+      "word": "abs ",
+      "success": true,
+      "start_s": 72.87233,
+      "end_s": 75.08,
+      "p_align": 0.99
+    },
+    {
+      "word": "have 2 ",
+      "success": true,
+      "start_s": 75.17975,
+      "end_s": 75.77133,
+      "p_align": 0.99
+    },
+    {
+      "word": "packs, ",
+      "success": true,
+      "start_s": 75.798,
+      "end_s": 77.613,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 77.673,
+      "end_s": 77.793,
+      "p_align": 0.99
+    },
+    {
+      "word": "soon ",
+      "success": true,
+      "start_s": 77.8925,
+      "end_s": 78.271,
+      "p_align": 0.99
+    },
+    {
+      "word": "they ",
+      "success": true,
+      "start_s": 78.311,
+      "end_s": 78.431,
+      "p_align": 0.99
+    },
+    {
+      "word": "will ",
+      "success": true,
+      "start_s": 78.49075,
+      "end_s": 78.67,
+      "p_align": 0.99
+    },
+    {
+      "word": "be 6 ",
+      "success": true,
+      "start_s": 78.79,
+      "end_s": 79.468,
+      "p_align": 0.99
+    },
+    {
+      "word": "packs\n\n",
+      "success": true,
+      "start_s": 79.508,
+      "end_s": 81.682,
+      "p_align": 0.99
+    },
+    {
+      "word": "Recently, ",
+      "success": true,
+      "start_s": 81.742,
+      "end_s": 82.79233,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 82.84567,
+      "end_s": 82.899,
+      "p_align": 0.99
+    },
+    {
+      "word": "has ",
+      "success": true,
+      "start_s": 82.97867,
+      "end_s": 83.138,
+      "p_align": 0.99
+    },
+    {
+      "word": "managed ",
+      "success": true,
+      "start_s": 83.19133,
+      "end_s": 83.537,
+      "p_align": 0.99
+    },
+    {
+      "word": "his ",
+      "success": true,
+      "start_s": 83.64333,
+      "end_s": 83.856,
+      "p_align": 0.99
+    },
+    {
+      "word": "emotions ",
+      "success": true,
+      "start_s": 83.91587,
+      "end_s": 84.335,
+      "p_align": 0.99
+    },
+    {
+      "word": "better: ",
+      "success": true,
+      "start_s": 84.42817,
+      "end_s": 85.665,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 85.718,
+      "end_s": 85.771,
+      "p_align": 0.99
+    },
+    {
+      "word": "no ",
+      "success": true,
+      "start_s": 85.851,
+      "end_s": 85.931,
+      "p_align": 0.99
+    },
+    {
+      "word": "longer ",
+      "success": true,
+      "start_s": 85.9975,
+      "end_s": 86.33,
+      "p_align": 0.99
+    },
+    {
+      "word": "holds ",
+      "success": true,
+      "start_s": 86.4098,
+      "end_s": 86.729,
+      "p_align": 0.99
+    },
+    {
+      "word": "grudges ",
+      "success": true,
+      "start_s": 86.75567,
+      "end_s": 87.128,
+      "p_align": 0.99
+    },
+    {
+      "word": "or ",
+      "success": true,
+      "start_s": 87.2075,
+      "end_s": 87.287,
+      "p_align": 0.99
+    },
+    {
+      "word": "hates ",
+      "success": true,
+      "start_s": 87.31367,
+      "end_s": 87.926,
+      "p_align": 0.99
+    },
+    {
+      "word": "anyone. ",
+      "success": true,
+      "start_s": 88.019,
+      "end_s": 89.09611,
+      "p_align": 0.99
+    },
+    {
+      "word": "Probably ",
+      "success": true,
+      "start_s": 89.14922,
+      "end_s": 89.521,
+      "p_align": 0.99
+    },
+    {
+      "word": "because ",
+      "success": true,
+      "start_s": 89.54386,
+      "end_s": 89.681,
+      "p_align": 0.99
+    },
+    {
+      "word": "lately ",
+      "success": true,
+      "start_s": 89.76067,
+      "end_s": 90.638,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 90.718,
+      "end_s": 90.798,
+      "p_align": 0.99
+    },
+    {
+      "word": "has ",
+      "success": true,
+      "start_s": 90.851,
+      "end_s": 90.957,
+      "p_align": 0.99
+    },
+    {
+      "word": "been ",
+      "success": true,
+      "start_s": 90.997,
+      "end_s": 91.117,
+      "p_align": 0.99
+    },
+    {
+      "word": "listening ",
+      "success": true,
+      "start_s": 91.13033,
+      "end_s": 91.596,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 91.7155,
+      "end_s": 91.835,
+      "p_align": 0.99
+    },
+    {
+      "word": "self-cultivation ",
+      "success": true,
+      "start_s": 91.91475,
+      "end_s": 92.952,
+      "p_align": 0.99
+    },
+    {
+      "word": "teachings. ",
+      "success": true,
+      "start_s": 93.0158,
+      "end_s": 94.282,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 94.335,
+      "end_s": 94.388,
+      "p_align": 0.99
+    },
+    {
+      "word": "doesn’",
+      "success": true,
+      "start_s": 94.42,
+      "end_s": 94.548,
+      "p_align": 0.99
+    },
+    {
+      "word": "t ",
+      "success": true,
+      "start_s": 94.707,
+      "end_s": 94.787,
+      "p_align": 0.99
+    },
+    {
+      "word": "know ",
+      "success": true,
+      "start_s": 94.827,
+      "end_s": 94.947,
+      "p_align": 0.99
+    },
+    {
+      "word": "if ",
+      "success": true,
+      "start_s": 94.987,
+      "end_s": 95.027,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 95.1065,
+      "end_s": 95.186,
+      "p_align": 0.99
+    },
+    {
+      "word": "will ",
+      "success": true,
+      "start_s": 95.246,
+      "end_s": 95.426,
+      "p_align": 0.99
+    },
+    {
+      "word": "reach ",
+      "success": true,
+      "start_s": 95.4738,
+      "end_s": 95.665,
+      "p_align": 0.99
+    },
+    {
+      "word": "enlightenment, ",
+      "success": true,
+      "start_s": 95.7445,
+      "end_s": 97.55975,
+      "p_align": 0.99
+    },
+    {
+      "word": "but ",
+      "success": true,
+      "start_s": 97.6195,
+      "end_s": 97.739,
+      "p_align": 0.99
+    },
+    {
+      "word": "life ",
+      "success": true,
+      "start_s": 97.83875,
+      "end_s": 98.936,
+      "p_align": 0.99
+    },
+    {
+      "word": "has ",
+      "success": true,
+      "start_s": 99.04233,
+      "end_s": 99.255,
+      "p_align": 0.99
+    },
+    {
+      "word": "become ",
+      "success": true,
+      "start_s": 99.3215,
+      "end_s": 99.654,
+      "p_align": 0.99
+    },
+    {
+      "word": "slightly ",
+      "success": true,
+      "start_s": 99.71388,
+      "end_s": 100.133,
+      "p_align": 0.99
+    },
+    {
+      "word": "gentler ",
+      "success": true,
+      "start_s": 100.19275,
+      "end_s": 100.532,
+      "p_align": 0.99
+    },
+    {
+      "word": "with ",
+      "success": true,
+      "start_s": 100.59175,
+      "end_s": 100.771,
+      "p_align": 0.99
+    },
+    {
+      "word": "him\n\n",
+      "success": true,
+      "start_s": 100.87733,
+      "end_s": 102.686,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 102.766,
+      "end_s": 102.846,
+      "p_align": 0.99
+    },
+    {
+      "word": "lives ",
+      "success": true,
+      "start_s": 102.8938,
+      "end_s": 103.085,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 103.245,
+      "end_s": 103.245,
+      "p_align": 0.99
+    },
+    {
+      "word": "leisurely ",
+      "success": true,
+      "start_s": 103.2845,
+      "end_s": 104.043,
+      "p_align": 0.99
+    },
+    {
+      "word": "life: ",
+      "success": true,
+      "start_s": 104.06275,
+      "end_s": 104.21175,
+      "p_align": 0.99
+    },
+    {
+      "word": "morning ",
+      "success": true,
+      "start_s": 104.3015,
+      "end_s": 105.798,
+      "p_align": 0.99
+    },
+    {
+      "word": "coffee ",
+      "success": true,
+      "start_s": 105.8645,
+      "end_s": 106.197,
+      "p_align": 0.99
+    },
+    {
+      "word": "at 6:50",
+      "success": true,
+      "start_s": 106.3165,
+      "end_s": 107.92567,
+      "p_align": 0.99
+    },
+    {
+      "word": "am, ",
+      "success": true,
+      "start_s": 108.01883,
+      "end_s": 109.00975,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 109.1095,
+      "end_s": 109.388,
+      "p_align": 0.99
+    },
+    {
+      "word": "returning ",
+      "success": true,
+      "start_s": 109.428,
+      "end_s": 109.867,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 109.947,
+      "end_s": 110.027,
+      "p_align": 0.99
+    },
+    {
+      "word": "his ",
+      "success": true,
+      "start_s": 110.13333,
+      "end_s": 110.346,
+      "p_align": 0.99
+    },
+    {
+      "word": "desk ",
+      "success": true,
+      "start_s": 110.426,
+      "end_s": 110.745,
+      "p_align": 0.99
+    },
+    {
+      "word": "at 8:10",
+      "success": true,
+      "start_s": 110.8645,
+      "end_s": 112.979,
+      "p_align": 0.99
+    },
+    {
+      "word": "am. ",
+      "success": true,
+      "start_s": 113.059,
+      "end_s": 114.25567,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 114.33533,
+      "end_s": 114.415,
+      "p_align": 0.99
+    },
+    {
+      "word": "works, ",
+      "success": true,
+      "start_s": 114.5108,
+      "end_s": 114.9335,
+      "p_align": 0.99
+    },
+    {
+      "word": "eats, ",
+      "success": true,
+      "start_s": 114.973,
+      "end_s": 115.37275,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 115.4525,
+      "end_s": 115.612,
+      "p_align": 0.99
+    },
+    {
+      "word": "rests ",
+      "success": true,
+      "start_s": 115.65175,
+      "end_s": 116.011,
+      "p_align": 0.99
+    },
+    {
+      "word": "reasonably, ",
+      "success": true,
+      "start_s": 116.104,
+      "end_s": 117.287,
+      "p_align": 0.99
+    },
+    {
+      "word": "or ",
+      "success": true,
+      "start_s": 117.367,
+      "end_s": 117.447,
+      "p_align": 0.99
+    },
+    {
+      "word": "at ",
+      "success": true,
+      "start_s": 117.5665,
+      "end_s": 117.686,
+      "p_align": 0.99
+    },
+    {
+      "word": "least ",
+      "success": true,
+      "start_s": 117.7658,
+      "end_s": 118.085,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 118.2045,
+      "end_s": 118.564,
+      "p_align": 0.99
+    },
+    {
+      "word": "thinks ",
+      "success": true,
+      "start_s": 118.64383,
+      "end_s": 119.043,
+      "p_align": 0.99
+    },
+    {
+      "word": "so. ",
+      "success": true,
+      "start_s": 119.1625,
+      "end_s": 120.79767,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 120.87733,
+      "end_s": 120.957,
+      "p_align": 0.99
+    },
+    {
+      "word": "often ",
+      "success": true,
+      "start_s": 121.037,
+      "end_s": 121.356,
+      "p_align": 0.99
+    },
+    {
+      "word": "drinks ",
+      "success": true,
+      "start_s": 121.4225,
+      "end_s": 121.755,
+      "p_align": 0.99
+    },
+    {
+      "word": "orange ",
+      "success": true,
+      "start_s": 121.875,
+      "end_s": 122.314,
+      "p_align": 0.99
+    },
+    {
+      "word": "juice ",
+      "success": true,
+      "start_s": 122.354,
+      "end_s": 122.553,
+      "p_align": 0.99
+    },
+    {
+      "word": "in ",
+      "success": true,
+      "start_s": 122.633,
+      "end_s": 122.713,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 122.79267,
+      "end_s": 122.952,
+      "p_align": 0.99
+    },
+    {
+      "word": "morning, ",
+      "success": true,
+      "start_s": 123.04314,
+      "end_s": 123.88317,
+      "p_align": 0.99
+    },
+    {
+      "word": "which ",
+      "success": true,
+      "start_s": 123.93633,
+      "end_s": 124.149,
+      "p_align": 0.99
+    },
+    {
+      "word": "keeps ",
+      "success": true,
+      "start_s": 124.2128,
+      "end_s": 124.468,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 124.57433,
+      "end_s": 124.787,
+      "p_align": 0.99
+    },
+    {
+      "word": "healthy. ",
+      "success": true,
+      "start_s": 124.86675,
+      "end_s": 126.44275,
+      "p_align": 0.99
+    },
+    {
+      "word": "Occasionally ",
+      "success": true,
+      "start_s": 126.5025,
+      "end_s": 127.979,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 128.0985,
+      "end_s": 128.218,
+      "p_align": 0.99
+    },
+    {
+      "word": "still ",
+      "success": true,
+      "start_s": 128.2658,
+      "end_s": 128.457,
+      "p_align": 0.99
+    },
+    {
+      "word": "eats ",
+      "success": true,
+      "start_s": 128.537,
+      "end_s": 128.777,
+      "p_align": 0.99
+    },
+    {
+      "word": "onion ",
+      "success": true,
+      "start_s": 128.8965,
+      "end_s": 129.415,
+      "p_align": 0.99
+    },
+    {
+      "word": "porridge, ",
+      "success": true,
+      "start_s": 129.49467,
+      "end_s": 131.84875,
+      "p_align": 0.99
+    },
+    {
+      "word": "but ",
+      "success": true,
+      "start_s": 131.8885,
+      "end_s": 131.968,
+      "p_align": 0.99
+    },
+    {
+      "word": "this ",
+      "success": true,
+      "start_s": 132.02775,
+      "end_s": 132.207,
+      "p_align": 0.99
+    },
+    {
+      "word": "time ",
+      "success": true,
+      "start_s": 132.30675,
+      "end_s": 133.005,
+      "p_align": 0.99
+    },
+    {
+      "word": "it ",
+      "success": true,
+      "start_s": 133.085,
+      "end_s": 133.165,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 133.2845,
+      "end_s": 133.564,
+      "p_align": 0.99
+    },
+    {
+      "word": "because ",
+      "success": true,
+      "start_s": 133.59814,
+      "end_s": 133.803,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 133.923,
+      "end_s": 134.043,
+      "p_align": 0.99
+    },
+    {
+      "word": "wants ",
+      "success": true,
+      "start_s": 134.1226,
+      "end_s": 134.441,
+      "p_align": 0.99
+    },
+    {
+      "word": "to\n\n",
+      "success": true,
+      "start_s": 134.561,
+      "end_s": 136.436,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 136.516,
+      "end_s": 136.596,
+      "p_align": 0.99
+    },
+    {
+      "word": "lives, ",
+      "success": true,
+      "start_s": 136.6916,
+      "end_s": 137.3805,
+      "p_align": 0.99
+    },
+    {
+      "word": "works, ",
+      "success": true,
+      "start_s": 137.447,
+      "end_s": 137.79275,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 137.8725,
+      "end_s": 138.032,
+      "p_align": 0.99
+    },
+    {
+      "word": "makes ",
+      "success": true,
+      "start_s": 138.1118,
+      "end_s": 138.431,
+      "p_align": 0.99
+    },
+    {
+      "word": "money ",
+      "success": true,
+      "start_s": 138.5268,
+      "end_s": 139.149,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 139.2685,
+      "end_s": 139.787,
+      "p_align": 0.99
+    },
+    {
+      "word": "realize ",
+      "success": true,
+      "start_s": 139.86686,
+      "end_s": 140.346,
+      "p_align": 0.99
+    },
+    {
+      "word": "his ",
+      "success": true,
+      "start_s": 140.45233,
+      "end_s": 140.745,
+      "p_align": 0.99
+    },
+    {
+      "word": "ambition: ",
+      "success": true,
+      "start_s": 140.85133,
+      "end_s": 142.68633,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 142.79267,
+      "end_s": 142.899,
+      "p_align": 0.99
+    },
+    {
+      "word": "step ",
+      "success": true,
+      "start_s": 142.99875,
+      "end_s": 143.298,
+      "p_align": 0.99
+    },
+    {
+      "word": "honorably ",
+      "success": true,
+      "start_s": 143.3938,
+      "end_s": 144.415,
+      "p_align": 0.99
+    },
+    {
+      "word": "on ",
+      "success": true,
+      "start_s": 144.5345,
+      "end_s": 144.894,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 144.97367,
+      "end_s": 145.133,
+      "p_align": 0.99
+    },
+    {
+      "word": "path ",
+      "success": true,
+      "start_s": 145.23275,
+      "end_s": 145.612,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 145.7315,
+      "end_s": 146.011,
+      "p_align": 0.99
+    },
+    {
+      "word": "socialism. ",
+      "success": true,
+      "start_s": 146.1305,
+      "end_s": 149.36167,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 149.44133,
+      "end_s": 149.521,
+      "p_align": 0.99
+    },
+    {
+      "word": "does ",
+      "success": true,
+      "start_s": 149.581,
+      "end_s": 149.761,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 149.86733,
+      "end_s": 150.16,
+      "p_align": 0.99
+    },
+    {
+      "word": "know ",
+      "success": true,
+      "start_s": 150.25975,
+      "end_s": 151.356,
+      "p_align": 0.99
+    },
+    {
+      "word": "if ",
+      "success": true,
+      "start_s": 151.476,
+      "end_s": 151.596,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 151.67567,
+      "end_s": 151.835,
+      "p_align": 0.99
+    },
+    {
+      "word": "road ",
+      "success": true,
+      "start_s": 151.89475,
+      "end_s": 152.074,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 152.194,
+      "end_s": 152.473,
+      "p_align": 0.99
+    },
+    {
+      "word": "far ",
+      "success": true,
+      "start_s": 152.57967,
+      "end_s": 152.952,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 153.05833,
+      "end_s": 153.431,
+      "p_align": 0.99
+    },
+    {
+      "word": "long, ",
+      "success": true,
+      "start_s": 153.53075,
+      "end_s": 154.24875,
+      "p_align": 0.99
+    },
+    {
+      "word": "but ",
+      "success": true,
+      "start_s": 154.3485,
+      "end_s": 155.266,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 155.3855,
+      "end_s": 155.505,
+      "p_align": 0.99
+    },
+    {
+      "word": "simply ",
+      "success": true,
+      "start_s": 155.565,
+      "end_s": 156.144,
+      "p_align": 0.99
+    },
+    {
+      "word": "walks, ",
+      "success": true,
+      "start_s": 156.2396,
+      "end_s": 158.24787,
+      "p_align": 0.99
+    },
+    {
+      "word": "without ",
+      "success": true,
+      "start_s": 158.27775,
+      "end_s": 158.457,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 158.617,
+      "end_s": 158.617,
+      "p_align": 0.99
+    },
+    {
+      "word": "shred ",
+      "success": true,
+      "start_s": 158.657,
+      "end_s": 158.936,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 159.056,
+      "end_s": 159.176,
+      "p_align": 0.99
+    },
+    {
+      "word": "doubt ",
+      "success": true,
+      "start_s": 159.2716,
+      "end_s": 159.654,
+      "p_align": 0.99
+    },
+    {
+      "word": "or ",
+      "success": true,
+      "start_s": 159.774,
+      "end_s": 161.011,
+      "p_align": 0.99
+    },
+    {
+      "word": "calculation\n\n",
+      "success": true,
+      "start_s": 161.104,
+      "end_s": 162.686,
+      "p_align": 0.99
+    }
+  ],
+  "waveform_data": [
+    0.00203,
+    0.0,
+    4e-05,
+    0.00021,
+    7e-05,
+    9e-05,
+    0.00045,
+    0.00983,
+    0.0042,
+    0.002,
+    0.00106,
+    0.09796,
+    0.03366,
+    0.00096,
+    0.00011,
+    0.00136,
+    0.06934,
+    0.05445,
+    0.05113,
+    0.03438,
+    0.05131,
+    0.0534,
+    0.03547,
+    0.04207,
+    0.16889,
+    0.20583,
+    0.11779,
+    0.03002,
+    0.03392,
+    0.0461,
+    0.05113,
+    0.02659,
+    0.0331,
+    0.02368,
+    0.05746,
+    0.13512,
+    0.13902,
+    0.15876,
+    0.15881,
+    0.10222,
+    0.0979,
+    0.14466,
+    0.05136,
+    0.03559,
+    0.02866,
+    0.02597,
+    0.03252,
+    0.02785,
+    0.05156,
+    0.03269,
+    0.02305,
+    0.01697,
+    0.02469,
+    0.04292,
+    0.14215,
+    0.16723,
+    0.2458,
+    0.20066,
+    0.15101,
+    0.10179,
+    0.12553,
+    0.16575,
+    0.10959,
+    0.10384,
+    0.1042,
+    0.06757,
+    0.13489,
+    0.0281,
+    0.02639,
+    0.03316,
+    0.01565,
+    0.02746,
+    0.02734,
+    0.14045,
+    0.13991,
+    0.03775,
+    0.07612,
+    0.16485,
+    0.16406,
+    0.06277,
+    0.07891,
+    0.06155,
+    0.07834,
+    0.07772,
+    0.01611,
+    0.03881,
+    0.02164,
+    0.02108,
+    0.02415,
+    0.18472,
+    0.09458,
+    0.0396,
+    0.03723,
+    0.03601,
+    0.1098,
+    0.03394,
+    0.14626,
+    0.16404,
+    0.16243,
+    0.09257,
+    0.13772,
+    0.11008,
+    0.0664,
+    0.18614,
+    0.0821,
+    0.12047,
+    0.1251,
+    0.05202,
+    0.21373,
+    0.07335,
+    0.19098,
+    0.16049,
+    0.15447,
+    0.09138,
+    0.06009,
+    0.11884,
+    0.05252,
+    0.11354,
+    0.10722,
+    0.12538,
+    0.09476,
+    0.0582,
+    0.10925,
+    0.02145,
+    0.03285,
+    0.05585,
+    0.22284,
+    0.12924,
+    0.08495,
+    0.11662,
+    0.04219,
+    0.12256,
+    0.03954,
+    0.04247,
+    0.04835,
+    0.04639,
+    0.09966,
+    0.06684,
+    0.16148,
+    0.08226,
+    0.11652,
+    0.02724,
+    0.02327,
+    0.03367,
+    0.03006,
+    0.21818,
+    0.06119,
+    0.1293,
+    0.18064,
+    0.0803,
+    0.07635,
+    0.03676,
+    0.01177,
+    0.00942,
+    0.00916,
+    0.00907,
+    0.01066,
+    0.00913,
+    0.01169,
+    0.01573,
+    0.01885,
+    0.03801,
+    0.06578,
+    0.2549,
+    0.11311,
+    0.15957,
+    0.05072,
+    0.05443,
+    0.15137,
+    0.06136,
+    0.23556,
+    0.32083,
+    0.20759,
+    0.33046,
+    0.0911,
+    0.2802,
+    0.17207,
+    0.21957,
+    0.11407,
+    0.07551,
+    0.11014,
+    0.111,
+    0.2663,
+    0.15646,
+    0.1471,
+    0.2626,
+    0.33385,
+    0.07916,
+    0.25281,
+    0.20136,
+    0.15654,
+    0.1087,
+    0.06016,
+    0.25223,
+    0.23901,
+    0.1066,
+    0.18549,
+    0.07129,
+    0.20105,
+    0.32746,
+    0.26595,
+    0.18995,
+    0.08419,
+    0.10472,
+    0.20476,
+    0.21357,
+    0.26666,
+    0.1564,
+    0.19679,
+    0.09087,
+    0.04889,
+    0.06169,
+    0.26471,
+    0.04085,
+    0.15501,
+    0.09554,
+    0.23805,
+    0.14323,
+    0.09348,
+    0.30506,
+    0.22875,
+    0.13643,
+    0.13758,
+    0.19471,
+    0.12215,
+    0.20006,
+    0.31008,
+    0.10619,
+    0.02808,
+    0.03222,
+    0.26874,
+    0.07987,
+    0.27243,
+    0.29503,
+    0.24624,
+    0.16795,
+    0.10646,
+    0.2923,
+    0.09615,
+    0.07156,
+    0.07185,
+    0.05917,
+    0.13489,
+    0.05588,
+    0.04372,
+    0.03665,
+    0.05212,
+    0.04096,
+    0.04298,
+    0.05178,
+    0.05042,
+    0.14214,
+    0.05301,
+    0.08118,
+    0.0805,
+    0.08105,
+    0.26589,
+    0.12139,
+    0.2879,
+    0.13519,
+    0.25551,
+    0.1528,
+    0.10074,
+    0.15821,
+    0.13797,
+    0.14131,
+    0.13955,
+    0.25733,
+    0.21132,
+    0.13766,
+    0.16957,
+    0.12051,
+    0.20924,
+    0.12527,
+    0.26222,
+    0.14274,
+    0.10671,
+    0.07168,
+    0.05746,
+    0.14886,
+    0.08587,
+    0.19099,
+    0.2208,
+    0.14141,
+    0.23169,
+    0.07584,
+    0.28931,
+    0.11239,
+    0.19877,
+    0.10426,
+    0.05053,
+    0.04933,
+    0.15123,
+    0.31696,
+    0.20325,
+    0.2086,
+    0.14372,
+    0.1661,
+    0.09234,
+    0.1172,
+    0.1021,
+    0.14286,
+    0.21149,
+    0.13234,
+    0.29204,
+    0.07578,
+    0.17271,
+    0.12828,
+    0.20422,
+    0.08486,
+    0.11498,
+    0.28094,
+    0.14736,
+    0.06775,
+    0.07248,
+    0.20866,
+    0.18197,
+    0.2063,
+    0.0791,
+    0.05511,
+    0.06836,
+    0.06222,
+    0.13963,
+    0.21786,
+    0.06368,
+    0.21882,
+    0.09857,
+    0.0928,
+    0.22569,
+    0.24447,
+    0.18765,
+    0.07544,
+    0.06475,
+    0.06729,
+    0.14849,
+    0.07513,
+    0.0626,
+    0.09661,
+    0.17672,
+    0.21296,
+    0.12997,
+    0.29026,
+    0.08216,
+    0.25108,
+    0.15224,
+    0.0922,
+    0.10891,
+    0.07634,
+    0.27882,
+    0.14977,
+    0.11772,
+    0.08254,
+    0.1426,
+    0.22082,
+    0.32146,
+    0.23709,
+    0.28066,
+    0.21155,
+    0.15749,
+    0.23867,
+    0.20318,
+    0.14018,
+    0.16024,
+    0.03356,
+    0.03088,
+    0.06022,
+    0.22902,
+    0.1264,
+    0.06402,
+    0.16801,
+    0.16705,
+    0.16414,
+    0.04734,
+    0.13741,
+    0.17172,
+    0.09923,
+    0.05466,
+    0.09392,
+    0.28657,
+    0.04728,
+    0.14089,
+    0.03509,
+    0.0454,
+    0.04867,
+    0.03556,
+    0.25862,
+    0.06288,
+    0.19818,
+    0.10028,
+    0.30106,
+    0.18648,
+    0.12916,
+    0.13784,
+    0.10697,
+    0.27383,
+    0.10328,
+    0.06213,
+    0.07231,
+    0.03816,
+    0.12137,
+    0.05309,
+    0.03934,
+    0.0433,
+    0.23369,
+    0.12751,
+    0.11398,
+    0.09234,
+    0.0805,
+    0.2252,
+    0.18517,
+    0.18712,
+    0.07272,
+    0.06773,
+    0.04569,
+    0.21009,
+    0.32429,
+    0.24056,
+    0.17013,
+    0.2219,
+    0.15386,
+    0.18626,
+    0.10725,
+    0.26779,
+    0.12241,
+    0.09315,
+    0.09158,
+    0.17407,
+    0.07179,
+    0.33578,
+    0.33322,
+    0.22898,
+    0.13352,
+    0.11674,
+    0.26348,
+    0.15677,
+    0.1414,
+    0.16488,
+    0.09471,
+    0.1683,
+    0.14016,
+    0.25195,
+    0.13312,
+    0.12255,
+    0.11435,
+    0.1006,
+    0.25904,
+    0.17462,
+    0.14056,
+    0.15988,
+    0.09927,
+    0.06996,
+    0.05799,
+    0.24974,
+    0.06806,
+    0.20495,
+    0.29733,
+    0.18384,
+    0.19222,
+    0.09523,
+    0.27696,
+    0.11988,
+    0.14092,
+    0.13956,
+    0.17017,
+    0.13587,
+    0.12211,
+    0.15529,
+    0.07254,
+    0.05653,
+    0.05576,
+    0.23714,
+    0.19364,
+    0.26533,
+    0.21111,
+    0.20235,
+    0.13038,
+    0.18175,
+    0.2886,
+    0.17131,
+    0.15983,
+    0.15864,
+    0.15559,
+    0.12786,
+    0.05606,
+    0.05066,
+    0.06243,
+    0.06904,
+    0.08709,
+    0.18378,
+    0.24234,
+    0.06469,
+    0.13713,
+    0.06971,
+    0.07127,
+    0.07003,
+    0.13086,
+    0.2737,
+    0.09832,
+    0.0939,
+    0.10401,
+    0.12506,
+    0.11745,
+    0.12492,
+    0.06633,
+    0.10761,
+    0.00652,
+    0.00689,
+    0.01162,
+    0.01651,
+    0.03008,
+    0.04656,
+    0.06521,
+    0.03103,
+    0.14596,
+    0.30868,
+    0.21005,
+    0.21605,
+    0.17448,
+    0.21286,
+    0.21193,
+    0.11101,
+    0.04951,
+    0.26451,
+    0.25085,
+    0.05672,
+    0.05548,
+    0.28151,
+    0.24929,
+    0.191,
+    0.1339,
+    0.14541,
+    0.08257,
+    0.15098,
+    0.21696,
+    0.15732,
+    0.0552,
+    0.16186,
+    0.2284,
+    0.12331,
+    0.10241,
+    0.12749,
+    0.229,
+    0.24308,
+    0.05872,
+    0.26779,
+    0.1937,
+    0.17259,
+    0.22633,
+    0.15367,
+    0.1407,
+    0.13657,
+    0.25128,
+    0.12019,
+    0.13673,
+    0.14268,
+    0.11504,
+    0.13067,
+    0.07131,
+    0.06334,
+    0.23085,
+    0.22408,
+    0.09959,
+    0.02853,
+    0.14763,
+    0.14544,
+    0.18481,
+    0.13214,
+    0.15632,
+    0.13947,
+    0.17114,
+    0.20975,
+    0.19563,
+    0.20687,
+    0.10681,
+    0.19706,
+    0.0531,
+    0.14738,
+    0.27712,
+    0.21663,
+    0.19093,
+    0.18632,
+    0.07523,
+    0.22526,
+    0.28134,
+    0.15859,
+    0.17113,
+    0.19814,
+    0.13381,
+    0.26474,
+    0.13881,
+    0.11515,
+    0.12665,
+    0.13635,
+    0.26371,
+    0.0824,
+    0.16374,
+    0.20116,
+    0.27789,
+    0.04172,
+    0.19694,
+    0.13656,
+    0.04455,
+    0.15182,
+    0.13489,
+    0.2552,
+    0.17344,
+    0.26828,
+    0.24306,
+    0.1077,
+    0.25484,
+    0.21557,
+    0.21487,
+    0.14418,
+    0.26144,
+    0.24256,
+    0.29765,
+    0.31242,
+    0.17111,
+    0.12251,
+    0.16216,
+    0.20142,
+    0.13765,
+    0.21286,
+    0.15651,
+    0.13687,
+    0.33026,
+    0.21192,
+    0.14197,
+    0.12856,
+    0.14029,
+    0.09309,
+    0.10082,
+    0.14329,
+    0.28603,
+    0.32047,
+    0.31013,
+    0.2704,
+    0.13603,
+    0.11907,
+    0.15821,
+    0.15049,
+    0.20799,
+    0.16462,
+    0.2805,
+    0.29835,
+    0.27483,
+    0.17346,
+    0.20045,
+    0.16488,
+    0.10455,
+    0.07595,
+    0.20923,
+    0.15884,
+    0.24551,
+    0.05834,
+    0.06927,
+    0.07016,
+    0.15824,
+    0.04654,
+    0.09831,
+    0.12605,
+    0.20747,
+    0.2863,
+    0.09659,
+    0.06984,
+    0.08478,
+    0.08437,
+    0.07971,
+    0.07756,
+    0.10932,
+    0.16707,
+    0.08372,
+    0.10547,
+    0.0415,
+    0.01842,
+    0.01303,
+    0.0234,
+    0.01338,
+    0.01155,
+    0.00911,
+    0.265,
+    0.08383,
+    0.14244,
+    0.07373,
+    0.05286,
+    0.05224,
+    0.16121,
+    0.32178,
+    0.28411,
+    0.29388,
+    0.23902,
+    0.07452,
+    0.24342,
+    0.1751,
+    0.05571,
+    0.13477,
+    0.14997,
+    0.15157,
+    0.135,
+    0.34838,
+    0.08164,
+    0.15014,
+    0.08003,
+    0.14515,
+    0.20606,
+    0.16235,
+    0.33436,
+    0.30095,
+    0.33823,
+    0.02702,
+    0.272,
+    0.07369,
+    0.04619,
+    0.08415,
+    0.16692,
+    0.04589,
+    0.20456,
+    0.36292,
+    0.25096,
+    0.16042,
+    0.18337,
+    0.07145,
+    0.19343,
+    0.16958,
+    0.34532,
+    0.28236,
+    0.28618,
+    0.2176,
+    0.15167,
+    0.1392,
+    0.17088,
+    0.10386,
+    0.16768,
+    0.20459,
+    0.1273,
+    0.19734,
+    0.34593,
+    0.05013,
+    0.05319,
+    0.06203,
+    0.09706,
+    0.08979,
+    0.15381,
+    0.30507,
+    0.28192,
+    0.32174,
+    0.14544,
+    0.32797,
+    0.18684,
+    0.17116,
+    0.12679,
+    0.25808,
+    0.12595,
+    0.09972,
+    0.32096,
+    0.14864,
+    0.16911,
+    0.15192,
+    0.25724,
+    0.21654,
+    0.15347,
+    0.10507,
+    0.20248,
+    0.29654,
+    0.20049,
+    0.22032,
+    0.18278,
+    0.19821,
+    0.18882,
+    0.13789,
+    0.13436,
+    0.10166,
+    0.16987,
+    0.29329,
+    0.05575,
+    0.03634,
+    0.03762,
+    0.16041,
+    0.16461,
+    0.11978,
+    0.06743,
+    0.08634,
+    0.07171,
+    0.03629,
+    0.03269,
+    0.02168,
+    0.02784,
+    0.01684,
+    0.01108,
+    0.01501,
+    0.12241,
+    0.17203,
+    0.10775,
+    0.15099,
+    0.12975,
+    0.04159,
+    0.11964,
+    0.02135,
+    0.11767,
+    0.06029,
+    0.06424,
+    0.07658,
+    0.04769,
+    0.03073,
+    0.02766,
+    0.11944,
+    0.04918,
+    0.13877,
+    0.18072,
+    0.24124,
+    0.34941,
+    0.25771,
+    0.2066,
+    0.2166,
+    0.21661,
+    0.07836,
+    0.25489,
+    0.29466,
+    0.19864,
+    0.32569,
+    0.15409,
+    0.15927,
+    0.12537,
+    0.17907,
+    0.01494,
+    0.00304,
+    0.00089,
+    0.00031
+  ],
+  "hoot_cer": 0.18507281553398058,
+  "is_streamed": false,
+  "aligned_lyrics": [
+    {
+      "text": "Hey, it’s him again: anh4gs, a scient",
+      "start_s": 2.314,
+      "end_s": 8.457,
+      "section": "",
+      "words": [
+        {
+          "text": "Hey,",
+          "start_s": 2.314,
+          "end_s": 2.553
+        },
+        {
+          "text": " it",
+          "start_s": 4.707,
+          "end_s": 4.787
+        },
+        {
+          "text": "’s",
+          "start_s": 4.787,
+          "end_s": 4.947
+        },
+        {
+          "text": " him",
+          "start_s": 4.947,
+          "end_s": 5.186
+        },
+        {
+          "text": " again:",
+          "start_s": 5.186,
+          "end_s": 5.665
+        },
+        {
+          "text": " anh",
+          "start_s": 7.101,
+          "end_s": 7.261
+        },
+        {
+          "text": "4g",
+          "start_s": 7.261,
+          "end_s": 7.42
+        },
+        {
+          "text": "s,",
+          "start_s": 7.739,
+          "end_s": 7.819
+        },
+        {
+          "text": " a",
+          "start_s": 7.979,
+          "end_s": 8.138
+        },
+        {
+          "text": " sc",
+          "start_s": 8.138,
+          "end_s": 8.298
+        },
+        {
+          "text": "ient",
+          "start_s": 8.298,
+          "end_s": 8.457
+        }
+      ]
+    },
+    {
+      "text": "ist. He doesn’t remember the last time",
+      "start_s": 8.457,
+      "end_s": 12.207,
+      "section": "",
+      "words": [
+        {
+          "text": "ist.",
+          "start_s": 8.457,
+          "end_s": 8.697
+        },
+        {
+          "text": " He",
+          "start_s": 10.771,
+          "end_s": 10.931
+        },
+        {
+          "text": " doesn",
+          "start_s": 10.931,
+          "end_s": 11.09
+        },
+        {
+          "text": "’t",
+          "start_s": 11.09,
+          "end_s": 11.25
+        },
+        {
+          "text": " remember",
+          "start_s": 11.33,
+          "end_s": 11.649
+        },
+        {
+          "text": " the",
+          "start_s": 11.649,
+          "end_s": 11.729
+        },
+        {
+          "text": " last",
+          "start_s": 11.729,
+          "end_s": 12.048
+        },
+        {
+          "text": " time",
+          "start_s": 12.048,
+          "end_s": 12.207
+        }
+      ]
+    },
+    {
+      "text": "he wrote futile things, but today he",
+      "start_s": 12.207,
+      "end_s": 15.399,
+      "section": "",
+      "words": [
+        {
+          "text": " he",
+          "start_s": 12.207,
+          "end_s": 12.287
+        },
+        {
+          "text": " w",
+          "start_s": 12.287,
+          "end_s": 12.447
+        },
+        {
+          "text": "rote",
+          "start_s": 12.447,
+          "end_s": 12.686
+        },
+        {
+          "text": " fut",
+          "start_s": 12.686,
+          "end_s": 12.846
+        },
+        {
+          "text": "ile",
+          "start_s": 12.846,
+          "end_s": 13.085
+        },
+        {
+          "text": " things,",
+          "start_s": 13.165,
+          "end_s": 13.723
+        },
+        {
+          "text": " but",
+          "start_s": 13.803,
+          "end_s": 14.202
+        },
+        {
+          "text": " today",
+          "start_s": 14.761,
+          "end_s": 15.16
+        },
+        {
+          "text": " he",
+          "start_s": 15.16,
+          "end_s": 15.399
+        }
+      ]
+    },
+    {
+      "text": "suddenly itches to write again",
+      "start_s": 15.399,
+      "end_s": 17.234,
+      "section": "",
+      "words": [
+        {
+          "text": " sudden",
+          "start_s": 15.399,
+          "end_s": 15.718
+        },
+        {
+          "text": "ly",
+          "start_s": 15.718,
+          "end_s": 15.878
+        },
+        {
+          "text": " it",
+          "start_s": 15.878,
+          "end_s": 16.037
+        },
+        {
+          "text": "ches",
+          "start_s": 16.037,
+          "end_s": 16.277
+        },
+        {
+          "text": " to",
+          "start_s": 16.277,
+          "end_s": 16.436
+        },
+        {
+          "text": " write",
+          "start_s": 16.436,
+          "end_s": 16.755
+        },
+        {
+          "text": " again",
+          "start_s": 16.755,
+          "end_s": 17.234
+        }
+      ]
+    },
+    {
+      "text": "He often jokes with himself that in the",
+      "start_s": 19.149,
+      "end_s": 20.984,
+      "section": "",
+      "words": [
+        {
+          "text": "He",
+          "start_s": 19.149,
+          "end_s": 19.388
+        },
+        {
+          "text": " of",
+          "start_s": 19.388,
+          "end_s": 19.468
+        },
+        {
+          "text": "ten",
+          "start_s": 19.468,
+          "end_s": 19.707
+        },
+        {
+          "text": " jokes",
+          "start_s": 19.707,
+          "end_s": 19.947
+        },
+        {
+          "text": " with",
+          "start_s": 19.947,
+          "end_s": 20.106
+        },
+        {
+          "text": " him",
+          "start_s": 20.106,
+          "end_s": 20.266
+        },
+        {
+          "text": "self",
+          "start_s": 20.266,
+          "end_s": 20.585
+        },
+        {
+          "text": " that",
+          "start_s": 20.585,
+          "end_s": 20.745
+        },
+        {
+          "text": " in",
+          "start_s": 20.745,
+          "end_s": 20.824
+        },
+        {
+          "text": " the",
+          "start_s": 20.824,
+          "end_s": 20.984
+        }
+      ]
+    },
+    {
+      "text": "future, if he no longer writes code, he",
+      "start_s": 20.984,
+      "end_s": 23.457,
+      "section": "",
+      "words": [
+        {
+          "text": " future,",
+          "start_s": 20.984,
+          "end_s": 21.543
+        },
+        {
+          "text": " if",
+          "start_s": 21.862,
+          "end_s": 22.021
+        },
+        {
+          "text": " he",
+          "start_s": 22.021,
+          "end_s": 22.181
+        },
+        {
+          "text": " no",
+          "start_s": 22.181,
+          "end_s": 22.34
+        },
+        {
+          "text": " longer",
+          "start_s": 22.34,
+          "end_s": 22.66
+        },
+        {
+          "text": " writes",
+          "start_s": 22.66,
+          "end_s": 22.979
+        },
+        {
+          "text": " code,",
+          "start_s": 22.979,
+          "end_s": 23.298
+        },
+        {
+          "text": " he",
+          "start_s": 23.298,
+          "end_s": 23.457
+        }
+      ]
+    },
+    {
+      "text": "will become a writer to write about his",
+      "start_s": 23.457,
+      "end_s": 25.851,
+      "section": "",
+      "words": [
+        {
+          "text": " will",
+          "start_s": 23.457,
+          "end_s": 23.777
+        },
+        {
+          "text": " become",
+          "start_s": 23.777,
+          "end_s": 23.856
+        },
+        {
+          "text": " a",
+          "start_s": 23.856,
+          "end_s": 24.016
+        },
+        {
+          "text": " wr",
+          "start_s": 24.016,
+          "end_s": 24.096
+        },
+        {
+          "text": "it",
+          "start_s": 24.096,
+          "end_s": 24.255
+        },
+        {
+          "text": "er",
+          "start_s": 24.255,
+          "end_s": 24.415
+        },
+        {
+          "text": " to",
+          "start_s": 25.053,
+          "end_s": 25.213
+        },
+        {
+          "text": " write",
+          "start_s": 25.213,
+          "end_s": 25.452
+        },
+        {
+          "text": " about",
+          "start_s": 25.452,
+          "end_s": 25.612
+        },
+        {
+          "text": " his",
+          "start_s": 25.612,
+          "end_s": 25.851
+        }
+      ]
+    },
+    {
+      "text": "life, the people he met, and the roads",
+      "start_s": 25.851,
+      "end_s": 29.84,
+      "section": "",
+      "words": [
+        {
+          "text": " life,",
+          "start_s": 25.851,
+          "end_s": 26.25
+        },
+        {
+          "text": " the",
+          "start_s": 27.128,
+          "end_s": 27.287
+        },
+        {
+          "text": " people",
+          "start_s": 27.287,
+          "end_s": 27.606
+        },
+        {
+          "text": " he",
+          "start_s": 27.606,
+          "end_s": 27.846
+        },
+        {
+          "text": " met,",
+          "start_s": 27.846,
+          "end_s": 28.165
+        },
+        {
+          "text": " and",
+          "start_s": 29.282,
+          "end_s": 29.441
+        },
+        {
+          "text": " the",
+          "start_s": 29.441,
+          "end_s": 29.601
+        },
+        {
+          "text": " roads",
+          "start_s": 29.601,
+          "end_s": 29.84
+        }
+      ]
+    },
+    {
+      "text": "he traveled",
+      "start_s": 29.84,
+      "end_s": 30.399,
+      "section": "",
+      "words": [
+        {
+          "text": " he",
+          "start_s": 29.84,
+          "end_s": 30.0
+        },
+        {
+          "text": " travel",
+          "start_s": 30.0,
+          "end_s": 30.239
+        },
+        {
+          "text": "ed",
+          "start_s": 30.239,
+          "end_s": 30.399
+        }
+      ]
+    },
+    {
+      "text": "Lately, he has been working out quite",
+      "start_s": 32.713,
+      "end_s": 35.186,
+      "section": "",
+      "words": [
+        {
+          "text": "Lat",
+          "start_s": 32.713,
+          "end_s": 32.952
+        },
+        {
+          "text": "ely,",
+          "start_s": 32.952,
+          "end_s": 33.191
+        },
+        {
+          "text": " he",
+          "start_s": 33.91,
+          "end_s": 34.069
+        },
+        {
+          "text": " has",
+          "start_s": 34.069,
+          "end_s": 34.229
+        },
+        {
+          "text": " been",
+          "start_s": 34.229,
+          "end_s": 34.388
+        },
+        {
+          "text": " working",
+          "start_s": 34.388,
+          "end_s": 34.707
+        },
+        {
+          "text": " out",
+          "start_s": 34.707,
+          "end_s": 34.947
+        },
+        {
+          "text": " quite",
+          "start_s": 34.947,
+          "end_s": 35.186
+        }
+      ]
+    },
+    {
+      "text": "regularly, which has given him a strong",
+      "start_s": 35.186,
+      "end_s": 37.899,
+      "section": "",
+      "words": [
+        {
+          "text": " reg",
+          "start_s": 35.186,
+          "end_s": 35.426
+        },
+        {
+          "text": "ular",
+          "start_s": 35.426,
+          "end_s": 35.665
+        },
+        {
+          "text": "ly,",
+          "start_s": 35.665,
+          "end_s": 35.824
+        },
+        {
+          "text": " which",
+          "start_s": 36.622,
+          "end_s": 36.782
+        },
+        {
+          "text": " has",
+          "start_s": 36.782,
+          "end_s": 36.941
+        },
+        {
+          "text": " given",
+          "start_s": 36.941,
+          "end_s": 37.261
+        },
+        {
+          "text": " him",
+          "start_s": 37.261,
+          "end_s": 37.42
+        },
+        {
+          "text": " a",
+          "start_s": 37.42,
+          "end_s": 37.58
+        },
+        {
+          "text": " strong",
+          "start_s": 37.58,
+          "end_s": 37.899
+        }
+      ]
+    },
+    {
+      "text": "physique: broad chest, toned glutes,",
+      "start_s": 37.899,
+      "end_s": 40.532,
+      "section": "",
+      "words": [
+        {
+          "text": " p",
+          "start_s": 37.899,
+          "end_s": 37.979
+        },
+        {
+          "text": "hy",
+          "start_s": 37.979,
+          "end_s": 38.138
+        },
+        {
+          "text": "si",
+          "start_s": 38.138,
+          "end_s": 38.218
+        },
+        {
+          "text": "que:",
+          "start_s": 38.218,
+          "end_s": 38.457
+        },
+        {
+          "text": " bro",
+          "start_s": 38.777,
+          "end_s": 38.856
+        },
+        {
+          "text": "ad",
+          "start_s": 38.856,
+          "end_s": 39.016
+        },
+        {
+          "text": " chest,",
+          "start_s": 39.176,
+          "end_s": 39.654
+        },
+        {
+          "text": " ton",
+          "start_s": 39.654,
+          "end_s": 39.734
+        },
+        {
+          "text": "ed",
+          "start_s": 39.734,
+          "end_s": 39.894
+        },
+        {
+          "text": " gl",
+          "start_s": 40.133,
+          "end_s": 40.213
+        },
+        {
+          "text": "utes,",
+          "start_s": 40.213,
+          "end_s": 40.532
+        }
+      ]
+    },
+    {
+      "text": "and a firm abdomen. The target is 70 k",
+      "start_s": 40.691,
+      "end_s": 44.362,
+      "section": "",
+      "words": [
+        {
+          "text": " and",
+          "start_s": 40.691,
+          "end_s": 40.851
+        },
+        {
+          "text": " a",
+          "start_s": 40.851,
+          "end_s": 41.011
+        },
+        {
+          "text": " firm",
+          "start_s": 41.011,
+          "end_s": 41.33
+        },
+        {
+          "text": " ab",
+          "start_s": 41.33,
+          "end_s": 41.569
+        },
+        {
+          "text": "dom",
+          "start_s": 41.569,
+          "end_s": 41.729
+        },
+        {
+          "text": "en.",
+          "start_s": 41.729,
+          "end_s": 41.888
+        },
+        {
+          "text": " The",
+          "start_s": 43.005,
+          "end_s": 43.165
+        },
+        {
+          "text": " tar",
+          "start_s": 43.165,
+          "end_s": 43.404
+        },
+        {
+          "text": "get",
+          "start_s": 43.404,
+          "end_s": 43.564
+        },
+        {
+          "text": " is",
+          "start_s": 43.564,
+          "end_s": 43.803
+        },
+        {
+          "text": " 70 k",
+          "start_s": 44.202,
+          "end_s": 44.362
+        }
+      ]
+    },
+    {
+      "text": "ilograms, with only 6.9 kg left to go",
+      "start_s": 44.362,
+      "end_s": 48.431,
+      "section": "",
+      "words": [
+        {
+          "text": "ilo",
+          "start_s": 44.362,
+          "end_s": 44.521
+        },
+        {
+          "text": "gr",
+          "start_s": 44.521,
+          "end_s": 44.601
+        },
+        {
+          "text": "ams,",
+          "start_s": 44.601,
+          "end_s": 44.84
+        },
+        {
+          "text": " with",
+          "start_s": 44.92,
+          "end_s": 45.08
+        },
+        {
+          "text": " only",
+          "start_s": 45.08,
+          "end_s": 45.479
+        },
+        {
+          "text": " 6.9 k",
+          "start_s": 47.074,
+          "end_s": 47.394
+        },
+        {
+          "text": "g",
+          "start_s": 47.394,
+          "end_s": 47.473
+        },
+        {
+          "text": " left",
+          "start_s": 47.793,
+          "end_s": 48.032
+        },
+        {
+          "text": " to",
+          "start_s": 48.032,
+          "end_s": 48.191
+        },
+        {
+          "text": " go",
+          "start_s": 48.191,
+          "end_s": 48.431
+        }
+      ]
+    },
+    {
+      "text": "He always tells himself that the abdomen",
+      "start_s": 51.463,
+      "end_s": 53.378,
+      "section": "",
+      "words": [
+        {
+          "text": "He",
+          "start_s": 51.463,
+          "end_s": 51.782
+        },
+        {
+          "text": " always",
+          "start_s": 51.782,
+          "end_s": 51.941
+        },
+        {
+          "text": " tells",
+          "start_s": 51.941,
+          "end_s": 52.181
+        },
+        {
+          "text": " him",
+          "start_s": 52.181,
+          "end_s": 52.34
+        },
+        {
+          "text": "self",
+          "start_s": 52.34,
+          "end_s": 52.58
+        },
+        {
+          "text": " that",
+          "start_s": 52.58,
+          "end_s": 52.739
+        },
+        {
+          "text": " the",
+          "start_s": 52.739,
+          "end_s": 52.899
+        },
+        {
+          "text": " ab",
+          "start_s": 52.899,
+          "end_s": 53.059
+        },
+        {
+          "text": "dom",
+          "start_s": 53.059,
+          "end_s": 53.218
+        },
+        {
+          "text": "en",
+          "start_s": 53.218,
+          "end_s": 53.378
+        }
+      ]
+    },
+    {
+      "text": "is the most important part of the body:",
+      "start_s": 53.378,
+      "end_s": 55.612,
+      "section": "",
+      "words": [
+        {
+          "text": " is",
+          "start_s": 53.378,
+          "end_s": 53.617
+        },
+        {
+          "text": " the",
+          "start_s": 53.617,
+          "end_s": 53.777
+        },
+        {
+          "text": " most",
+          "start_s": 53.777,
+          "end_s": 54.176
+        },
+        {
+          "text": " import",
+          "start_s": 54.255,
+          "end_s": 54.415
+        },
+        {
+          "text": "ant",
+          "start_s": 54.415,
+          "end_s": 54.654
+        },
+        {
+          "text": " part",
+          "start_s": 54.654,
+          "end_s": 54.894
+        },
+        {
+          "text": " of",
+          "start_s": 54.894,
+          "end_s": 55.053
+        },
+        {
+          "text": " the",
+          "start_s": 55.053,
+          "end_s": 55.213
+        },
+        {
+          "text": " body:",
+          "start_s": 55.213,
+          "end_s": 55.612
+        }
+      ]
+    },
+    {
+      "text": "a strong core is necessary to bear the",
+      "start_s": 56.09,
+      "end_s": 59.043,
+      "section": "",
+      "words": [
+        {
+          "text": " a",
+          "start_s": 56.09,
+          "end_s": 56.33
+        },
+        {
+          "text": " strong",
+          "start_s": 56.33,
+          "end_s": 56.729
+        },
+        {
+          "text": " core",
+          "start_s": 56.729,
+          "end_s": 57.128
+        },
+        {
+          "text": " is",
+          "start_s": 57.128,
+          "end_s": 57.367
+        },
+        {
+          "text": " ne",
+          "start_s": 57.367,
+          "end_s": 57.527
+        },
+        {
+          "text": "cess",
+          "start_s": 57.527,
+          "end_s": 57.686
+        },
+        {
+          "text": "ary",
+          "start_s": 57.686,
+          "end_s": 57.926
+        },
+        {
+          "text": " to",
+          "start_s": 58.564,
+          "end_s": 58.723
+        },
+        {
+          "text": " bear",
+          "start_s": 58.723,
+          "end_s": 58.963
+        },
+        {
+          "text": " the",
+          "start_s": 58.963,
+          "end_s": 59.043
+        }
+      ]
+    },
+    {
+      "text": "weight of the upper half and serves as",
+      "start_s": 59.043,
+      "end_s": 61.356,
+      "section": "",
+      "words": [
+        {
+          "text": " weight",
+          "start_s": 59.043,
+          "end_s": 59.282
+        },
+        {
+          "text": " of",
+          "start_s": 59.282,
+          "end_s": 59.441
+        },
+        {
+          "text": " the",
+          "start_s": 59.441,
+          "end_s": 59.601
+        },
+        {
+          "text": " up",
+          "start_s": 59.601,
+          "end_s": 59.761
+        },
+        {
+          "text": "per",
+          "start_s": 59.761,
+          "end_s": 59.92
+        },
+        {
+          "text": " half",
+          "start_s": 59.92,
+          "end_s": 60.319
+        },
+        {
+          "text": " and",
+          "start_s": 60.319,
+          "end_s": 60.638
+        },
+        {
+          "text": " ser",
+          "start_s": 60.718,
+          "end_s": 60.878
+        },
+        {
+          "text": "ves",
+          "start_s": 60.878,
+          "end_s": 61.117
+        },
+        {
+          "text": " as",
+          "start_s": 61.117,
+          "end_s": 61.356
+        }
+      ]
+    },
+    {
+      "text": "the bridge for the body to perform",
+      "start_s": 61.356,
+      "end_s": 63.351,
+      "section": "",
+      "words": [
+        {
+          "text": " the",
+          "start_s": 61.356,
+          "end_s": 61.596
+        },
+        {
+          "text": " bridge",
+          "start_s": 61.596,
+          "end_s": 61.995
+        },
+        {
+          "text": " for",
+          "start_s": 61.995,
+          "end_s": 62.154
+        },
+        {
+          "text": " the",
+          "start_s": 62.154,
+          "end_s": 62.314
+        },
+        {
+          "text": " body",
+          "start_s": 62.314,
+          "end_s": 62.633
+        },
+        {
+          "text": " to",
+          "start_s": 62.633,
+          "end_s": 62.872
+        },
+        {
+          "text": " perform",
+          "start_s": 62.952,
+          "end_s": 63.351
+        }
+      ]
+    },
+    {
+      "text": "complex, high-paced movements. There",
+      "start_s": 63.351,
+      "end_s": 67.819,
+      "section": "",
+      "words": [
+        {
+          "text": " complex,",
+          "start_s": 63.351,
+          "end_s": 63.989
+        },
+        {
+          "text": " high",
+          "start_s": 65.027,
+          "end_s": 65.266
+        },
+        {
+          "text": "-p",
+          "start_s": 65.266,
+          "end_s": 65.346
+        },
+        {
+          "text": "aced",
+          "start_s": 65.346,
+          "end_s": 65.665
+        },
+        {
+          "text": " move",
+          "start_s": 65.665,
+          "end_s": 65.904
+        },
+        {
+          "text": "ments.",
+          "start_s": 65.904,
+          "end_s": 66.303
+        },
+        {
+          "text": " There",
+          "start_s": 67.58,
+          "end_s": 67.819
+        }
+      ]
+    },
+    {
+      "text": "fore, he prioritizes core workouts: tra",
+      "start_s": 67.819,
+      "end_s": 70.851,
+      "section": "",
+      "words": [
+        {
+          "text": "fore,",
+          "start_s": 67.819,
+          "end_s": 68.138
+        },
+        {
+          "text": " he",
+          "start_s": 68.218,
+          "end_s": 68.537
+        },
+        {
+          "text": " p",
+          "start_s": 68.537,
+          "end_s": 68.697
+        },
+        {
+          "text": "ri",
+          "start_s": 68.697,
+          "end_s": 68.777
+        },
+        {
+          "text": "or",
+          "start_s": 68.777,
+          "end_s": 68.936
+        },
+        {
+          "text": "it",
+          "start_s": 68.936,
+          "end_s": 69.016
+        },
+        {
+          "text": "iz",
+          "start_s": 69.016,
+          "end_s": 69.176
+        },
+        {
+          "text": "es",
+          "start_s": 69.335,
+          "end_s": 69.495
+        },
+        {
+          "text": " core",
+          "start_s": 69.495,
+          "end_s": 69.814
+        },
+        {
+          "text": " work",
+          "start_s": 69.814,
+          "end_s": 70.053
+        },
+        {
+          "text": "out",
+          "start_s": 70.053,
+          "end_s": 70.133
+        },
+        {
+          "text": "s:",
+          "start_s": 70.133,
+          "end_s": 70.213
+        },
+        {
+          "text": " tra",
+          "start_s": 70.612,
+          "end_s": 70.851
+        }
+      ]
+    },
+    {
+      "text": "ining them more than other areas.",
+      "start_s": 70.851,
+      "end_s": 72.447,
+      "section": "",
+      "words": [
+        {
+          "text": "ining",
+          "start_s": 70.851,
+          "end_s": 71.011
+        },
+        {
+          "text": " them",
+          "start_s": 71.011,
+          "end_s": 71.25
+        },
+        {
+          "text": " more",
+          "start_s": 71.25,
+          "end_s": 71.569
+        },
+        {
+          "text": " than",
+          "start_s": 71.569,
+          "end_s": 71.729
+        },
+        {
+          "text": " other",
+          "start_s": 71.729,
+          "end_s": 72.048
+        },
+        {
+          "text": " are",
+          "start_s": 72.048,
+          "end_s": 72.287
+        },
+        {
+          "text": "as.",
+          "start_s": 72.287,
+          "end_s": 72.447
+        }
+      ]
+    },
+    {
+      "text": "Currently, his abs have 2 packs, and",
+      "start_s": 72.447,
+      "end_s": 77.793,
+      "section": "",
+      "words": [
+        {
+          "text": " Current",
+          "start_s": 72.447,
+          "end_s": 72.606
+        },
+        {
+          "text": "ly,",
+          "start_s": 72.606,
+          "end_s": 72.686
+        },
+        {
+          "text": " his",
+          "start_s": 72.686,
+          "end_s": 72.766
+        },
+        {
+          "text": " abs",
+          "start_s": 72.766,
+          "end_s": 73.085
+        },
+        {
+          "text": " have",
+          "start_s": 75.08,
+          "end_s": 75.479
+        },
+        {
+          "text": " 2 pack",
+          "start_s": 75.718,
+          "end_s": 75.878
+        },
+        {
+          "text": "s,",
+          "start_s": 75.878,
+          "end_s": 75.957
+        },
+        {
+          "text": " and",
+          "start_s": 77.553,
+          "end_s": 77.793
+        }
+      ]
+    },
+    {
+      "text": "soon they will be 6 packs",
+      "start_s": 77.793,
+      "end_s": 79.707,
+      "section": "",
+      "words": [
+        {
+          "text": " soon",
+          "start_s": 77.793,
+          "end_s": 78.191
+        },
+        {
+          "text": " they",
+          "start_s": 78.271,
+          "end_s": 78.431
+        },
+        {
+          "text": " will",
+          "start_s": 78.431,
+          "end_s": 78.67
+        },
+        {
+          "text": " be",
+          "start_s": 78.67,
+          "end_s": 78.91
+        },
+        {
+          "text": " 6",
+          "start_s": 79.149,
+          "end_s": 79.309
+        },
+        {
+          "text": " pack",
+          "start_s": 79.468,
+          "end_s": 79.628
+        },
+        {
+          "text": "s",
+          "start_s": 79.628,
+          "end_s": 79.707
+        }
+      ]
+    },
+    {
+      "text": "Recently, he has managed his emotions",
+      "start_s": 81.622,
+      "end_s": 84.335,
+      "section": "",
+      "words": [
+        {
+          "text": "Rec",
+          "start_s": 81.622,
+          "end_s": 81.862
+        },
+        {
+          "text": "ent",
+          "start_s": 81.862,
+          "end_s": 82.021
+        },
+        {
+          "text": "ly,",
+          "start_s": 82.021,
+          "end_s": 82.181
+        },
+        {
+          "text": " he",
+          "start_s": 82.739,
+          "end_s": 82.899
+        },
+        {
+          "text": " has",
+          "start_s": 82.899,
+          "end_s": 83.138
+        },
+        {
+          "text": " man",
+          "start_s": 83.138,
+          "end_s": 83.298
+        },
+        {
+          "text": "aged",
+          "start_s": 83.298,
+          "end_s": 83.537
+        },
+        {
+          "text": " his",
+          "start_s": 83.537,
+          "end_s": 83.856
+        },
+        {
+          "text": " emotions",
+          "start_s": 83.856,
+          "end_s": 84.335
+        }
+      ]
+    },
+    {
+      "text": "better: he no longer holds grudges or",
+      "start_s": 84.335,
+      "end_s": 87.287,
+      "section": "",
+      "words": [
+        {
+          "text": " better:",
+          "start_s": 84.335,
+          "end_s": 84.894
+        },
+        {
+          "text": " he",
+          "start_s": 85.612,
+          "end_s": 85.771
+        },
+        {
+          "text": " no",
+          "start_s": 85.771,
+          "end_s": 85.931
+        },
+        {
+          "text": " longer",
+          "start_s": 85.931,
+          "end_s": 86.33
+        },
+        {
+          "text": " holds",
+          "start_s": 86.33,
+          "end_s": 86.729
+        },
+        {
+          "text": " gru",
+          "start_s": 86.729,
+          "end_s": 86.809
+        },
+        {
+          "text": "d",
+          "start_s": 86.809,
+          "end_s": 86.888
+        },
+        {
+          "text": "ges",
+          "start_s": 86.968,
+          "end_s": 87.128
+        },
+        {
+          "text": " or",
+          "start_s": 87.128,
+          "end_s": 87.287
+        }
+      ]
+    },
+    {
+      "text": "hates anyone. Probably because lately",
+      "start_s": 87.287,
+      "end_s": 90.16,
+      "section": "",
+      "words": [
+        {
+          "text": " hat",
+          "start_s": 87.287,
+          "end_s": 87.367
+        },
+        {
+          "text": "es",
+          "start_s": 87.367,
+          "end_s": 87.527
+        },
+        {
+          "text": " anyone.",
+          "start_s": 87.926,
+          "end_s": 88.484
+        },
+        {
+          "text": " Probably",
+          "start_s": 89.043,
+          "end_s": 89.521
+        },
+        {
+          "text": " because",
+          "start_s": 89.521,
+          "end_s": 89.681
+        },
+        {
+          "text": " lat",
+          "start_s": 89.681,
+          "end_s": 89.92
+        },
+        {
+          "text": "ely",
+          "start_s": 89.92,
+          "end_s": 90.16
+        }
+      ]
+    },
+    {
+      "text": "he has been listening to self-cultiv",
+      "start_s": 90.638,
+      "end_s": 92.553,
+      "section": "",
+      "words": [
+        {
+          "text": " he",
+          "start_s": 90.638,
+          "end_s": 90.798
+        },
+        {
+          "text": " has",
+          "start_s": 90.798,
+          "end_s": 90.957
+        },
+        {
+          "text": " been",
+          "start_s": 90.957,
+          "end_s": 91.117
+        },
+        {
+          "text": " listen",
+          "start_s": 91.117,
+          "end_s": 91.197
+        },
+        {
+          "text": "ing",
+          "start_s": 91.197,
+          "end_s": 91.436
+        },
+        {
+          "text": " to",
+          "start_s": 91.596,
+          "end_s": 91.835
+        },
+        {
+          "text": " self",
+          "start_s": 91.835,
+          "end_s": 92.154
+        },
+        {
+          "text": "-cult",
+          "start_s": 92.154,
+          "end_s": 92.394
+        },
+        {
+          "text": "iv",
+          "start_s": 92.394,
+          "end_s": 92.553
+        }
+      ]
+    },
+    {
+      "text": "ation teachings. He doesn’t know if he",
+      "start_s": 92.713,
+      "end_s": 95.186,
+      "section": "",
+      "words": [
+        {
+          "text": "ation",
+          "start_s": 92.713,
+          "end_s": 92.952
+        },
+        {
+          "text": " teach",
+          "start_s": 92.952,
+          "end_s": 93.271
+        },
+        {
+          "text": "ings.",
+          "start_s": 93.271,
+          "end_s": 93.59
+        },
+        {
+          "text": " He",
+          "start_s": 94.229,
+          "end_s": 94.388
+        },
+        {
+          "text": " doesn",
+          "start_s": 94.388,
+          "end_s": 94.548
+        },
+        {
+          "text": "’t",
+          "start_s": 94.548,
+          "end_s": 94.707
+        },
+        {
+          "text": " know",
+          "start_s": 94.787,
+          "end_s": 94.947
+        },
+        {
+          "text": " if",
+          "start_s": 94.947,
+          "end_s": 95.027
+        },
+        {
+          "text": " he",
+          "start_s": 95.027,
+          "end_s": 95.186
+        }
+      ]
+    },
+    {
+      "text": "will reach enlightenment, but life has",
+      "start_s": 95.186,
+      "end_s": 99.255,
+      "section": "",
+      "words": [
+        {
+          "text": " will",
+          "start_s": 95.186,
+          "end_s": 95.426
+        },
+        {
+          "text": " reach",
+          "start_s": 95.426,
+          "end_s": 95.665
+        },
+        {
+          "text": " en",
+          "start_s": 95.665,
+          "end_s": 95.824
+        },
+        {
+          "text": "light",
+          "start_s": 95.824,
+          "end_s": 95.984
+        },
+        {
+          "text": "en",
+          "start_s": 95.984,
+          "end_s": 96.144
+        },
+        {
+          "text": "ment,",
+          "start_s": 96.144,
+          "end_s": 96.463
+        },
+        {
+          "text": " but",
+          "start_s": 97.5,
+          "end_s": 97.739
+        },
+        {
+          "text": " life",
+          "start_s": 97.739,
+          "end_s": 98.138
+        },
+        {
+          "text": " has",
+          "start_s": 98.936,
+          "end_s": 99.255
+        }
+      ]
+    },
+    {
+      "text": "become slightly gentler with him",
+      "start_s": 99.255,
+      "end_s": 101.09,
+      "section": "",
+      "words": [
+        {
+          "text": " become",
+          "start_s": 99.255,
+          "end_s": 99.654
+        },
+        {
+          "text": " slightly",
+          "start_s": 99.654,
+          "end_s": 100.133
+        },
+        {
+          "text": " gent",
+          "start_s": 100.133,
+          "end_s": 100.372
+        },
+        {
+          "text": "ler",
+          "start_s": 100.372,
+          "end_s": 100.532
+        },
+        {
+          "text": " with",
+          "start_s": 100.532,
+          "end_s": 100.771
+        },
+        {
+          "text": " him",
+          "start_s": 100.771,
+          "end_s": 101.09
+        }
+      ]
+    },
+    {
+      "text": "He lives a leisurely life: morning",
+      "start_s": 102.606,
+      "end_s": 104.84,
+      "section": "",
+      "words": [
+        {
+          "text": "He",
+          "start_s": 102.606,
+          "end_s": 102.846
+        },
+        {
+          "text": " lives",
+          "start_s": 102.846,
+          "end_s": 103.085
+        },
+        {
+          "text": " a",
+          "start_s": 103.085,
+          "end_s": 103.245
+        },
+        {
+          "text": " le",
+          "start_s": 103.245,
+          "end_s": 103.324
+        },
+        {
+          "text": "is",
+          "start_s": 103.324,
+          "end_s": 103.484
+        },
+        {
+          "text": "ure",
+          "start_s": 103.564,
+          "end_s": 103.723
+        },
+        {
+          "text": "ly",
+          "start_s": 103.723,
+          "end_s": 103.883
+        },
+        {
+          "text": " life:",
+          "start_s": 104.043,
+          "end_s": 104.122
+        },
+        {
+          "text": " morning",
+          "start_s": 104.122,
+          "end_s": 104.84
+        }
+      ]
+    },
+    {
+      "text": "coffee at 6:50am, and returning to his",
+      "start_s": 105.798,
+      "end_s": 110.346,
+      "section": "",
+      "words": [
+        {
+          "text": " coffee",
+          "start_s": 105.798,
+          "end_s": 106.197
+        },
+        {
+          "text": " at",
+          "start_s": 106.197,
+          "end_s": 106.436
+        },
+        {
+          "text": " 6:50am,",
+          "start_s": 107.553,
+          "end_s": 108.112
+        },
+        {
+          "text": " and",
+          "start_s": 108.91,
+          "end_s": 109.309
+        },
+        {
+          "text": " return",
+          "start_s": 109.388,
+          "end_s": 109.628
+        },
+        {
+          "text": "ing",
+          "start_s": 109.628,
+          "end_s": 109.867
+        },
+        {
+          "text": " to",
+          "start_s": 109.867,
+          "end_s": 110.027
+        },
+        {
+          "text": " his",
+          "start_s": 110.027,
+          "end_s": 110.346
+        }
+      ]
+    },
+    {
+      "text": "desk at 8:10am. He works, eats, and",
+      "start_s": 110.346,
+      "end_s": 115.612,
+      "section": "",
+      "words": [
+        {
+          "text": " d",
+          "start_s": 110.346,
+          "end_s": 110.426
+        },
+        {
+          "text": "es",
+          "start_s": 110.426,
+          "end_s": 110.505
+        },
+        {
+          "text": "k",
+          "start_s": 110.505,
+          "end_s": 110.585
+        },
+        {
+          "text": " at",
+          "start_s": 110.745,
+          "end_s": 110.984
+        },
+        {
+          "text": " 8:10",
+          "start_s": 112.58,
+          "end_s": 112.979
+        },
+        {
+          "text": "am.",
+          "start_s": 113.059,
+          "end_s": 113.218
+        },
+        {
+          "text": " He",
+          "start_s": 114.176,
+          "end_s": 114.415
+        },
+        {
+          "text": " works,",
+          "start_s": 114.415,
+          "end_s": 114.894
+        },
+        {
+          "text": " e",
+          "start_s": 114.894,
+          "end_s": 114.973
+        },
+        {
+          "text": "ats,",
+          "start_s": 114.973,
+          "end_s": 115.213
+        },
+        {
+          "text": " and",
+          "start_s": 115.293,
+          "end_s": 115.612
+        }
+      ]
+    },
+    {
+      "text": "rests reasonably, or at least he thinks",
+      "start_s": 115.612,
+      "end_s": 119.043,
+      "section": "",
+      "words": [
+        {
+          "text": " rest",
+          "start_s": 115.612,
+          "end_s": 115.771
+        },
+        {
+          "text": "s",
+          "start_s": 115.771,
+          "end_s": 115.851
+        },
+        {
+          "text": " reason",
+          "start_s": 116.011,
+          "end_s": 116.569
+        },
+        {
+          "text": "a",
+          "start_s": 116.729,
+          "end_s": 116.809
+        },
+        {
+          "text": "b",
+          "start_s": 116.809,
+          "end_s": 116.888
+        },
+        {
+          "text": "ly,",
+          "start_s": 116.968,
+          "end_s": 117.128
+        },
+        {
+          "text": " or",
+          "start_s": 117.207,
+          "end_s": 117.447
+        },
+        {
+          "text": " at",
+          "start_s": 117.447,
+          "end_s": 117.686
+        },
+        {
+          "text": " least",
+          "start_s": 117.686,
+          "end_s": 118.085
+        },
+        {
+          "text": " he",
+          "start_s": 118.085,
+          "end_s": 118.324
+        },
+        {
+          "text": " thinks",
+          "start_s": 118.564,
+          "end_s": 119.043
+        }
+      ]
+    },
+    {
+      "text": "so. He often drinks orange juice in the",
+      "start_s": 119.043,
+      "end_s": 122.952,
+      "section": "",
+      "words": [
+        {
+          "text": " so.",
+          "start_s": 119.043,
+          "end_s": 119.282
+        },
+        {
+          "text": " He",
+          "start_s": 120.718,
+          "end_s": 120.957
+        },
+        {
+          "text": " of",
+          "start_s": 120.957,
+          "end_s": 121.117
+        },
+        {
+          "text": "ten",
+          "start_s": 121.117,
+          "end_s": 121.356
+        },
+        {
+          "text": " drinks",
+          "start_s": 121.356,
+          "end_s": 121.755
+        },
+        {
+          "text": " or",
+          "start_s": 121.755,
+          "end_s": 121.995
+        },
+        {
+          "text": "ange",
+          "start_s": 121.995,
+          "end_s": 122.314
+        },
+        {
+          "text": " ju",
+          "start_s": 122.314,
+          "end_s": 122.394
+        },
+        {
+          "text": "ice",
+          "start_s": 122.394,
+          "end_s": 122.553
+        },
+        {
+          "text": " in",
+          "start_s": 122.553,
+          "end_s": 122.713
+        },
+        {
+          "text": " the",
+          "start_s": 122.713,
+          "end_s": 122.952
+        }
+      ]
+    },
+    {
+      "text": "morning, which keeps him healthy. Occas",
+      "start_s": 122.952,
+      "end_s": 126.782,
+      "section": "",
+      "words": [
+        {
+          "text": " morning,",
+          "start_s": 122.952,
+          "end_s": 123.59
+        },
+        {
+          "text": " which",
+          "start_s": 123.83,
+          "end_s": 124.149
+        },
+        {
+          "text": " keeps",
+          "start_s": 124.149,
+          "end_s": 124.468
+        },
+        {
+          "text": " him",
+          "start_s": 124.468,
+          "end_s": 124.787
+        },
+        {
+          "text": " heal",
+          "start_s": 124.787,
+          "end_s": 125.106
+        },
+        {
+          "text": "thy.",
+          "start_s": 125.106,
+          "end_s": 125.346
+        },
+        {
+          "text": " Occ",
+          "start_s": 126.383,
+          "end_s": 126.622
+        },
+        {
+          "text": "as",
+          "start_s": 126.622,
+          "end_s": 126.782
+        }
+      ]
+    },
+    {
+      "text": "ionally he still eats onion porridge,",
+      "start_s": 126.862,
+      "end_s": 130.053,
+      "section": "",
+      "words": [
+        {
+          "text": "ion",
+          "start_s": 126.862,
+          "end_s": 127.101
+        },
+        {
+          "text": "ally",
+          "start_s": 127.181,
+          "end_s": 127.5
+        },
+        {
+          "text": " he",
+          "start_s": 127.979,
+          "end_s": 128.218
+        },
+        {
+          "text": " still",
+          "start_s": 128.218,
+          "end_s": 128.457
+        },
+        {
+          "text": " e",
+          "start_s": 128.457,
+          "end_s": 128.537
+        },
+        {
+          "text": "ats",
+          "start_s": 128.537,
+          "end_s": 128.777
+        },
+        {
+          "text": " on",
+          "start_s": 128.777,
+          "end_s": 129.016
+        },
+        {
+          "text": "ion",
+          "start_s": 129.096,
+          "end_s": 129.335
+        },
+        {
+          "text": " por",
+          "start_s": 129.415,
+          "end_s": 129.654
+        },
+        {
+          "text": "ridge,",
+          "start_s": 129.654,
+          "end_s": 130.053
+        }
+      ]
+    },
+    {
+      "text": "but this time it is because he wants to",
+      "start_s": 131.809,
+      "end_s": 134.681,
+      "section": "",
+      "words": [
+        {
+          "text": " but",
+          "start_s": 131.809,
+          "end_s": 131.968
+        },
+        {
+          "text": " this",
+          "start_s": 131.968,
+          "end_s": 132.207
+        },
+        {
+          "text": " time",
+          "start_s": 132.207,
+          "end_s": 132.606
+        },
+        {
+          "text": " it",
+          "start_s": 133.005,
+          "end_s": 133.165
+        },
+        {
+          "text": " is",
+          "start_s": 133.165,
+          "end_s": 133.404
+        },
+        {
+          "text": " because",
+          "start_s": 133.564,
+          "end_s": 133.803
+        },
+        {
+          "text": " he",
+          "start_s": 133.803,
+          "end_s": 134.043
+        },
+        {
+          "text": " wants",
+          "start_s": 134.043,
+          "end_s": 134.441
+        },
+        {
+          "text": " to",
+          "start_s": 134.441,
+          "end_s": 134.681
+        }
+      ]
+    },
+    {
+      "text": "He lives, works, and makes money to",
+      "start_s": 136.356,
+      "end_s": 139.388,
+      "section": "",
+      "words": [
+        {
+          "text": "He",
+          "start_s": 136.356,
+          "end_s": 136.596
+        },
+        {
+          "text": " lives,",
+          "start_s": 136.596,
+          "end_s": 137.074
+        },
+        {
+          "text": " works,",
+          "start_s": 137.314,
+          "end_s": 137.713
+        },
+        {
+          "text": " and",
+          "start_s": 137.713,
+          "end_s": 138.032
+        },
+        {
+          "text": " makes",
+          "start_s": 138.032,
+          "end_s": 138.431
+        },
+        {
+          "text": " money",
+          "start_s": 138.431,
+          "end_s": 138.91
+        },
+        {
+          "text": " to",
+          "start_s": 139.149,
+          "end_s": 139.388
+        }
+      ]
+    },
+    {
+      "text": "realize his ambition: to step honorably",
+      "start_s": 139.787,
+      "end_s": 144.176,
+      "section": "",
+      "words": [
+        {
+          "text": " realize",
+          "start_s": 139.787,
+          "end_s": 140.346
+        },
+        {
+          "text": " his",
+          "start_s": 140.346,
+          "end_s": 140.665
+        },
+        {
+          "text": " amb",
+          "start_s": 140.745,
+          "end_s": 141.064
+        },
+        {
+          "text": "ition:",
+          "start_s": 141.223,
+          "end_s": 141.622
+        },
+        {
+          "text": " to",
+          "start_s": 142.58,
+          "end_s": 142.899
+        },
+        {
+          "text": " step",
+          "start_s": 142.899,
+          "end_s": 143.298
+        },
+        {
+          "text": " honor",
+          "start_s": 143.298,
+          "end_s": 143.777
+        },
+        {
+          "text": "ab",
+          "start_s": 143.777,
+          "end_s": 143.936
+        },
+        {
+          "text": "ly",
+          "start_s": 144.016,
+          "end_s": 144.176
+        }
+      ]
+    },
+    {
+      "text": "on the path of socialism. He does not",
+      "start_s": 144.415,
+      "end_s": 150.08,
+      "section": "",
+      "words": [
+        {
+          "text": " on",
+          "start_s": 144.415,
+          "end_s": 144.654
+        },
+        {
+          "text": " the",
+          "start_s": 144.894,
+          "end_s": 145.133
+        },
+        {
+          "text": " path",
+          "start_s": 145.133,
+          "end_s": 145.532
+        },
+        {
+          "text": " of",
+          "start_s": 145.612,
+          "end_s": 145.851
+        },
+        {
+          "text": " so",
+          "start_s": 146.011,
+          "end_s": 146.25
+        },
+        {
+          "text": "cial",
+          "start_s": 146.489,
+          "end_s": 146.729
+        },
+        {
+          "text": "ism.",
+          "start_s": 146.729,
+          "end_s": 146.968
+        },
+        {
+          "text": " He",
+          "start_s": 149.282,
+          "end_s": 149.521
+        },
+        {
+          "text": " does",
+          "start_s": 149.521,
+          "end_s": 149.761
+        },
+        {
+          "text": " not",
+          "start_s": 149.761,
+          "end_s": 150.08
+        }
+      ]
+    },
+    {
+      "text": "know if the road is far and long, but",
+      "start_s": 150.16,
+      "end_s": 154.548,
+      "section": "",
+      "words": [
+        {
+          "text": " know",
+          "start_s": 150.16,
+          "end_s": 150.559
+        },
+        {
+          "text": " if",
+          "start_s": 151.356,
+          "end_s": 151.596
+        },
+        {
+          "text": " the",
+          "start_s": 151.596,
+          "end_s": 151.835
+        },
+        {
+          "text": " road",
+          "start_s": 151.835,
+          "end_s": 152.074
+        },
+        {
+          "text": " is",
+          "start_s": 152.074,
+          "end_s": 152.314
+        },
+        {
+          "text": " far",
+          "start_s": 152.473,
+          "end_s": 152.793
+        },
+        {
+          "text": " and",
+          "start_s": 152.952,
+          "end_s": 153.271
+        },
+        {
+          "text": " long,",
+          "start_s": 153.431,
+          "end_s": 153.83
+        },
+        {
+          "text": " but",
+          "start_s": 154.149,
+          "end_s": 154.548
+        }
+      ]
+    },
+    {
+      "text": "he simply walks, without a shred of",
+      "start_s": 155.266,
+      "end_s": 159.176,
+      "section": "",
+      "words": [
+        {
+          "text": " he",
+          "start_s": 155.266,
+          "end_s": 155.505
+        },
+        {
+          "text": " simp",
+          "start_s": 155.505,
+          "end_s": 155.745
+        },
+        {
+          "text": "ly",
+          "start_s": 155.745,
+          "end_s": 155.904
+        },
+        {
+          "text": " walks,",
+          "start_s": 156.144,
+          "end_s": 156.622
+        },
+        {
+          "text": " without",
+          "start_s": 158.218,
+          "end_s": 158.457
+        },
+        {
+          "text": " a",
+          "start_s": 158.457,
+          "end_s": 158.617
+        },
+        {
+          "text": " sh",
+          "start_s": 158.617,
+          "end_s": 158.697
+        },
+        {
+          "text": "red",
+          "start_s": 158.697,
+          "end_s": 158.936
+        },
+        {
+          "text": " of",
+          "start_s": 158.936,
+          "end_s": 159.176
+        }
+      ]
+    },
+    {
+      "text": "doubt or calculation",
+      "start_s": 159.176,
+      "end_s": 162.686,
+      "section": "",
+      "words": [
+        {
+          "text": " doubt",
+          "start_s": 159.176,
+          "end_s": 159.654
+        },
+        {
+          "text": " or",
+          "start_s": 159.654,
+          "end_s": 159.894
+        },
+        {
+          "text": " calcul",
+          "start_s": 161.011,
+          "end_s": 161.569
+        },
+        {
+          "text": "ation",
+          "start_s": 162.128,
+          "end_s": 162.686
+        }
+      ]
+    }
+  ]
+}
