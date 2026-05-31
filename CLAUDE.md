@@ -19,6 +19,26 @@ yarn typecheck    # TypeScript + Astro check
 yarn deploy       # Build + deploy to Cloudflare via Wrangler
 ```
 
+## Reference Texts
+
+Read these files before writing any new post:
+
+- **[styleguide.md](content/styleguide/styleguide.md)** — Voice, tone, vocabulary and LLM execution rules. Read before writing ANY post
+- **[DaoTrading.txt](content/styleguide/DaoTrading.txt)** — Source book for the dvvv (anh4gs) writing style. Before writing a dvvv post, grep this file for 2–3 passages related to the post's core theme and use them as tonal inspiration
+- **[PerfectTrading.txt](content/styleguide/PerfectTrading.txt)** — Secondary reference text, same purpose as DaoTrading.txt
+
+## Exemplar Posts (Read Before Writing)
+
+Read the full `index.md` of the relevant exemplar before drafting a new post to calibrate voice and rhythm.
+
+### dvvv / anh4gs (philosophical, contemplative)
+- [thoi-gian](src/content/blog/thoi-gian/index.md) — best example of @aethery co-writing + dvvv voice
+- [chao-hau-thi](src/content/blog/chao-hau-thi/index.md) — pure "hắn" narrator, no @aethery, warmest tone
+- [recap-2025](src/content/blog/recap-2025/index.md) — year-in-review structure, poetic prose
+
+### bnvc / blog (technical, clear, no mysticism)
+- [astro-migration-gatsby-to-astro](src/content/blog/astro-migration-gatsby-to-astro/index.md) — best @aethery co-writing in blog voice
+
 ## Adding a New Blog Post
 
 ### Writing Style & Voice
@@ -28,6 +48,12 @@ All new posts must adopt the third-person narrator using "hắn" and "@aethery",
 - **dvvv posts (category: "anh4gs")**: Focus on life reflections, memories, and thoughts. They can adopt the mystical, Zen-philosophical style modeled after the book "Đạo Trading" (using words like "Thị", "tánh biết", "như thị", etc.).
 
 Before writing or generating new articles, review and follow the instructions in [styleguide.md](file:///Users/phamtam/projects/xaolonist.eth/content/styleguide/styleguide.md). Additionally, any posts written/co-written by the LLM must set `cowriter: "@aethery"` in the frontmatter, and append the signature `*❤️ cowriter aethery*` on a new line at the very end of the markdown body.
+
+### Slug Naming Rules
+
+- Lowercase kebab-case, no diacritics: `thoi-gian`, `dich-chuyen-tai-san`
+- Keep it short (3–6 words max)
+- The directory name must exactly match the `slug` field in frontmatter
 
 ### 1. Create the post directory
 
@@ -73,6 +99,7 @@ If the user has attached/provided an image in their request, use that image dire
 - **Texture**: Visible watercolor paper grain, natural paint bleeds and edges, subtle ink outlines. Should feel hand-painted and organic
 - **Avoid**: Photorealistic renders, vibrant/neon colors, cluttered compositions, text overlays, heavy digital effects, futuristic/sci-fi looks
 - **Format**: Save as `cover.jpg` or `cover.png` in the post directory
+- **Full save path**: `src/content/blog/<slug>/cover.jpg` (or `.png`)
 
 ### 4. Category routing
 
