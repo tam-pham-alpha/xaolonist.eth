@@ -1,0 +1,2850 @@
+{
+  "aligned_words": [
+    {
+      "word": "Hey, ",
+      "success": true,
+      "start_s": 2.553,
+      "end_s": 4.84033,
+      "p_align": 0.99
+    },
+    {
+      "word": "it’",
+      "success": true,
+      "start_s": 4.89367,
+      "end_s": 4.947,
+      "p_align": 0.99
+    },
+    {
+      "word": "s ",
+      "success": true,
+      "start_s": 5.027,
+      "end_s": 5.027,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 5.13333,
+      "end_s": 5.346,
+      "p_align": 0.99
+    },
+    {
+      "word": "again, ",
+      "success": true,
+      "start_s": 5.3778,
+      "end_s": 5.545,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 5.585,
+      "end_s": 5.665,
+      "p_align": 0.99
+    },
+    {
+      "word": "last ",
+      "success": true,
+      "start_s": 5.74475,
+      "end_s": 5.984,
+      "p_align": 0.99
+    },
+    {
+      "word": "night ",
+      "success": true,
+      "start_s": 6.0798,
+      "end_s": 8.059,
+      "p_align": 0.99
+    },
+    {
+      "word": "Son ",
+      "success": true,
+      "start_s": 8.16533,
+      "end_s": 8.378,
+      "p_align": 0.99
+    },
+    {
+      "word": "Tung ",
+      "success": true,
+      "start_s": 8.47775,
+      "end_s": 8.936,
+      "p_align": 0.99
+    },
+    {
+      "word": "M-TP ",
+      "success": true,
+      "start_s": 9.096,
+      "end_s": 10.771,
+      "p_align": 0.99
+    },
+    {
+      "word": "released ",
+      "success": true,
+      "start_s": 10.791,
+      "end_s": 14.043,
+      "p_align": 0.99
+    },
+    {
+      "word": "Come ",
+      "success": true,
+      "start_s": 14.10275,
+      "end_s": 14.282,
+      "p_align": 0.99
+    },
+    {
+      "word": "My ",
+      "success": true,
+      "start_s": 14.4015,
+      "end_s": 14.521,
+      "p_align": 0.99
+    },
+    {
+      "word": "Way, ",
+      "success": true,
+      "start_s": 14.62733,
+      "end_s": 16.65575,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 16.7155,
+      "end_s": 16.835,
+      "p_align": 0.99
+    },
+    {
+      "word": "perhaps ",
+      "success": true,
+      "start_s": 16.86167,
+      "end_s": 17.234,
+      "p_align": 0.99
+    },
+    {
+      "word": "Vietnam ",
+      "success": true,
+      "start_s": 17.314,
+      "end_s": 17.872,
+      "p_align": 0.99
+    },
+    {
+      "word": "owes ",
+      "success": true,
+      "start_s": 17.952,
+      "end_s": 18.191,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 18.29767,
+      "end_s": 18.67,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 18.83,
+      "end_s": 18.91,
+      "p_align": 0.99
+    },
+    {
+      "word": "deep ",
+      "success": true,
+      "start_s": 18.98975,
+      "end_s": 19.229,
+      "p_align": 0.99
+    },
+    {
+      "word": "thank ",
+      "success": true,
+      "start_s": 19.2768,
+      "end_s": 19.468,
+      "p_align": 0.99
+    },
+    {
+      "word": "you\n\n",
+      "success": true,
+      "start_s": 19.57433,
+      "end_s": 23.351,
+      "p_align": 0.99
+    },
+    {
+      "word": "If ",
+      "success": true,
+      "start_s": 23.404,
+      "end_s": 23.457,
+      "p_align": 0.99
+    },
+    {
+      "word": "this ",
+      "success": true,
+      "start_s": 23.497,
+      "end_s": 23.617,
+      "p_align": 0.99
+    },
+    {
+      "word": "song ",
+      "success": true,
+      "start_s": 23.69675,
+      "end_s": 23.936,
+      "p_align": 0.99
+    },
+    {
+      "word": "succeeds ",
+      "success": true,
+      "start_s": 24.016,
+      "end_s": 24.654,
+      "p_align": 0.99
+    },
+    {
+      "word": "internationally, ",
+      "success": true,
+      "start_s": 24.686,
+      "end_s": 26.064,
+      "p_align": 0.99
+    },
+    {
+      "word": "it ",
+      "success": true,
+      "start_s": 26.117,
+      "end_s": 26.17,
+      "p_align": 0.99
+    },
+    {
+      "word": "could ",
+      "success": true,
+      "start_s": 26.2338,
+      "end_s": 26.489,
+      "p_align": 0.99
+    },
+    {
+      "word": "become ",
+      "success": true,
+      "start_s": 26.51567,
+      "end_s": 26.649,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 26.809,
+      "end_s": 26.809,
+      "p_align": 0.99
+    },
+    {
+      "word": "massive ",
+      "success": true,
+      "start_s": 26.87729,
+      "end_s": 27.287,
+      "p_align": 0.99
+    },
+    {
+      "word": "gateway ",
+      "success": true,
+      "start_s": 27.347,
+      "end_s": 27.766,
+      "p_align": 0.99
+    },
+    {
+      "word": "for ",
+      "success": true,
+      "start_s": 27.81933,
+      "end_s": 27.926,
+      "p_align": 0.99
+    },
+    {
+      "word": "Vietnamese ",
+      "success": true,
+      "start_s": 28.0055,
+      "end_s": 28.644,
+      "p_align": 0.99
+    },
+    {
+      "word": "culture ",
+      "success": true,
+      "start_s": 28.70375,
+      "end_s": 29.202,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 29.282,
+      "end_s": 29.362,
+      "p_align": 0.99
+    },
+    {
+      "word": "step ",
+      "success": true,
+      "start_s": 29.40175,
+      "end_s": 29.521,
+      "p_align": 0.99
+    },
+    {
+      "word": "onto ",
+      "success": true,
+      "start_s": 29.62075,
+      "end_s": 29.92,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 29.97333,
+      "end_s": 30.08,
+      "p_align": 0.99
+    },
+    {
+      "word": "global ",
+      "success": true,
+      "start_s": 30.15967,
+      "end_s": 30.559,
+      "p_align": 0.99
+    },
+    {
+      "word": "stage. ",
+      "success": true,
+      "start_s": 30.6546,
+      "end_s": 31.867,
+      "p_align": 0.99
+    },
+    {
+      "word": "When ",
+      "success": true,
+      "start_s": 31.899,
+      "end_s": 31.995,
+      "p_align": 0.99
+    },
+    {
+      "word": "music ",
+      "success": true,
+      "start_s": 32.0748,
+      "end_s": 32.394,
+      "p_align": 0.99
+    },
+    {
+      "word": "leads ",
+      "success": true,
+      "start_s": 32.4578,
+      "end_s": 32.713,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 32.766,
+      "end_s": 32.872,
+      "p_align": 0.99
+    },
+    {
+      "word": "way, ",
+      "success": true,
+      "start_s": 32.97833,
+      "end_s": 33.4148,
+      "p_align": 0.99
+    },
+    {
+      "word": "tourism, ",
+      "success": true,
+      "start_s": 33.4786,
+      "end_s": 34.25567,
+      "p_align": 0.99
+    },
+    {
+      "word": "cuisine, ",
+      "success": true,
+      "start_s": 34.28233,
+      "end_s": 35.0665,
+      "p_align": 0.99
+    },
+    {
+      "word": "fashion, ",
+      "success": true,
+      "start_s": 35.186,
+      "end_s": 36.024,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 36.064,
+      "end_s": 36.144,
+      "p_align": 0.99
+    },
+    {
+      "word": "many ",
+      "success": true,
+      "start_s": 36.20375,
+      "end_s": 36.383,
+      "p_align": 0.99
+    },
+    {
+      "word": "other ",
+      "success": true,
+      "start_s": 36.4468,
+      "end_s": 36.702,
+      "p_align": 0.99
+    },
+    {
+      "word": "values ",
+      "success": true,
+      "start_s": 36.78167,
+      "end_s": 37.101,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 37.181,
+      "end_s": 37.261,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 37.314,
+      "end_s": 37.42,
+      "p_align": 0.99
+    },
+    {
+      "word": "country ",
+      "success": true,
+      "start_s": 37.51129,
+      "end_s": 38.457,
+      "p_align": 0.99
+    },
+    {
+      "word": "will ",
+      "success": true,
+      "start_s": 38.497,
+      "end_s": 38.617,
+      "p_align": 0.99
+    },
+    {
+      "word": "also ",
+      "success": true,
+      "start_s": 38.71675,
+      "end_s": 39.016,
+      "p_align": 0.99
+    },
+    {
+      "word": "have ",
+      "success": true,
+      "start_s": 39.056,
+      "end_s": 39.176,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 39.229,
+      "end_s": 39.335,
+      "p_align": 0.99
+    },
+    {
+      "word": "opportunity ",
+      "success": true,
+      "start_s": 39.44133,
+      "end_s": 40.133,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 40.173,
+      "end_s": 40.213,
+      "p_align": 0.99
+    },
+    {
+      "word": "be ",
+      "success": true,
+      "start_s": 40.3325,
+      "end_s": 40.452,
+      "p_align": 0.99
+    },
+    {
+      "word": "seen ",
+      "success": true,
+      "start_s": 40.53175,
+      "end_s": 40.771,
+      "p_align": 0.99
+    },
+    {
+      "word": "more\n\n",
+      "success": true,
+      "start_s": 40.87075,
+      "end_s": 42.786,
+      "p_align": 0.99
+    },
+    {
+      "word": "The ",
+      "success": true,
+      "start_s": 42.806,
+      "end_s": 42.846,
+      "p_align": 0.99
+    },
+    {
+      "word": "most ",
+      "success": true,
+      "start_s": 42.94575,
+      "end_s": 43.245,
+      "p_align": 0.99
+    },
+    {
+      "word": "interesting ",
+      "success": true,
+      "start_s": 43.2768,
+      "end_s": 43.723,
+      "p_align": 0.99
+    },
+    {
+      "word": "part ",
+      "success": true,
+      "start_s": 43.803,
+      "end_s": 44.043,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 44.1625,
+      "end_s": 44.282,
+      "p_align": 0.99
+    },
+    {
+      "word": "that ",
+      "success": true,
+      "start_s": 44.34175,
+      "end_s": 44.521,
+      "p_align": 0.99
+    },
+    {
+      "word": "this ",
+      "success": true,
+      "start_s": 44.581,
+      "end_s": 44.761,
+      "p_align": 0.99
+    },
+    {
+      "word": "could ",
+      "success": true,
+      "start_s": 44.8248,
+      "end_s": 45.08,
+      "p_align": 0.99
+    },
+    {
+      "word": "become ",
+      "success": true,
+      "start_s": 45.1065,
+      "end_s": 45.239,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 45.399,
+      "end_s": 45.798,
+      "p_align": 0.99
+    },
+    {
+      "word": "beautiful ",
+      "success": true,
+      "start_s": 45.82456,
+      "end_s": 46.037,
+      "p_align": 0.99
+    },
+    {
+      "word": "example ",
+      "success": true,
+      "start_s": 46.117,
+      "end_s": 46.596,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 46.7155,
+      "end_s": 46.835,
+      "p_align": 0.99
+    },
+    {
+      "word": "combining ",
+      "success": true,
+      "start_s": 46.93475,
+      "end_s": 47.473,
+      "p_align": 0.99
+    },
+    {
+      "word": "East ",
+      "success": true,
+      "start_s": 47.553,
+      "end_s": 47.713,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 47.79267,
+      "end_s": 47.952,
+      "p_align": 0.99
+    },
+    {
+      "word": "West ",
+      "success": true,
+      "start_s": 48.05175,
+      "end_s": 48.431,
+      "p_align": 0.99
+    },
+    {
+      "word": "while ",
+      "success": true,
+      "start_s": 48.4788,
+      "end_s": 48.67,
+      "p_align": 0.99
+    },
+    {
+      "word": "preserving ",
+      "success": true,
+      "start_s": 48.71,
+      "end_s": 49.229,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 49.388,
+      "end_s": 49.388,
+      "p_align": 0.99
+    },
+    {
+      "word": "unique ",
+      "success": true,
+      "start_s": 49.468,
+      "end_s": 49.867,
+      "p_align": 0.99
+    },
+    {
+      "word": "identity. ",
+      "success": true,
+      "start_s": 49.947,
+      "end_s": 52.404,
+      "p_align": 0.99
+    },
+    {
+      "word": "Once ",
+      "success": true,
+      "start_s": 52.468,
+      "end_s": 52.66,
+      "p_align": 0.99
+    },
+    {
+      "word": "that ",
+      "success": true,
+      "start_s": 52.69975,
+      "end_s": 52.819,
+      "p_align": 0.99
+    },
+    {
+      "word": "door ",
+      "success": true,
+      "start_s": 52.89875,
+      "end_s": 53.138,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 53.218,
+      "end_s": 53.298,
+      "p_align": 0.99
+    },
+    {
+      "word": "opened, ",
+      "success": true,
+      "start_s": 53.391,
+      "end_s": 54.01575,
+      "p_align": 0.99
+    },
+    {
+      "word": "opportunities ",
+      "success": true,
+      "start_s": 54.0955,
+      "end_s": 54.894,
+      "p_align": 0.99
+    },
+    {
+      "word": "for ",
+      "success": true,
+      "start_s": 54.947,
+      "end_s": 55.053,
+      "p_align": 0.99
+    },
+    {
+      "word": "other ",
+      "success": true,
+      "start_s": 55.1168,
+      "end_s": 55.372,
+      "p_align": 0.99
+    },
+    {
+      "word": "Vietnamese ",
+      "success": true,
+      "start_s": 55.452,
+      "end_s": 56.09,
+      "p_align": 0.99
+    },
+    {
+      "word": "artists ",
+      "success": true,
+      "start_s": 56.14333,
+      "end_s": 57.287,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 57.367,
+      "end_s": 57.447,
+      "p_align": 0.99
+    },
+    {
+      "word": "enter ",
+      "success": true,
+      "start_s": 57.5108,
+      "end_s": 57.766,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 57.87233,
+      "end_s": 58.085,
+      "p_align": 0.99
+    },
+    {
+      "word": "international ",
+      "success": true,
+      "start_s": 58.117,
+      "end_s": 58.723,
+      "p_align": 0.99
+    },
+    {
+      "word": "market ",
+      "success": true,
+      "start_s": 58.783,
+      "end_s": 59.601,
+      "p_align": 0.99
+    },
+    {
+      "word": "will ",
+      "success": true,
+      "start_s": 59.66075,
+      "end_s": 59.84,
+      "p_align": 0.99
+    },
+    {
+      "word": "also ",
+      "success": true,
+      "start_s": 59.93975,
+      "end_s": 60.319,
+      "p_align": 0.99
+    },
+    {
+      "word": "become ",
+      "success": true,
+      "start_s": 60.37217,
+      "end_s": 60.638,
+      "p_align": 0.99
+    },
+    {
+      "word": "wider ",
+      "success": true,
+      "start_s": 60.798,
+      "end_s": 61.915,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 61.99467,
+      "end_s": 62.154,
+      "p_align": 0.99
+    },
+    {
+      "word": "easier\n\n",
+      "success": true,
+      "start_s": 62.26033,
+      "end_s": 62.593,
+      "p_align": 0.99
+    },
+    {
+      "word": "Tung ",
+      "success": true,
+      "start_s": 62.633,
+      "end_s": 62.793,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 62.8325,
+      "end_s": 62.872,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 62.89867,
+      "end_s": 62.952,
+      "p_align": 0.99
+    },
+    {
+      "word": "just ",
+      "success": true,
+      "start_s": 62.992,
+      "end_s": 63.112,
+      "p_align": 0.99
+    },
+    {
+      "word": "making ",
+      "success": true,
+      "start_s": 63.15183,
+      "end_s": 63.351,
+      "p_align": 0.99
+    },
+    {
+      "word": "music: ",
+      "success": true,
+      "start_s": 63.3988,
+      "end_s": 63.61667,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 63.64333,
+      "end_s": 63.67,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 63.79,
+      "end_s": 67.979,
+      "p_align": 0.99
+    },
+    {
+      "word": "trying ",
+      "success": true,
+      "start_s": 68.0455,
+      "end_s": 68.378,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 68.4575,
+      "end_s": 68.537,
+      "p_align": 0.99
+    },
+    {
+      "word": "paint ",
+      "success": true,
+      "start_s": 68.6008,
+      "end_s": 68.856,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 69.016,
+      "end_s": 69.096,
+      "p_align": 0.99
+    },
+    {
+      "word": "new ",
+      "success": true,
+      "start_s": 69.20233,
+      "end_s": 69.574,
+      "p_align": 0.99
+    },
+    {
+      "word": "trend, ",
+      "success": true,
+      "start_s": 69.6698,
+      "end_s": 70.213,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 70.293,
+      "end_s": 70.293,
+      "p_align": 0.99
+    },
+    {
+      "word": "new ",
+      "success": true,
+      "start_s": 70.39933,
+      "end_s": 70.612,
+      "p_align": 0.99
+    },
+    {
+      "word": "direction ",
+      "success": true,
+      "start_s": 70.70067,
+      "end_s": 71.649,
+      "p_align": 0.99
+    },
+    {
+      "word": "for ",
+      "success": true,
+      "start_s": 71.75533,
+      "end_s": 73.085,
+      "p_align": 0.99
+    },
+    {
+      "word": "Vietnamese ",
+      "success": true,
+      "start_s": 73.125,
+      "end_s": 74.122,
+      "p_align": 0.99
+    },
+    {
+      "word": "music. ",
+      "success": true,
+      "start_s": 74.2178,
+      "end_s": 74.86075,
+      "p_align": 0.99
+    },
+    {
+      "word": "And ",
+      "success": true,
+      "start_s": 74.9605,
+      "end_s": 75.479,
+      "p_align": 0.99
+    },
+    {
+      "word": "whatever ",
+      "success": true,
+      "start_s": 75.53875,
+      "end_s": 75.957,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 76.037,
+      "end_s": 76.197,
+      "p_align": 0.99
+    },
+    {
+      "word": "final ",
+      "success": true,
+      "start_s": 76.2928,
+      "end_s": 76.676,
+      "p_align": 0.99
+    },
+    {
+      "word": "result ",
+      "success": true,
+      "start_s": 76.729,
+      "end_s": 77.234,
+      "p_align": 0.99
+    },
+    {
+      "word": "may ",
+      "success": true,
+      "start_s": 77.34033,
+      "end_s": 77.553,
+      "p_align": 0.99
+    },
+    {
+      "word": "be, ",
+      "success": true,
+      "start_s": 77.673,
+      "end_s": 78.718,
+      "p_align": 0.99
+    },
+    {
+      "word": "just ",
+      "success": true,
+      "start_s": 78.766,
+      "end_s": 78.91,
+      "p_align": 0.99
+    },
+    {
+      "word": "having ",
+      "success": true,
+      "start_s": 79.003,
+      "end_s": 79.468,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 79.52133,
+      "end_s": 79.628,
+      "p_align": 0.99
+    },
+    {
+      "word": "courage ",
+      "success": true,
+      "start_s": 79.70771,
+      "end_s": 80.186,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 80.266,
+      "end_s": 80.346,
+      "p_align": 0.99
+    },
+    {
+      "word": "try ",
+      "success": true,
+      "start_s": 80.45233,
+      "end_s": 81.543,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 81.6625,
+      "end_s": 82.101,
+      "p_align": 0.99
+    },
+    {
+      "word": "already ",
+      "success": true,
+      "start_s": 82.19214,
+      "end_s": 84.176,
+      "p_align": 0.99
+    },
+    {
+      "word": "worth ",
+      "success": true,
+      "start_s": 84.2716,
+      "end_s": 84.973,
+      "p_align": 0.99
+    },
+    {
+      "word": "appreciating\n\n",
+      "success": true,
+      "start_s": 85.053,
+      "end_s": 89.72083,
+      "p_align": 0.99
+    },
+    {
+      "word": "Thank ",
+      "success": true,
+      "start_s": 89.76067,
+      "end_s": 89.92,
+      "p_align": 0.99
+    },
+    {
+      "word": "you ",
+      "success": true,
+      "start_s": 89.97333,
+      "end_s": 90.08,
+      "p_align": 0.99
+    },
+    {
+      "word": "Tung, ",
+      "success": true,
+      "start_s": 90.1995,
+      "end_s": 94.80675,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ❤ ",
+      "success": true,
+      "start_s": 94.9065,
+      "end_s": 95.28857,
+      "p_align": 0.99
+    },
+    {
+      "word": "you\n\n",
+      "success": true,
+      "start_s": 95.37986,
+      "end_s": 95.745,
+      "p_align": 0.99
+    }
+  ],
+  "waveform_data": [
+    0.00249,
+    1e-05,
+    7e-05,
+    0.00145,
+    0.00316,
+    0.00382,
+    0.00802,
+    0.00769,
+    0.01338,
+    0.02029,
+    0.01915,
+    0.01289,
+    0.02187,
+    0.17887,
+    0.02274,
+    0.06295,
+    0.05919,
+    0.05712,
+    0.04871,
+    0.0426,
+    0.05501,
+    0.06364,
+    0.04711,
+    0.0533,
+    0.07365,
+    0.20533,
+    0.17184,
+    0.17337,
+    0.14237,
+    0.07954,
+    0.13032,
+    0.04924,
+    0.03652,
+    0.04034,
+    0.04815,
+    0.04861,
+    0.04899,
+    0.05565,
+    0.04872,
+    0.08863,
+    0.18188,
+    0.14481,
+    0.16353,
+    0.16327,
+    0.16211,
+    0.15085,
+    0.10491,
+    0.1196,
+    0.05618,
+    0.07181,
+    0.09495,
+    0.07581,
+    0.06061,
+    0.08556,
+    0.04991,
+    0.04304,
+    0.04002,
+    0.03816,
+    0.04378,
+    0.03117,
+    0.03207,
+    0.0339,
+    0.05114,
+    0.04278,
+    0.03962,
+    0.04716,
+    0.06001,
+    0.06355,
+    0.05332,
+    0.06114,
+    0.16068,
+    0.16883,
+    0.14027,
+    0.09181,
+    0.03574,
+    0.04269,
+    0.05887,
+    0.04717,
+    0.04936,
+    0.05452,
+    0.05227,
+    0.04775,
+    0.04334,
+    0.11753,
+    0.14955,
+    0.08164,
+    0.15219,
+    0.10853,
+    0.14961,
+    0.12871,
+    0.12589,
+    0.14436,
+    0.05575,
+    0.04361,
+    0.07904,
+    0.04272,
+    0.08941,
+    0.04778,
+    0.07871,
+    0.05415,
+    0.04723,
+    0.113,
+    0.08581,
+    0.06415,
+    0.08769,
+    0.0794,
+    0.0974,
+    0.07214,
+    0.11331,
+    0.05139,
+    0.0519,
+    0.07663,
+    0.10791,
+    0.06566,
+    0.04476,
+    0.12483,
+    0.10655,
+    0.13272,
+    0.17143,
+    0.13653,
+    0.08176,
+    0.18514,
+    0.1484,
+    0.13955,
+    0.13141,
+    0.11607,
+    0.23912,
+    0.1203,
+    0.13639,
+    0.18459,
+    0.09759,
+    0.15064,
+    0.14566,
+    0.22684,
+    0.16705,
+    0.11891,
+    0.18148,
+    0.09396,
+    0.09827,
+    0.09969,
+    0.25795,
+    0.18235,
+    0.15104,
+    0.18875,
+    0.09004,
+    0.08622,
+    0.07095,
+    0.11925,
+    0.15772,
+    0.08313,
+    0.20157,
+    0.09928,
+    0.07774,
+    0.08635,
+    0.22355,
+    0.10163,
+    0.08384,
+    0.18031,
+    0.06568,
+    0.15293,
+    0.2284,
+    0.12128,
+    0.16482,
+    0.10693,
+    0.22187,
+    0.09593,
+    0.07037,
+    0.14317,
+    0.24193,
+    0.16405,
+    0.15694,
+    0.19129,
+    0.17133,
+    0.17583,
+    0.0728,
+    0.10474,
+    0.11218,
+    0.1049,
+    0.19237,
+    0.06612,
+    0.22214,
+    0.25693,
+    0.21738,
+    0.17997,
+    0.18147,
+    0.211,
+    0.0906,
+    0.16284,
+    0.0993,
+    0.0744,
+    0.06237,
+    0.07236,
+    0.2098,
+    0.12795,
+    0.13558,
+    0.19786,
+    0.18618,
+    0.10709,
+    0.17988,
+    0.21669,
+    0.10616,
+    0.11105,
+    0.1378,
+    0.1317,
+    0.08289,
+    0.07066,
+    0.18392,
+    0.04961,
+    0.05208,
+    0.1727,
+    0.18149,
+    0.12176,
+    0.11295,
+    0.17858,
+    0.22653,
+    0.15867,
+    0.12899,
+    0.14888,
+    0.10425,
+    0.11796,
+    0.18944,
+    0.09742,
+    0.14768,
+    0.18916,
+    0.18579,
+    0.1586,
+    0.17794,
+    0.24434,
+    0.15779,
+    0.14505,
+    0.12016,
+    0.1586,
+    0.12345,
+    0.09953,
+    0.22584,
+    0.14927,
+    0.13854,
+    0.23841,
+    0.15391,
+    0.16127,
+    0.12405,
+    0.19696,
+    0.12712,
+    0.12908,
+    0.16482,
+    0.16768,
+    0.15424,
+    0.22306,
+    0.21755,
+    0.11194,
+    0.16405,
+    0.21885,
+    0.12065,
+    0.098,
+    0.12409,
+    0.18629,
+    0.09576,
+    0.11682,
+    0.10796,
+    0.07379,
+    0.09416,
+    0.09722,
+    0.23182,
+    0.13538,
+    0.18442,
+    0.2143,
+    0.14916,
+    0.13753,
+    0.11484,
+    0.2004,
+    0.12855,
+    0.17294,
+    0.20246,
+    0.1135,
+    0.13179,
+    0.13737,
+    0.19445,
+    0.18114,
+    0.20426,
+    0.23749,
+    0.16249,
+    0.11643,
+    0.0962,
+    0.18693,
+    0.07654,
+    0.09446,
+    0.09845,
+    0.16181,
+    0.12633,
+    0.16998,
+    0.23144,
+    0.16198,
+    0.14441,
+    0.23982,
+    0.15151,
+    0.11873,
+    0.10445,
+    0.16314,
+    0.10753,
+    0.12568,
+    0.09361,
+    0.10973,
+    0.16658,
+    0.12822,
+    0.18598,
+    0.05524,
+    0.08749,
+    0.09798,
+    0.06361,
+    0.02732,
+    0.10257,
+    0.12873,
+    0.07445,
+    0.10045,
+    0.13058,
+    0.10533,
+    0.12581,
+    0.08779,
+    0.09785,
+    0.09373,
+    0.07394,
+    0.24429,
+    0.18101,
+    0.15802,
+    0.15433,
+    0.18167,
+    0.06441,
+    0.09122,
+    0.11414,
+    0.06615,
+    0.26148,
+    0.20386,
+    0.21515,
+    0.10807,
+    0.08354,
+    0.2505,
+    0.14127,
+    0.18742,
+    0.12774,
+    0.19402,
+    0.12852,
+    0.12583,
+    0.13023,
+    0.15549,
+    0.28818,
+    0.18418,
+    0.15262,
+    0.09888,
+    0.14165,
+    0.25728,
+    0.20656,
+    0.21167,
+    0.19587,
+    0.15179,
+    0.13483,
+    0.22142,
+    0.12158,
+    0.07707,
+    0.26691,
+    0.14561,
+    0.12097,
+    0.06879,
+    0.06506,
+    0.25953,
+    0.14669,
+    0.20689,
+    0.17656,
+    0.15428,
+    0.22775,
+    0.16778,
+    0.2262,
+    0.23291,
+    0.26355,
+    0.16336,
+    0.257,
+    0.23525,
+    0.18545,
+    0.27121,
+    0.17897,
+    0.16542,
+    0.1939,
+    0.15271,
+    0.19987,
+    0.13989,
+    0.12383,
+    0.09626,
+    0.25521,
+    0.16536,
+    0.13125,
+    0.06803,
+    0.04511,
+    0.25818,
+    0.13752,
+    0.16933,
+    0.17885,
+    0.13741,
+    0.21548,
+    0.14886,
+    0.15713,
+    0.14446,
+    0.24661,
+    0.17552,
+    0.18193,
+    0.14849,
+    0.08575,
+    0.26466,
+    0.1431,
+    0.14366,
+    0.18867,
+    0.16464,
+    0.16795,
+    0.14289,
+    0.10254,
+    0.13095,
+    0.21457,
+    0.16045,
+    0.08786,
+    0.08814,
+    0.05799,
+    0.28082,
+    0.16366,
+    0.17604,
+    0.14172,
+    0.13799,
+    0.12792,
+    0.12117,
+    0.15924,
+    0.07641,
+    0.15842,
+    0.13454,
+    0.12188,
+    0.12308,
+    0.09494,
+    0.21259,
+    0.1008,
+    0.09723,
+    0.10923,
+    0.08961,
+    0.07335,
+    0.0701,
+    0.05146,
+    0.06249,
+    0.09746,
+    0.09586,
+    0.0506,
+    0.03658,
+    0.0275,
+    0.08773,
+    0.08755,
+    0.08775,
+    0.08586,
+    0.11269,
+    0.02974,
+    0.03752,
+    0.02881,
+    0.03744,
+    0.05198,
+    0.07572,
+    0.05387,
+    0.03146,
+    0.03508,
+    0.21069,
+    0.12272,
+    0.09238,
+    0.08246,
+    0.05112,
+    0.04347,
+    0.07356,
+    0.07946,
+    0.04688,
+    0.07133,
+    0.09791,
+    0.104,
+    0.08624,
+    0.07643,
+    0.10018,
+    0.08426,
+    0.03632,
+    0.02892,
+    0.02486,
+    0.02148,
+    0.01619,
+    0.01467,
+    0.01321,
+    0.00944,
+    0.00532,
+    0.00339,
+    0.00114,
+    0.00038
+  ],
+  "hoot_cer": 0.1111111111111111,
+  "is_streamed": false,
+  "aligned_lyrics": [
+    {
+      "text": "Hey, it’s him again, and last night Son",
+      "start_s": 2.553,
+      "end_s": 8.378,
+      "section": "",
+      "words": [
+        {
+          "text": "Hey,",
+          "start_s": 2.553,
+          "end_s": 2.793
+        },
+        {
+          "text": " it",
+          "start_s": 4.787,
+          "end_s": 4.947
+        },
+        {
+          "text": "’s",
+          "start_s": 4.947,
+          "end_s": 5.027
+        },
+        {
+          "text": " him",
+          "start_s": 5.027,
+          "end_s": 5.346
+        },
+        {
+          "text": " again,",
+          "start_s": 5.346,
+          "end_s": 5.505
+        },
+        {
+          "text": " and",
+          "start_s": 5.505,
+          "end_s": 5.665
+        },
+        {
+          "text": " last",
+          "start_s": 5.665,
+          "end_s": 5.984
+        },
+        {
+          "text": " night",
+          "start_s": 5.984,
+          "end_s": 6.463
+        },
+        {
+          "text": " Son",
+          "start_s": 8.059,
+          "end_s": 8.378
+        }
+      ]
+    },
+    {
+      "text": "Tung M-TP released Come My Way, and per",
+      "start_s": 8.378,
+      "end_s": 16.915,
+      "section": "",
+      "words": [
+        {
+          "text": " Tung",
+          "start_s": 8.378,
+          "end_s": 8.777
+        },
+        {
+          "text": " M",
+          "start_s": 8.936,
+          "end_s": 9.096
+        },
+        {
+          "text": "-T",
+          "start_s": 9.415,
+          "end_s": 9.574
+        },
+        {
+          "text": "P",
+          "start_s": 9.894,
+          "end_s": 9.973
+        },
+        {
+          "text": " rele",
+          "start_s": 10.771,
+          "end_s": 10.851
+        },
+        {
+          "text": "ased",
+          "start_s": 10.851,
+          "end_s": 11.17
+        },
+        {
+          "text": " Come",
+          "start_s": 14.043,
+          "end_s": 14.282
+        },
+        {
+          "text": " My",
+          "start_s": 14.282,
+          "end_s": 14.521
+        },
+        {
+          "text": " Way,",
+          "start_s": 14.521,
+          "end_s": 14.84
+        },
+        {
+          "text": " and",
+          "start_s": 16.596,
+          "end_s": 16.835
+        },
+        {
+          "text": " per",
+          "start_s": 16.835,
+          "end_s": 16.915
+        }
+      ]
+    },
+    {
+      "text": "haps Vietnam owes him a deep thank you",
+      "start_s": 16.915,
+      "end_s": 19.787,
+      "section": "",
+      "words": [
+        {
+          "text": "h",
+          "start_s": 16.915,
+          "end_s": 16.995
+        },
+        {
+          "text": "aps",
+          "start_s": 16.995,
+          "end_s": 17.234
+        },
+        {
+          "text": " Vi",
+          "start_s": 17.234,
+          "end_s": 17.394
+        },
+        {
+          "text": "et",
+          "start_s": 17.394,
+          "end_s": 17.553
+        },
+        {
+          "text": "nam",
+          "start_s": 17.553,
+          "end_s": 17.793
+        },
+        {
+          "text": " ow",
+          "start_s": 17.872,
+          "end_s": 18.032
+        },
+        {
+          "text": "es",
+          "start_s": 18.032,
+          "end_s": 18.191
+        },
+        {
+          "text": " him",
+          "start_s": 18.191,
+          "end_s": 18.511
+        },
+        {
+          "text": " a",
+          "start_s": 18.67,
+          "end_s": 18.83
+        },
+        {
+          "text": " deep",
+          "start_s": 18.91,
+          "end_s": 19.229
+        },
+        {
+          "text": " thank",
+          "start_s": 19.229,
+          "end_s": 19.468
+        },
+        {
+          "text": " you",
+          "start_s": 19.468,
+          "end_s": 19.787
+        }
+      ]
+    },
+    {
+      "text": "If this song succeeds internationally,",
+      "start_s": 23.298,
+      "end_s": 25.532,
+      "section": "",
+      "words": [
+        {
+          "text": "If",
+          "start_s": 23.298,
+          "end_s": 23.457
+        },
+        {
+          "text": " this",
+          "start_s": 23.457,
+          "end_s": 23.617
+        },
+        {
+          "text": " song",
+          "start_s": 23.617,
+          "end_s": 23.936
+        },
+        {
+          "text": " su",
+          "start_s": 23.936,
+          "end_s": 24.096
+        },
+        {
+          "text": "c",
+          "start_s": 24.096,
+          "end_s": 24.176
+        },
+        {
+          "text": "ce",
+          "start_s": 24.176,
+          "end_s": 24.255
+        },
+        {
+          "text": "eds",
+          "start_s": 24.255,
+          "end_s": 24.495
+        },
+        {
+          "text": " inter",
+          "start_s": 24.654,
+          "end_s": 24.814
+        },
+        {
+          "text": "n",
+          "start_s": 24.814,
+          "end_s": 24.894
+        },
+        {
+          "text": "ation",
+          "start_s": 24.973,
+          "end_s": 25.213
+        },
+        {
+          "text": "ally,",
+          "start_s": 25.213,
+          "end_s": 25.532
+        }
+      ]
+    },
+    {
+      "text": "it could become a massive gateway for",
+      "start_s": 26.011,
+      "end_s": 27.926,
+      "section": "",
+      "words": [
+        {
+          "text": " it",
+          "start_s": 26.011,
+          "end_s": 26.17
+        },
+        {
+          "text": " could",
+          "start_s": 26.17,
+          "end_s": 26.489
+        },
+        {
+          "text": " become",
+          "start_s": 26.489,
+          "end_s": 26.649
+        },
+        {
+          "text": " a",
+          "start_s": 26.649,
+          "end_s": 26.809
+        },
+        {
+          "text": " massive",
+          "start_s": 26.809,
+          "end_s": 27.287
+        },
+        {
+          "text": " gate",
+          "start_s": 27.287,
+          "end_s": 27.527
+        },
+        {
+          "text": "way",
+          "start_s": 27.527,
+          "end_s": 27.766
+        },
+        {
+          "text": " for",
+          "start_s": 27.766,
+          "end_s": 27.926
+        }
+      ]
+    },
+    {
+      "text": "Vietnamese culture to step onto the glo",
+      "start_s": 27.926,
+      "end_s": 30.319,
+      "section": "",
+      "words": [
+        {
+          "text": " Vi",
+          "start_s": 27.926,
+          "end_s": 28.085
+        },
+        {
+          "text": "et",
+          "start_s": 28.085,
+          "end_s": 28.245
+        },
+        {
+          "text": "nam",
+          "start_s": 28.245,
+          "end_s": 28.404
+        },
+        {
+          "text": "e",
+          "start_s": 28.404,
+          "end_s": 28.484
+        },
+        {
+          "text": "se",
+          "start_s": 28.564,
+          "end_s": 28.644
+        },
+        {
+          "text": " cult",
+          "start_s": 28.644,
+          "end_s": 28.883
+        },
+        {
+          "text": "ure",
+          "start_s": 28.883,
+          "end_s": 29.122
+        },
+        {
+          "text": " to",
+          "start_s": 29.202,
+          "end_s": 29.362
+        },
+        {
+          "text": " step",
+          "start_s": 29.362,
+          "end_s": 29.521
+        },
+        {
+          "text": " onto",
+          "start_s": 29.521,
+          "end_s": 29.92
+        },
+        {
+          "text": " the",
+          "start_s": 29.92,
+          "end_s": 30.08
+        },
+        {
+          "text": " glo",
+          "start_s": 30.08,
+          "end_s": 30.319
+        }
+      ]
+    },
+    {
+      "text": "bal stage. When music leads the way,",
+      "start_s": 30.319,
+      "end_s": 33.191,
+      "section": "",
+      "words": [
+        {
+          "text": "bal",
+          "start_s": 30.319,
+          "end_s": 30.559
+        },
+        {
+          "text": " stage.",
+          "start_s": 30.559,
+          "end_s": 31.037
+        },
+        {
+          "text": " When",
+          "start_s": 31.835,
+          "end_s": 31.995
+        },
+        {
+          "text": " music",
+          "start_s": 31.995,
+          "end_s": 32.394
+        },
+        {
+          "text": " leads",
+          "start_s": 32.394,
+          "end_s": 32.713
+        },
+        {
+          "text": " the",
+          "start_s": 32.713,
+          "end_s": 32.872
+        },
+        {
+          "text": " way,",
+          "start_s": 32.872,
+          "end_s": 33.191
+        }
+      ]
+    },
+    {
+      "text": "tourism, cuisine, fashion, and many",
+      "start_s": 33.351,
+      "end_s": 36.383,
+      "section": "",
+      "words": [
+        {
+          "text": " tour",
+          "start_s": 33.351,
+          "end_s": 33.67
+        },
+        {
+          "text": "ism,",
+          "start_s": 33.67,
+          "end_s": 33.91
+        },
+        {
+          "text": " cu",
+          "start_s": 34.229,
+          "end_s": 34.309
+        },
+        {
+          "text": "is",
+          "start_s": 34.309,
+          "end_s": 34.388
+        },
+        {
+          "text": "ine,",
+          "start_s": 34.388,
+          "end_s": 34.628
+        },
+        {
+          "text": " f",
+          "start_s": 34.947,
+          "end_s": 35.186
+        },
+        {
+          "text": "ashion,",
+          "start_s": 35.186,
+          "end_s": 35.665
+        },
+        {
+          "text": " and",
+          "start_s": 35.984,
+          "end_s": 36.144
+        },
+        {
+          "text": " many",
+          "start_s": 36.144,
+          "end_s": 36.383
+        }
+      ]
+    },
+    {
+      "text": "other values of the country will also",
+      "start_s": 36.383,
+      "end_s": 39.016,
+      "section": "",
+      "words": [
+        {
+          "text": " other",
+          "start_s": 36.383,
+          "end_s": 36.702
+        },
+        {
+          "text": " val",
+          "start_s": 36.702,
+          "end_s": 36.941
+        },
+        {
+          "text": "ues",
+          "start_s": 36.941,
+          "end_s": 37.101
+        },
+        {
+          "text": " of",
+          "start_s": 37.101,
+          "end_s": 37.261
+        },
+        {
+          "text": " the",
+          "start_s": 37.261,
+          "end_s": 37.42
+        },
+        {
+          "text": " country",
+          "start_s": 37.42,
+          "end_s": 38.059
+        },
+        {
+          "text": " will",
+          "start_s": 38.457,
+          "end_s": 38.617
+        },
+        {
+          "text": " also",
+          "start_s": 38.617,
+          "end_s": 39.016
+        }
+      ]
+    },
+    {
+      "text": "have the opportunity to be seen more",
+      "start_s": 39.016,
+      "end_s": 41.17,
+      "section": "",
+      "words": [
+        {
+          "text": " have",
+          "start_s": 39.016,
+          "end_s": 39.176
+        },
+        {
+          "text": " the",
+          "start_s": 39.176,
+          "end_s": 39.335
+        },
+        {
+          "text": " opp",
+          "start_s": 39.335,
+          "end_s": 39.654
+        },
+        {
+          "text": "ortun",
+          "start_s": 39.654,
+          "end_s": 39.814
+        },
+        {
+          "text": "ity",
+          "start_s": 39.814,
+          "end_s": 40.053
+        },
+        {
+          "text": " to",
+          "start_s": 40.133,
+          "end_s": 40.213
+        },
+        {
+          "text": " be",
+          "start_s": 40.213,
+          "end_s": 40.452
+        },
+        {
+          "text": " seen",
+          "start_s": 40.452,
+          "end_s": 40.771
+        },
+        {
+          "text": " more",
+          "start_s": 40.771,
+          "end_s": 41.17
+        }
+      ]
+    },
+    {
+      "text": "The most interesting part is that this",
+      "start_s": 42.766,
+      "end_s": 44.761,
+      "section": "",
+      "words": [
+        {
+          "text": "The",
+          "start_s": 42.766,
+          "end_s": 42.846
+        },
+        {
+          "text": " most",
+          "start_s": 42.846,
+          "end_s": 43.245
+        },
+        {
+          "text": " inter",
+          "start_s": 43.245,
+          "end_s": 43.404
+        },
+        {
+          "text": "est",
+          "start_s": 43.404,
+          "end_s": 43.484
+        },
+        {
+          "text": "ing",
+          "start_s": 43.484,
+          "end_s": 43.723
+        },
+        {
+          "text": " part",
+          "start_s": 43.723,
+          "end_s": 44.043
+        },
+        {
+          "text": " is",
+          "start_s": 44.043,
+          "end_s": 44.282
+        },
+        {
+          "text": " that",
+          "start_s": 44.282,
+          "end_s": 44.521
+        },
+        {
+          "text": " this",
+          "start_s": 44.521,
+          "end_s": 44.761
+        }
+      ]
+    },
+    {
+      "text": "could become a beautiful example of",
+      "start_s": 44.761,
+      "end_s": 46.835,
+      "section": "",
+      "words": [
+        {
+          "text": " could",
+          "start_s": 44.761,
+          "end_s": 45.08
+        },
+        {
+          "text": " become",
+          "start_s": 45.08,
+          "end_s": 45.239
+        },
+        {
+          "text": " a",
+          "start_s": 45.239,
+          "end_s": 45.399
+        },
+        {
+          "text": " beautiful",
+          "start_s": 45.798,
+          "end_s": 46.037
+        },
+        {
+          "text": " ex",
+          "start_s": 46.037,
+          "end_s": 46.197
+        },
+        {
+          "text": "ample",
+          "start_s": 46.197,
+          "end_s": 46.596
+        },
+        {
+          "text": " of",
+          "start_s": 46.596,
+          "end_s": 46.835
+        }
+      ]
+    },
+    {
+      "text": "combining East and West while preser",
+      "start_s": 46.835,
+      "end_s": 48.989,
+      "section": "",
+      "words": [
+        {
+          "text": " comb",
+          "start_s": 46.835,
+          "end_s": 47.234
+        },
+        {
+          "text": "ining",
+          "start_s": 47.234,
+          "end_s": 47.473
+        },
+        {
+          "text": " E",
+          "start_s": 47.473,
+          "end_s": 47.553
+        },
+        {
+          "text": "ast",
+          "start_s": 47.553,
+          "end_s": 47.713
+        },
+        {
+          "text": " and",
+          "start_s": 47.713,
+          "end_s": 47.952
+        },
+        {
+          "text": " West",
+          "start_s": 47.952,
+          "end_s": 48.351
+        },
+        {
+          "text": " while",
+          "start_s": 48.431,
+          "end_s": 48.67
+        },
+        {
+          "text": " pres",
+          "start_s": 48.67,
+          "end_s": 48.83
+        },
+        {
+          "text": "er",
+          "start_s": 48.83,
+          "end_s": 48.989
+        }
+      ]
+    },
+    {
+      "text": "ving a unique identity. Once that door",
+      "start_s": 49.069,
+      "end_s": 53.138,
+      "section": "",
+      "words": [
+        {
+          "text": "ving",
+          "start_s": 49.069,
+          "end_s": 49.229
+        },
+        {
+          "text": " a",
+          "start_s": 49.229,
+          "end_s": 49.388
+        },
+        {
+          "text": " uni",
+          "start_s": 49.388,
+          "end_s": 49.628
+        },
+        {
+          "text": "que",
+          "start_s": 49.628,
+          "end_s": 49.867
+        },
+        {
+          "text": " id",
+          "start_s": 49.867,
+          "end_s": 50.027
+        },
+        {
+          "text": "ent",
+          "start_s": 50.027,
+          "end_s": 50.186
+        },
+        {
+          "text": "ity.",
+          "start_s": 50.186,
+          "end_s": 50.426
+        },
+        {
+          "text": " Once",
+          "start_s": 52.34,
+          "end_s": 52.66
+        },
+        {
+          "text": " that",
+          "start_s": 52.66,
+          "end_s": 52.819
+        },
+        {
+          "text": " door",
+          "start_s": 52.819,
+          "end_s": 53.138
+        }
+      ]
+    },
+    {
+      "text": "is opened, opportunities for other Viet",
+      "start_s": 53.138,
+      "end_s": 55.612,
+      "section": "",
+      "words": [
+        {
+          "text": " is",
+          "start_s": 53.138,
+          "end_s": 53.298
+        },
+        {
+          "text": " opened,",
+          "start_s": 53.298,
+          "end_s": 53.856
+        },
+        {
+          "text": " opp",
+          "start_s": 53.936,
+          "end_s": 54.255
+        },
+        {
+          "text": "ortun",
+          "start_s": 54.255,
+          "end_s": 54.574
+        },
+        {
+          "text": "ities",
+          "start_s": 54.574,
+          "end_s": 54.894
+        },
+        {
+          "text": " for",
+          "start_s": 54.894,
+          "end_s": 55.053
+        },
+        {
+          "text": " other",
+          "start_s": 55.053,
+          "end_s": 55.372
+        },
+        {
+          "text": " Vi",
+          "start_s": 55.372,
+          "end_s": 55.532
+        },
+        {
+          "text": "et",
+          "start_s": 55.532,
+          "end_s": 55.612
+        }
+      ]
+    },
+    {
+      "text": "namese artists to enter the intern",
+      "start_s": 55.612,
+      "end_s": 58.324,
+      "section": "",
+      "words": [
+        {
+          "text": "n",
+          "start_s": 55.612,
+          "end_s": 55.691
+        },
+        {
+          "text": "ames",
+          "start_s": 55.771,
+          "end_s": 55.851
+        },
+        {
+          "text": "e",
+          "start_s": 55.851,
+          "end_s": 55.931
+        },
+        {
+          "text": " art",
+          "start_s": 56.09,
+          "end_s": 56.25
+        },
+        {
+          "text": "ists",
+          "start_s": 56.25,
+          "end_s": 56.569
+        },
+        {
+          "text": " to",
+          "start_s": 57.287,
+          "end_s": 57.447
+        },
+        {
+          "text": " enter",
+          "start_s": 57.447,
+          "end_s": 57.766
+        },
+        {
+          "text": " the",
+          "start_s": 57.766,
+          "end_s": 58.085
+        },
+        {
+          "text": " inter",
+          "start_s": 58.085,
+          "end_s": 58.245
+        },
+        {
+          "text": "n",
+          "start_s": 58.245,
+          "end_s": 58.324
+        }
+      ]
+    },
+    {
+      "text": "ational market will also become wider",
+      "start_s": 58.404,
+      "end_s": 61.197,
+      "section": "",
+      "words": [
+        {
+          "text": "ational",
+          "start_s": 58.404,
+          "end_s": 58.723
+        },
+        {
+          "text": " mark",
+          "start_s": 58.723,
+          "end_s": 58.963
+        },
+        {
+          "text": "et",
+          "start_s": 58.963,
+          "end_s": 59.122
+        },
+        {
+          "text": " will",
+          "start_s": 59.601,
+          "end_s": 59.84
+        },
+        {
+          "text": " also",
+          "start_s": 59.84,
+          "end_s": 60.239
+        },
+        {
+          "text": " become",
+          "start_s": 60.319,
+          "end_s": 60.638
+        },
+        {
+          "text": " w",
+          "start_s": 60.638,
+          "end_s": 60.798
+        },
+        {
+          "text": "ider",
+          "start_s": 60.878,
+          "end_s": 61.197
+        }
+      ]
+    },
+    {
+      "text": "and easier",
+      "start_s": 61.915,
+      "end_s": 62.553,
+      "section": "",
+      "words": [
+        {
+          "text": " and",
+          "start_s": 61.915,
+          "end_s": 62.154
+        },
+        {
+          "text": " eas",
+          "start_s": 62.154,
+          "end_s": 62.473
+        },
+        {
+          "text": "ier",
+          "start_s": 62.473,
+          "end_s": 62.553
+        }
+      ]
+    },
+    {
+      "text": "Tung is not just making music: he is",
+      "start_s": 62.553,
+      "end_s": 63.91,
+      "section": "",
+      "words": [
+        {
+          "text": "Tun",
+          "start_s": 62.553,
+          "end_s": 62.713
+        },
+        {
+          "text": "g",
+          "start_s": 62.713,
+          "end_s": 62.793
+        },
+        {
+          "text": " is",
+          "start_s": 62.793,
+          "end_s": 62.872
+        },
+        {
+          "text": " not",
+          "start_s": 62.872,
+          "end_s": 62.952
+        },
+        {
+          "text": " just",
+          "start_s": 62.952,
+          "end_s": 63.112
+        },
+        {
+          "text": " making",
+          "start_s": 63.112,
+          "end_s": 63.351
+        },
+        {
+          "text": " music:",
+          "start_s": 63.351,
+          "end_s": 63.59
+        },
+        {
+          "text": " he",
+          "start_s": 63.59,
+          "end_s": 63.67
+        },
+        {
+          "text": " is",
+          "start_s": 63.67,
+          "end_s": 63.91
+        }
+      ]
+    },
+    {
+      "text": "trying to paint a new trend, a new",
+      "start_s": 67.979,
+      "end_s": 70.612,
+      "section": "",
+      "words": [
+        {
+          "text": " trying",
+          "start_s": 67.979,
+          "end_s": 68.378
+        },
+        {
+          "text": " to",
+          "start_s": 68.378,
+          "end_s": 68.537
+        },
+        {
+          "text": " paint",
+          "start_s": 68.537,
+          "end_s": 68.856
+        },
+        {
+          "text": " a",
+          "start_s": 68.856,
+          "end_s": 69.016
+        },
+        {
+          "text": " new",
+          "start_s": 69.096,
+          "end_s": 69.415
+        },
+        {
+          "text": " trend,",
+          "start_s": 69.574,
+          "end_s": 70.053
+        },
+        {
+          "text": " a",
+          "start_s": 70.133,
+          "end_s": 70.293
+        },
+        {
+          "text": " new",
+          "start_s": 70.293,
+          "end_s": 70.612
+        }
+      ]
+    },
+    {
+      "text": "direction for Vietnamese music. And",
+      "start_s": 70.612,
+      "end_s": 75.16,
+      "section": "",
+      "words": [
+        {
+          "text": " direction",
+          "start_s": 70.612,
+          "end_s": 71.41
+        },
+        {
+          "text": " for",
+          "start_s": 71.649,
+          "end_s": 71.968
+        },
+        {
+          "text": " Vi",
+          "start_s": 73.085,
+          "end_s": 73.165
+        },
+        {
+          "text": "et",
+          "start_s": 73.165,
+          "end_s": 73.324
+        },
+        {
+          "text": "n",
+          "start_s": 73.484,
+          "end_s": 73.564
+        },
+        {
+          "text": "am",
+          "start_s": 73.723,
+          "end_s": 73.803
+        },
+        {
+          "text": "e",
+          "start_s": 73.803,
+          "end_s": 73.883
+        },
+        {
+          "text": "s",
+          "start_s": 73.883,
+          "end_s": 73.963
+        },
+        {
+          "text": "e",
+          "start_s": 73.963,
+          "end_s": 74.043
+        },
+        {
+          "text": " music.",
+          "start_s": 74.122,
+          "end_s": 74.601
+        },
+        {
+          "text": " And",
+          "start_s": 74.761,
+          "end_s": 75.16
+        }
+      ]
+    },
+    {
+      "text": "whatever the final result may be, just",
+      "start_s": 75.479,
+      "end_s": 78.91,
+      "section": "",
+      "words": [
+        {
+          "text": " whatever",
+          "start_s": 75.479,
+          "end_s": 75.957
+        },
+        {
+          "text": " the",
+          "start_s": 75.957,
+          "end_s": 76.197
+        },
+        {
+          "text": " final",
+          "start_s": 76.197,
+          "end_s": 76.676
+        },
+        {
+          "text": " res",
+          "start_s": 76.676,
+          "end_s": 76.835
+        },
+        {
+          "text": "ult",
+          "start_s": 76.835,
+          "end_s": 77.074
+        },
+        {
+          "text": " may",
+          "start_s": 77.234,
+          "end_s": 77.553
+        },
+        {
+          "text": " be,",
+          "start_s": 77.553,
+          "end_s": 77.793
+        },
+        {
+          "text": " just",
+          "start_s": 78.67,
+          "end_s": 78.91
+        }
+      ]
+    },
+    {
+      "text": "having the courage to try is already",
+      "start_s": 78.91,
+      "end_s": 82.739,
+      "section": "",
+      "words": [
+        {
+          "text": " having",
+          "start_s": 78.91,
+          "end_s": 79.468
+        },
+        {
+          "text": " the",
+          "start_s": 79.468,
+          "end_s": 79.628
+        },
+        {
+          "text": " courage",
+          "start_s": 79.628,
+          "end_s": 80.186
+        },
+        {
+          "text": " to",
+          "start_s": 80.186,
+          "end_s": 80.346
+        },
+        {
+          "text": " try",
+          "start_s": 80.346,
+          "end_s": 80.665
+        },
+        {
+          "text": " is",
+          "start_s": 81.543,
+          "end_s": 81.782
+        },
+        {
+          "text": " already",
+          "start_s": 82.101,
+          "end_s": 82.739
+        }
+      ]
+    },
+    {
+      "text": "worth appreciating",
+      "start_s": 84.176,
+      "end_s": 86.649,
+      "section": "",
+      "words": [
+        {
+          "text": " worth",
+          "start_s": 84.176,
+          "end_s": 84.654
+        },
+        {
+          "text": " app",
+          "start_s": 84.973,
+          "end_s": 85.213
+        },
+        {
+          "text": "re",
+          "start_s": 85.213,
+          "end_s": 85.372
+        },
+        {
+          "text": "ci",
+          "start_s": 85.532,
+          "end_s": 85.691
+        },
+        {
+          "text": "ating",
+          "start_s": 86.25,
+          "end_s": 86.649
+        }
+      ]
+    },
+    {
+      "text": "Thank you Tung, and ❤ you",
+      "start_s": 89.681,
+      "end_s": 95.745,
+      "section": "",
+      "words": [
+        {
+          "text": "Thank",
+          "start_s": 89.681,
+          "end_s": 89.92
+        },
+        {
+          "text": " you",
+          "start_s": 89.92,
+          "end_s": 90.08
+        },
+        {
+          "text": " Tu",
+          "start_s": 90.08,
+          "end_s": 90.319
+        },
+        {
+          "text": "n",
+          "start_s": 93.431,
+          "end_s": 93.511
+        },
+        {
+          "text": "g,",
+          "start_s": 94.468,
+          "end_s": 94.548
+        },
+        {
+          "text": " and",
+          "start_s": 94.707,
+          "end_s": 95.106
+        },
+        {
+          "text": " ❤ you",
+          "start_s": 95.106,
+          "end_s": 95.745
+        }
+      ]
+    }
+  ]
+}

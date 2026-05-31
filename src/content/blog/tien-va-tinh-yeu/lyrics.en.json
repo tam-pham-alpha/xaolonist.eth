@@ -1,0 +1,873 @@
+{
+  "aligned_words": [
+    {
+      "word": "Hey, ",
+      "success": true,
+      "start_s": 0.0,
+      "end_s": 1.93548,
+      "p_align": 0.99
+    },
+    {
+      "word": "it’s ",
+      "success": true,
+      "start_s": 1.93548,
+      "end_s": 3.87097,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 3.87097,
+      "end_s": 5.80645,
+      "p_align": 0.99
+    },
+    {
+      "word": "again, ",
+      "success": true,
+      "start_s": 5.80645,
+      "end_s": 7.74194,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 7.74194,
+      "end_s": 9.67742,
+      "p_align": 0.99
+    },
+    {
+      "word": "according ",
+      "success": true,
+      "start_s": 9.67742,
+      "end_s": 11.6129,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 11.6129,
+      "end_s": 13.54839,
+      "p_align": 0.99
+    },
+    {
+      "word": "Einstein’s ",
+      "success": true,
+      "start_s": 13.54839,
+      "end_s": 15.48387,
+      "p_align": 0.99
+    },
+    {
+      "word": "equations, ",
+      "success": true,
+      "start_s": 15.48387,
+      "end_s": 17.41935,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 17.41935,
+      "end_s": 19.35484,
+      "p_align": 0.99
+    },
+    {
+      "word": "world ",
+      "success": true,
+      "start_s": 19.35484,
+      "end_s": 21.29032,
+      "p_align": 0.99
+    },
+    {
+      "word": "has ",
+      "success": true,
+      "start_s": 21.29032,
+      "end_s": 23.22581,
+      "p_align": 0.99
+    },
+    {
+      "word": "about ",
+      "success": true,
+      "start_s": 23.22581,
+      "end_s": 25.16129,
+      "p_align": 0.99
+    },
+    {
+      "word": "11 ",
+      "success": true,
+      "start_s": 25.16129,
+      "end_s": 27.09677,
+      "p_align": 0.99
+    },
+    {
+      "word": "dimensions. ",
+      "success": true,
+      "start_s": 27.09677,
+      "end_s": 29.03226,
+      "p_align": 0.99
+    },
+    {
+      "word": "What ",
+      "success": true,
+      "start_s": 29.03226,
+      "end_s": 30.96774,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 30.96774,
+      "end_s": 32.90323,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 32.90323,
+      "end_s": 34.83871,
+      "p_align": 0.99
+    },
+    {
+      "word": "key ",
+      "success": true,
+      "start_s": 34.83871,
+      "end_s": 36.77419,
+      "p_align": 0.99
+    },
+    {
+      "word": "for ",
+      "success": true,
+      "start_s": 36.77419,
+      "end_s": 38.70968,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 38.70968,
+      "end_s": 40.64516,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 40.64516,
+      "end_s": 42.58065,
+      "p_align": 0.99
+    },
+    {
+      "word": "access ",
+      "success": true,
+      "start_s": 42.58065,
+      "end_s": 44.51613,
+      "p_align": 0.99
+    },
+    {
+      "word": "these ",
+      "success": true,
+      "start_s": 44.51613,
+      "end_s": 46.45161,
+      "p_align": 0.99
+    },
+    {
+      "word": "new ",
+      "success": true,
+      "start_s": 46.45161,
+      "end_s": 48.3871,
+      "p_align": 0.99
+    },
+    {
+      "word": "dimensions?\n\n",
+      "success": true,
+      "start_s": 48.3871,
+      "end_s": 50.32258,
+      "p_align": 0.99
+    },
+    {
+      "word": "Ever ",
+      "success": true,
+      "start_s": 50.32258,
+      "end_s": 52.25806,
+      "p_align": 0.99
+    },
+    {
+      "word": "since ",
+      "success": true,
+      "start_s": 52.25806,
+      "end_s": 54.19355,
+      "p_align": 0.99
+    },
+    {
+      "word": "finding ",
+      "success": true,
+      "start_s": 54.19355,
+      "end_s": 56.12903,
+      "p_align": 0.99
+    },
+    {
+      "word": "love, ",
+      "success": true,
+      "start_s": 56.12903,
+      "end_s": 58.06452,
+      "p_align": 0.99
+    },
+    {
+      "word": "Binz’s ",
+      "success": true,
+      "start_s": 58.06452,
+      "end_s": 60.0,
+      "p_align": 0.99
+    },
+    {
+      "word": "music ",
+      "success": true,
+      "start_s": 60.0,
+      "end_s": 61.93548,
+      "p_align": 0.99
+    },
+    {
+      "word": "sounds ",
+      "success": true,
+      "start_s": 61.93548,
+      "end_s": 63.87097,
+      "p_align": 0.99
+    },
+    {
+      "word": "incredibly ",
+      "success": true,
+      "start_s": 63.87097,
+      "end_s": 65.80645,
+      "p_align": 0.99
+    },
+    {
+      "word": "deep: ",
+      "success": true,
+      "start_s": 65.80645,
+      "end_s": 67.74194,
+      "p_align": 0.99
+    },
+    {
+      "word": "whether ",
+      "success": true,
+      "start_s": 67.74194,
+      "end_s": 69.67742,
+      "p_align": 0.99
+    },
+    {
+      "word": "one ",
+      "success": true,
+      "start_s": 69.67742,
+      "end_s": 71.6129,
+      "p_align": 0.99
+    },
+    {
+      "word": "likes ",
+      "success": true,
+      "start_s": 71.6129,
+      "end_s": 73.54839,
+      "p_align": 0.99
+    },
+    {
+      "word": "it ",
+      "success": true,
+      "start_s": 73.54839,
+      "end_s": 75.48387,
+      "p_align": 0.99
+    },
+    {
+      "word": "or ",
+      "success": true,
+      "start_s": 75.48387,
+      "end_s": 77.41935,
+      "p_align": 0.99
+    },
+    {
+      "word": "not, ",
+      "success": true,
+      "start_s": 77.41935,
+      "end_s": 79.35484,
+      "p_align": 0.99
+    },
+    {
+      "word": "that ",
+      "success": true,
+      "start_s": 79.35484,
+      "end_s": 81.29032,
+      "p_align": 0.99
+    },
+    {
+      "word": "very ",
+      "success": true,
+      "start_s": 81.29032,
+      "end_s": 83.22581,
+      "p_align": 0.99
+    },
+    {
+      "word": "aura ",
+      "success": true,
+      "start_s": 83.22581,
+      "end_s": 85.16129,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 85.16129,
+      "end_s": 87.09677,
+      "p_align": 0.99
+    },
+    {
+      "word": "what ",
+      "success": true,
+      "start_s": 87.09677,
+      "end_s": 89.03226,
+      "p_align": 0.99
+    },
+    {
+      "word": "makes ",
+      "success": true,
+      "start_s": 89.03226,
+      "end_s": 90.96774,
+      "p_align": 0.99
+    },
+    {
+      "word": "each ",
+      "success": true,
+      "start_s": 90.96774,
+      "end_s": 92.90323,
+      "p_align": 0.99
+    },
+    {
+      "word": "person ",
+      "success": true,
+      "start_s": 92.90323,
+      "end_s": 94.83871,
+      "p_align": 0.99
+    },
+    {
+      "word": "distinct\n\n",
+      "success": true,
+      "start_s": 94.83871,
+      "end_s": 96.77419,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 96.77419,
+      "end_s": 98.70968,
+      "p_align": 0.99
+    },
+    {
+      "word": "watched ",
+      "success": true,
+      "start_s": 98.70968,
+      "end_s": 100.64516,
+      "p_align": 0.99
+    },
+    {
+      "word": "Materialists: ",
+      "success": true,
+      "start_s": 100.64516,
+      "end_s": 102.58065,
+      "p_align": 0.99
+    },
+    {
+      "word": "those ",
+      "success": true,
+      "start_s": 102.58065,
+      "end_s": 104.51613,
+      "p_align": 0.99
+    },
+    {
+      "word": "who ",
+      "success": true,
+      "start_s": 104.51613,
+      "end_s": 106.45161,
+      "p_align": 0.99
+    },
+    {
+      "word": "have ",
+      "success": true,
+      "start_s": 106.45161,
+      "end_s": 108.3871,
+      "p_align": 0.99
+    },
+    {
+      "word": "money ",
+      "success": true,
+      "start_s": 108.3871,
+      "end_s": 110.32258,
+      "p_align": 0.99
+    },
+    {
+      "word": "always ",
+      "success": true,
+      "start_s": 110.32258,
+      "end_s": 112.25806,
+      "p_align": 0.99
+    },
+    {
+      "word": "talk ",
+      "success": true,
+      "start_s": 112.25806,
+      "end_s": 114.19355,
+      "p_align": 0.99
+    },
+    {
+      "word": "about ",
+      "success": true,
+      "start_s": 114.19355,
+      "end_s": 116.12903,
+      "p_align": 0.99
+    },
+    {
+      "word": "value, ",
+      "success": true,
+      "start_s": 116.12903,
+      "end_s": 118.06452,
+      "p_align": 0.99
+    },
+    {
+      "word": "while ",
+      "success": true,
+      "start_s": 118.06452,
+      "end_s": 120.0,
+      "p_align": 0.99
+    },
+    {
+      "word": "those ",
+      "success": true,
+      "start_s": 120.0,
+      "end_s": 121.93548,
+      "p_align": 0.99
+    },
+    {
+      "word": "who ",
+      "success": true,
+      "start_s": 121.93548,
+      "end_s": 123.87097,
+      "p_align": 0.99
+    },
+    {
+      "word": "don’t ",
+      "success": true,
+      "start_s": 123.87097,
+      "end_s": 125.80645,
+      "p_align": 0.99
+    },
+    {
+      "word": "have ",
+      "success": true,
+      "start_s": 125.80645,
+      "end_s": 127.74194,
+      "p_align": 0.99
+    },
+    {
+      "word": "much ",
+      "success": true,
+      "start_s": 127.74194,
+      "end_s": 129.67742,
+      "p_align": 0.99
+    },
+    {
+      "word": "money ",
+      "success": true,
+      "start_s": 129.67742,
+      "end_s": 131.6129,
+      "p_align": 0.99
+    },
+    {
+      "word": "talk ",
+      "success": true,
+      "start_s": 131.6129,
+      "end_s": 133.54839,
+      "p_align": 0.99
+    },
+    {
+      "word": "about ",
+      "success": true,
+      "start_s": 133.54839,
+      "end_s": 135.48387,
+      "p_align": 0.99
+    },
+    {
+      "word": "love\n\n",
+      "success": true,
+      "start_s": 135.48387,
+      "end_s": 137.41935,
+      "p_align": 0.99
+    },
+    {
+      "word": "If ",
+      "success": true,
+      "start_s": 137.41935,
+      "end_s": 139.35484,
+      "p_align": 0.99
+    },
+    {
+      "word": "forced ",
+      "success": true,
+      "start_s": 139.35484,
+      "end_s": 141.29032,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 141.29032,
+      "end_s": 143.22581,
+      "p_align": 0.99
+    },
+    {
+      "word": "choose ",
+      "success": true,
+      "start_s": 143.22581,
+      "end_s": 145.16129,
+      "p_align": 0.99
+    },
+    {
+      "word": "between ",
+      "success": true,
+      "start_s": 145.16129,
+      "end_s": 147.09677,
+      "p_align": 0.99
+    },
+    {
+      "word": "love ",
+      "success": true,
+      "start_s": 147.09677,
+      "end_s": 149.03226,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 149.03226,
+      "end_s": 150.96774,
+      "p_align": 0.99
+    },
+    {
+      "word": "money, ",
+      "success": true,
+      "start_s": 150.96774,
+      "end_s": 152.90323,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 152.90323,
+      "end_s": 154.83871,
+      "p_align": 0.99
+    },
+    {
+      "word": "would ",
+      "success": true,
+      "start_s": 154.83871,
+      "end_s": 156.77419,
+      "p_align": 0.99
+    },
+    {
+      "word": "choose ",
+      "success": true,
+      "start_s": 156.77419,
+      "end_s": 158.70968,
+      "p_align": 0.99
+    },
+    {
+      "word": "love. ",
+      "success": true,
+      "start_s": 158.70968,
+      "end_s": 160.64516,
+      "p_align": 0.99
+    },
+    {
+      "word": "But ",
+      "success": true,
+      "start_s": 160.64516,
+      "end_s": 162.58065,
+      "p_align": 0.99
+    },
+    {
+      "word": "if ",
+      "success": true,
+      "start_s": 162.58065,
+      "end_s": 164.51613,
+      "p_align": 0.99
+    },
+    {
+      "word": "forced ",
+      "success": true,
+      "start_s": 164.51613,
+      "end_s": 166.45161,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 166.45161,
+      "end_s": 168.3871,
+      "p_align": 0.99
+    },
+    {
+      "word": "choose ",
+      "success": true,
+      "start_s": 168.3871,
+      "end_s": 170.32258,
+      "p_align": 0.99
+    },
+    {
+      "word": "between ",
+      "success": true,
+      "start_s": 170.32258,
+      "end_s": 172.25806,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 172.25806,
+      "end_s": 174.19355,
+      "p_align": 0.99
+    },
+    {
+      "word": "lot ",
+      "success": true,
+      "start_s": 174.19355,
+      "end_s": 176.12903,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 176.12903,
+      "end_s": 178.06452,
+      "p_align": 0.99
+    },
+    {
+      "word": "love ",
+      "success": true,
+      "start_s": 178.06452,
+      "end_s": 180.0,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 180.0,
+      "end_s": 181.93548,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 181.93548,
+      "end_s": 183.87097,
+      "p_align": 0.99
+    },
+    {
+      "word": "lot ",
+      "success": true,
+      "start_s": 183.87097,
+      "end_s": 185.80645,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 185.80645,
+      "end_s": 187.74194,
+      "p_align": 0.99
+    },
+    {
+      "word": "money, ",
+      "success": true,
+      "start_s": 187.74194,
+      "end_s": 189.67742,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 189.67742,
+      "end_s": 191.6129,
+      "p_align": 0.99
+    },
+    {
+      "word": "still ",
+      "success": true,
+      "start_s": 191.6129,
+      "end_s": 193.54839,
+      "p_align": 0.99
+    },
+    {
+      "word": "does ",
+      "success": true,
+      "start_s": 193.54839,
+      "end_s": 195.48387,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 195.48387,
+      "end_s": 197.41935,
+      "p_align": 0.99
+    },
+    {
+      "word": "have ",
+      "success": true,
+      "start_s": 197.41935,
+      "end_s": 199.35484,
+      "p_align": 0.99
+    },
+    {
+      "word": "an ",
+      "success": true,
+      "start_s": 199.35484,
+      "end_s": 201.29032,
+      "p_align": 0.99
+    },
+    {
+      "word": "answer\n\n",
+      "success": true,
+      "start_s": 201.29032,
+      "end_s": 203.22581,
+      "p_align": 0.99
+    },
+    {
+      "word": "To ",
+      "success": true,
+      "start_s": 203.22581,
+      "end_s": 205.16129,
+      "p_align": 0.99
+    },
+    {
+      "word": "him, ",
+      "success": true,
+      "start_s": 205.16129,
+      "end_s": 207.09677,
+      "p_align": 0.99
+    },
+    {
+      "word": "money, ",
+      "success": true,
+      "start_s": 207.09677,
+      "end_s": 209.03226,
+      "p_align": 0.99
+    },
+    {
+      "word": "love, ",
+      "success": true,
+      "start_s": 209.03226,
+      "end_s": 210.96774,
+      "p_align": 0.99
+    },
+    {
+      "word": "history, ",
+      "success": true,
+      "start_s": 210.96774,
+      "end_s": 212.90323,
+      "p_align": 0.99
+    },
+    {
+      "word": "physics, ",
+      "success": true,
+      "start_s": 212.90323,
+      "end_s": 214.83871,
+      "p_align": 0.99
+    },
+    {
+      "word": "philosophy, ",
+      "success": true,
+      "start_s": 214.83871,
+      "end_s": 216.77419,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 216.77419,
+      "end_s": 218.70968,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 218.70968,
+      "end_s": 220.64516,
+      "p_align": 0.99
+    },
+    {
+      "word": "dark ",
+      "success": true,
+      "start_s": 220.64516,
+      "end_s": 222.58065,
+      "p_align": 0.99
+    },
+    {
+      "word": "arts ",
+      "success": true,
+      "start_s": 222.58065,
+      "end_s": 224.51613,
+      "p_align": 0.99
+    },
+    {
+      "word": "are ",
+      "success": true,
+      "start_s": 224.51613,
+      "end_s": 226.45161,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 226.45161,
+      "end_s": 228.3871,
+      "p_align": 0.99
+    },
+    {
+      "word": "essential ",
+      "success": true,
+      "start_s": 228.3871,
+      "end_s": 230.32258,
+      "p_align": 0.99
+    },
+    {
+      "word": "keys ",
+      "success": true,
+      "start_s": 230.32258,
+      "end_s": 232.25806,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 232.25806,
+      "end_s": 234.19355,
+      "p_align": 0.99
+    },
+    {
+      "word": "accessing ",
+      "success": true,
+      "start_s": 234.19355,
+      "end_s": 236.12903,
+      "p_align": 0.99
+    },
+    {
+      "word": "new ",
+      "success": true,
+      "start_s": 236.12903,
+      "end_s": 238.06452,
+      "p_align": 0.99
+    },
+    {
+      "word": "dimensions",
+      "success": true,
+      "start_s": 238.06452,
+      "end_s": 240.0,
+      "p_align": 0.99
+    }
+  ],
+  "is_streamed": true
+}

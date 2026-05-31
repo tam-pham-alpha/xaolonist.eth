@@ -107,7 +107,7 @@ def main():
     lyrics_prefix = "lyrics" if lang == "vn" else "lyrics.en"
     
     # 1. Download MP3 audio from Suno CDN
-    audio_url = f"https://cdn1.suno.ai/{song_id}.mp3"
+    audio_url = f"https://audiopipe.suno.ai/?item_id={song_id}"
     audio_dest = os.path.join(output_dir, audio_filename)
     print(f"Downloading MP3 from {audio_url} to: {audio_dest} ...")
     try:

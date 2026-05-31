@@ -1,0 +1,1027 @@
+{
+  "aligned_words": [
+    {
+      "word": "Hey ",
+      "success": true,
+      "start_s": 0.0,
+      "end_s": 1.64384,
+      "p_align": 0.99
+    },
+    {
+      "word": "hey, ",
+      "success": true,
+      "start_s": 1.64384,
+      "end_s": 3.28767,
+      "p_align": 0.99
+    },
+    {
+      "word": "it’s ",
+      "success": true,
+      "start_s": 3.28767,
+      "end_s": 4.93151,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 4.93151,
+      "end_s": 6.57534,
+      "p_align": 0.99
+    },
+    {
+      "word": "again, ",
+      "success": true,
+      "start_s": 6.57534,
+      "end_s": 8.21918,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 8.21918,
+      "end_s": 9.86301,
+      "p_align": 0.99
+    },
+    {
+      "word": "AI ",
+      "success": true,
+      "start_s": 9.86301,
+      "end_s": 11.50685,
+      "p_align": 0.99
+    },
+    {
+      "word": "gets ",
+      "success": true,
+      "start_s": 11.50685,
+      "end_s": 13.15068,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 13.15068,
+      "end_s": 14.79452,
+      "p_align": 0.99
+    },
+    {
+      "word": "too ",
+      "success": true,
+      "start_s": 14.79452,
+      "end_s": 16.43836,
+      "p_align": 0.99
+    },
+    {
+      "word": "excited. ",
+      "success": true,
+      "start_s": 16.43836,
+      "end_s": 18.08219,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 18.08219,
+      "end_s": 19.72603,
+      "p_align": 0.99
+    },
+    {
+      "word": "often ",
+      "success": true,
+      "start_s": 19.72603,
+      "end_s": 21.36986,
+      "p_align": 0.99
+    },
+    {
+      "word": "jokes ",
+      "success": true,
+      "start_s": 21.36986,
+      "end_s": 23.0137,
+      "p_align": 0.99
+    },
+    {
+      "word": "that ",
+      "success": true,
+      "start_s": 23.0137,
+      "end_s": 24.65753,
+      "p_align": 0.99
+    },
+    {
+      "word": "before ",
+      "success": true,
+      "start_s": 24.65753,
+      "end_s": 26.30137,
+      "p_align": 0.99
+    },
+    {
+      "word": "AI, ",
+      "success": true,
+      "start_s": 26.30137,
+      "end_s": 27.94521,
+      "p_align": 0.99
+    },
+    {
+      "word": "only ",
+      "success": true,
+      "start_s": 27.94521,
+      "end_s": 29.58904,
+      "p_align": 0.99
+    },
+    {
+      "word": "Tran ",
+      "success": true,
+      "start_s": 29.58904,
+      "end_s": 31.23288,
+      "p_align": 0.99
+    },
+    {
+      "word": "Thanh ",
+      "success": true,
+      "start_s": 31.23288,
+      "end_s": 32.87671,
+      "p_align": 0.99
+    },
+    {
+      "word": "had ",
+      "success": true,
+      "start_s": 32.87671,
+      "end_s": 34.52055,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 34.52055,
+      "end_s": 36.16438,
+      "p_align": 0.99
+    },
+    {
+      "word": "capability ",
+      "success": true,
+      "start_s": 36.16438,
+      "end_s": 37.80822,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 37.80822,
+      "end_s": 39.45205,
+      "p_align": 0.99
+    },
+    {
+      "word": "entertain: ",
+      "success": true,
+      "start_s": 39.45205,
+      "end_s": 41.09589,
+      "p_align": 0.99
+    },
+    {
+      "word": "since ",
+      "success": true,
+      "start_s": 41.09589,
+      "end_s": 42.73973,
+      "p_align": 0.99
+    },
+    {
+      "word": "AI ",
+      "success": true,
+      "start_s": 42.73973,
+      "end_s": 44.38356,
+      "p_align": 0.99
+    },
+    {
+      "word": "arrived, ",
+      "success": true,
+      "start_s": 44.38356,
+      "end_s": 46.0274,
+      "p_align": 0.99
+    },
+    {
+      "word": "even ",
+      "success": true,
+      "start_s": 46.0274,
+      "end_s": 47.67123,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 47.67123,
+      "end_s": 49.31507,
+      "p_align": 0.99
+    },
+    {
+      "word": "vegetable ",
+      "success": true,
+      "start_s": 49.31507,
+      "end_s": 50.9589,
+      "p_align": 0.99
+    },
+    {
+      "word": "vendor ",
+      "success": true,
+      "start_s": 50.9589,
+      "end_s": 52.60274,
+      "p_align": 0.99
+    },
+    {
+      "word": "can ",
+      "success": true,
+      "start_s": 52.60274,
+      "end_s": 54.24658,
+      "p_align": 0.99
+    },
+    {
+      "word": "create ",
+      "success": true,
+      "start_s": 54.24658,
+      "end_s": 55.89041,
+      "p_align": 0.99
+    },
+    {
+      "word": "entertainment\n\n",
+      "success": true,
+      "start_s": 55.89041,
+      "end_s": 57.53425,
+      "p_align": 0.99
+    },
+    {
+      "word": "Similarly, ",
+      "success": true,
+      "start_s": 57.53425,
+      "end_s": 59.17808,
+      "p_align": 0.99
+    },
+    {
+      "word": "before ",
+      "success": true,
+      "start_s": 59.17808,
+      "end_s": 60.82192,
+      "p_align": 0.99
+    },
+    {
+      "word": "AI, ",
+      "success": true,
+      "start_s": 60.82192,
+      "end_s": 62.46575,
+      "p_align": 0.99
+    },
+    {
+      "word": "only ",
+      "success": true,
+      "start_s": 62.46575,
+      "end_s": 64.10959,
+      "p_align": 0.99
+    },
+    {
+      "word": "large ",
+      "success": true,
+      "start_s": 64.10959,
+      "end_s": 65.75342,
+      "p_align": 0.99
+    },
+    {
+      "word": "corporations ",
+      "success": true,
+      "start_s": 65.75342,
+      "end_s": 67.39726,
+      "p_align": 0.99
+    },
+    {
+      "word": "could ",
+      "success": true,
+      "start_s": 67.39726,
+      "end_s": 69.0411,
+      "p_align": 0.99
+    },
+    {
+      "word": "build ",
+      "success": true,
+      "start_s": 69.0411,
+      "end_s": 70.68493,
+      "p_align": 0.99
+    },
+    {
+      "word": "good ",
+      "success": true,
+      "start_s": 70.68493,
+      "end_s": 72.32877,
+      "p_align": 0.99
+    },
+    {
+      "word": "products ",
+      "success": true,
+      "start_s": 72.32877,
+      "end_s": 73.9726,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 73.9726,
+      "end_s": 75.61644,
+      "p_align": 0.99
+    },
+    {
+      "word": "create ",
+      "success": true,
+      "start_s": 75.61644,
+      "end_s": 77.26027,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 77.26027,
+      "end_s": 78.90411,
+      "p_align": 0.99
+    },
+    {
+      "word": "massive ",
+      "success": true,
+      "start_s": 78.90411,
+      "end_s": 80.54795,
+      "p_align": 0.99
+    },
+    {
+      "word": "impact. ",
+      "success": true,
+      "start_s": 80.54795,
+      "end_s": 82.19178,
+      "p_align": 0.99
+    },
+    {
+      "word": "Now, ",
+      "success": true,
+      "start_s": 82.19178,
+      "end_s": 83.83562,
+      "p_align": 0.99
+    },
+    {
+      "word": "the ",
+      "success": true,
+      "start_s": 83.83562,
+      "end_s": 85.47945,
+      "p_align": 0.99
+    },
+    {
+      "word": "gap ",
+      "success": true,
+      "start_s": 85.47945,
+      "end_s": 87.12329,
+      "p_align": 0.99
+    },
+    {
+      "word": "between ",
+      "success": true,
+      "start_s": 87.12329,
+      "end_s": 88.76712,
+      "p_align": 0.99
+    },
+    {
+      "word": "corporation ",
+      "success": true,
+      "start_s": 88.76712,
+      "end_s": 90.41096,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 90.41096,
+      "end_s": 92.05479,
+      "p_align": 0.99
+    },
+    {
+      "word": "individual ",
+      "success": true,
+      "start_s": 92.05479,
+      "end_s": 93.69863,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 93.69863,
+      "end_s": 95.34247,
+      "p_align": 0.99
+    },
+    {
+      "word": "no ",
+      "success": true,
+      "start_s": 95.34247,
+      "end_s": 96.9863,
+      "p_align": 0.99
+    },
+    {
+      "word": "longer ",
+      "success": true,
+      "start_s": 96.9863,
+      "end_s": 98.63014,
+      "p_align": 0.99
+    },
+    {
+      "word": "that ",
+      "success": true,
+      "start_s": 98.63014,
+      "end_s": 100.27397,
+      "p_align": 0.99
+    },
+    {
+      "word": "wide\n\n",
+      "success": true,
+      "start_s": 100.27397,
+      "end_s": 101.91781,
+      "p_align": 0.99
+    },
+    {
+      "word": "The ",
+      "success": true,
+      "start_s": 101.91781,
+      "end_s": 103.56164,
+      "p_align": 0.99
+    },
+    {
+      "word": "near ",
+      "success": true,
+      "start_s": 103.56164,
+      "end_s": 105.20548,
+      "p_align": 0.99
+    },
+    {
+      "word": "future ",
+      "success": true,
+      "start_s": 105.20548,
+      "end_s": 106.84932,
+      "p_align": 0.99
+    },
+    {
+      "word": "will ",
+      "success": true,
+      "start_s": 106.84932,
+      "end_s": 108.49315,
+      "p_align": 0.99
+    },
+    {
+      "word": "see ",
+      "success": true,
+      "start_s": 108.49315,
+      "end_s": 110.13699,
+      "p_align": 0.99
+    },
+    {
+      "word": "an ",
+      "success": true,
+      "start_s": 110.13699,
+      "end_s": 111.78082,
+      "p_align": 0.99
+    },
+    {
+      "word": "explosion ",
+      "success": true,
+      "start_s": 111.78082,
+      "end_s": 113.42466,
+      "p_align": 0.99
+    },
+    {
+      "word": "of ",
+      "success": true,
+      "start_s": 113.42466,
+      "end_s": 115.06849,
+      "p_align": 0.99
+    },
+    {
+      "word": "individuals, ",
+      "success": true,
+      "start_s": 115.06849,
+      "end_s": 116.71233,
+      "p_align": 0.99
+    },
+    {
+      "word": "or ",
+      "success": true,
+      "start_s": 116.71233,
+      "end_s": 118.35616,
+      "p_align": 0.99
+    },
+    {
+      "word": "small, ",
+      "success": true,
+      "start_s": 118.35616,
+      "end_s": 120.0,
+      "p_align": 0.99
+    },
+    {
+      "word": "lean, ",
+      "success": true,
+      "start_s": 120.0,
+      "end_s": 121.64384,
+      "p_align": 0.99
+    },
+    {
+      "word": "highly ",
+      "success": true,
+      "start_s": 121.64384,
+      "end_s": 123.28767,
+      "p_align": 0.99
+    },
+    {
+      "word": "adaptable ",
+      "success": true,
+      "start_s": 123.28767,
+      "end_s": 124.93151,
+      "p_align": 0.99
+    },
+    {
+      "word": "teams: ",
+      "success": true,
+      "start_s": 124.93151,
+      "end_s": 126.57534,
+      "p_align": 0.99
+    },
+    {
+      "word": "as ",
+      "success": true,
+      "start_s": 126.57534,
+      "end_s": 128.21918,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 128.21918,
+      "end_s": 129.86301,
+      "p_align": 0.99
+    },
+    {
+      "word": "result, ",
+      "success": true,
+      "start_s": 129.86301,
+      "end_s": 131.50685,
+      "p_align": 0.99
+    },
+    {
+      "word": "many ",
+      "success": true,
+      "start_s": 131.50685,
+      "end_s": 133.15068,
+      "p_align": 0.99
+    },
+    {
+      "word": "wonderful ",
+      "success": true,
+      "start_s": 133.15068,
+      "end_s": 134.79452,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 134.79452,
+      "end_s": 136.43836,
+      "p_align": 0.99
+    },
+    {
+      "word": "not-so-wonderful ",
+      "success": true,
+      "start_s": 136.43836,
+      "end_s": 138.08219,
+      "p_align": 0.99
+    },
+    {
+      "word": "things ",
+      "success": true,
+      "start_s": 138.08219,
+      "end_s": 139.72603,
+      "p_align": 0.99
+    },
+    {
+      "word": "will ",
+      "success": true,
+      "start_s": 139.72603,
+      "end_s": 141.36986,
+      "p_align": 0.99
+    },
+    {
+      "word": "happen ",
+      "success": true,
+      "start_s": 141.36986,
+      "end_s": 143.0137,
+      "p_align": 0.99
+    },
+    {
+      "word": "together\n\n",
+      "success": true,
+      "start_s": 143.0137,
+      "end_s": 144.65753,
+      "p_align": 0.99
+    },
+    {
+      "word": "A ",
+      "success": true,
+      "start_s": 144.65753,
+      "end_s": 146.30137,
+      "p_align": 0.99
+    },
+    {
+      "word": "place ",
+      "success": true,
+      "start_s": 146.30137,
+      "end_s": 147.94521,
+      "p_align": 0.99
+    },
+    {
+      "word": "where ",
+      "success": true,
+      "start_s": 147.94521,
+      "end_s": 149.58904,
+      "p_align": 0.99
+    },
+    {
+      "word": "academic ",
+      "success": true,
+      "start_s": 149.58904,
+      "end_s": 151.23288,
+      "p_align": 0.99
+    },
+    {
+      "word": "knowledge ",
+      "success": true,
+      "start_s": 151.23288,
+      "end_s": 152.87671,
+      "p_align": 0.99
+    },
+    {
+      "word": "and ",
+      "success": true,
+      "start_s": 152.87671,
+      "end_s": 154.52055,
+      "p_align": 0.99
+    },
+    {
+      "word": "cheap ",
+      "success": true,
+      "start_s": 154.52055,
+      "end_s": 156.16438,
+      "p_align": 0.99
+    },
+    {
+      "word": "information ",
+      "success": true,
+      "start_s": 156.16438,
+      "end_s": 157.80822,
+      "p_align": 0.99
+    },
+    {
+      "word": "might ",
+      "success": true,
+      "start_s": 157.80822,
+      "end_s": 159.45205,
+      "p_align": 0.99
+    },
+    {
+      "word": "be ",
+      "success": true,
+      "start_s": 159.45205,
+      "end_s": 161.09589,
+      "p_align": 0.99
+    },
+    {
+      "word": "treated ",
+      "success": true,
+      "start_s": 161.09589,
+      "end_s": 162.73973,
+      "p_align": 0.99
+    },
+    {
+      "word": "equally ",
+      "success": true,
+      "start_s": 162.73973,
+      "end_s": 164.38356,
+      "p_align": 0.99
+    },
+    {
+      "word": "will ",
+      "success": true,
+      "start_s": 164.38356,
+      "end_s": 166.0274,
+      "p_align": 0.99
+    },
+    {
+      "word": "present ",
+      "success": true,
+      "start_s": 166.0274,
+      "end_s": 167.67123,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 167.67123,
+      "end_s": 169.31507,
+      "p_align": 0.99
+    },
+    {
+      "word": "significant ",
+      "success": true,
+      "start_s": 169.31507,
+      "end_s": 170.9589,
+      "p_align": 0.99
+    },
+    {
+      "word": "challenge ",
+      "success": true,
+      "start_s": 170.9589,
+      "end_s": 172.60274,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 172.60274,
+      "end_s": 174.24658,
+      "p_align": 0.99
+    },
+    {
+      "word": "teenagers\n\n",
+      "success": true,
+      "start_s": 174.24658,
+      "end_s": 175.89041,
+      "p_align": 0.99
+    },
+    {
+      "word": "He ",
+      "success": true,
+      "start_s": 175.89041,
+      "end_s": 177.53425,
+      "p_align": 0.99
+    },
+    {
+      "word": "believes ",
+      "success": true,
+      "start_s": 177.53425,
+      "end_s": 179.17808,
+      "p_align": 0.99
+    },
+    {
+      "word": "opportunities ",
+      "success": true,
+      "start_s": 179.17808,
+      "end_s": 180.82192,
+      "p_align": 0.99
+    },
+    {
+      "word": "are ",
+      "success": true,
+      "start_s": 180.82192,
+      "end_s": 182.46575,
+      "p_align": 0.99
+    },
+    {
+      "word": "now ",
+      "success": true,
+      "start_s": 182.46575,
+      "end_s": 184.10959,
+      "p_align": 0.99
+    },
+    {
+      "word": "fairer ",
+      "success": true,
+      "start_s": 184.10959,
+      "end_s": 185.75342,
+      "p_align": 0.99
+    },
+    {
+      "word": "for ",
+      "success": true,
+      "start_s": 185.75342,
+      "end_s": 187.39726,
+      "p_align": 0.99
+    },
+    {
+      "word": "everyone. ",
+      "success": true,
+      "start_s": 187.39726,
+      "end_s": 189.0411,
+      "p_align": 0.99
+    },
+    {
+      "word": "However, ",
+      "success": true,
+      "start_s": 189.0411,
+      "end_s": 190.68493,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 190.68493,
+      "end_s": 192.32877,
+      "p_align": 0.99
+    },
+    {
+      "word": "knows ",
+      "success": true,
+      "start_s": 192.32877,
+      "end_s": 193.9726,
+      "p_align": 0.99
+    },
+    {
+      "word": "that ",
+      "success": true,
+      "start_s": 193.9726,
+      "end_s": 195.61644,
+      "p_align": 0.99
+    },
+    {
+      "word": "if ",
+      "success": true,
+      "start_s": 195.61644,
+      "end_s": 197.26027,
+      "p_align": 0.99
+    },
+    {
+      "word": "AI ",
+      "success": true,
+      "start_s": 197.26027,
+      "end_s": 198.90411,
+      "p_align": 0.99
+    },
+    {
+      "word": "has ",
+      "success": true,
+      "start_s": 198.90411,
+      "end_s": 200.54795,
+      "p_align": 0.99
+    },
+    {
+      "word": "not ",
+      "success": true,
+      "start_s": 200.54795,
+      "end_s": 202.19178,
+      "p_align": 0.99
+    },
+    {
+      "word": "yet ",
+      "success": true,
+      "start_s": 202.19178,
+      "end_s": 203.83562,
+      "p_align": 0.99
+    },
+    {
+      "word": "saved ",
+      "success": true,
+      "start_s": 203.83562,
+      "end_s": 205.47945,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 205.47945,
+      "end_s": 207.12329,
+      "p_align": 0.99
+    },
+    {
+      "word": "time, ",
+      "success": true,
+      "start_s": 207.12329,
+      "end_s": 208.76712,
+      "p_align": 0.99
+    },
+    {
+      "word": "helped ",
+      "success": true,
+      "start_s": 208.76712,
+      "end_s": 210.41096,
+      "p_align": 0.99
+    },
+    {
+      "word": "generate ",
+      "success": true,
+      "start_s": 210.41096,
+      "end_s": 212.05479,
+      "p_align": 0.99
+    },
+    {
+      "word": "passive ",
+      "success": true,
+      "start_s": 212.05479,
+      "end_s": 213.69863,
+      "p_align": 0.99
+    },
+    {
+      "word": "income, ",
+      "success": true,
+      "start_s": 213.69863,
+      "end_s": 215.34247,
+      "p_align": 0.99
+    },
+    {
+      "word": "or ",
+      "success": true,
+      "start_s": 215.34247,
+      "end_s": 216.9863,
+      "p_align": 0.99
+    },
+    {
+      "word": "given ",
+      "success": true,
+      "start_s": 216.9863,
+      "end_s": 218.63014,
+      "p_align": 0.99
+    },
+    {
+      "word": "him ",
+      "success": true,
+      "start_s": 218.63014,
+      "end_s": 220.27397,
+      "p_align": 0.99
+    },
+    {
+      "word": "access ",
+      "success": true,
+      "start_s": 220.27397,
+      "end_s": 221.91781,
+      "p_align": 0.99
+    },
+    {
+      "word": "to ",
+      "success": true,
+      "start_s": 221.91781,
+      "end_s": 223.56164,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 223.56164,
+      "end_s": 225.20548,
+      "p_align": 0.99
+    },
+    {
+      "word": "higher ",
+      "success": true,
+      "start_s": 225.20548,
+      "end_s": 226.84932,
+      "p_align": 0.99
+    },
+    {
+      "word": "dimension, ",
+      "success": true,
+      "start_s": 226.84932,
+      "end_s": 228.49315,
+      "p_align": 0.99
+    },
+    {
+      "word": "he ",
+      "success": true,
+      "start_s": 228.49315,
+      "end_s": 230.13699,
+      "p_align": 0.99
+    },
+    {
+      "word": "is ",
+      "success": true,
+      "start_s": 230.13699,
+      "end_s": 231.78082,
+      "p_align": 0.99
+    },
+    {
+      "word": "merely ",
+      "success": true,
+      "start_s": 231.78082,
+      "end_s": 233.42466,
+      "p_align": 0.99
+    },
+    {
+      "word": "holding ",
+      "success": true,
+      "start_s": 233.42466,
+      "end_s": 235.06849,
+      "p_align": 0.99
+    },
+    {
+      "word": "a ",
+      "success": true,
+      "start_s": 235.06849,
+      "end_s": 236.71233,
+      "p_align": 0.99
+    },
+    {
+      "word": "giant ",
+      "success": true,
+      "start_s": 236.71233,
+      "end_s": 238.35616,
+      "p_align": 0.99
+    },
+    {
+      "word": "toy",
+      "success": true,
+      "start_s": 238.35616,
+      "end_s": 240.0,
+      "p_align": 0.99
+    }
+  ],
+  "is_streamed": true
+}
