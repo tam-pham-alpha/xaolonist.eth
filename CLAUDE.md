@@ -19,6 +19,27 @@ yarn typecheck    # TypeScript + Astro check
 yarn deploy       # Build + deploy to Cloudflare via Wrangler
 ```
 
+## Planning Logs
+
+All implementation plans, technical proposals, and architectural decisions must be saved to the `_logs/` folder at the project root.
+
+### Rules
+- **Always create a log file** when you produce a plan, proposal, or significant design decision — without being asked
+- **Filename format**: `yy-mm-dd-<short-kebab-description>.md` (e.g. `26-05-31-suno-music-integration.md`)
+- **Date**: use today's local date in `yy-mm-dd` format
+- **Location**: always `_logs/<filename>.md` at the project root — never inside `src/`
+- If the user asks to update or revise a plan, update the existing `_logs/` file in place (don't create a duplicate)
+
+### Example
+```
+_logs/
+├── 26-05-30-gatsby-to-astro-migration.md
+├── 26-05-31-suno-music-integration.md
+└── 26-06-01-dark-mode-redesign.md
+```
+
+---
+
 ## Reference Texts
 
 Read these files before writing any new post:
