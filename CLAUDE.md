@@ -120,11 +120,11 @@ lang: "vn"                # "vn" or "en"
 
 If the user has attached/provided an image in their request, use that image directly as the cover (`cover.jpg` or `cover.png`) and do NOT generate a new one.
 
-- **Style**: Watercolor or acrylic painting, iconic/symbolic composition — focus on one or two central symbols that represent the post's theme. Simple, clean, airy. Think editorial illustration, not photorealism
-- **Composition**: Minimalist, uncluttered — let the subject breathe with generous white/negative space. One focal symbol is better than a busy scene
-- **Palette**: Soft, muted watercolor tones — light washes, gentle bleeds, translucent layers. Favor warm earth tones, faded indigos, soft greens, dusty rose
-- **Texture**: Visible watercolor paper grain, natural paint bleeds and edges, subtle ink outlines. Should feel hand-painted and organic
-- **Avoid**: Photorealistic renders, vibrant/neon colors, cluttered compositions, text overlays, heavy digital effects, futuristic/sci-fi looks
+- **Style**: Watercolor or acrylic painting on a dark canvas, iconic/symbolic composition — focus on one or two central symbols that represent the post's theme. Simple, clean, airy. Think editorial illustration, not photorealism
+- **Composition**: Minimalist, uncluttered — let the subject breathe with generous dark negative space. One focal symbol is better than a busy scene
+- **Palette**: Soft, glowing watercolor/luminous tones on a deep dark charcoal/black watercolor paper background (matching `#0b0b0f`). Light washes, gentle bleeds, gold/luminous outlines. Favor warm gold/earth tones, indigo, soft greens, and dusty rose
+- **Texture**: Visible dark rough watercolor paper grain, natural paint bleeds, subtle gold/luminous hand-drawn outlines. Should feel hand-painted, organic, and blend seamlessly with the website's dark mode
+- **Avoid**: Pure white/light backgrounds (which cause harsh contrast blocks in dark mode), photorealistic renders, vibrant/neon colors, cluttered compositions, text overlays, heavy digital effects, futuristic/sci-fi looks
 - **Format**: Save as `cover.jpg` or `cover.png` in the post directory
 - **Full save path**: `src/content/blog/<slug>/cover.jpg` (or `.png`)
 
