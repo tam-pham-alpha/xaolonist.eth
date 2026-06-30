@@ -67,4 +67,17 @@ Có sự phân biệt rõ ràng về phong cách viết giữa hai chuyên mục
 *   **bnvc (Category "blog" / Trang chủ)**: Chuyên mục viết về lập trình, công nghệ, tối ưu hóa, công cụ phát triển phần mềm. Giọng văn ở đây phải **trong sáng, đơn giản, logic và khoa học**. Tuyệt đối tránh sử dụng các từ ngữ huyền hoặc, ẩn dụ thiền tông hay thuật ngữ triết học nặng nề (như *tánh biết, như thị, rỗng lặng, vô minh, dục ái, cái ngã ảo tưởng*). Thay vào đó, tập trung vào bản chất kỹ thuật, phân tích nguyên nhân - kết quả cụ thể.
 *   **dvvv (Category "anh4gs" / Đêm về viết văn)**: Chuyên mục viết về cuộc sống, suy tưởng, kỷ niệm và cảm xúc. Nơi đây khuyến khích giọng văn trầm lắng, chiêm nghiệm sâu sắc, có thể tự do kết hợp các ẩn dụ thiền tông, triết học cổ xưa và các quan sát tâm thức.
 
+### Pattern viết bài bnvc
+
+Các bài bnvc hay nhất thường không mở bằng định nghĩa học thuật, mà mở bằng một quan sát cá nhân, một va chạm thực tế, hoặc một chi tiết kỹ thuật khiến hắn phải dừng lại suy nghĩ. Từ đó bài viết mới bóc tách thành thesis, cơ chế vận hành, ví dụ cụ thể, và bài học thực dụng.
+
+Khi viết bnvc, hãy ưu tiên các nguyên tắc sau:
+
+*   **Mở bằng trải nghiệm hoặc nhận định cụ thể**: Hắn nhìn vào `package.json`, gặp lỗi build, quan sát một công cụ mới, hoặc nghe một nhận định chưa đủ đúng. Tránh mở bài bằng kiểu "X là gì" nếu không thật sự cần.
+*   **Thesis rõ nhưng kể như trải nghiệm**: Bài có thể có quan điểm mạnh, nhưng nên được trình bày như quá trình hắn tự nhận ra điều gì đó, không như một bài luận trung lập hay báo cáo thị trường.
+*   **Giải thích bằng cơ chế**: Mỗi nhận định kỹ thuật cần có nguyên nhân - kết quả cụ thể. Ví dụ: runtime vs build-time, API remote vs Markdown local, feedback loop của agent, cost vs edge, observability vs phỏng đoán.
+*   **Opinion được phép sắc, nhưng phải có nền**: Hắn có thể đoán, nghi ngờ, hoặc đưa ra nhận định mạnh, miễn là có quan sát, ví dụ, hoặc logic vận hành đỡ phía dưới.
+*   **Giữ chất kỹ thuật đời thường**: Có thể dùng các ẩn dụ như "ngôi nhà kỹ thuật số", "dọn nền móng", "gáo nước lạnh từ terminal", nhưng không chuyển sang giọng thiền, huyền học, hay chiêm nghiệm nặng.
+*   **Kết bài bằng bài học gọn**: Cuối bài nên gom lại thành một câu thực dụng, dễ nhớ, cho thấy hắn đã học được gì từ hệ thống, công cụ, thị trường, hoặc cách làm việc.
+
 
