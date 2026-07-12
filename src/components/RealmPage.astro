@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Container from './Container.astro';
+import Card from './Card.astro';
+import { getRealm, type RealmSlug } from '../lib/realms';
+
+interface Props {
+  realm: RealmSlug;
+  lang: 'vn' | 'en';
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { realm: realmSlug, lang, posts } = Astro.props;
+const realm = getRealm(realmSlug);
+const isEn = lang === 'en';
+const title = `${realm.emoji} ${realm.name}`;
+const description = realm.description[lang];
+const url = `https://anh4gs.xyz${isEn ? '/en' : ''}/${realm.slug}`;
+---
+
+<Layout {title} {description} {url} blur={false} {lang}>
+  <div class="bg-darkmode pt-[1px]">
+    <Container>
+      <div class="mt-12 mb-20 lg:mt-12 lg:mb-40">
+        <header class="mb-[2.5em] text-center max-w-[400px] mx-auto">
+          <h1 class="text-textColor text-[1.8rem] mb-4 font-normal lg:text-[2rem]">
+            {title}
+          </h1>
+          <p class="text-white/70 text-base leading-relaxed font-normal">
+            {description}
+          </p>
+        </header>
+        <div class="lg:flex lg:flex-wrap lg:-mx-6">
+          {posts.map((post) => (
+            <Card post={post} />
+          ))}
+        </div>
+        {posts.length === 0 && (
+          <p class="text-center text-white/40 py-12">
+            {isEn ? 'No posts yet.' : 'Chưa có bài viết nào.'}
+          </p>
+        )}
+      </div>
+    </Container>
+  </div>
+</Layout>

@@ -368,7 +368,7 @@ function main() {
       `title: ${yamlEscape(name)}`,
       `summary: ${yamlEscape(row.summary || "")}`,
       `author: ${yamlEscape(row.author || "Tam Pham")}`,
-      `category: ${yamlEscape(row.category || "blog")}`,
+      `category: ${yamlEscape(row.category || "forge")}`,
       `status: ${yamlEscape(row.status || "published")}`,
       `date: ${yamlEscape(row.publish_date || "")}`,
     ];

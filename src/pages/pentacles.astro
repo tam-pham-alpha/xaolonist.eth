@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import RealmPage from '../components/RealmPage.astro';
+
+const allPosts = await getCollection('blog', ({ data }) =>
+  data.status === 'published' && data.category === 'pentacles' && data.lang === 'vn'
+);
+
+const posts = allPosts.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<RealmPage realm="pentacles" lang="vn" posts={posts} />

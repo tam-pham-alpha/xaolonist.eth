@@ -65,8 +65,8 @@ Read the full `index.md` of the relevant exemplar before drafting a new post to 
 ### Writing Style & Voice
 
 All new posts must adopt the third-person narrator using "hắn" and "@aethery", omit em-dashes (use commas or colons instead), and avoid ending lines/bullet points with a period. However, we maintain a clear stylistic split based on category:
-- **bnvc posts (category: "blog")**: Focus on software engineering, tech stack, and logic. They should NOT use mystical, Zen-heavy, or overly philosophical words. Use clear, simple, and scientific language.
-- **dvvv posts (category: "anh4gs")**: Focus on life reflections, memories, and thoughts. They can adopt the mystical, Zen-philosophical style modeled after the book "Đạo Trading" (using words like "Thị", "tánh biết", "như thị", etc.).
+- **Forge posts (category: "forge")**: Focus on software engineering, tech stack, and logic. They should NOT use mystical, Zen-heavy, or overly philosophical words. Use clear, simple, and scientific language.
+- **Oracle posts (category: "oracle")**: Focus on life reflections, memories, and thoughts. They can adopt the mystical, Zen-philosophical style modeled after the book "Đạo Trading" (using words like "Thị", "tánh biết", "như thị", etc.).
 
 Before writing or generating new articles, review and follow the instructions in [styleguide.md](file:///Users/phamtam/projects/xaolonist.eth/content/styleguide/styleguide.md). Additionally, any posts written/co-written by the LLM must set `cowriter: "@aethery"` in the frontmatter, and append the signature `*❤️ cowriter aethery*` on a new line at the very end of the markdown body.
 
@@ -102,7 +102,7 @@ title: "My Post Title"
 summary: "A brief summary of the post."
 author: "Tam Pham"
 cowriter: "@aethery"      # (Optional) "@aethery" if co-written by LLM
-category: "blog"          # "blog" → homepage, "anh4gs" → /dvvv/ page
+category: "forge"         # "forge" | "pentacles" | "oracle" | "all-blue"
 status: "published"       # "published" or "draft"
 date: "2026-05-30"        # YYYY-MM-DD
 cover: "./cover.jpg"      # Relative path to cover image
@@ -130,18 +130,26 @@ If the user has attached/provided an image in their request, use that image dire
 
 ### 4. Category routing
 
-| `category` value | Page | Title |
+| `category` value | Page | Tagline |
 |---|---|---|
-| `"blog"` | `/` (index.astro) | "ban ngày viết code" |
-| `"anh4gs"` | `/dvvv/` (dvvv.astro) | "đêm về viết văn" |
+| `"forge"` | `/forge` | Create |
+| `"pentacles"` | `/pentacles` | Accumulate |
+| `"oracle"` | `/oracle` | Understand |
+| `"all-blue"` | `/all-blue` | Transcend |
+
+Homepage (`/`) shows all published posts as a unified timeline. `/music` lists posts with audio across all realms.
 
 ## Project Structure
 
 ```
 src/content/blog/       # All blog posts (markdown + images)
 src/content.config.ts   # Content collection schema definition
-src/pages/index.astro   # Homepage — lists category="blog" posts
-src/pages/dvvv.astro    # Writing page — lists category="anh4gs" posts
+src/pages/index.astro   # Homepage — unified timeline of all posts
+src/pages/forge.astro   # Forge room
+src/pages/pentacles.astro
+src/pages/oracle.astro
+src/pages/all-blue.astro
+src/pages/music.astro   # Cross-cutting music playlist
 src/pages/aethery.astro # Aethery profile page
 src/pages/blog/[slug].astro  # Individual post template (VN)
 src/pages/en/           # English versions of all pages
@@ -164,7 +172,7 @@ z.object({
   summary: z.string(),
   author: z.string().default('Tam Pham'),
   cowriter: z.string().optional(),
-  category: z.enum(['blog', 'anh4gs']),
+  category: z.enum(['forge', 'pentacles', 'oracle', 'all-blue']),
   status: z.enum(['published', 'draft']).default('published'),
   date: z.string(),
   cover: image(),      // Astro image optimization
