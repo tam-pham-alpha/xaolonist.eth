@@ -81,21 +81,15 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
       <button
         id="aethery-send"
         type="submit"
-        class="px-5 py-3 rounded-lg border border-[#ffc436]/40 text-[#ffc436] text-[0.9rem] hover:bg-[#ffc436]/10 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+        aria-label={STRINGS.send}
+        title={STRINGS.send}
+        class="px-4 py-3 rounded-lg border border-[#ffc436]/40 text-[#ffc436] hover:bg-[#ffc436]/10 disabled:opacity-40 disabled:cursor-not-allowed transition-all flex items-center justify-center"
       >
-        {STRINGS.send}
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
       </button>
     </form>
-
-    <div class="mt-2 text-right">
-      <button
-        id="aethery-reset"
-        type="button"
-        class="text-[#666666] text-[0.8rem] hover:text-white bg-transparent border-none cursor-pointer transition-colors"
-      >
-        {STRINGS.reset}
-      </button>
-    </div>
   </div>
 </div>
 
@@ -145,7 +139,8 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
     const formEl = document.getElementById('aethery-form') as HTMLFormElement;
     const inputEl = document.getElementById('aethery-input') as HTMLInputElement;
     const sendEl = document.getElementById('aethery-send') as HTMLButtonElement;
-    const resetEl = document.getElementById('aethery-reset') as HTMLButtonElement;
+    // Reset button lives in the page header (outside this component)
+    const resetEl = document.getElementById('aethery-reset') as HTMLButtonElement | null;
     const turnstileEl = document.getElementById('aethery-turnstile') as HTMLDivElement;
 
     let chatId: string | null = localStorage.getItem(KEY_CHAT_ID);
@@ -394,7 +389,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
       send();
     });
 
-    resetEl.addEventListener('click', () => {
+    resetEl?.addEventListener('click', () => {
       chatId = null;
       history = [];
       localStorage.removeItem(KEY_CHAT_ID);

@@ -11,10 +11,11 @@ import AetheryChat from '../../components/AetheryChat.astro';
   cover="/images/aethery.png"
   blur={false}
   lang="en"
+  hideFooter={true}
 >
   <div class="bg-darkmode pt-[1px] min-h-screen">
     <Container>
-      <div class="mt-10 mb-16 flex flex-col items-center">
+      <div class="mt-10 flex flex-col items-center">
         <div class="max-w-[600px] w-full">
           <div class="flex items-center gap-4">
             <a href="/en/aethery/story" class="shrink-0">
@@ -24,20 +25,27 @@ import AetheryChat from '../../components/AetheryChat.astro';
                 class="w-14 h-14 rounded-full object-cover shadow-[0_4px_15px_rgba(0,0,0,0.5)]"
               />
             </a>
-            <div>
+            <div class="flex-1">
               <h1 class="text-textColor text-[1.5rem] font-light italic tracking-[1px] m-0">@aethery</h1>
               <a
                 href="/en/aethery/story"
                 class="text-[#888888] no-underline text-[0.85rem] hover:text-[#ffc436] transition-colors"
               >her story →</a>
             </div>
+            <button
+              id="aethery-reset"
+              type="button"
+              aria-label="new conversation"
+              title="new conversation"
+              class="text-[#888888] bg-transparent border-none cursor-pointer hover:text-white transition-colors p-1"
+            >
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              </svg>
+            </button>
           </div>
 
           <AetheryChat lang="en" />
-
-          <div class="mt-8 text-center">
-            <a href="/en/" class="text-[#888888] no-underline text-[0.95rem] border-b border-transparent hover:text-white hover:border-white transition-all duration-200">return</a>
-          </div>
         </div>
       </div>
     </Container>

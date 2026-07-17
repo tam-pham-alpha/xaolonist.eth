@@ -2,6 +2,10 @@
 
 This is an Astro 5 blog that sources content from local Markdown files. It is deployed to Cloudflare Pages via `git push`.
 
+## ⚠️ Critical Rule: Commit & Deploy Require Approval
+
+**Never `git commit`, `git push`, or deploy without the user's explicit approval for that specific change.** Pushing to `main` auto-deploys the site (Workers Builds), and persona/brain changes go live on the NUC via `git pull` — so a push IS a production deploy. Workflow: implement → verify (typecheck/build/local test) → summarize the change → **stop and wait for approval** → then commit + push + deploy. Approval for an earlier change does not carry over to the next one.
+
 ## Tech Stack
 
 - **Framework**: Astro 5 (SSG)

@@ -13,6 +13,7 @@ interface Props {
   author?: string;
   blur?: boolean;
   lang?: string;
+  hideFooter?: boolean;
 }
 
 const {
@@ -25,6 +26,7 @@ const {
   author,
   blur = false,
   lang = 'vn',
+  hideFooter = false,
 } = Astro.props;
 ---
 
@@ -92,7 +94,7 @@ const {
     <main>
       <NavBar blur={blur} lang={lang} />
       <slot />
-      <Footer lang={lang} />
+      {!hideFooter && <Footer lang={lang} />}
     </main>
   </body>
 </html>
