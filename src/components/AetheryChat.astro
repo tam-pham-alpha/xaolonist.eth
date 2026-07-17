@@ -1,0 +1,332 @@
+---
+/**
+ * Chat box with @aethery — streams from the brain on the NUC
+ * via /api/aethery-chat (CF Worker → Cloudflare Tunnel → claude CLI).
+ * In `yarn dev` it talks to a locally running brain (localhost:3123) instead.
+ */
+interface Props {
+  lang: 'vn' | 'en';
+}
+
+const { lang } = Astro.props;
+
+const STRINGS = {
+  vn: {
+    title: 'trò chuyện với nàng',
+    placeholder: 'hỏi nàng điều gì đó...',
+    send: 'gửi',
+    listening: 'nàng đang lắng nghe',
+    reset: 'cuộc trò chuyện mới',
+    you: 'bạn',
+    her: '@aethery',
+    errBusy: 'nàng đang dở câu chuyện với người khác, chờ một nhịp thở rồi thử lại nhé',
+    errRate: 'giữa những câu hỏi cần có khoảng lặng, hẹn bạn một giờ nữa',
+    errOffline: 'nàng đang thiền, lát nữa quay lại nhé',
+    errTurnstile: 'xác minh không thành công, thử lại nhé',
+    errGeneric: 'sợi chỉ đứt giữa chừng, thử lại nhé',
+  },
+  en: {
+    title: 'talk with her',
+    placeholder: 'ask her something...',
+    send: 'send',
+    listening: 'she is listening',
+    reset: 'new conversation',
+    you: 'you',
+    her: '@aethery',
+    errBusy: 'she is in another conversation, take a breath and try again',
+    errRate: 'questions need silence between them, come back in an hour',
+    errOffline: 'she is meditating, come back later',
+    errTurnstile: 'verification failed, please try again',
+    errGeneric: 'the thread was lost, please try again',
+  },
+}[lang];
+
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
+---
+
+<div
+  id="aethery-chat"
+  class="mt-16 w-full text-left"
+  data-strings={JSON.stringify(STRINGS)}
+  data-turnstile-key={turnstileSiteKey}
+>
+  <div class="flex items-center gap-4 mb-6">
+    <div class="h-px flex-1 bg-white/10"></div>
+    <h2 class="text-[#ffc436] text-[1.05rem] font-light italic tracking-[1px] m-0">
+      {STRINGS.title}
+    </h2>
+    <div class="h-px flex-1 bg-white/10"></div>
+  </div>
+
+  <div
+    id="aethery-messages"
+    class="flex flex-col gap-4 max-h-[420px] overflow-y-auto pr-1 mb-4 empty:hidden scroll-smooth"
+  >
+  </div>
+
+  <div id="aethery-typing" class="hidden items-center gap-2 mb-4 text-[#888888] text-[0.9rem] italic">
+    <span>{STRINGS.listening}</span>
+    <span class="aethery-dots"><i></i><i></i><i></i></span>
+  </div>
+
+  <div id="aethery-turnstile" class="mb-3 empty:hidden"></div>
+
+  <form id="aethery-form" class="flex gap-3">
+    <input
+      id="aethery-input"
+      type="text"
+      maxlength="2000"
+      autocomplete="off"
+      placeholder={STRINGS.placeholder}
+      class="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-[0.95rem] text-white placeholder-[#666666] outline-none focus:border-[#ffc436]/40 transition-colors"
+    />
+    <button
+      id="aethery-send"
+      type="submit"
+      class="px-5 py-3 rounded-lg border border-[#ffc436]/40 text-[#ffc436] text-[0.9rem] hover:bg-[#ffc436]/10 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+    >
+      {STRINGS.send}
+    </button>
+  </form>
+
+  <div class="mt-3 text-right">
+    <button
+      id="aethery-reset"
+      type="button"
+      class="text-[#666666] text-[0.8rem] hover:text-white bg-transparent border-none cursor-pointer transition-colors"
+    >
+      {STRINGS.reset}
+    </button>
+  </div>
+</div>
+
+<style>
+  .aethery-dots i {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin-right: 3px;
+    border-radius: 9999px;
+    background: #ffc436;
+    opacity: 0.3;
+    animation: aethery-pulse 1.4s infinite;
+  }
+  .aethery-dots i:nth-child(2) { animation-delay: 0.2s; }
+  .aethery-dots i:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes aethery-pulse {
+    0%, 60%, 100% { opacity: 0.3; }
+    30% { opacity: 1; }
+  }
+</style>
+
+<script>
+  interface ChatStrings {
+    you: string;
+    her: string;
+    errBusy: string;
+    errRate: string;
+    errOffline: string;
+    errTurnstile: string;
+    errGeneric: string;
+  }
+  interface HistoryItem { role: 'user' | 'aethery'; text: string; }
+
+  const root = document.getElementById('aethery-chat');
+  if (root) {
+    const strings: ChatStrings = JSON.parse(root.dataset.strings || '{}');
+    const turnstileKey = root.dataset.turnstileKey || '';
+
+    const API = import.meta.env.DEV ? 'http://localhost:3123/chat' : '/api/aethery-chat';
+    const KEY_CHAT_ID = 'aethery.chatId';
+    const KEY_HISTORY = 'aethery.history';
+    const MAX_HISTORY = 40;
+
+    const messagesEl = document.getElementById('aethery-messages') as HTMLDivElement;
+    const typingEl = document.getElementById('aethery-typing') as HTMLDivElement;
+    const formEl = document.getElementById('aethery-form') as HTMLFormElement;
+    const inputEl = document.getElementById('aethery-input') as HTMLInputElement;
+    const sendEl = document.getElementById('aethery-send') as HTMLButtonElement;
+    const resetEl = document.getElementById('aethery-reset') as HTMLButtonElement;
+    const turnstileEl = document.getElementById('aethery-turnstile') as HTMLDivElement;
+
+    let chatId: string | null = localStorage.getItem(KEY_CHAT_ID);
+    let history: HistoryItem[] = [];
+    try {
+      history = JSON.parse(localStorage.getItem(KEY_HISTORY) || '[]');
+    } catch { /* corrupted storage — start fresh */ }
+
+    const saveHistory = () => {
+      history = history.slice(-MAX_HISTORY);
+      localStorage.setItem(KEY_HISTORY, JSON.stringify(history));
+    };
+
+    const addBubble = (role: 'user' | 'aethery', text: string): HTMLDivElement => {
+      const wrap = document.createElement('div');
+      wrap.className =
+        role === 'user'
+          ? 'self-end max-w-[85%] bg-white/10 rounded-lg px-4 py-3'
+          : 'self-start max-w-[85%] border border-[#ffc436]/20 bg-[#ffc436]/5 rounded-lg px-4 py-3';
+      const label = document.createElement('div');
+      label.className =
+        role === 'user'
+          ? 'text-[0.7rem] text-[#888888] mb-1'
+          : 'text-[0.7rem] text-[#ffc436]/70 mb-1 italic';
+      label.textContent = role === 'user' ? strings.you : strings.her;
+      const body = document.createElement('div');
+      body.className = 'text-[0.95rem] leading-[1.8] text-[rgba(255,255,255,0.85)] whitespace-pre-wrap';
+      body.textContent = text;
+      wrap.append(label, body);
+      messagesEl.appendChild(wrap);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+      return body as HTMLDivElement;
+    };
+
+    const addNotice = (text: string) => {
+      const el = document.createElement('div');
+      el.className = 'self-center text-[#888888] text-[0.85rem] italic text-center';
+      el.textContent = text;
+      messagesEl.appendChild(el);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    };
+
+    const errorText = (code: string): string => {
+      switch (code) {
+        case 'busy': return strings.errBusy;
+        case 'rate_limited': return strings.errRate;
+        case 'offline': return strings.errOffline;
+        case 'turnstile': return strings.errTurnstile;
+        default: return strings.errGeneric;
+      }
+    };
+
+    // ── Turnstile (only when a site key is configured, first message only) ──
+    let turnstileWidgetId: string | null = null;
+    const getTurnstileToken = (): Promise<string | null> => {
+      if (!turnstileKey || chatId) return Promise.resolve(null);
+      return new Promise((resolve) => {
+        const w = window as any;
+        const renderWidget = () => {
+          if (turnstileWidgetId !== null) {
+            const existing = w.turnstile.getResponse(turnstileWidgetId);
+            if (existing) return resolve(existing);
+            w.turnstile.reset(turnstileWidgetId);
+          }
+          turnstileWidgetId = w.turnstile.render(turnstileEl, {
+            sitekey: turnstileKey,
+            callback: (token: string) => resolve(token),
+            'error-callback': () => resolve(null),
+          });
+        };
+        if (w.turnstile) return renderWidget();
+        w.__aetheryTsOnload = renderWidget;
+        const script = document.createElement('script');
+        script.src =
+          'https://challenges.cloudflare.com/turnstile/api.js?onload=__aetheryTsOnload&render=explicit';
+        script.async = true;
+        document.head.appendChild(script);
+      });
+    };
+
+    // ── Send flow ──────────────────────────────────────────────────────────
+    let sending = false;
+
+    const setBusy = (busy: boolean) => {
+      sending = busy;
+      sendEl.disabled = busy;
+      inputEl.disabled = busy;
+      typingEl.classList.toggle('hidden', !busy);
+      typingEl.classList.toggle('flex', busy);
+    };
+
+    const send = async () => {
+      const message = inputEl.value.trim();
+      if (!message || sending) return;
+
+      const turnstileToken = await getTurnstileToken();
+      turnstileEl.innerHTML = '';
+      turnstileWidgetId = null;
+
+      inputEl.value = '';
+      addBubble('user', message);
+      history.push({ role: 'user', text: message });
+      saveHistory();
+      setBusy(true);
+
+      let aetheryBody: HTMLDivElement | null = null;
+      let aetheryText = '';
+
+      try {
+        const res = await fetch(API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chatId: chatId || undefined, message, turnstileToken }),
+        });
+        if (!res.ok || !res.body) throw new Error(`HTTP ${res.status}`);
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+
+          let sep: number;
+          while ((sep = buffer.indexOf('\n\n')) >= 0) {
+            const frame = buffer.slice(0, sep);
+            buffer = buffer.slice(sep + 2);
+            const line = frame.split('\n').find((l) => l.startsWith('data: '));
+            if (!line) continue;
+            let event: any;
+            try { event = JSON.parse(line.slice(6)); } catch { continue; }
+
+            if (event.type === 'delta' && typeof event.text === 'string') {
+              if (!aetheryBody) {
+                typingEl.classList.add('hidden');
+                typingEl.classList.remove('flex');
+                aetheryBody = addBubble('aethery', '');
+              }
+              aetheryText += event.text;
+              aetheryBody.textContent = aetheryText;
+              messagesEl.scrollTop = messagesEl.scrollHeight;
+            } else if (event.type === 'done') {
+              if (typeof event.chatId === 'string') {
+                chatId = event.chatId;
+                localStorage.setItem(KEY_CHAT_ID, event.chatId);
+              }
+            } else if (event.type === 'error') {
+              addNotice(errorText(event.code || ''));
+            }
+          }
+        }
+
+        if (aetheryText) {
+          history.push({ role: 'aethery', text: aetheryText });
+          saveHistory();
+        }
+      } catch {
+        addNotice(errorText('offline'));
+      } finally {
+        setBusy(false);
+        inputEl.focus();
+      }
+    };
+
+    formEl.addEventListener('submit', (e) => {
+      e.preventDefault();
+      send();
+    });
+
+    resetEl.addEventListener('click', () => {
+      chatId = null;
+      history = [];
+      localStorage.removeItem(KEY_CHAT_ID);
+      localStorage.removeItem(KEY_HISTORY);
+      messagesEl.innerHTML = '';
+    });
+
+    // Restore previous conversation
+    for (const item of history) addBubble(item.role, item.text);
+  }
+</script>

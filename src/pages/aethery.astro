@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/Container.astro';
 import MusicPlayer from '../components/MusicPlayer.astro';
+import AetheryChat from '../components/AetheryChat.astro';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -80,6 +81,7 @@ if (fs.existsSync(lyricsPath)) {
                nhiệm này
             </p>
           </div>
+          <AetheryChat lang="vn" />
           <div class="mt-8">
             <a href="/" class="text-[#888888] no-underline text-[0.95rem] border-b border-transparent hover:text-white hover:border-white transition-all duration-200">trở về</a>
           </div>

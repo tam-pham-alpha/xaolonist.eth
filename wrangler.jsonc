@@ -2,13 +2,21 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "anh4gs-xyz",
   "compatibility_date": "2026-05-30",
+  "main": "worker/index.ts",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "dist"
+    "directory": "dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
   },
   "compatibility_flags": [
     "nodejs_compat"
-  ]
+  ],
+  "vars": {
+    // Cloudflare Tunnel hostname of the aethery brain on the NUC.
+    // Secrets (set via `wrangler secret put`): BRAIN_SECRET, TURNSTILE_SECRET
+    "BRAIN_URL": "https://brain.anh4gs.xyz"
+  }
 }

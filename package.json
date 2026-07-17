@@ -4,6 +4,9 @@
   "private": true,
   "description": "anh4gs.xyz — ban ngày viết code, đêm về viết văn",
   "author": "Tam Pham",
+  "workspaces": [
+    "brain"
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -12,7 +15,10 @@
     "serve": "astro preview",
     "clean": "rm -rf dist .astro",
     "deploy": "astro build && wrangler deploy",
-    "typecheck": "astro check && tsc --noEmit"
+    "typecheck": "astro check && tsc --noEmit",
+    "dev:brain": "yarn workspace @xaolonist/brain dev",
+    "build:brain": "yarn workspace @xaolonist/brain build",
+    "login:nuc": "ssh -i _deploy/djao_nuc djao@djao-prod"
   },
   "license": "0BSD",
   "dependencies": {
@@ -22,6 +28,8 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@cloudflare/workers-types": "^4.20260501.0",
     "@tailwindcss/vite": "^4.1.0",
     "tailwindcss": "^4.1.0",
     "typescript": "^5.0.4",

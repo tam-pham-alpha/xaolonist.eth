@@ -1,3 +1,9 @@
 {
-  "model": "claude-sonnet-4-6"
+  "model": "claude-sonnet-4-6",
+  "permissions": {
+    "allow": [
+      "Bash(ssh -i _deploy/djao_nuc djao@djao-prod*)",
+      "Bash(yarn login:nuc)"
+    ]
+  }
 }
