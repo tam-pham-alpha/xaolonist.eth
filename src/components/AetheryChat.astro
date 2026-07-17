@@ -161,27 +161,51 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 
     // ── Rich rendering for aethery replies: clickable links + **bold** ─────
     // Built with DOM nodes only (never innerHTML from model output).
-    const URL_RE = /\bhttps?:\/\/[^\s<>()"']+|\b(?:[a-z0-9-]+\.)+[a-z]{2,6}\/[^\s<>()"']+/gi;
+    const URL_RE =
+      /\bhttps?:\/\/[^\s<>()"']+|\b(?:[a-z0-9-]+\.)+[a-z]{2,6}\/[^\s<>()"']+|(?:^|\s)\/blog\/[a-z0-9-]+/gi;
+    const MD_LINK_RE = /\[([^\]]+)\]\(([^)\s]+)\)/g;
 
-    const appendLinkified = (parent: HTMLElement, text: string) => {
+    const makeLink = (href: string, label: string): HTMLAnchorElement => {
+      const a = document.createElement('a');
+      a.href = href.startsWith('http') || href.startsWith('/') ? href : `https://${href}`;
+      a.textContent = label;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.className =
+        'text-[#ffc436] underline underline-offset-4 decoration-[#ffc436]/40 hover:decoration-[#ffc436] break-all transition-colors';
+      return a;
+    };
+
+    const appendUrlLinkified = (parent: HTMLElement, text: string) => {
       let last = 0;
       for (const m of text.matchAll(URL_RE)) {
-        const idx = m.index ?? 0;
+        let idx = m.index ?? 0;
+        let url = m[0];
+        // the relative /blog/... alternative consumes its leading whitespace
+        if (url.startsWith(' ') || url.startsWith('\n')) {
+          url = url.slice(1);
+          idx += 1;
+        }
         if (idx > last) parent.appendChild(document.createTextNode(text.slice(last, idx)));
-        const trimmed = m[0].replace(/[.,;:!?)*]+$/, '');
-        const trailing = m[0].slice(trimmed.length);
-        const a = document.createElement('a');
-        a.href = trimmed.startsWith('http') ? trimmed : `https://${trimmed}`;
-        a.textContent = trimmed;
-        a.target = '_blank';
-        a.rel = 'noopener noreferrer';
-        a.className =
-          'text-[#ffc436] underline underline-offset-4 decoration-[#ffc436]/40 hover:decoration-[#ffc436] break-all transition-colors';
-        parent.appendChild(a);
+        const trimmed = url.replace(/[.,;:!?)*]+$/, '');
+        const trailing = url.slice(trimmed.length);
+        parent.appendChild(makeLink(trimmed, trimmed));
         if (trailing) parent.appendChild(document.createTextNode(trailing));
-        last = idx + m[0].length;
+        last = idx + url.length;
       }
       if (last < text.length) parent.appendChild(document.createTextNode(text.slice(last)));
+    };
+
+    // Markdown [text](url) first, plain URLs in the remaining segments
+    const appendLinkified = (parent: HTMLElement, text: string) => {
+      let last = 0;
+      for (const m of text.matchAll(MD_LINK_RE)) {
+        const idx = m.index ?? 0;
+        if (idx > last) appendUrlLinkified(parent, text.slice(last, idx));
+        parent.appendChild(makeLink(m[2], m[1]));
+        last = idx + m[0].length;
+      }
+      if (last < text.length) appendUrlLinkified(parent, text.slice(last));
     };
 
     const renderAetheryText = (body: HTMLElement, text: string) => {

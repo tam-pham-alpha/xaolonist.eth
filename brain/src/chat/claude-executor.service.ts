@@ -2,7 +2,7 @@ import { Injectable, Logger, OnModuleDestroy } from '@nestjs/common';
 import { spawn } from 'child_process';
 import { randomUUID } from 'crypto';
 import * as path from 'path';
-import { AETHERY_SYSTEM_PROMPT } from './aethery-prompt';
+import { loadAetheryPrompt } from './aethery-prompt';
 import {
   MAX_CONCURRENT_TURNS,
   MAX_TURNS_PER_MESSAGE,
@@ -151,7 +151,8 @@ export class ClaudeExecutorService implements OnModuleDestroy {
       '--include-partial-messages',
       '--allowedTools', 'Read,Grep,Glob',
       '--max-turns', String(MAX_TURNS_PER_MESSAGE),
-      '--append-system-prompt', AETHERY_SYSTEM_PROMPT,
+      // Re-read persona.md every turn — edits go live without restart
+      '--append-system-prompt', loadAetheryPrompt(this.repoDir),
     );
     if (this.model) args.push('--model', this.model);
     args.push(prompt);
