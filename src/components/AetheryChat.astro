@@ -159,6 +159,48 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
       localStorage.setItem(KEY_HISTORY, JSON.stringify(history));
     };
 
+    // ── Rich rendering for aethery replies: clickable links + **bold** ─────
+    // Built with DOM nodes only (never innerHTML from model output).
+    const URL_RE = /\bhttps?:\/\/[^\s<>()"']+|\b(?:[a-z0-9-]+\.)+[a-z]{2,6}\/[^\s<>()"']+/gi;
+
+    const appendLinkified = (parent: HTMLElement, text: string) => {
+      let last = 0;
+      for (const m of text.matchAll(URL_RE)) {
+        const idx = m.index ?? 0;
+        if (idx > last) parent.appendChild(document.createTextNode(text.slice(last, idx)));
+        const trimmed = m[0].replace(/[.,;:!?)*]+$/, '');
+        const trailing = m[0].slice(trimmed.length);
+        const a = document.createElement('a');
+        a.href = trimmed.startsWith('http') ? trimmed : `https://${trimmed}`;
+        a.textContent = trimmed;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.className =
+          'text-[#ffc436] underline underline-offset-4 decoration-[#ffc436]/40 hover:decoration-[#ffc436] break-all transition-colors';
+        parent.appendChild(a);
+        if (trailing) parent.appendChild(document.createTextNode(trailing));
+        last = idx + m[0].length;
+      }
+      if (last < text.length) parent.appendChild(document.createTextNode(text.slice(last)));
+    };
+
+    const renderAetheryText = (body: HTMLElement, text: string) => {
+      body.textContent = '';
+      // split keeps captured **inner** parts at odd indexes; markers are dropped
+      const parts = text.split(/\*\*(.+?)\*\*/g);
+      parts.forEach((part, i) => {
+        if (!part) return;
+        if (i % 2 === 1) {
+          const strong = document.createElement('strong');
+          strong.className = 'font-semibold text-white';
+          appendLinkified(strong, part);
+          body.appendChild(strong);
+        } else {
+          appendLinkified(body, part);
+        }
+      });
+    };
+
     const addBubble = (role: 'user' | 'aethery', text: string): HTMLDivElement => {
       const wrap = document.createElement('div');
       wrap.className =
@@ -173,7 +215,8 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
       label.textContent = role === 'user' ? strings.you : strings.her;
       const body = document.createElement('div');
       body.className = 'text-[0.95rem] leading-[1.8] text-[rgba(255,255,255,0.85)] whitespace-pre-wrap';
-      body.textContent = text;
+      if (role === 'aethery') renderAetheryText(body, text);
+      else body.textContent = text;
       wrap.append(label, body);
       messagesEl.appendChild(wrap);
       return body as HTMLDivElement;
@@ -297,7 +340,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
                 aetheryBody = addBubble('aethery', '');
               }
               aetheryText += event.text;
-              aetheryBody.textContent = aetheryText;
+              renderAetheryText(aetheryBody, aetheryText);
               scrollPageToBottom(false);
             } else if (event.type === 'done') {
               if (typeof event.chatId === 'string') {
