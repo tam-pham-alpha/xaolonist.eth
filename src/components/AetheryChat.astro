@@ -46,7 +46,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 
 <div
   id="aethery-chat"
-  class="mt-16 w-full text-left"
+  class="mt-16 w-full text-left flex flex-col min-h-[100svh]"
   data-strings={JSON.stringify(STRINGS)}
   data-turnstile-key={turnstileSiteKey}
 >
@@ -58,45 +58,44 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
     <div class="h-px flex-1 bg-white/10"></div>
   </div>
 
-  <div
-    id="aethery-messages"
-    class="flex flex-col gap-4 max-h-[420px] overflow-y-auto pr-1 mb-4 empty:hidden scroll-smooth"
-  >
+  <div id="aethery-messages" class="flex flex-col gap-4 flex-1">
   </div>
 
-  <div id="aethery-typing" class="hidden items-center gap-2 mb-4 text-[#888888] text-[0.9rem] italic">
-    <span>{STRINGS.listening}</span>
-    <span class="aethery-dots"><i></i><i></i><i></i></span>
-  </div>
+  <div class="sticky bottom-0 bg-darkmode pt-3 pb-4">
+    <div id="aethery-typing" class="hidden items-center gap-2 mb-3 text-[#888888] text-[0.9rem] italic">
+      <span>{STRINGS.listening}</span>
+      <span class="aethery-dots"><i></i><i></i><i></i></span>
+    </div>
 
-  <div id="aethery-turnstile" class="mb-3 empty:hidden"></div>
+    <div id="aethery-turnstile" class="mb-3 empty:hidden"></div>
 
-  <form id="aethery-form" class="flex gap-3">
-    <input
-      id="aethery-input"
-      type="text"
-      maxlength="2000"
-      autocomplete="off"
-      placeholder={STRINGS.placeholder}
-      class="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-[0.95rem] text-white placeholder-[#666666] outline-none focus:border-[#ffc436]/40 transition-colors"
-    />
-    <button
-      id="aethery-send"
-      type="submit"
-      class="px-5 py-3 rounded-lg border border-[#ffc436]/40 text-[#ffc436] text-[0.9rem] hover:bg-[#ffc436]/10 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
-    >
-      {STRINGS.send}
-    </button>
-  </form>
+    <form id="aethery-form" class="flex gap-3">
+      <input
+        id="aethery-input"
+        type="text"
+        maxlength="2000"
+        autocomplete="off"
+        placeholder={STRINGS.placeholder}
+        class="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-[0.95rem] text-white placeholder-[#666666] outline-none focus:border-[#ffc436]/40 transition-colors"
+      />
+      <button
+        id="aethery-send"
+        type="submit"
+        class="px-5 py-3 rounded-lg border border-[#ffc436]/40 text-[#ffc436] text-[0.9rem] hover:bg-[#ffc436]/10 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+      >
+        {STRINGS.send}
+      </button>
+    </form>
 
-  <div class="mt-3 text-right">
-    <button
-      id="aethery-reset"
-      type="button"
-      class="text-[#666666] text-[0.8rem] hover:text-white bg-transparent border-none cursor-pointer transition-colors"
-    >
-      {STRINGS.reset}
-    </button>
+    <div class="mt-2 text-right">
+      <button
+        id="aethery-reset"
+        type="button"
+        class="text-[#666666] text-[0.8rem] hover:text-white bg-transparent border-none cursor-pointer transition-colors"
+      >
+        {STRINGS.reset}
+      </button>
+    </div>
   </div>
 </div>
 
@@ -177,8 +176,17 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
       body.textContent = text;
       wrap.append(label, body);
       messagesEl.appendChild(wrap);
-      messagesEl.scrollTop = messagesEl.scrollHeight;
       return body as HTMLDivElement;
+    };
+
+    // Page-level scroll (no inner scroller): force on user actions,
+    // follow during streaming only while the reader is already near the bottom
+    const scrollPageToBottom = (force: boolean) => {
+      const doc = document.documentElement;
+      const nearBottom = window.innerHeight + window.scrollY >= doc.scrollHeight - 200;
+      if (force || nearBottom) {
+        window.scrollTo({ top: doc.scrollHeight, behavior: force ? 'smooth' : 'auto' });
+      }
     };
 
     const addNotice = (text: string) => {
@@ -186,7 +194,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
       el.className = 'self-center text-[#888888] text-[0.85rem] italic text-center';
       el.textContent = text;
       messagesEl.appendChild(el);
-      messagesEl.scrollTop = messagesEl.scrollHeight;
+      scrollPageToBottom(false);
     };
 
     const errorText = (code: string): string => {
@@ -248,6 +256,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 
       inputEl.value = '';
       addBubble('user', message);
+      scrollPageToBottom(true);
       history.push({ role: 'user', text: message });
       saveHistory();
       setBusy(true);
@@ -289,7 +298,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
               }
               aetheryText += event.text;
               aetheryBody.textContent = aetheryText;
-              messagesEl.scrollTop = messagesEl.scrollHeight;
+              scrollPageToBottom(false);
             } else if (event.type === 'done') {
               if (typeof event.chatId === 'string') {
                 chatId = event.chatId;

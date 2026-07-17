@@ -142,12 +142,14 @@ Key properties the diagrams encode:
 - **No token cost, but**: burns Claude subscription usage quota + NUC CPU → Turnstile + rate limit + concurrency cap remain **mandatory**, not optional
 - **Availability**: chat is down when the NUC is down — acceptable for a personal site; the UI shows "nàng đang thiền, lát nữa quay lại nhé" on tunnel failure
 
-## Remaining (production rollout)
+## Production rollout — DONE 26-07-17
 
-- [ ] NUC: build brain, `brain/.env` with `BRAIN_SECRET`, pm2 start
-- [ ] cloudflared tunnel → `brain.anh4gs.xyz` (one-time, CF dashboard access)
-- [ ] `wrangler secret put BRAIN_SECRET` (+ `TURNSTILE_SECRET` and `PUBLIC_TURNSTILE_SITE_KEY` if enabling human check)
-- [ ] Commit + `yarn deploy`
+- [x] Commit + push `5d51ab9` — Worker + assets auto-deployed via git push (Workers Builds); no manual `yarn deploy` needed
+- [x] NUC: corepack/yarn 4 enabled, brain built, `brain/.env` with `BRAIN_SECRET`, pm2 app `aethery-brain` (saved)
+- [x] cloudflared 2026.7.2 (no sudo, `~/.local/bin`), tunnel `aethery-brain` (8731e5e1) → `brain.anh4gs.xyz`, pm2 app `aethery-tunnel`
+- [x] `wrangler secret put BRAIN_SECRET` (piped from NUC `.env`, OAuth login on dev Mac; wrangler needs node ≥22 → brew `node@22` keg-only)
+- [x] E2E verified on anh4gs.xyz: streaming reply in oracle voice citing real slugs (~10–13s/turn), `--resume` continuity, unauthorized/404 paths
+- [ ] Optional later: Turnstile (`TURNSTILE_SECRET` + `PUBLIC_TURNSTILE_SITE_KEY`)
 
 ## Effort (actual)
 
