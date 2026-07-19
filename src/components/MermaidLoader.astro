@@ -1,0 +1,33 @@
+<script>
+  import mermaid from 'mermaid';
+
+  async function renderMermaidDiagrams() {
+    const root = document.querySelector('.markdown-content');
+    if (!root) return;
+
+    const codes = root.querySelectorAll(
+      'pre > code.language-mermaid, pre[data-language="mermaid"] > code',
+    );
+    if (codes.length === 0) return;
+
+    for (const code of codes) {
+      const pre = code.parentElement;
+      if (!pre) continue;
+
+      const diagram = document.createElement('pre');
+      diagram.className = 'mermaid';
+      diagram.textContent = code.textContent ?? '';
+      pre.replaceWith(diagram);
+    }
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'dark',
+      securityLevel: 'loose',
+    });
+
+    await mermaid.run({ querySelector: '.markdown-content .mermaid' });
+  }
+
+  void renderMermaidDiagrams();
+</script>

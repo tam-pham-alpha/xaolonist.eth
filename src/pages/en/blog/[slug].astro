@@ -4,6 +4,7 @@ import { Image, getImage } from 'astro:assets';
 import Layout from '../../../layouts/Layout.astro';
 import Container from '../../../components/Container.astro';
 import MusicPlayer from '../../../components/MusicPlayer.astro';
+import MermaidLoader from '../../../components/MermaidLoader.astro';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -114,6 +115,7 @@ if (data.music) {
         <section class="text-[17px] text-[rgba(255,255,255,0.8)] leading-[1.5] max-w-[760px] mx-auto markdown-content">
           <Content />
         </section>
+        <MermaidLoader />
       </div>
     </Container>
   </div>

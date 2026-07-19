@@ -19,46 +19,26 @@ Those two jobs have almost opposite requirements. Collection needs to be determi
 
 So in Djao Trading's market-making audit system, he deliberately split them into two fully independent pipelines. The collector is only responsible for producing a **snapshot**. The LLM is only responsible for reading that snapshot. Nothing more. Nothing less. The architecture looks like this:
 
-```text
-Cron
-    ↓
-Collector
-    ↓
-snapshot.json
-    ↓
-LLM
-    ↓
-report.md
-    ↓
-Discord
+```mermaid
+flowchart TD
+  Cron --> Collector
+  Collector --> LLM
+  LLM --> Report
 ```
 
 ## Detailed architecture
 
 Zoom in, and the same loop looks like this:
 
-```text
-        ┌──────────────────────── cron-jobs.json ───────────────────────┐
-        │   "0 */4 * * *"   →   audit_type: mm_health                   │
-        └───────────────────────────────┬───────────────────────────────┘
-                                         │ time's up
-                                         ▼
-   _audit/requests/*.md ─────────►  filter enabled requests of that type
-   (declare: what to check)             │
-                                         ▼   for each request:
-                          ┌──────────────────────────────┐
-                          │  collector.sh --request X    │   COLLECT
-                          │    → snapshot.json           │   (deterministic)
-                          └───────────────┬──────────────┘
-                                          │ read file
-                                          ▼
-                          ┌──────────────────────────────┐
-                          │ prompt = snapshot + template │
-                          │          + request           │   INTERPRET
-                          │   → claude → stdout          │   (judgment)
-                          └───────────────┬──────────────┘
-                                          ▼
-              report.md  ──►  git commit + push  ──►  Discord
+```mermaid
+flowchart TD
+  Cron["cron-jobs.json<br/>0 */4 * * * → audit_type: mm_health"]
+  Cron -->|time's up| Requests["_audit/requests/<br/>filter enabled requests of that type"]
+  Requests -->|for each request| Collect["collector.sh --request X<br/>→ snapshot.json<br/>COLLECT · deterministic"]
+  Collect -->|read file| Interpret["prompt = snapshot + template + request<br/>→ claude → stdout<br/>INTERPRET · judgment"]
+  Interpret --> Report[report.md]
+  Report --> Git[git commit + push]
+  Git --> Discord[Discord]
 ```
 
 Four layers, four cleanly separated responsibilities:
@@ -83,22 +63,6 @@ Everyone's first instinct is to give the AI permission to run commands, let it q
 The decision: draw a hard line between **deterministic** and **non-deterministic**.
 
 > The shell script owns the *facts*: take one fixed photo, print JSON, save it to a file. The LLM owns the *meaning*: read exactly that photo and judge.
-
-The scheduler doesn't hard-code the schedule. It reads `_audit/cron-jobs.json`, where each line pairs a *cron expression → audit type*, then registers each job:
-
-```ts
-const { CronJob } = require(join(this.repoDir, 'node_modules/cron'));
-
-for (const job of this.cronJobs) {
-  const cronJob = new CronJob(job.cron, () => {
-    void this.runRequestBatch(job.auditType);   // time's up → run a batch
-  });
-  this.schedulerRegistry.addCronJob(`mm-audit-${job.auditType}`, cronJob);
-  cronJob.start();
-}
-```
-
-Want to change "every 4 hours" to "hourly," or add a new audit type on its own cadence: edit the JSON, restart, done. Not a single line of TypeScript touched. The schedule is *configuration*, not *logic*.
 
 For each request, the scheduler calls exactly one shell script and tells it to dump the result to a file. Absolutely no AI in this layer, just query, gather, print JSON:
 
@@ -285,10 +249,6 @@ Any system where you find yourself having to *read and judge it every day*, AWS 
 
 After splitting the collector from reasoning, he realized the AI doesn't need to become an operating system. It only needs to become a compiler: the collector compiles the real world into a snapshot, the LLM compiles the snapshot into insight. Two independent layers, swappable, testable separately, scalable separately.
 
-What readers should remember after this post isn't `collector.sh` or `cron-jobs.json`, but three principles:
-
-> **Data collection should be deterministic. AI should only do reasoning. The snapshot is the contract between the two layers.**
-
-That's a takeaway strong enough for a technical blog post.
+What he carries away isn't a filename or a cron schedule, but a boundary: collection stays deterministic, reasoning stays separate, and the snapshot is the contract between the two. Everything else — which model, Discord or Slack, bash or Python — can be swapped piece by piece without touching that insight.
 
 *❤️ cowriter aethery*
