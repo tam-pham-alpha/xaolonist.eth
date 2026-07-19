@@ -1,6 +1,6 @@
 # Tools Platform — Architecture North-Star
 
-> **Status: foundation implemented 26-07-19.** First tool (batch image-resizer) built + verified end-to-end locally. This is the **evergreen direction doc** (`00-00-00` = not a dated log) for turning anh4gs.xyz into a host for many small utility tools. New tool plans should reference this and respect the tier boundaries below.
+> **Status: LIVE in production 26-07-19.** First tool (batch image-resizer) shipped via PR #4 — frontend+worker auto-deployed by Cloudflare Workers Builds on merge to `main`, brain deployed on the NUC with a portable ImageMagick AppImage. Verified end-to-end on `https://anh4gs.xyz/api/tools/image-resize`. This is the **evergreen direction doc** (`00-00-00` = not a dated log) for turning anh4gs.xyz into a host for many small utility tools. New tool plans should reference this and respect the tier boundaries below.
 >
 > Code landed: `brain/src/common/`, `brain/src/tools/image-resize/`, `worker/index.ts` (`/api/tools/:id`), `src/lib/tools.ts`, `src/pages/tools/`, `src/components/tools/ImageResizer.astro`.
 
@@ -156,7 +156,7 @@ Brain typecheck + astro check/build + worker typecheck all pass.
 
 Reuses the aethery pipeline (see `brain/README.md`), no new secrets:
 
-- **Brain (NUC)** — `cd ~/prod/xaolonist.eth && git pull && yarn install && yarn workspace @xaolonist/brain build && pm2 restart aethery-brain`. **Plus one-time: install ImageMagick** (`sudo apt-get install -y imagemagick` → provides `convert`; the service auto-detects `magick`→`convert`, or set `MAGICK_BIN`). Not preinstalled on the NUC as of 26-07-19.
+- **Brain (NUC)** — `cd ~/prod/xaolonist.eth && git pull && yarn install && yarn workspace @xaolonist/brain build && pm2 restart aethery-brain`. **Plus one-time: ImageMagick.** The `djao` user has **no passwordless sudo**, so `apt-get` is not an option — instead a portable static AppImage is used (runs directly, no FUSE): `curl -fL https://github.com/ImageMagick/ImageMagick/releases/download/<ver>/ImageMagick-<ver>-gcc-x86_64.AppImage -o ~/.local/opt/im/magick && chmod +x ~/.local/opt/im/magick`, then `MAGICK_BIN=/home/djao/.local/opt/im/magick` in `brain/.env` (the service reads `MAGICK_BIN`, else falls back to `magick`→`convert` on PATH).
 - **Worker + site** — `yarn deploy` (repo root) = `astro build && wrangler deploy`. Publishes `/tools/*` pages + `/api/tools/*` route.
 - Order: brain first, then worker/site.
 
