@@ -1,0 +1,35 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Container from '../../../components/Container.astro';
+import ImageResizer from '../../../components/tools/ImageResizer.astro';
+import { getTool } from '../../../lib/tools';
+
+const tool = getTool('image-resizer')!;
+---
+
+<Layout
+  title={`${tool.name.en} — anh4gs tools`}
+  description={tool.description.en}
+  url="https://anh4gs.xyz/en/tools/image-resizer"
+  lang="en"
+>
+  <div class="bg-darkmode min-h-screen pt-10 pb-20">
+    <Container>
+      <div class="max-w-[720px] mx-auto">
+        <a href="/en/tools" class="text-[#888] text-[0.85rem] hover:text-[#ffc436] transition-colors">
+          ← all tools
+        </a>
+        <header class="mt-4 mb-8">
+          <h1 class="text-textColor text-[1.8rem] font-light tracking-[0.5px] m-0">
+            {tool.emoji} {tool.name.en}
+          </h1>
+          <p class="text-[#888888] text-[0.95rem] mt-2 leading-relaxed">
+            {tool.description.en}
+          </p>
+        </header>
+
+        <ImageResizer lang="en" />
+      </div>
+    </Container>
+  </div>
+</Layout>

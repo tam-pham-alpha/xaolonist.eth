@@ -55,6 +55,14 @@ const getLangLinkClass = (active: boolean) =>
             <span class="hidden md:inline">{` ${realm.name}`}</span>
           </a>
         ))}
+        <a
+          href={isEn ? '/en/tools' : '/tools'}
+          class={navLinkClass}
+          title={isEn ? 'tools — small handy utilities' : 'tools — công cụ nhỏ tiện dụng'}
+        >
+          <span aria-hidden="true">🧰</span>
+          <span class="hidden md:inline"> Tools</span>
+        </a>
         <div class="inline-flex items-center gap-1.5 sm:gap-3 shrink-0">
           <a href={viPath} class={getLangLinkClass(!isEn)} title="Tiếng Việt"
             >🇻🇳</a

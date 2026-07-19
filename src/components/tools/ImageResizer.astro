@@ -1,0 +1,460 @@
+---
+/**
+ * Batch image resizer — client island (bilingual).
+ * Uploads N images to /api/tools/image-resize (CF Worker → NUC brain →
+ * ImageMagick) and downloads the returned zip. In `yarn dev` it talks to the
+ * local brain (localhost:3123) directly.
+ */
+interface Props {
+  lang?: 'vn' | 'en';
+}
+
+const { lang = 'vn' } = Astro.props;
+
+const L = {
+  vn: {
+    dropTitle: 'Kéo thả ảnh vào đây, hoặc bấm để chọn',
+    dropHint: 'Tối đa 30 ảnh · 15MB/ảnh · 25MB tổng · JPG, PNG, WebP, GIF, TIFF, HEIC…',
+    clearAll: 'xoá hết',
+    modeLabel: 'Cách resize',
+    modePercent: 'Theo phần trăm (%)',
+    modeWidth: 'Cố định chiều rộng',
+    modeHeight: 'Cố định chiều cao',
+    modeFit: 'Vừa trong khung W×H',
+    lblPercent: 'Phần trăm',
+    lblWidth: 'Chiều rộng (px)',
+    lblHeight: 'Chiều cao (px)',
+    lblFitW: 'Rộng tối đa',
+    lblFitH: 'Cao tối đa',
+    formatLabel: 'Định dạng',
+    fmtKeep: 'Giữ nguyên',
+    lblQuality: 'Chất lượng',
+    lblNoUpscale: 'Không phóng to ảnh nhỏ hơn kích thước đích',
+    btnRun: 'Resize & tải zip',
+    // strings used from the client script (placeholders {n} {mb} {max} {name} {ok} {fail})
+    js: {
+      images: 'ảnh',
+      resizing: 'Đang resize {n} ảnh…',
+      errTotal: 'Tổng dung lượng vượt {mb}MB — bớt vài ảnh nhé',
+      errMaxFiles: 'Tối đa {max} ảnh',
+      errFileTooBig: '"{name}" lớn hơn {mb}MB — bỏ qua',
+      errTooLarge: 'Ảnh quá lớn so với giới hạn',
+      errRate: 'Bạn gửi hơi nhiều, thử lại sau một lúc nhé',
+      errOffline: 'Máy chủ xử lý đang nghỉ, thử lại sau nhé',
+      errAllFailed: 'Không xử lý được ảnh nào, thử ảnh khác nhé',
+      errGeneric: 'Có lỗi xảy ra, thử lại nhé',
+      doneOk: 'Xong {n} ảnh — zip đã tải về ✓',
+      doneFail: 'Xong {ok} ảnh · {fail} ảnh lỗi — zip đã tải về',
+    },
+  },
+  en: {
+    dropTitle: 'Drop images here, or click to choose',
+    dropHint: 'Up to 30 images · 15MB each · 25MB total · JPG, PNG, WebP, GIF, TIFF, HEIC…',
+    clearAll: 'clear all',
+    modeLabel: 'Resize mode',
+    modePercent: 'By percentage (%)',
+    modeWidth: 'Fixed width',
+    modeHeight: 'Fixed height',
+    modeFit: 'Fit within W×H',
+    lblPercent: 'Percentage',
+    lblWidth: 'Width (px)',
+    lblHeight: 'Height (px)',
+    lblFitW: 'Max width',
+    lblFitH: 'Max height',
+    formatLabel: 'Format',
+    fmtKeep: 'Keep original',
+    lblQuality: 'Quality',
+    lblNoUpscale: "Don't upscale images smaller than the target",
+    btnRun: 'Resize & download zip',
+    js: {
+      images: 'images',
+      resizing: 'Resizing {n} images…',
+      errTotal: 'Total size exceeds {mb}MB — remove a few images',
+      errMaxFiles: 'Up to {max} images',
+      errFileTooBig: '"{name}" is larger than {mb}MB — skipped',
+      errTooLarge: 'Images exceed the size limit',
+      errRate: 'Too many requests, please try again later',
+      errOffline: 'The processing server is resting, try again later',
+      errAllFailed: 'Could not process any image, try different files',
+      errGeneric: 'Something went wrong, please try again',
+      doneOk: 'Done {n} images — zip downloaded ✓',
+      doneFail: 'Done {ok} images · {fail} failed — zip downloaded',
+    },
+  },
+}[lang];
+---
+
+<div
+  id="img-resizer"
+  class="w-full max-w-[720px] mx-auto"
+  data-max-files="30"
+  data-max-total-mb="25"
+  data-max-file-mb="15"
+  data-strings={JSON.stringify(L.js)}
+>
+  <!-- Dropzone -->
+  <label
+    id="ir-drop"
+    for="ir-input"
+    class="block border-2 border-dashed border-white/15 rounded-xl px-6 py-10 text-center cursor-pointer transition-colors hover:border-[#ffc436]/50 hover:bg-white/[0.03]"
+  >
+    <div class="text-[2rem] mb-2">🖼️</div>
+    <div class="text-white text-[0.95rem]">{L.dropTitle}</div>
+    <div class="text-[#777] text-[0.8rem] mt-1">{L.dropHint}</div>
+    <input id="ir-input" type="file" accept="image/*" multiple class="hidden" />
+  </label>
+
+  <!-- Selected files -->
+  <div id="ir-files" class="hidden mt-5">
+    <div class="flex items-center justify-between mb-2">
+      <span id="ir-files-summary" class="text-[#888] text-[0.85rem]"></span>
+      <button id="ir-clear" type="button" class="text-[#888] text-[0.8rem] hover:text-white transition-colors">
+        {L.clearAll}
+      </button>
+    </div>
+    <div id="ir-thumbs" class="grid grid-cols-3 sm:grid-cols-4 gap-2"></div>
+  </div>
+
+  <!-- Options -->
+  <div class="mt-6 rounded-xl border border-white/10 bg-white/[0.03] p-5">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <label class="block">
+        <span class="text-[#aaa] text-[0.8rem] block mb-1">{L.modeLabel}</span>
+        <select id="ir-mode" class="ir-field">
+          <option value="percent">{L.modePercent}</option>
+          <option value="width">{L.modeWidth}</option>
+          <option value="height">{L.modeHeight}</option>
+          <option value="fit">{L.modeFit}</option>
+        </select>
+      </label>
+
+      <div id="ir-dim-percent" class="ir-dim">
+        <label class="block">
+          <span class="text-[#aaa] text-[0.8rem] block mb-1">{L.lblPercent}</span>
+          <input id="ir-percent" type="number" min="1" max="1000" value="50" class="ir-field" />
+        </label>
+      </div>
+      <div id="ir-dim-width" class="ir-dim hidden">
+        <label class="block">
+          <span class="text-[#aaa] text-[0.8rem] block mb-1">{L.lblWidth}</span>
+          <input id="ir-width" type="number" min="1" max="10000" value="1280" class="ir-field" />
+        </label>
+      </div>
+      <div id="ir-dim-height" class="ir-dim hidden">
+        <label class="block">
+          <span class="text-[#aaa] text-[0.8rem] block mb-1">{L.lblHeight}</span>
+          <input id="ir-height" type="number" min="1" max="10000" value="720" class="ir-field" />
+        </label>
+      </div>
+      <div id="ir-dim-fit" class="ir-dim hidden grid grid-cols-2 gap-3">
+        <label class="block">
+          <span class="text-[#aaa] text-[0.8rem] block mb-1">{L.lblFitW}</span>
+          <input id="ir-fit-w" type="number" min="1" max="10000" value="1280" class="ir-field" />
+        </label>
+        <label class="block">
+          <span class="text-[#aaa] text-[0.8rem] block mb-1">{L.lblFitH}</span>
+          <input id="ir-fit-h" type="number" min="1" max="10000" value="1280" class="ir-field" />
+        </label>
+      </div>
+
+      <label class="block">
+        <span class="text-[#aaa] text-[0.8rem] block mb-1">{L.formatLabel}</span>
+        <select id="ir-format" class="ir-field">
+          <option value="keep">{L.fmtKeep}</option>
+          <option value="jpeg">JPG</option>
+          <option value="png">PNG</option>
+          <option value="webp">WebP</option>
+        </select>
+      </label>
+
+      <label id="ir-quality-wrap" class="block">
+        <span class="text-[#aaa] text-[0.8rem] block mb-1">{L.lblQuality} (<span id="ir-quality-val">82</span>)</span>
+        <input id="ir-quality" type="range" min="1" max="100" value="82" class="w-full accent-[#ffc436]" />
+      </label>
+    </div>
+
+    <label class="flex items-center gap-2 mt-4 cursor-pointer">
+      <input id="ir-noupscale" type="checkbox" checked class="accent-[#ffc436]" />
+      <span class="text-[#aaa] text-[0.85rem]">{L.lblNoUpscale}</span>
+    </label>
+  </div>
+
+  <!-- Action -->
+  <button
+    id="ir-run"
+    type="button"
+    disabled
+    class="mt-5 w-full py-3 rounded-lg border border-[#ffc436]/40 text-[#ffc436] font-medium hover:bg-[#ffc436]/10 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+  >
+    {L.btnRun}
+  </button>
+
+  <div id="ir-status" class="mt-4 text-center text-[0.9rem] empty:hidden"></div>
+</div>
+
+<style>
+  .ir-field {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.55rem 0.75rem;
+    color: white;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .ir-field:focus {
+    border-color: rgba(255, 196, 54, 0.4);
+  }
+  .ir-field option {
+    background: #0b0b0f;
+  }
+</style>
+
+<script>
+  interface IrStrings {
+    images: string;
+    resizing: string;
+    errTotal: string;
+    errMaxFiles: string;
+    errFileTooBig: string;
+    errTooLarge: string;
+    errRate: string;
+    errOffline: string;
+    errAllFailed: string;
+    errGeneric: string;
+    doneOk: string;
+    doneFail: string;
+  }
+
+  const root = document.getElementById('img-resizer');
+  if (root) {
+    const S: IrStrings = JSON.parse(root.dataset.strings || '{}');
+    const fmt = (tpl: string, vars: Record<string, string | number>) =>
+      tpl.replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? ''));
+
+    const API = import.meta.env.DEV
+      ? 'http://localhost:3123/tools/image-resize'
+      : '/api/tools/image-resize';
+
+    const MAX_FILES = Number(root.dataset.maxFiles) || 30;
+    const MAX_TOTAL = (Number(root.dataset.maxTotalMb) || 25) * 1024 * 1024;
+    const MAX_FILE = (Number(root.dataset.maxFileMb) || 15) * 1024 * 1024;
+    const MAX_TOTAL_MB = MAX_TOTAL / 1024 / 1024;
+    const MAX_FILE_MB = MAX_FILE / 1024 / 1024;
+
+    const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+    const input = $<HTMLInputElement>('ir-input');
+    const drop = $<HTMLLabelElement>('ir-drop');
+    const filesBox = $<HTMLDivElement>('ir-files');
+    const thumbs = $<HTMLDivElement>('ir-thumbs');
+    const summary = $<HTMLSpanElement>('ir-files-summary');
+    const clearBtn = $<HTMLButtonElement>('ir-clear');
+    const modeSel = $<HTMLSelectElement>('ir-mode');
+    const formatSel = $<HTMLSelectElement>('ir-format');
+    const qualityWrap = $<HTMLLabelElement>('ir-quality-wrap');
+    const quality = $<HTMLInputElement>('ir-quality');
+    const qualityVal = $<HTMLSpanElement>('ir-quality-val');
+    const noUpscale = $<HTMLInputElement>('ir-noupscale');
+    const runBtn = $<HTMLButtonElement>('ir-run');
+    const status = $<HTMLDivElement>('ir-status');
+
+    let selected: File[] = [];
+
+    const fmtBytes = (n: number) =>
+      n >= 1024 * 1024 ? `${(n / 1024 / 1024).toFixed(1)}MB` : `${Math.round(n / 1024)}KB`;
+
+    const setStatus = (msg: string, tone: 'info' | 'error' | 'ok' = 'info') => {
+      status.textContent = msg;
+      status.className =
+        'mt-4 text-center text-[0.9rem] ' +
+        (tone === 'error' ? 'text-red-400' : tone === 'ok' ? 'text-[#7dd87d]' : 'text-[#888]');
+    };
+
+    const renderThumbs = () => {
+      thumbs.innerHTML = '';
+      selected.forEach((file, i) => {
+        const cell = document.createElement('div');
+        cell.className = 'relative rounded-lg overflow-hidden border border-white/10 aspect-square bg-white/5';
+        const img = document.createElement('img');
+        img.className = 'w-full h-full object-cover';
+        img.src = URL.createObjectURL(file);
+        img.onload = () => URL.revokeObjectURL(img.src);
+        const rm = document.createElement('button');
+        rm.type = 'button';
+        rm.className =
+          'absolute top-1 right-1 w-5 h-5 rounded-full bg-black/60 text-white text-xs leading-none hover:bg-red-500/80';
+        rm.textContent = '×';
+        rm.onclick = (e) => {
+          e.preventDefault();
+          selected.splice(i, 1);
+          refresh();
+        };
+        cell.append(img, rm);
+        thumbs.appendChild(cell);
+      });
+    };
+
+    const refresh = () => {
+      const total = selected.reduce((s, f) => s + f.size, 0);
+      filesBox.classList.toggle('hidden', selected.length === 0);
+      summary.textContent = `${selected.length} ${S.images} · ${fmtBytes(total)}`;
+      runBtn.disabled = selected.length === 0;
+      renderThumbs();
+      if (total > MAX_TOTAL) {
+        setStatus(fmt(S.errTotal, { mb: MAX_TOTAL_MB }), 'error');
+        runBtn.disabled = true;
+      } else if (status.className.includes('text-red-400')) {
+        setStatus('');
+      }
+    };
+
+    const addFiles = (list: FileList | File[]) => {
+      const incoming = Array.from(list).filter((f) => f.type.startsWith('image/'));
+      for (const f of incoming) {
+        if (selected.length >= MAX_FILES) {
+          setStatus(fmt(S.errMaxFiles, { max: MAX_FILES }), 'error');
+          break;
+        }
+        if (f.size > MAX_FILE) {
+          setStatus(fmt(S.errFileTooBig, { name: f.name, mb: MAX_FILE_MB }), 'error');
+          continue;
+        }
+        // de-dupe by name+size
+        if (selected.some((s) => s.name === f.name && s.size === f.size)) continue;
+        selected.push(f);
+      }
+      refresh();
+    };
+
+    input.addEventListener('change', () => {
+      if (input.files) addFiles(input.files);
+      input.value = '';
+    });
+
+    ['dragenter', 'dragover'].forEach((ev) =>
+      drop.addEventListener(ev, (e) => {
+        e.preventDefault();
+        drop.classList.add('border-[#ffc436]/60', 'bg-white/[0.05]');
+      }),
+    );
+    ['dragleave', 'drop'].forEach((ev) =>
+      drop.addEventListener(ev, (e) => {
+        e.preventDefault();
+        drop.classList.remove('border-[#ffc436]/60', 'bg-white/[0.05]');
+      }),
+    );
+    drop.addEventListener('drop', (e) => {
+      const dt = (e as DragEvent).dataTransfer;
+      if (dt?.files) addFiles(dt.files);
+    });
+
+    clearBtn.addEventListener('click', () => {
+      selected = [];
+      setStatus('');
+      refresh();
+    });
+
+    // Show only the dimension inputs for the active mode
+    const syncMode = () => {
+      const mode = modeSel.value;
+      document.querySelectorAll<HTMLElement>('.ir-dim').forEach((el) => el.classList.add('hidden'));
+      $<HTMLElement>(`ir-dim-${mode}`).classList.remove('hidden');
+    };
+    modeSel.addEventListener('change', syncMode);
+    syncMode();
+
+    // Quality only matters for lossy formats
+    const syncQuality = () => {
+      const lossy = formatSel.value === 'jpeg' || formatSel.value === 'webp' || formatSel.value === 'keep';
+      qualityWrap.classList.toggle('hidden', !lossy);
+    };
+    formatSel.addEventListener('change', syncQuality);
+    quality.addEventListener('input', () => (qualityVal.textContent = quality.value));
+    syncQuality();
+
+    const buildOptions = () => {
+      const mode = modeSel.value;
+      const o: Record<string, unknown> = {
+        mode,
+        format: formatSel.value,
+        noUpscale: noUpscale.checked,
+      };
+      if (formatSel.value !== 'png') o.quality = Number(quality.value);
+      if (mode === 'percent') o.percent = Number($<HTMLInputElement>('ir-percent').value);
+      if (mode === 'width') o.width = Number($<HTMLInputElement>('ir-width').value);
+      if (mode === 'height') o.height = Number($<HTMLInputElement>('ir-height').value);
+      if (mode === 'fit') {
+        o.width = Number($<HTMLInputElement>('ir-fit-w').value);
+        o.height = Number($<HTMLInputElement>('ir-fit-h').value);
+      }
+      return o;
+    };
+
+    const errText = (code: string) => {
+      switch (code) {
+        case 'too_large': return S.errTooLarge;
+        case 'rate_limited': return S.errRate;
+        case 'offline': return S.errOffline;
+        case 'all_failed': return S.errAllFailed;
+        default: return S.errGeneric;
+      }
+    };
+
+    let running = false;
+    runBtn.addEventListener('click', async () => {
+      if (running || selected.length === 0) return;
+      running = true;
+      runBtn.disabled = true;
+      setStatus(fmt(S.resizing, { n: selected.length }), 'info');
+
+      const form = new FormData();
+      for (const f of selected) form.append('files', f, f.name);
+      form.append('options', JSON.stringify(buildOptions()));
+
+      try {
+        const res = await fetch(API, { method: 'POST', body: form });
+        if (!res.ok) {
+          let code = 'error';
+          try { code = (await res.json()).error || 'error'; } catch { /* non-json */ }
+          setStatus(errText(code), 'error');
+          return;
+        }
+
+        const blob = await res.blob();
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'resized-images.zip';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 4000);
+
+        // Per-file summary from the X-Tool-Result header
+        let okCount = selected.length;
+        let failCount = 0;
+        try {
+          const raw = res.headers.get('X-Tool-Result');
+          if (raw) {
+            const results = JSON.parse(decodeURIComponent(raw)) as Array<{ ok: boolean }>;
+            okCount = results.filter((r) => r.ok).length;
+            failCount = results.length - okCount;
+          }
+        } catch { /* header optional */ }
+        setStatus(
+          failCount > 0
+            ? fmt(S.doneFail, { ok: okCount, fail: failCount })
+            : fmt(S.doneOk, { n: okCount }),
+          'ok',
+        );
+      } catch {
+        setStatus(errText('offline'), 'error');
+      } finally {
+        running = false;
+        runBtn.disabled = selected.length === 0;
+      }
+    });
+  }
+</script>
