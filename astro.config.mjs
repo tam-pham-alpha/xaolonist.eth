@@ -6,7 +6,12 @@ import { remarkStripMissingImages } from './src/plugins/remark-strip-missing-ima
 export default defineConfig({
   site: 'https://anh4gs.xyz',
   output: 'static',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Trang mời hẹn hò riêng tư — không đưa vào sitemap.
+      filter: (page) => !page.includes('/na-sofia'),
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

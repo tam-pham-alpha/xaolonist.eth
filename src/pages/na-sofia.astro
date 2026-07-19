@@ -1,0 +1,761 @@
+---
+// /na-sofia — một lời mời hẹn hò dễ thương, chạy hoàn toàn client-side.
+// Trang standalone (không dùng Layout tối của blog), tiếng Việt, style cute cartoon.
+// Muốn đổi tên / ngày mặc định: sửa object CONFIG trong <script> bên dưới.
+---
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Cho Na Sofia 💌</title>
+    <meta name="theme-color" content="#fff4e6" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Nunito:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style is:inline>
+      :root {
+        --cream: #fff6ea;
+        --cream-2: #ffe9d6;
+        --ink: #4a3b39;
+        --red: #e23a4e;
+        --red-deep: #c31d33;
+        --pink: #ff5d73;
+        --pink-soft: #ffd0d8;
+        --yellow: #ffd23f;
+        --card: #fffdf9;
+        --shadow: 0 18px 45px -18px rgba(200, 60, 80, 0.45);
+      }
+
+      * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        font-family: "Nunito", system-ui, -apple-system, sans-serif;
+        color: var(--ink);
+      }
+
+      body {
+        background:
+          radial-gradient(1200px 700px at 50% -10%, #fffdf7 0%, var(--cream) 45%, var(--cream-2) 100%);
+        min-height: 100dvh;
+        overflow-x: hidden;
+      }
+
+      /* floating background emojis */
+      .bg-float {
+        position: fixed;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .bg-float span {
+        position: absolute;
+        bottom: -40px;
+        font-size: 22px;
+        opacity: 0.5;
+        animation: rise linear infinite;
+        will-change: transform;
+      }
+      @keyframes rise {
+        0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+        10%  { opacity: 0.55; }
+        90%  { opacity: 0.55; }
+        100% { transform: translateY(-108dvh) rotate(200deg); opacity: 0; }
+      }
+
+      .stage {
+        position: relative;
+        z-index: 1;
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 18px;
+      }
+
+      .card {
+        position: relative;
+        width: 100%;
+        max-width: 460px;
+        background: var(--card);
+        border-radius: 30px;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(226, 58, 78, 0.12);
+        padding: 34px 26px 30px;
+        text-align: center;
+      }
+
+      /* steps */
+      .step { display: none; }
+      .step.active {
+        display: block;
+        animation: pop 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.3);
+      }
+      @keyframes pop {
+        0%   { opacity: 0; transform: translateY(14px) scale(0.97); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+      }
+
+      .mascot {
+        font-size: 58px;
+        line-height: 1;
+        display: inline-block;
+        animation: bob 2.6s ease-in-out infinite;
+        filter: drop-shadow(0 8px 10px rgba(226, 58, 78, 0.25));
+      }
+      @keyframes bob {
+        0%, 100% { transform: translateY(0) rotate(-3deg); }
+        50%      { transform: translateY(-10px) rotate(3deg); }
+      }
+
+      .kicker {
+        display: inline-block;
+        margin: 16px 0 10px;
+        background: #2a2320;
+        color: #fff;
+        font-weight: 800;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        border-radius: 6px;
+        transform: rotate(-1.5deg);
+      }
+
+      h1 {
+        font-family: "Fraunces", Georgia, serif;
+        color: var(--red);
+        font-weight: 700;
+        font-size: clamp(30px, 8vw, 42px);
+        line-height: 1.04;
+        margin: 6px 0 4px;
+        letter-spacing: -0.01em;
+      }
+      .sub {
+        color: #8a756f;
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 12px 4px 6px;
+      }
+
+      .greeting {
+        font-family: "Fraunces", Georgia, serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--red-deep);
+        font-size: 23px;
+        margin: 14px 0 4px;
+        letter-spacing: -0.01em;
+      }
+      .dedication {
+        color: #a07d76;
+        font-weight: 700;
+        font-size: 13.5px;
+        line-height: 1.5;
+        margin: 0 8px;
+      }
+
+      /* buttons */
+      .btn {
+        appearance: none;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: 800;
+        font-size: 18px;
+        color: #fff;
+        background: var(--pink);
+        padding: 15px 26px;
+        border-radius: 999px;
+        box-shadow: 0 10px 22px -8px rgba(255, 93, 115, 0.8);
+        transition: transform 0.12s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
+      .btn:hover { background: var(--red); }
+      .btn:active { transform: scale(0.96); }
+      .btn.big { background: var(--red); }
+      .btn:disabled {
+        background: #f0d9d5;
+        color: #c9aca6;
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+
+      .ask-row {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 26px;
+        min-height: 64px;
+        flex-wrap: wrap;
+      }
+      #yesBtn { transition: transform 0.18s cubic-bezier(0.2, 0.9, 0.3, 1.4), background 0.2s; }
+      #noBtn {
+        background: #efe4de;
+        color: #8a756f;
+        box-shadow: none;
+        transition: left 0.16s ease, top 0.16s ease, transform 0.16s ease;
+      }
+      #noBtn:hover { background: #efe4de; }
+
+      /* kỷ niệm / lời hứa hiện dần mỗi lần bấm "Thôi" */
+      .mem-cap {
+        display: none;
+        font-family: "Fraunces", Georgia, serif;
+        font-style: italic;
+        color: #a07d76;
+        font-size: 14px;
+        margin: 20px 4px 2px;
+      }
+      .mem-cap.show { display: block; animation: pop 0.4s ease; }
+      .memories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        justify-content: center;
+        margin-top: 12px;
+      }
+      .mem {
+        font-size: 12.5px;
+        font-weight: 800;
+        color: var(--red-deep);
+        background: #fff0f1;
+        border: 1px solid var(--pink-soft);
+        padding: 5px 11px;
+        border-radius: 999px;
+        animation: mempop 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.5);
+      }
+      @keyframes mempop {
+        0%   { opacity: 0; transform: scale(0.6) translateY(8px); }
+        100% { opacity: 1; transform: scale(1) translateY(0); }
+      }
+
+      /* time options */
+      .opt-list { display: grid; gap: 10px; margin: 18px 0 4px; text-align: left; }
+      .opt {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        border-radius: 16px;
+        border: 2px solid #f1e2db;
+        background: #fffaf4;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+      .opt:hover { border-color: var(--pink-soft); }
+      .opt .opt-emoji { font-size: 22px; }
+      .opt .opt-time { font-weight: 800; font-size: 16px; }
+      .opt .opt-note { color: #a08c86; font-size: 13px; }
+      .opt.sel {
+        border-color: var(--red);
+        background: #fff0f1;
+        box-shadow: 0 8px 18px -12px rgba(226, 58, 78, 0.6);
+      }
+
+      .field { text-align: left; margin: 16px 0; }
+      .field label {
+        display: block;
+        font-weight: 800;
+        font-size: 14px;
+        margin-bottom: 7px;
+        color: #6b574f;
+      }
+      input[type="date"] {
+        width: 100%;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--ink);
+        padding: 14px 16px;
+        border-radius: 16px;
+        border: 2px solid #f1e2db;
+        background: #fffaf4;
+        outline: none;
+      }
+      input[type="date"]:focus { border-color: var(--pink); }
+
+      /* food grid */
+      .food-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 18px 0 6px;
+      }
+      .food {
+        border: 2px solid #f1e2db;
+        background: #fffaf4;
+        border-radius: 18px;
+        padding: 16px 8px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        user-select: none;
+      }
+      .food:hover { border-color: var(--pink-soft); transform: translateY(-2px); }
+      .food .fe { font-size: 30px; display: block; }
+      .food .fl { font-weight: 800; font-size: 14px; margin-top: 6px; }
+      .food.sel {
+        border-color: var(--red);
+        background: #fff0f1;
+        box-shadow: 0 10px 20px -12px rgba(226, 58, 78, 0.7);
+      }
+      .food.sel .fe { animation: bounce 0.4s; }
+      @keyframes bounce { 50% { transform: scale(1.25); } }
+
+      .footer-note {
+        margin-top: 22px;
+        font-size: 12.5px;
+        color: #b09b95;
+      }
+
+      /* plan card */
+      .plan {
+        text-align: left;
+        background: #fff7f2;
+        border: 1.5px dashed var(--pink-soft);
+        border-radius: 20px;
+        padding: 18px 20px;
+        margin: 18px 0 8px;
+      }
+      .plan .row { display: flex; gap: 10px; padding: 7px 0; align-items: flex-start; }
+      .plan .row .k { font-weight: 800; color: var(--red-deep); min-width: 74px; font-size: 13px; letter-spacing: 0.03em; }
+      .plan .row .v { font-weight: 700; }
+
+      .mt { margin-top: 18px; }
+
+      /* confetti canvas */
+      #confetti {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 50;
+      }
+
+      .spacer { height: 8px; }
+    </style>
+  </head>
+
+  <body>
+    <div class="bg-float" id="bgFloat" aria-hidden="true"></div>
+    <canvas id="confetti"></canvas>
+
+    <div class="stage">
+      <div class="card">
+        <!-- STEP 1: ASK -->
+        <section class="step active" data-step="ask">
+          <div class="mascot">😇</div>
+          <p class="greeting"><span id="greetName">Na Sofia</span>,</p>
+          <p class="dedication">trang này dành riêng cho em, và chỉ mình em thôi 💛</p>
+          <div class="kicker">Không áp lực đâu... nhưng nói có nha 🙏</div>
+          <h1>Đi hẹn hò<br />với tôi nha?</h1>
+          <div class="ask-row">
+            <button class="btn big" id="yesBtn">Có chứ 💛</button>
+            <button class="btn" id="noBtn">Thôi 😳</button>
+          </div>
+          <p class="mem-cap" id="memCap">và chúng ta sẽ lại & và...</p>
+          <div class="memories" id="memories"></div>
+        </section>
+
+        <!-- STEP 2: CONFIRM -->
+        <section class="step" data-step="confirm">
+          <div class="mascot">🥳</div>
+          <div class="kicker">Tim tôi lúc này: 📈📈📈</div>
+          <h1>trời ơi.<br />TRỜI ƠI. 😳</h1>
+          <p class="sub">tôi đã soạn sẵn nguyên một bài diễn văn phòng khi em nói không 🥹</p>
+          <div class="spacer"></div>
+          <button class="btn big mt" data-next="time">rồi rồi, đi tiếp →</button>
+        </section>
+
+        <!-- STEP 3: TIME -->
+        <section class="step" data-step="time">
+          <div class="mascot">🗓️</div>
+          <div class="kicker">Chốt lịch thôi Na ơi 📅</div>
+          <h1>Rồi... khi nào<br />em rảnh?</h1>
+
+          <div class="field">
+            <label for="dateInput">Chọn ngày ✨</label>
+            <input type="date" id="dateInput" />
+          </div>
+
+          <div class="field">
+            <label>Mấy giờ? 🥹</label>
+            <div class="opt-list" id="timeList"></div>
+          </div>
+
+          <button class="btn big mt" id="timeNext" data-next="food" disabled>tiếp nào →</button>
+        </section>
+
+        <!-- STEP 4: FOOD -->
+        <section class="step" data-step="food">
+          <div class="mascot">🍽️</div>
+          <div class="kicker">Tôi lúc nào cũng đói 🍔</div>
+          <h1>Em muốn ăn gì?</h1>
+          <p class="sub">(chọn bao nhiêu tuỳ thích, không phán xét 😌)</p>
+          <div class="food-grid" id="foodGrid"></div>
+          <button class="btn big mt" id="foodNext" data-next="done" disabled>món này nè →</button>
+        </section>
+
+        <!-- STEP 5: DONE -->
+        <section class="step" data-step="done">
+          <div class="mascot">💌</div>
+          <div class="kicker">Chốt đơn rồi nha 💛</div>
+          <h1>Hẹn hò thôiii</h1>
+          <div class="plan" id="planCard"></div>
+          <p class="sub" style="margin-top:16px">
+            p.s. cảm ơn em đã cho tôi cơ hội win your heart back 🎶
+          </p>
+          <button class="btn big mt" id="copyBtn" style="width:100%">📋 Copy plan &amp; nhắn cho tôi</button>
+          <p class="footer-note">🎸 made with 💛</p>
+        </section>
+      </div>
+    </div>
+
+    <script is:inline>
+      // ------- Đổi tên & ngày mặc định ở đây -------
+      const CONFIG = {
+        her: "Na Sofia",     // tên cô ấy (lời chào ở màn 1)
+        me: "Tâm",           // tên bạn (ký ở cuối lời nhắn)
+        defaultOffsetDays: 8 // ngày mặc định = hôm nay + N ngày
+      };
+
+      // lời chào ở màn 1 lấy theo CONFIG.her
+      const greetEl = document.getElementById("greetName");
+      if (greetEl) greetEl.textContent = CONFIG.her;
+
+      const TIMES = [
+        { v: "18:00", note: "ăn tối kiểu người lớn", emoji: "🍜" },
+        { v: "18:30", note: "vừa tan làm gặp liền cho nóng", emoji: "🌇" },
+        { v: "19:00", note: "trời vừa lên đèn, giờ đẹp", emoji: "🌆" },
+        { v: "19:15", note: "trễ 15 phút cho sang chảnh", emoji: "💅" },
+        { v: "19:30", note: "giờ vàng của mấy đứa có gu", emoji: "😎" },
+        { v: "20:00", note: "no bụng rồi đi dạo tí", emoji: "🌃" },
+        { v: "21:00", note: "chế độ cú đêm, nghe nhạc tới khuya", emoji: "🌙" },
+      ];
+
+      const FOODS = [
+        { id: "pizza",  label: "Pizza",           emoji: "🍕" },
+        { id: "sushi",  label: "Sushi",           emoji: "🍣" },
+        { id: "fusion", label: "Fusion",          emoji: "🍱" },
+        { id: "pasta",  label: "Mì Ý",            emoji: "🍝" },
+        { id: "ramen",  label: "Ramen",           emoji: "🍜" },
+        { id: "coffee", label: "Cà phê acoustic", emoji: "☕" },
+        { id: "viet",   label: "Đồ Việt",         emoji: "🍲" },
+        { id: "any",    label: "Gì cũng được",    emoji: "🎶" },
+      ];
+
+      // 50 nhãn lầy cho nút "Thôi" — cô ấy càng cố bấm, nút càng đổi câu (leo thang)
+      const NO_LABELS = [
+        "Thôi 😳", "Thôi mà 🙈", "Chắc hông? 🥺", "Nút kẹt rồi 😵‍💫",
+        "Ơ nó chạy kìa 😮", "Hụt rồi nha 😌", "Gần trúng đó 😏", "Xíu nữa 🤏",
+        "Đừng mà 😭", "Nút lỗi rồi 🐛", "No bị chặn 🖥️", "Bấm Có điii 💛",
+        "Chắc chưa? 🤨", "Suy nghĩ lại 🤔", "Tay run kìa 🫨", "No đang bận 🚧",
+        "No hết hàng 📦", "Thử lại sau 🔄", "404 No 🔍", "Nút của Yes 💘",
+        "Bắt hụt rồi 🎣", "Nhanh tay nào 🏃", "Mỏi tay chưa 😪", "Kiên trì ghê 👀",
+        "Cố chấp dữ 🫡", "Giỏi lắm rồi 🏆", "Vẫn là Có nha 😙", "Bấm Có cho lành 🕊️",
+        "No trốn rồi 🫥", "Nó sợ em 😱", "Đầu hàng đi 🏳️", "Vũ trụ nói Có 🌌",
+        "Định mệnh rồi 🔮", "Trời bó tay 🙏", "Tôi cũng sốc 😅", "Nút lương thấp 💸",
+        "Nó nghỉ phép 🏖️", "Wifi No yếu 📶", "Loading mãi ⏳", "No sắp hết pin 🔋",
+        "No block em 🚫", "Huề nha 🤝", "Em thắng á 🥹", "No khóc rồi 😢",
+        "Nó năn nỉ đó 🥹", "Đùa xíu thôi 😜", "Bấm Có đi 🤫", "Luôn là Có 💯",
+        "Tôi đợi nãy giờ 🥲", "Okii chốt Có! 💛",
+      ];
+
+      const state = { date: null, time: null, foods: [] };
+      const WD = ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"];
+      const pad = (n) => String(n).padStart(2, "0");
+
+      // ---------- navigation ----------
+      function showStep(name) {
+        document.querySelectorAll(".step").forEach((s) => {
+          s.classList.toggle("active", s.dataset.step === name);
+        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      document.querySelectorAll("[data-next]").forEach((b) => {
+        b.addEventListener("click", () => {
+          const t = b.dataset.next;
+          if (t === "done") renderPlan();
+          showStep(t);
+          if (t === "confirm" || t === "done") burst();
+        });
+      });
+
+      // ---------- step 1: ask (No button dodges) ----------
+      const yesBtn = document.getElementById("yesBtn");
+      const noBtn = document.getElementById("noBtn");
+      let dodges = 0;
+
+      // Kỷ niệm & lời hứa hiện dần mỗi lần em định bấm "Thôi"
+      const MEMORIES = [
+        "🍳 nấu ăn cho nhau",
+        "🍷 say mèm cùng nhau",
+        "📖 cùng em nghe triết học",
+        "🔭 cùng nghe vật lý",
+        "🎸 cùng em làm nhạc",
+        "🎧 cùng stream Spotify",
+        "🌱 cùng em trưởng thành",
+        "📸 chụp photobooth",
+        "🚬 hút thuốc",
+        "💨 hẹn hò nicotin",
+        "🌶️ ăn bánh tráng trộn",
+        "🛵 chở em dạo phố",
+        "🌊 dẫn em đi biển",
+        "🌲 dắt em lên rừng",
+        "🌙 kể chuyện cho em nghe",
+        "✍️ viết về em",
+        "🫶 tôi sẽ chiều em",
+        "🥇 tôi sẽ ưu tiên em",
+        "⏳ tôi sẽ dành thời gian cho em",
+        "🍚 tôi sẽ nấu cơm",
+        "🧼 tôi sẽ rửa chén",
+        "💛 và... tôi luôn mê em",
+      ];
+      const memWrap = document.getElementById("memories");
+      const memCap = document.getElementById("memCap");
+      let memIdx = 0;
+      let lastMemT = -1e9;
+      function addMemoryMaybe() {
+        const now = performance.now();
+        if (now - lastMemT < 320) return false; // gộp các event của cùng một lần chạm
+        lastMemT = now;
+        if (memIdx >= MEMORIES.length) return false;
+        if (memCap) memCap.classList.add("show");
+        const el = document.createElement("span");
+        el.className = "mem";
+        el.textContent = MEMORIES[memIdx++];
+        memWrap.appendChild(el);
+        return true;
+      }
+
+      // Nút "Có chứ" thỉnh thoảng lắc lắc khi có kỷ niệm mới (giữ nguyên scale hiện tại)
+      let yesScale = 1;
+      function wiggleYes() {
+        if (!yesBtn.animate) return;
+        const s = yesScale;
+        yesBtn.animate(
+          [
+            { transform: "scale(" + s + ") rotate(0deg)" },
+            { transform: "scale(" + s + ") rotate(-7deg)" },
+            { transform: "scale(" + s + ") rotate(6deg)" },
+            { transform: "scale(" + s + ") rotate(-4deg)" },
+            { transform: "scale(" + s + ") rotate(3deg)" },
+            { transform: "scale(" + s + ") rotate(0deg)" },
+          ],
+          { duration: 550, easing: "ease-in-out" }
+        );
+      }
+
+      yesBtn.addEventListener("click", () => {
+        showStep("confirm");
+        burst();
+      });
+
+      function dodge(e) {
+        if (e) { try { e.preventDefault(); } catch (_) {} }
+        dodges++;
+        const memAdded = addMemoryMaybe();
+        const bw = noBtn.offsetWidth || 120;
+        const bh = noBtn.offsetHeight || 54;
+        const maxX = Math.max(16, window.innerWidth - bw - 16);
+        const maxY = Math.max(16, window.innerHeight - bh - 16);
+        const x = 16 + Math.random() * (maxX - 16);
+        const y = 16 + Math.random() * (maxY - 16);
+        noBtn.style.position = "fixed";
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+        const scale = Math.max(0.5, 1 - dodges * 0.06);
+        noBtn.style.transform = "scale(" + scale + ")";
+        noBtn.textContent = NO_LABELS[Math.min(dodges, NO_LABELS.length - 1)];
+        yesScale = Math.min(1 + dodges * 0.07, 1.7);
+        yesBtn.style.transform = "scale(" + yesScale + ")";
+        if (memAdded && Math.random() < 0.5) wiggleYes();
+      }
+
+      ["mouseenter", "pointerdown", "touchstart", "focus", "click"].forEach((ev) => {
+        noBtn.addEventListener(ev, dodge, { passive: false });
+      });
+
+      // ---------- step 3: date + time ----------
+      const dateInput = document.getElementById("dateInput");
+      const d0 = new Date();
+      d0.setDate(d0.getDate() + CONFIG.defaultOffsetDays);
+      dateInput.min = new Date().toISOString().slice(0, 10);
+      dateInput.value = d0.toISOString().slice(0, 10);
+      state.date = dateInput.value;
+      dateInput.addEventListener("change", () => { state.date = dateInput.value; });
+
+      const timeList = document.getElementById("timeList");
+      const timeNext = document.getElementById("timeNext");
+      TIMES.forEach((t) => {
+        const el = document.createElement("div");
+        el.className = "opt";
+        el.innerHTML =
+          '<span class="opt-emoji">' + t.emoji + "</span>" +
+          '<span><span class="opt-time">' + t.v + "</span> " +
+          '<span class="opt-note">— ' + t.note + "</span></span>";
+        el.addEventListener("click", () => {
+          state.time = t.v;
+          document.querySelectorAll("#timeList .opt").forEach((o) => o.classList.remove("sel"));
+          el.classList.add("sel");
+          timeNext.disabled = false;
+        });
+        timeList.appendChild(el);
+      });
+
+      // ---------- step 4: food ----------
+      const foodGrid = document.getElementById("foodGrid");
+      const foodNext = document.getElementById("foodNext");
+      FOODS.forEach((f) => {
+        const el = document.createElement("div");
+        el.className = "food";
+        el.innerHTML = '<span class="fe">' + f.emoji + '</span><span class="fl">' + f.label + "</span>";
+        el.addEventListener("click", () => {
+          el.classList.toggle("sel");
+          if (state.foods.includes(f.id)) {
+            state.foods = state.foods.filter((x) => x !== f.id);
+          } else {
+            state.foods.push(f.id);
+          }
+          foodNext.disabled = state.foods.length === 0;
+        });
+        foodGrid.appendChild(el);
+      });
+
+      // ---------- step 5: plan ----------
+      function foodLabels() {
+        return state.foods
+          .map((id) => FOODS.find((f) => f.id === id))
+          .map((f) => f.emoji + " " + f.label)
+          .join(", ");
+      }
+      function dateStr() {
+        const d = new Date(state.date + "T00:00:00");
+        return WD[d.getDay()] + ", " + pad(d.getDate()) + "/" + pad(d.getMonth() + 1) + "/" + d.getFullYear();
+      }
+      function timeObj() {
+        return TIMES.find((t) => t.v === state.time) || TIMES[0];
+      }
+
+      function renderPlan() {
+        const t = timeObj();
+        document.getElementById("planCard").innerHTML =
+          '<div class="row"><span class="k">KHI NÀO</span><span class="v">' + dateStr() + "</span></div>" +
+          '<div class="row"><span class="k">MẤY GIỜ</span><span class="v">' + t.v + " " + t.emoji + " <span style=\"font-weight:600;color:#a08c86\">— " + t.note + "</span></span></div>" +
+          '<div class="row"><span class="k">ĂN GÌ</span><span class="v">' + (foodLabels() || "gì cũng được 🎶") + "</span></div>";
+      }
+
+      function buildMessage() {
+        const t = timeObj();
+        return (
+          "em đồng ý đi hẹn hò với " + CONFIG.me + " 💛\n" +
+          "📅 " + dateStr() + "\n" +
+          "🕘 " + t.v + " — " + t.note + "\n" +
+          "🍽️ " + (foodLabels() || "gì cũng được 🎶") + "\n" +
+          "hẹn gặp nhaa 🎶"
+        );
+      }
+
+      const copyBtn = document.getElementById("copyBtn");
+      copyBtn.addEventListener("click", async () => {
+        const msg = buildMessage();
+        let ok = false;
+        try {
+          await navigator.clipboard.writeText(msg);
+          ok = true;
+        } catch (_) {
+          const ta = document.createElement("textarea");
+          ta.value = msg;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+          document.body.removeChild(ta);
+        }
+        copyBtn.textContent = ok ? "Đã copy! 💛 gửi cho tôi nha" : "Copy hụt 🥲 thử lại nha";
+        if (ok) burst();
+      });
+
+      // ---------- background floaters ----------
+      (function () {
+        const wrap = document.getElementById("bgFloat");
+        const set = ["🎶", "💛", "🎸", "✨", "💌", "🎵"];
+        for (let i = 0; i < 14; i++) {
+          const s = document.createElement("span");
+          s.textContent = set[i % set.length];
+          s.style.left = Math.random() * 100 + "vw";
+          s.style.fontSize = 16 + Math.random() * 20 + "px";
+          const dur = 12 + Math.random() * 12;
+          s.style.animationDuration = dur + "s";
+          s.style.animationDelay = "-" + Math.random() * dur + "s";
+          wrap.appendChild(s);
+        }
+      })();
+
+      // ---------- confetti ----------
+      const cv = document.getElementById("confetti");
+      const ctx = cv.getContext("2d");
+      let parts = [];
+      function resize() { cv.width = window.innerWidth; cv.height = window.innerHeight; }
+      resize();
+      window.addEventListener("resize", resize);
+
+      function burst() {
+        const colors = ["#e23a4e", "#ff5d73", "#ffd23f", "#ffb3c0", "#7bd88f", "#6aa9ff"];
+        for (let i = 0; i < 90; i++) {
+          parts.push({
+            x: cv.width / 2,
+            y: cv.height * 0.32,
+            vx: (Math.random() - 0.5) * 11,
+            vy: Math.random() * -11 - 3,
+            g: 0.28 + Math.random() * 0.12,
+            r: 4 + Math.random() * 5,
+            rot: Math.random() * 6.28,
+            vr: (Math.random() - 0.5) * 0.4,
+            c: colors[(Math.random() * colors.length) | 0],
+            life: 120,
+          });
+        }
+        if (!raf) tick();
+      }
+
+      let raf = null;
+      function tick() {
+        ctx.clearRect(0, 0, cv.width, cv.height);
+        parts.forEach((p) => {
+          p.vy += p.g;
+          p.x += p.vx;
+          p.y += p.vy;
+          p.rot += p.vr;
+          p.life--;
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot);
+          ctx.fillStyle = p.c;
+          ctx.fillRect(-p.r / 2, -p.r / 2, p.r, p.r * 1.5);
+          ctx.restore();
+        });
+        parts = parts.filter((p) => p.life > 0 && p.y < cv.height + 40);
+        if (parts.length) {
+          raf = requestAnimationFrame(tick);
+        } else {
+          ctx.clearRect(0, 0, cv.width, cv.height);
+          raf = null;
+        }
+      }
+    </script>
+  </body>
+</html>
