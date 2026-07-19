@@ -4,6 +4,10 @@
     "allow": [
       "Bash(ssh -i _deploy/djao_nuc djao@djao-prod*)",
       "Bash(yarn login:nuc)"
+    ],
+    "ask": [
+      "Bash(git push origin main:*)",
+      "Bash(gh pr merge:*)"
     ]
   }
 }

@@ -6,6 +6,8 @@ This is an Astro 5 blog that sources content from local Markdown files. It is de
 
 **Never `git commit`, `git push`, or deploy without the user's explicit approval for that specific change.** Pushing to `main` auto-deploys the site (Workers Builds), and persona/brain changes go live on the NUC via `git pull` — so a push IS a production deploy. Workflow: implement → verify (typecheck/build/local test) → summarize the change → **stop and wait for approval** → then commit + push + deploy. Approval for an earlier change does not carry over to the next one.
 
+Once approved, pushing **directly to `main` is fine** — a feature branch + PR is optional, reserved for changes that genuinely warrant review. The harness surfaces a confirmation prompt for `git push origin main` and `gh pr merge` (an `ask` rule in `.claude/settings.json`); that prompt IS the approval gate, so those actions no longer hard-fail the way they did before.
+
 ## Tech Stack
 
 - **Framework**: Astro 5 (SSG)
