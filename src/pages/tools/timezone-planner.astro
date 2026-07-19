@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Container from '../../components/Container.astro';
+import TimezonePlanner from '../../components/tools/TimezonePlanner.astro';
+import { getTool } from '../../lib/tools';
+
+const tool = getTool('timezone-planner')!;
+---
+
+<Layout
+  title={`${tool.name.vn} — anh4gs tools`}
+  description={tool.description.vn}
+  url="https://anh4gs.xyz/tools/timezone-planner"
+  lang="vn"
+>
+  <div class="bg-darkmode min-h-screen pt-10 pb-20">
+    <Container>
+      <div class="max-w-[1180px] mx-auto">
+        <a href="/tools" class="text-[#888] text-[0.85rem] hover:text-[#ffc436] transition-colors">
+          ← tất cả tools
+        </a>
+        <header class="mt-4 mb-8">
+          <h1 class="text-textColor text-[1.8rem] font-light tracking-[0.5px] m-0">
+            {tool.emoji} {tool.name.vn}
+          </h1>
+          <p class="text-[#888888] text-[0.95rem] mt-2 leading-relaxed">
+            {tool.description.vn}
+          </p>
+        </header>
+
+        <TimezonePlanner lang="vn" />
+      </div>
+    </Container>
+  </div>
+</Layout>

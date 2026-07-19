@@ -172,4 +172,4 @@ Reuses the aethery pipeline (see `brain/README.md`), no new secrets:
 - [x] EN mirrors for tool pages — `/en/tools`, `/en/tools/image-resizer` (component is bilingual via a `lang` prop; done 26-07-19)
 - [ ] Turnstile on `nuc` tools if abuse shows up
 - [ ] Job/progress abstraction before the first long-running tool
-- [ ] Second tool to validate the "add a tool" flow (candidate: a `client` tool for reach, e.g. QR or palette)
+- [x] Second tool to validate the "add a tool" flow — **Timezone Planner** (`runtime: client`, `life`, featured) shipped 26-07-19; proves the client-only path (browser `Intl`/IANA TZDB, no worker/brain hop). See `_logs/26-07-19-timezone-planner.md`.

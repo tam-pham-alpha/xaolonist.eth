@@ -1,0 +1,1003 @@
+---
+/**
+ * Timezone Planner — client island (bilingual, no backend).
+ *
+ * Stacks cities as rows sharing a synced 24-hour grid: each column is one hour
+ * of absolute time starting at the home city's local midnight on the selected
+ * date, so hovering any column shows the matching local time in every row.
+ * Add/remove/reorder cities, pick a date (DST-correct per date), toggle 12/24h,
+ * drag a meeting block, and share the whole view via URL. All state also
+ * persists to localStorage. Time math is pure `Intl` — no moment/luxon.
+ */
+interface Props {
+  lang?: 'vn' | 'en';
+}
+
+const { lang = 'vn' } = Astro.props;
+
+const L = {
+  vn: {
+    addPlaceholder: 'Thêm thành phố hoặc timezone…',
+    noResults: 'Không tìm thấy — thử tên tiếng Anh hoặc mã IANA',
+    homeTitle: 'Đặt làm nhà (mốc so giờ)',
+    upTitle: 'Lên',
+    downTitle: 'Xuống',
+    removeTitle: 'Xoá',
+    today: 'Hôm nay',
+    copyLink: 'Copy link',
+    copied: 'Đã copy ✓',
+    workHours: 'Tô đậm giờ làm (9–18h)',
+    hint: 'Rê chuột để so giờ · bấm/kéo một khối giờ để chọn khung họp · ←/→ chỉnh, Esc bỏ chọn',
+    emptyState: 'Chưa có thành phố nào — thêm ở ô trên để bắt đầu.',
+    meetingWord: 'Khung họp',
+    hoursWord: 'giờ',
+    copySummary: 'Copy khung giờ',
+    copiedSummary: 'Đã copy ✓',
+    clearSel: 'bỏ chọn',
+  },
+  en: {
+    addPlaceholder: 'Add a city or timezone…',
+    noResults: 'No match — try an English name or IANA id',
+    homeTitle: 'Set as home (offset anchor)',
+    upTitle: 'Move up',
+    downTitle: 'Move down',
+    removeTitle: 'Remove',
+    today: 'Today',
+    copyLink: 'Copy link',
+    copied: 'Copied ✓',
+    workHours: 'Shade work hours (9–18)',
+    hint: 'Hover to compare · click/drag an hour block to pick a meeting · ←/→ nudge, Esc to clear',
+    emptyState: 'No cities yet — add one above to get started.',
+    meetingWord: 'Meeting',
+    hoursWord: 'h',
+    copySummary: 'Copy slot',
+    copiedSummary: 'Copied ✓',
+    clearSel: 'clear',
+  },
+}[lang];
+
+// Strings needed inside the client script (kept minimal + serialisable).
+const JS = {
+  meetingWord: L.meetingWord,
+  hoursWord: L.hoursWord,
+  copySummary: L.copySummary,
+  copiedSummary: L.copiedSummary,
+  copyLink: L.copyLink,
+  copied: L.copied,
+  emptyState: L.emptyState,
+  noResults: L.noResults,
+  homeTitle: L.homeTitle,
+  upTitle: L.upTitle,
+  downTitle: L.downTitle,
+  removeTitle: L.removeTitle,
+  clearSel: L.clearSel,
+};
+---
+
+<div id="tzp" class="w-full" data-lang={lang} data-strings={JSON.stringify(JS)}>
+  <!-- Toolbar -->
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <!-- Add city combobox -->
+    <div class="relative flex-1 max-w-[360px]">
+      <input
+        id="tzp-add"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder={L.addPlaceholder}
+        class="tzp-field"
+      />
+      <div
+        id="tzp-results"
+        class="hidden absolute z-20 mt-1 w-full rounded-lg border border-white/10 bg-[#12121a] shadow-xl overflow-hidden"
+      >
+      </div>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <!-- 12h / 24h -->
+      <div id="tzp-fmt" class="inline-flex rounded-lg border border-white/10 overflow-hidden text-[0.8rem]">
+        <button type="button" data-fmt="12" class="tzp-seg px-3 py-1.5">12h</button>
+        <button type="button" data-fmt="24" class="tzp-seg px-3 py-1.5">24h</button>
+      </div>
+      <button
+        id="tzp-copy"
+        type="button"
+        class="px-3 py-1.5 rounded-lg border border-[#ffc436]/40 text-[#ffc436] text-[0.8rem] hover:bg-[#ffc436]/10 transition-all whitespace-nowrap"
+      >
+        {L.copyLink}
+      </button>
+    </div>
+  </div>
+
+  <!-- Date strip + options -->
+  <div class="mt-4 flex flex-wrap items-center gap-3">
+    <div id="tzp-datestrip" class="flex items-center gap-1"></div>
+    <input id="tzp-date" type="date" class="tzp-field !w-auto text-[0.82rem] py-1.5" />
+    <label class="flex items-center gap-2 cursor-pointer ml-auto">
+      <input id="tzp-work" type="checkbox" checked class="accent-[#ffc436]" />
+      <span class="text-[#aaa] text-[0.82rem]">{L.workHours}</span>
+    </label>
+  </div>
+
+  <!-- Grid -->
+  <div id="tzp-scroll" class="mt-5 overflow-x-auto rounded-xl border border-white/10 bg-white/[0.02]">
+    <div id="tzp-rows" tabindex="0" class="min-w-[940px] outline-none"></div>
+  </div>
+
+  <!-- Meeting summary -->
+  <div id="tzp-summary" class="hidden mt-4 rounded-xl border border-[#ffc436]/25 bg-[#ffc436]/[0.06] p-4"></div>
+
+  <p class="mt-3 text-[#666] text-[0.78rem] leading-relaxed">{L.hint}</p>
+</div>
+
+<!-- is:global — rows/cells/date-strip are built via innerHTML in the script, so
+     they never receive Astro's scoping attribute; scoped rules wouldn't reach
+     them. All selectors are namespaced .tzp-* so global is safe. -->
+<style is:global>
+  .tzp-field {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.55rem 0.75rem;
+    color: white;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .tzp-field:focus {
+    border-color: rgba(255, 196, 54, 0.4);
+  }
+  .tzp-field::-webkit-calendar-picker-indicator {
+    filter: invert(0.7);
+  }
+
+  /* 12/24h segmented + date-strip buttons */
+  .tzp-seg {
+    color: #999;
+    background: transparent;
+    transition: all 0.15s;
+  }
+  .tzp-seg + .tzp-seg {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .tzp-seg.is-on {
+    color: #ffc436;
+    background: rgba(255, 196, 54, 0.12);
+  }
+
+  .tzp-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 44px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    color: #999;
+    font-size: 0.72rem;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .tzp-day:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .tzp-day.is-on {
+    border-color: rgba(255, 196, 54, 0.4);
+    color: #ffc436;
+  }
+  .tzp-day b {
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  /* Row layout */
+  .tzp-row {
+    display: flex;
+    align-items: stretch;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .tzp-row:first-child {
+    border-top: none;
+  }
+  .tzp-head {
+    position: sticky;
+    left: 0;
+    z-index: 5;
+    /* Explicit min/max width (not `auto`) locks every header to the same size —
+       otherwise a long meta line lets the flex item grow past its basis and
+       shifts that row's grid out of alignment. overflow clips the overflow. */
+    flex: 0 0 200px;
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.6rem;
+    background: #101018;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .tzp-head-main {
+    min-width: 0;
+    flex: 1;
+  }
+  .tzp-name {
+    display: block;
+    color: #fff;
+    font-size: 0.86rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .tzp-meta {
+    display: block;
+    color: #888;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .tzp-cur {
+    color: #cfcfcf;
+  }
+  .tzp-home-badge {
+    color: #ffc436;
+  }
+  .tzp-ctrls {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .tzp-ctrl {
+    width: 20px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: #777;
+    font-size: 0.7rem;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.04);
+    transition: all 0.12s;
+  }
+  .tzp-ctrl:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  .tzp-ctrl.is-home {
+    color: #ffc436;
+  }
+
+  .tzp-cells {
+    display: flex;
+    flex: 1;
+  }
+  .tzp-cell {
+    flex: 1;
+    min-width: 30px;
+    padding: 0.55rem 0;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    border-left: 1px solid rgba(255, 255, 255, 0.04);
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: background 0.08s;
+  }
+  .tzp-cell.is-day {
+    background: rgba(255, 255, 255, 0.045);
+  }
+  .tzp-cell.is-night {
+    background: rgba(0, 0, 0, 0.28);
+    color: #6b7280;
+  }
+  .tzp-cell.is-work {
+    background: rgba(255, 196, 54, 0.1);
+    color: #f0e6cf;
+  }
+  .tzp-cell.is-daystart {
+    border-left: 1px solid rgba(255, 196, 54, 0.35);
+  }
+  .tzp-cell.is-hover {
+    background: rgba(255, 255, 255, 0.14);
+  }
+  .tzp-cell.is-now {
+    box-shadow: inset 0 -2px 0 0 #38bdf8;
+  }
+  .tzp-cell.is-sel {
+    background: rgba(255, 196, 54, 0.28);
+    color: #fff;
+    box-shadow: inset 0 0 0 1px rgba(255, 196, 54, 0.6);
+  }
+</style>
+
+<script>
+  import { searchZones, displayName } from '../../lib/timezone-cities';
+
+  type Sel = { from: number; to: number } | null;
+  interface Strings {
+    meetingWord: string;
+    hoursWord: string;
+    copySummary: string;
+    copiedSummary: string;
+    copyLink: string;
+    copied: string;
+    emptyState: string;
+    noResults: string;
+    homeTitle: string;
+    upTitle: string;
+    downTitle: string;
+    removeTitle: string;
+    clearSel: string;
+  }
+
+  const root = document.getElementById('tzp');
+  if (root) {
+    const S: Strings = JSON.parse(root.dataset.strings || '{}');
+    const lang = (root.dataset.lang as 'vn' | 'en') || 'vn';
+    const locale = lang === 'vn' ? 'vi-VN' : 'en-US';
+    const LS_KEY = 'anh4gs.tz-planner.v1';
+    const HOUR = 3600_000;
+
+    const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+    const addInput = $<HTMLInputElement>('tzp-add');
+    const resultsBox = $<HTMLDivElement>('tzp-results');
+    const fmtBox = $<HTMLDivElement>('tzp-fmt');
+    const copyBtn = $<HTMLButtonElement>('tzp-copy');
+    const dateStrip = $<HTMLDivElement>('tzp-datestrip');
+    const dateInput = $<HTMLInputElement>('tzp-date');
+    const workToggle = $<HTMLInputElement>('tzp-work');
+    const rowsEl = $<HTMLDivElement>('tzp-rows');
+    const summaryEl = $<HTMLDivElement>('tzp-summary');
+
+    // ---- state ----
+    const state = {
+      zones: [] as string[],
+      home: 0,
+      date: '', // YYYY-MM-DD
+      fmt: 24 as 12 | 24,
+      work: true,
+      sel: null as Sel,
+    };
+
+    const rawZones: string[] = (() => {
+      try {
+        const fn = (Intl as unknown as { supportedValuesOf?: (k: string) => string[] }).supportedValuesOf;
+        return fn ? fn('timeZone') : [];
+      } catch {
+        return [];
+      }
+    })();
+
+    // ---- time helpers (pure Intl, DST-correct) ----
+    const partMap = (parts: Intl.DateTimeFormatPart[]) => {
+      const m: Record<string, string> = {};
+      for (const p of parts) if (p.type !== 'literal') m[p.type] = p.value;
+      return m;
+    };
+
+    /** Offset (ms, zone ahead of UTC is positive) of `tz` at instant `ts`. */
+    const zoneOffset = (tz: string, ts: number): number => {
+      const dtf = new Intl.DateTimeFormat('en-US', {
+        timeZone: tz,
+        hour12: false,
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      });
+      const m = partMap(dtf.formatToParts(new Date(ts)));
+      let h = Number(m.hour);
+      if (h === 24) h = 0;
+      const asUTC = Date.UTC(Number(m.year), Number(m.month) - 1, Number(m.day), h, Number(m.minute), Number(m.second));
+      return asUTC - ts;
+    };
+
+    /** UTC instant of local midnight on Y-M-D in `tz` (refined for DST edges). */
+    const zonedMidnight = (y: number, mo: number, d: number, tz: string): number => {
+      const guess = Date.UTC(y, mo - 1, d, 0, 0, 0);
+      const o1 = zoneOffset(tz, guess);
+      let ts = guess - o1;
+      const o2 = zoneOffset(tz, ts);
+      if (o2 !== o1) ts = guess - o2;
+      return ts;
+    };
+
+    const isValidZone = (tz: string): boolean => {
+      try {
+        new Intl.DateTimeFormat('en-US', { timeZone: tz });
+        return true;
+      } catch {
+        return false;
+      }
+    };
+
+    /** {h, weekday, day, month} of `ts` in `tz`, using a reusable formatter. */
+    const localParts = (dtf: Intl.DateTimeFormat, ts: number) => {
+      const m = partMap(dtf.formatToParts(new Date(ts)));
+      let h = Number(m.hour);
+      if (h === 24) h = 0;
+      return { h, weekday: m.weekday, day: m.day, month: m.month };
+    };
+
+    const clockOf = (tz: string, ts: number): { h: number; min: string } => {
+      const dtf = new Intl.DateTimeFormat('en-GB', { timeZone: tz, hour12: false, hour: '2-digit', minute: '2-digit' });
+      const m = partMap(dtf.formatToParts(new Date(ts)));
+      return { h: Number(m.hour) % 24, min: m.minute };
+    };
+
+    const fmtClock = (tz: string, ts: number): string => {
+      const { h, min } = clockOf(tz, ts);
+      if (state.fmt === 24) return `${String(h).padStart(2, '0')}:${min}`;
+      const ap = h < 12 ? 'a' : 'p';
+      const hh = h % 12 === 0 ? 12 : h % 12;
+      return `${hh}:${min}${ap}`;
+    };
+
+    const cellLabel = (h: number): string => {
+      if (state.fmt === 24) return String(h).padStart(2, '0');
+      const ap = h < 12 ? 'a' : 'p';
+      const hh = h % 12 === 0 ? 12 : h % 12;
+      return `${hh}${ap}`;
+    };
+
+    const zoneAbbr = (tz: string, ts: number): string => {
+      const dtf = new Intl.DateTimeFormat('en-US', { timeZone: tz, timeZoneName: 'short' });
+      const found = dtf.formatToParts(new Date(ts)).find((p) => p.type === 'timeZoneName');
+      return found ? found.value : '';
+    };
+
+    const fmtOffset = (hours: number): string => {
+      if (hours === 0) return '±0';
+      const sign = hours > 0 ? '+' : '−';
+      const abs = Math.abs(hours);
+      const txt = Number.isInteger(abs) ? String(abs) : String(abs).replace('.', '.');
+      return `${sign}${txt}`;
+    };
+
+    // ---- home / date anchoring ----
+    const homeTz = (): string => state.zones[state.home] || state.zones[0] || 'UTC';
+
+    const parseDate = (s: string): [number, number, number] => {
+      const [y, mo, d] = s.split('-').map(Number);
+      return [y, mo, d];
+    };
+
+    const homeMidnight = (): number => {
+      const [y, mo, d] = parseDate(state.date);
+      return zonedMidnight(y, mo, d, homeTz());
+    };
+
+    /** Column (0..23) containing "now" in the home day window, or -1. */
+    const nowCol = (base: number): number => {
+      const now = Date.now();
+      if (now < base || now >= base + 24 * HOUR) return -1;
+      return Math.floor((now - base) / HOUR);
+    };
+
+    /** Local Y-M-D of `tz` at instant `ts`. */
+    const localYMD = (tz: string, ts: number): [number, number, number] => {
+      const dtf = new Intl.DateTimeFormat('en-CA', { timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit' });
+      const m = partMap(dtf.formatToParts(new Date(ts)));
+      return [Number(m.year), Number(m.month), Number(m.day)];
+    };
+
+    const ymdStr = (y: number, mo: number, d: number) =>
+      `${y}-${String(mo).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+
+    // ---- persistence ----
+    const save = () => {
+      try {
+        localStorage.setItem(
+          LS_KEY,
+          JSON.stringify({ zones: state.zones, home: state.home, fmt: state.fmt, work: state.work }),
+        );
+      } catch {
+        /* ignore quota / privacy mode */
+      }
+    };
+
+    const buildUrl = (): string => {
+      const p = new URLSearchParams();
+      p.set('z', state.zones.join(','));
+      p.set('d', state.date);
+      p.set('home', String(state.home));
+      p.set('fmt', String(state.fmt));
+      if (state.sel) {
+        p.set('from', String(state.sel.from));
+        p.set('to', String(state.sel.to));
+      }
+      return `${location.origin}${location.pathname}?${p.toString()}`;
+    };
+
+    const syncUrl = () => {
+      try {
+        history.replaceState(null, '', buildUrl());
+      } catch {
+        /* ignore */
+      }
+      save();
+    };
+
+    const loadState = () => {
+      const url = new URL(location.href);
+      const z = url.searchParams.get('z');
+      if (z) {
+        state.zones = z.split(',').map((s) => s.trim()).filter((s) => s && isValidZone(s));
+        const home = Number(url.searchParams.get('home'));
+        state.home = Number.isInteger(home) ? Math.max(0, Math.min(home, state.zones.length - 1)) : 0;
+        const fmt = Number(url.searchParams.get('fmt'));
+        state.fmt = fmt === 12 ? 12 : 24;
+        const d = url.searchParams.get('d');
+        if (d && /^\d{4}-\d{2}-\d{2}$/.test(d)) state.date = d;
+        const from = Number(url.searchParams.get('from'));
+        const to = Number(url.searchParams.get('to'));
+        if (Number.isInteger(from) && Number.isInteger(to)) {
+          state.sel = { from: Math.max(0, Math.min(23, from)), to: Math.max(0, Math.min(23, to)) };
+        }
+      } else {
+        try {
+          const raw = localStorage.getItem(LS_KEY);
+          if (raw) {
+            const j = JSON.parse(raw);
+            if (Array.isArray(j.zones)) state.zones = j.zones.filter(isValidZone);
+            if (Number.isInteger(j.home)) state.home = j.home;
+            if (j.fmt === 12 || j.fmt === 24) state.fmt = j.fmt;
+            if (typeof j.work === 'boolean') state.work = j.work;
+          }
+        } catch {
+          /* ignore */
+        }
+      }
+
+      if (state.zones.length === 0) {
+        state.zones = ['Asia/Ho_Chi_Minh', 'Europe/London', 'America/New_York'];
+        state.home = 0;
+      }
+      state.home = Math.max(0, Math.min(state.home, state.zones.length - 1));
+
+      if (!state.date) {
+        const [y, mo, d] = localYMD(homeTz(), Date.now());
+        state.date = ymdStr(y, mo, d);
+      }
+    };
+
+    // ---- rendering ----
+    const esc = (s: string) =>
+      s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+    const renderRows = () => {
+      const base = homeMidnight();
+      const now = Date.now();
+      const col = nowCol(base);
+
+      if (state.zones.length === 0) {
+        rowsEl.innerHTML = `<div class="p-8 text-center text-[#777] text-[0.9rem]">${esc(S.emptyState)}</div>`;
+        return;
+      }
+
+      const rows = state.zones.map((tz, idx) => {
+        const isHome = idx === state.home;
+        const dtf = new Intl.DateTimeFormat('en-GB', {
+          timeZone: tz,
+          hour12: false,
+          hour: '2-digit',
+          weekday: 'short',
+          day: 'numeric',
+          month: 'short',
+        });
+        const relHours = (zoneOffset(tz, now) - zoneOffset(homeTz(), now)) / HOUR;
+        const cur = fmtClock(tz, now);
+        const abbr = zoneAbbr(tz, now);
+        const curDate = new Intl.DateTimeFormat(locale, {
+          timeZone: tz,
+          weekday: 'short',
+          month: 'short',
+          day: 'numeric',
+        }).format(new Date(now));
+
+        let cells = '';
+        for (let c = 0; c < 24; c++) {
+          const inst = base + c * HOUR;
+          const p = localParts(dtf, inst);
+          const h = p.h;
+          const night = h < 6 || h >= 22;
+          const work = state.work && h >= 9 && h < 18;
+          const stateCls = work ? 'is-work' : night ? 'is-night' : 'is-day';
+          const daystart = h === 0 ? ' is-daystart' : '';
+          const nowCls = c === col ? ' is-now' : '';
+          const selCls = state.sel && c >= state.sel.from && c <= state.sel.to ? ' is-sel' : '';
+          const title = `${displayName(tz)} · ${fmtClock(tz, inst)} · ${p.weekday} ${p.month} ${p.day}`;
+          cells += `<button type="button" class="tzp-cell ${stateCls}${daystart}${nowCls}${selCls}" data-col="${c}" title="${esc(title)}">${cellLabel(h)}</button>`;
+        }
+
+        const homeBadge = isHome ? ` <span class="tzp-home-badge">🏠</span>` : '';
+        return `<div class="tzp-row" data-idx="${idx}">
+          <div class="tzp-head">
+            <div class="tzp-head-main">
+              <span class="tzp-name">${esc(displayName(tz))}${homeBadge}</span>
+              <span class="tzp-meta">${esc(abbr)} · ${fmtOffset(relHours)} · <span class="tzp-cur">${cur}</span> · ${esc(curDate)}</span>
+            </div>
+            <div class="tzp-ctrls">
+              <button type="button" class="tzp-ctrl${isHome ? ' is-home' : ''}" data-act="home" data-idx="${idx}" title="${esc(S.homeTitle)}">${isHome ? '★' : '☆'}</button>
+              <button type="button" class="tzp-ctrl" data-act="up" data-idx="${idx}" title="${esc(S.upTitle)}">↑</button>
+              <button type="button" class="tzp-ctrl" data-act="down" data-idx="${idx}" title="${esc(S.downTitle)}">↓</button>
+              <button type="button" class="tzp-ctrl" data-act="remove" data-idx="${idx}" title="${esc(S.removeTitle)}">×</button>
+            </div>
+          </div>
+          <div class="tzp-cells">${cells}</div>
+        </div>`;
+      });
+
+      rowsEl.innerHTML = rows.join('');
+    };
+
+    const renderSummary = () => {
+      if (!state.sel) {
+        summaryEl.classList.add('hidden');
+        summaryEl.innerHTML = '';
+        return;
+      }
+      const base = homeMidnight();
+      const start = base + state.sel.from * HOUR;
+      const end = base + (state.sel.to + 1) * HOUR;
+      const hours = state.sel.to - state.sel.from + 1;
+
+      const lines = state.zones.map((tz) => {
+        const home = state.zones[state.home] === tz;
+        return `<div class="flex items-center justify-between gap-3 py-0.5">
+          <span class="text-[#ccc] text-[0.85rem]">${home ? '🏠 ' : ''}${esc(displayName(tz))}</span>
+          <span class="text-white text-[0.85rem] font-medium tabular-nums">${fmtClock(tz, start)} – ${fmtClock(tz, end)}</span>
+        </div>`;
+      });
+
+      summaryEl.innerHTML = `
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[#ffc436] text-[0.8rem] uppercase tracking-wide">${esc(S.meetingWord)} · ${hours}${esc(S.hoursWord)}</span>
+          <div class="flex items-center gap-3">
+            <button id="tzp-copysum" type="button" class="text-[#ffc436] text-[0.78rem] hover:underline">${esc(S.copySummary)}</button>
+            <button id="tzp-clearsel" type="button" class="text-[#888] text-[0.78rem] hover:text-white">${esc(S.clearSel)}</button>
+          </div>
+        </div>
+        ${lines.join('')}`;
+      summaryEl.classList.remove('hidden');
+
+      $<HTMLButtonElement>('tzp-copysum').addEventListener('click', () => copySummary());
+      $<HTMLButtonElement>('tzp-clearsel').addEventListener('click', () => {
+        setSelection(null);
+        syncUrl();
+      });
+    };
+
+    const summaryText = (): string => {
+      if (!state.sel) return '';
+      const base = homeMidnight();
+      const start = base + state.sel.from * HOUR;
+      const end = base + (state.sel.to + 1) * HOUR;
+      return state.zones
+        .map((tz) => `${displayName(tz)}: ${fmtClock(tz, start)}–${fmtClock(tz, end)}`)
+        .join('\n');
+    };
+
+    const render = () => {
+      renderRows();
+      renderSummary();
+      renderDateStrip();
+      dateInput.value = state.date;
+      fmtBox.querySelectorAll<HTMLButtonElement>('.tzp-seg').forEach((b) =>
+        b.classList.toggle('is-on', b.dataset.fmt === String(state.fmt)),
+      );
+    };
+
+    const renderDateStrip = () => {
+      const [hy, hmo, hd] = localYMD(homeTz(), Date.now());
+      dateStrip.innerHTML = '';
+      for (let off = -1; off <= 3; off++) {
+        const base = new Date(Date.UTC(hy, hmo - 1, hd));
+        base.setUTCDate(base.getUTCDate() + off);
+        const y = base.getUTCFullYear();
+        const mo = base.getUTCMonth() + 1;
+        const d = base.getUTCDate();
+        const value = ymdStr(y, mo, d);
+        const wd = new Intl.DateTimeFormat(locale, { weekday: 'short', timeZone: 'UTC' }).format(base);
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'tzp-day' + (value === state.date ? ' is-on' : '');
+        btn.innerHTML = `<span>${esc(wd)}</span><b>${d}</b>`;
+        btn.addEventListener('click', () => {
+          state.date = value;
+          setSelection(state.sel); // keep selection, recompute summary
+          render();
+          syncUrl();
+        });
+        dateStrip.appendChild(btn);
+      }
+    };
+
+    // ---- selection + highlight ----
+    const applySelClasses = () => {
+      rowsEl.querySelectorAll<HTMLButtonElement>('.tzp-cell').forEach((cell) => {
+        const c = Number(cell.dataset.col);
+        const on = !!state.sel && c >= state.sel.from && c <= state.sel.to;
+        cell.classList.toggle('is-sel', on);
+      });
+    };
+
+    const setSelection = (sel: Sel) => {
+      state.sel = sel;
+      applySelClasses();
+      renderSummary();
+    };
+
+    const setHover = (col: number | null) => {
+      rowsEl.querySelectorAll<HTMLButtonElement>('.tzp-cell.is-hover').forEach((c) => c.classList.remove('is-hover'));
+      if (col === null) return;
+      rowsEl.querySelectorAll<HTMLButtonElement>(`.tzp-cell[data-col="${col}"]`).forEach((c) => c.classList.add('is-hover'));
+    };
+
+    // ---- zone list mutations ----
+    const addZone = (tz: string) => {
+      if (!isValidZone(tz) || state.zones.includes(tz)) return;
+      state.zones.push(tz);
+      render();
+      syncUrl();
+    };
+
+    const removeZone = (idx: number) => {
+      state.zones.splice(idx, 1);
+      if (state.home === idx) state.home = 0;
+      else if (state.home > idx) state.home -= 1;
+      state.home = Math.max(0, Math.min(state.home, state.zones.length - 1));
+      render();
+      syncUrl();
+    };
+
+    const moveZone = (idx: number, dir: -1 | 1) => {
+      const j = idx + dir;
+      if (j < 0 || j >= state.zones.length) return;
+      [state.zones[idx], state.zones[j]] = [state.zones[j], state.zones[idx]];
+      if (state.home === idx) state.home = j;
+      else if (state.home === j) state.home = idx;
+      render();
+      syncUrl();
+    };
+
+    const setHome = (idx: number) => {
+      state.home = idx;
+      render();
+      syncUrl();
+    };
+
+    // ---- clipboard ----
+    const copyText = async (text: string): Promise<boolean> => {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          ta.remove();
+          return true;
+        } catch {
+          return false;
+        }
+      }
+    };
+
+    const flash = (btn: HTMLButtonElement, msg: string, restore: string) => {
+      btn.textContent = msg;
+      setTimeout(() => (btn.textContent = restore), 1600);
+    };
+
+    const copySummary = async () => {
+      const ok = await copyText(summaryText());
+      const btn = document.getElementById('tzp-copysum') as HTMLButtonElement | null;
+      if (ok && btn) flash(btn, S.copiedSummary, S.copySummary);
+    };
+
+    // ---- combobox ----
+    let activeResult = -1;
+    let currentResults: ReturnType<typeof searchZones> = [];
+
+    const renderResults = () => {
+      if (currentResults.length === 0) {
+        resultsBox.innerHTML = `<div class="px-3 py-2 text-[#777] text-[0.82rem]">${esc(S.noResults)}</div>`;
+        resultsBox.classList.remove('hidden');
+        return;
+      }
+      resultsBox.innerHTML = currentResults
+        .map(
+          (r, i) => `<button type="button" data-tz="${esc(r.tz)}" data-i="${i}"
+            class="tzp-result flex w-full items-center justify-between gap-3 px-3 py-2 text-left hover:bg-white/10 ${i === activeResult ? 'bg-white/10' : ''}">
+            <span class="text-white text-[0.85rem]">${esc(r.label)}</span>
+            <span class="text-[#777] text-[0.72rem] truncate">${esc(r.sub)}</span>
+          </button>`,
+        )
+        .join('');
+      resultsBox.classList.remove('hidden');
+    };
+
+    const hideResults = () => {
+      resultsBox.classList.add('hidden');
+      activeResult = -1;
+    };
+
+    const pickResult = (i: number) => {
+      const r = currentResults[i];
+      if (!r) return;
+      addZone(r.tz);
+      addInput.value = '';
+      currentResults = [];
+      hideResults();
+    };
+
+    addInput.addEventListener('input', () => {
+      currentResults = searchZones(addInput.value, rawZones, 8);
+      activeResult = currentResults.length ? 0 : -1;
+      if (addInput.value.trim()) renderResults();
+      else hideResults();
+    });
+
+    addInput.addEventListener('keydown', (e) => {
+      if (resultsBox.classList.contains('hidden')) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeResult = Math.min(activeResult + 1, currentResults.length - 1);
+        renderResults();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeResult = Math.max(activeResult - 1, 0);
+        renderResults();
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (activeResult >= 0) pickResult(activeResult);
+      } else if (e.key === 'Escape') {
+        hideResults();
+      }
+    });
+
+    addInput.addEventListener('blur', () => setTimeout(hideResults, 150));
+
+    resultsBox.addEventListener('mousedown', (e) => {
+      const btn = (e.target as HTMLElement).closest('.tzp-result') as HTMLElement | null;
+      if (btn) {
+        e.preventDefault();
+        pickResult(Number(btn.dataset.i));
+      }
+    });
+
+    // ---- grid events (delegation) ----
+    rowsEl.addEventListener('click', (e) => {
+      const ctrl = (e.target as HTMLElement).closest('[data-act]') as HTMLElement | null;
+      if (!ctrl) return;
+      const idx = Number(ctrl.dataset.idx);
+      switch (ctrl.dataset.act) {
+        case 'home': setHome(idx); break;
+        case 'up': moveZone(idx, -1); break;
+        case 'down': moveZone(idx, 1); break;
+        case 'remove': removeZone(idx); break;
+      }
+    });
+
+    let drag: { start: number } | null = null;
+    const colFromPoint = (x: number, y: number): number | null => {
+      const el = document.elementFromPoint(x, y) as HTMLElement | null;
+      const cell = el?.closest('.tzp-cell') as HTMLElement | null;
+      return cell ? Number(cell.dataset.col) : null;
+    };
+
+    rowsEl.addEventListener('pointerdown', (e) => {
+      const cell = (e.target as HTMLElement).closest('.tzp-cell') as HTMLElement | null;
+      if (!cell) return;
+      e.preventDefault();
+      const c = Number(cell.dataset.col);
+      drag = { start: c };
+      setSelection({ from: c, to: c });
+      rowsEl.focus();
+    });
+
+    window.addEventListener('pointermove', (e) => {
+      if (!drag) return;
+      const c = colFromPoint(e.clientX, e.clientY);
+      if (c === null) return;
+      setSelection({ from: Math.min(drag.start, c), to: Math.max(drag.start, c) });
+    });
+
+    window.addEventListener('pointerup', () => {
+      if (drag) {
+        drag = null;
+        syncUrl();
+      }
+    });
+
+    rowsEl.addEventListener('mouseover', (e) => {
+      const cell = (e.target as HTMLElement).closest('.tzp-cell') as HTMLElement | null;
+      if (cell) setHover(Number(cell.dataset.col));
+    });
+    rowsEl.addEventListener('mouseleave', () => setHover(null));
+
+    rowsEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        setSelection(null);
+        syncUrl();
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+        e.preventDefault();
+        const anchor = state.sel ? state.sel.from : nowCol(homeMidnight());
+        const cur = anchor >= 0 ? anchor : 9;
+        const n = Math.max(0, Math.min(23, cur + (e.key === 'ArrowRight' ? 1 : -1)));
+        setSelection({ from: n, to: n });
+        syncUrl();
+      }
+    });
+
+    // ---- toolbar events ----
+    fmtBox.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('.tzp-seg') as HTMLElement | null;
+      if (!btn) return;
+      state.fmt = btn.dataset.fmt === '12' ? 12 : 24;
+      render();
+      syncUrl();
+    });
+
+    dateInput.addEventListener('change', () => {
+      if (/^\d{4}-\d{2}-\d{2}$/.test(dateInput.value)) {
+        state.date = dateInput.value;
+        render();
+        syncUrl();
+      }
+    });
+
+    workToggle.addEventListener('change', () => {
+      state.work = workToggle.checked;
+      render();
+      syncUrl();
+    });
+
+    copyBtn.addEventListener('click', async () => {
+      const ok = await copyText(buildUrl());
+      if (ok) flash(copyBtn, S.copied, S.copyLink);
+    });
+
+    // ---- live clock ----
+    const tick = () => {
+      const base = homeMidnight();
+      const now = Date.now();
+      const col = nowCol(base);
+      // refresh current-time labels
+      rowsEl.querySelectorAll<HTMLDivElement>('.tzp-row').forEach((row) => {
+        const idx = Number(row.dataset.idx);
+        const tz = state.zones[idx];
+        if (!tz) return;
+        const curSpan = row.querySelector('.tzp-cur');
+        if (curSpan) curSpan.textContent = fmtClock(tz, now);
+      });
+      // refresh now-column marker
+      rowsEl.querySelectorAll<HTMLButtonElement>('.tzp-cell.is-now').forEach((c) => c.classList.remove('is-now'));
+      if (col >= 0) {
+        rowsEl.querySelectorAll<HTMLButtonElement>(`.tzp-cell[data-col="${col}"]`).forEach((c) => c.classList.add('is-now'));
+      }
+    };
+
+    // ---- boot ----
+    loadState();
+    workToggle.checked = state.work;
+    render();
+    setInterval(tick, 30_000);
+  }
+</script>

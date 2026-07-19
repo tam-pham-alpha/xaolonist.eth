@@ -40,6 +40,19 @@ export const TOOLS: Tool[] = [
     status: 'live',
     featured: true,
   },
+  {
+    slug: 'timezone-planner',
+    emoji: '🕓',
+    name: { vn: 'Lịch timezone', en: 'Timezone Planner' },
+    description: {
+      vn: 'Xếp nhiều thành phố cạnh nhau, rê chuột so giờ, chọn khung họp chung — chia sẻ bằng link',
+      en: 'Line up cities side by side, hover to compare hours, pick a shared meeting slot — share via link',
+    },
+    category: 'life',
+    runtime: 'client',
+    status: 'live',
+    featured: true,
+  },
 ];
 
 export const FEATURED_TOOLS = TOOLS.filter((t) => t.featured && t.status !== 'soon');
