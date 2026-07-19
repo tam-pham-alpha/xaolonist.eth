@@ -1,0 +1,122 @@
+---
+/**
+ * Home-page hero: a prominent chat entry for @aethery, the realm/tools chips,
+ * and a featured-tools row. Submitting the input navigates to the aethery
+ * chat page with the question as `?q=`, which auto-sends it there.
+ */
+import { REALMS } from '../lib/realms';
+import { FEATURED_TOOLS } from '../lib/tools';
+
+interface Props {
+  lang: 'vn' | 'en';
+}
+
+const { lang } = Astro.props;
+const isEn = lang === 'en';
+const base = isEn ? '/en' : '';
+
+const T = {
+  vn: {
+    placeholder: 'hỏi @aethery điều gì đó…',
+    hint: 'trò chuyện với người bạn kỹ thuật số của hắn, hoặc dạo quanh các cõi',
+    featured: 'công cụ nổi bật',
+  },
+  en: {
+    placeholder: 'ask @aethery something…',
+    hint: 'talk with his digital companion, or wander the realms',
+    featured: 'featured tools',
+  },
+}[lang];
+
+const chips = [
+  ...REALMS.map((r) => ({ href: `${base}/${r.slug}`, emoji: r.emoji, label: r.name })),
+  { href: `${base}/tools`, emoji: '🧰', label: 'Tools' },
+];
+---
+
+<section class="pt-10 pb-8 lg:pt-16 lg:pb-12">
+  <div class="max-w-[640px] mx-auto">
+    <!-- Prominent chat entry -->
+    <form
+      id="home-chat"
+      data-target={`${base}/aethery`}
+      class="group flex items-center gap-3 rounded-2xl border border-white/12 bg-white/[0.04] px-3 py-2.5 shadow-[0_8px_30px_rgba(0,0,0,0.35)] transition-colors focus-within:border-[#ffc436]/50 focus-within:bg-white/[0.06]"
+    >
+      <img
+        src="/images/aethery.png"
+        alt="aethery"
+        width="40"
+        height="40"
+        class="w-10 h-10 rounded-full object-cover shrink-0 shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+      />
+      <input
+        id="home-chat-input"
+        type="text"
+        maxlength="2000"
+        autocomplete="off"
+        placeholder={T.placeholder}
+        class="flex-1 bg-transparent border-none outline-none text-[1rem] text-white placeholder-[#7a7a7a] py-1.5"
+      />
+      <button
+        type="submit"
+        aria-label="aethery"
+        class="shrink-0 w-10 h-10 rounded-xl border border-[#ffc436]/40 text-[#ffc436] hover:bg-[#ffc436]/10 transition-all flex items-center justify-center"
+      >
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+        </svg>
+      </button>
+    </form>
+    <p class="text-center text-[#777] text-[0.82rem] mt-3">{T.hint}</p>
+
+    <!-- Realm + tools chips -->
+    <div class="flex flex-wrap justify-center gap-2 mt-6">
+      {chips.map((c) => (
+        <a
+          href={c.href}
+          class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-[0.85rem] text-white/85 hover:border-[#ffc436]/40 hover:text-white hover:no-underline transition-all"
+        >
+          <span aria-hidden="true">{c.emoji}</span>
+          <span>{c.label}</span>
+        </a>
+      ))}
+    </div>
+
+    <!-- Featured tools (auto-populates from the tools registry) -->
+    {FEATURED_TOOLS.length > 0 && (
+      <div class="mt-8">
+        <div class="text-center text-[#ffc436]/70 text-[0.7rem] uppercase tracking-[2px] mb-3">
+          {T.featured}
+        </div>
+        <div class="flex flex-wrap justify-center gap-3">
+          {FEATURED_TOOLS.map((tool) => (
+            <a
+              href={`${base}/tools/${tool.slug}`}
+              class="group flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-2.5 max-w-[300px] hover:border-[#ffc436]/40 hover:bg-white/[0.06] hover:no-underline transition-all"
+            >
+              <span class="text-[1.3rem] leading-none shrink-0">{tool.emoji}</span>
+              <span class="min-w-0">
+                <span class="block text-white text-[0.9rem] font-medium truncate">{tool.name[lang]}</span>
+                <span class="block text-[#888] text-[0.78rem] truncate">{tool.description[lang]}</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</section>
+
+<script>
+  // Submit → navigate to the aethery chat with the question as ?q= (auto-sent there).
+  const form = document.getElementById('home-chat') as HTMLFormElement | null;
+  if (form) {
+    const input = document.getElementById('home-chat-input') as HTMLInputElement;
+    const target = form.dataset.target || '/aethery';
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const q = input.value.trim();
+      window.location.assign(q ? `${target}?q=${encodeURIComponent(q)}` : target);
+    });
+  }
+</script>

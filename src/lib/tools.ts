@@ -22,6 +22,8 @@ export type Tool = {
   category: ToolCategory;
   runtime: ToolRuntime;
   status: ToolStatus;
+  /** Surface this tool in the home-page "featured tools" row. */
+  featured?: boolean;
 };
 
 export const TOOLS: Tool[] = [
@@ -36,8 +38,11 @@ export const TOOLS: Tool[] = [
     category: 'media',
     runtime: 'nuc',
     status: 'live',
+    featured: true,
   },
 ];
+
+export const FEATURED_TOOLS = TOOLS.filter((t) => t.featured && t.status !== 'soon');
 
 export const CATEGORY_LABEL: Record<ToolCategory, { vn: string; en: string }> = {
   media: { vn: 'Ảnh & Media', en: 'Image & Media' },

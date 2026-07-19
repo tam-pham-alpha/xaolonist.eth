@@ -399,5 +399,13 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 
     // Restore previous conversation
     for (const item of history) addBubble(item.role, item.text);
+
+    // Auto-send a question handed over from the home hero (/aethery?q=...)
+    const initialQ = new URLSearchParams(location.search).get('q');
+    if (initialQ && initialQ.trim()) {
+      window.history.replaceState(null, '', location.pathname); // don't re-send on refresh (local `history` var shadows window.history)
+      inputEl.value = initialQ.trim();
+      send();
+    }
   }
 </script>

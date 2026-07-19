@@ -1,6 +1,5 @@
 ---
 import Container from "./Container.astro";
-import { REALMS } from "../lib/realms";
 
 interface Props {
   blur?: boolean;
@@ -12,10 +11,6 @@ const isEn = lang === "en";
 const pathname = Astro.url.pathname;
 const viPath = pathname.replace(/^\/en/, "") || "/";
 const enPath = `/en${pathname.replace(/^\/en/, "")}`;
-
-const navLinkClass = blur
-  ? "text-white font-medium no-underline transition-all duration-300 opacity-30 hover:opacity-60 hover:no-underline text-base md:text-sm whitespace-nowrap shrink-0"
-  : "text-white font-medium no-underline transition-all duration-300 opacity-80 hover:opacity-100 hover:no-underline text-base md:text-sm whitespace-nowrap shrink-0";
 
 const logoClass = blur
   ? "flex items-center font-bold shrink-0 min-w-0 mr-1 sm:mr-4 transition-all duration-300 no-underline hover:no-underline text-white opacity-50 hover:opacity-100 group"
@@ -44,31 +39,9 @@ const getLangLinkClass = (active: boolean) =>
         <span class={`${logoSpanClass} hidden min-[420px]:inline truncate`}>anh4gs</span>
       </a>
 
-      <div class="flex items-center gap-5 sm:gap-3 md:gap-4 lg:gap-5 min-w-0">
-        {REALMS.map((realm) => (
-          <a
-            href={isEn ? `/en/${realm.slug}` : `/${realm.slug}`}
-            class={navLinkClass}
-            title={`${realm.name} — ${realm.description[isEn ? 'en' : 'vn']}`}
-          >
-            <span aria-hidden="true">{realm.emoji}</span>
-            <span class="hidden md:inline">{` ${realm.name}`}</span>
-          </a>
-        ))}
-        <a
-          href={isEn ? '/en/tools' : '/tools'}
-          class={navLinkClass}
-          title={isEn ? 'tools — small handy utilities' : 'tools — công cụ nhỏ tiện dụng'}
-        >
-          <span aria-hidden="true">🧰</span>
-          <span class="hidden md:inline"> Tools</span>
-        </a>
-        <div class="inline-flex items-center gap-1.5 sm:gap-3 shrink-0">
-          <a href={viPath} class={getLangLinkClass(!isEn)} title="Tiếng Việt"
-            >🇻🇳</a
-          >
-          <a href={enPath} class={getLangLinkClass(isEn)} title="English">🇬🇧</a>
-        </div>
+      <div class="inline-flex items-center gap-1.5 sm:gap-3 shrink-0">
+        <a href={viPath} class={getLangLinkClass(!isEn)} title="Tiếng Việt">🇻🇳</a>
+        <a href={enPath} class={getLangLinkClass(isEn)} title="English">🇬🇧</a>
       </div>
     </nav>
   </Container>
