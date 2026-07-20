@@ -1,0 +1,432 @@
+---
+/**
+ * FIX Parser — client island (bilingual, no backend).
+ * Paste / drop / load FIX logs → timeline + tag detail.
+ */
+import { SAMPLE_FIX } from '../../lib/fix-tags';
+
+interface Props {
+  lang?: 'vn' | 'en';
+}
+
+const { lang = 'vn' } = Astro.props;
+
+const L = {
+  vn: {
+    raw: 'Raw logs',
+    process: 'Process',
+    clear: 'Clear',
+    sample: 'Sample data',
+    load: 'Load file',
+    placeholder: 'Dán FIX messages, kéo thả file (.log, .txt) hoặc bấm Load file',
+    timeline: 'Timeline',
+    detail: 'Detail',
+    colTime: 'Time',
+    colSender: 'Sender',
+    colMsg: 'Message',
+    colClOrd: 'Client Order ID',
+    colSide: 'Side',
+    colTag: 'Tag',
+    colName: 'Name',
+    colValue: 'Value',
+    search: 'Tìm: name, value…',
+    emptyTimeline: 'Chưa có message — dán log rồi bấm Process',
+    emptyDetail: 'Chọn một dòng trong Timeline',
+    share: 'Copy link',
+    copied: 'Đã copy ✓',
+    count: 'messages',
+  },
+  en: {
+    raw: 'Raw logs',
+    process: 'Process',
+    clear: 'Clear',
+    sample: 'Sample data',
+    load: 'Load file',
+    placeholder: 'Paste FIX messages, drop a file (.log, .txt) or click Load file',
+    timeline: 'Timeline',
+    detail: 'Detail',
+    colTime: 'Time',
+    colSender: 'Sender',
+    colMsg: 'Message',
+    colClOrd: 'Client Order ID',
+    colSide: 'Side',
+    colTag: 'Tag',
+    colName: 'Name',
+    colValue: 'Value',
+    search: 'Find anything: name, value…',
+    emptyTimeline: 'No messages yet — paste logs and hit Process',
+    emptyDetail: 'Select a row in the Timeline',
+    share: 'Copy link',
+    copied: 'Copied ✓',
+    count: 'messages',
+  },
+}[lang];
+---
+
+<div
+  id="fixp"
+  class="w-full"
+  data-lang={lang}
+  data-sample={SAMPLE_FIX}
+  data-strings={JSON.stringify(L)}
+>
+  <!-- Top bar -->
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+    <div>
+      <h2 class="text-[#ffc436] text-[1.15rem] font-medium tracking-wide m-0">FIX Parser</h2>
+      <p class="text-[#666] text-[0.7rem] uppercase tracking-[1.5px] mt-0.5 m-0">
+        FIX protocol log analysis tool
+      </p>
+    </div>
+    <div class="flex items-center gap-2">
+      <input
+        id="fixp-search"
+        type="search"
+        placeholder={L.search}
+        class="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-1.5 text-[0.85rem] text-white placeholder-[#666] outline-none focus:border-[#ffc436]/40 w-full sm:w-[240px]"
+      />
+      <button
+        id="fixp-share"
+        type="button"
+        class="shrink-0 text-[0.8rem] text-[#888] hover:text-[#ffc436] border border-white/10 rounded-lg px-3 py-1.5 transition-colors"
+      >{L.share}</button>
+    </div>
+  </div>
+
+  <!-- Raw logs -->
+  <section class="mb-4 rounded-xl border border-white/10 bg-white/[0.02] overflow-hidden">
+    <div class="flex flex-wrap items-center gap-2 px-4 py-3 border-b border-white/8">
+      <h3 class="text-[#ffc436] text-[0.95rem] font-medium m-0 mr-auto">{L.raw}</h3>
+      <button id="fixp-process" type="button" class="fixp-btn fixp-btn-primary">{L.process}</button>
+      <button id="fixp-clear" type="button" class="fixp-btn">{L.clear}</button>
+      <button id="fixp-sample" type="button" class="fixp-btn">{L.sample}</button>
+      <label class="fixp-btn cursor-pointer">
+        {L.load}
+        <input id="fixp-file" type="file" accept=".log,.txt,.fix,text/plain" class="hidden" />
+      </label>
+      <span id="fixp-count" class="text-[#666] text-[0.75rem] tabular-nums ml-1"></span>
+    </div>
+    <div id="fixp-drop" class="relative">
+      <textarea
+        id="fixp-raw"
+        rows="8"
+        spellcheck="false"
+        placeholder={L.placeholder}
+        class="w-full bg-transparent border-0 px-4 py-3 text-[0.82rem] font-mono text-white/85 placeholder-[#555] outline-none resize-y min-h-[160px] leading-relaxed"
+      ></textarea>
+    </div>
+  </section>
+
+  <!-- Panels -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 min-h-[320px]">
+    <!-- Timeline -->
+    <section class="rounded-xl border border-white/10 bg-white/[0.02] flex flex-col min-h-[280px] overflow-hidden">
+      <div class="px-4 py-2.5 border-b border-white/8 flex items-center justify-between">
+        <h3 class="text-white/90 text-[0.9rem] font-medium m-0">{L.timeline}</h3>
+      </div>
+      <div class="overflow-auto flex-1">
+        <table class="w-full text-left text-[0.78rem] border-collapse">
+          <thead class="sticky top-0 bg-[#121218] text-[#888]">
+            <tr>
+              <th class="px-3 py-2 font-medium border-b border-white/8 whitespace-nowrap">{L.colTime}</th>
+              <th class="px-3 py-2 font-medium border-b border-white/8 whitespace-nowrap">{L.colSender}</th>
+              <th class="px-3 py-2 font-medium border-b border-white/8 whitespace-nowrap">{L.colMsg}</th>
+              <th class="px-3 py-2 font-medium border-b border-white/8 whitespace-nowrap">{L.colClOrd}</th>
+              <th class="px-3 py-2 font-medium border-b border-white/8 whitespace-nowrap">{L.colSide}</th>
+            </tr>
+          </thead>
+          <tbody id="fixp-timeline"></tbody>
+        </table>
+        <p id="fixp-timeline-empty" class="text-[#555] text-[0.85rem] px-4 py-8 text-center">{L.emptyTimeline}</p>
+      </div>
+    </section>
+
+    <!-- Detail -->
+    <section class="rounded-xl border border-white/10 bg-white/[0.02] flex flex-col min-h-[280px] overflow-hidden">
+      <div class="px-4 py-2.5 border-b border-white/8">
+        <h3 class="text-white/90 text-[0.9rem] font-medium m-0">{L.detail}</h3>
+      </div>
+      <div class="overflow-auto flex-1">
+        <table class="w-full text-left text-[0.78rem] border-collapse">
+          <thead class="sticky top-0 bg-[#121218] text-[#888]">
+            <tr>
+              <th class="px-3 py-2 font-medium border-b border-white/8 w-[70px]">{L.colTag}</th>
+              <th class="px-3 py-2 font-medium border-b border-white/8 w-[140px]">{L.colName}</th>
+              <th class="px-3 py-2 font-medium border-b border-white/8">{L.colValue}</th>
+            </tr>
+          </thead>
+          <tbody id="fixp-detail"></tbody>
+        </table>
+        <p id="fixp-detail-empty" class="text-[#555] text-[0.85rem] px-4 py-8 text-center">{L.emptyDetail}</p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+  .fixp-btn {
+    font-size: 0.8rem;
+    color: #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+  }
+  .fixp-btn:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+  }
+  .fixp-btn-primary {
+    color: #0b0b0f;
+    background: #ffc436;
+    border-color: #ffc436;
+    font-weight: 500;
+  }
+  .fixp-btn-primary:hover {
+    background: #ffd060;
+    border-color: #ffd060;
+    color: #0b0b0f;
+  }
+  /* Subtle scrollbars (timeline / detail / raw) */
+  :global(#fixp *) {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
+  }
+  :global(#fixp *::-webkit-scrollbar) {
+    width: 6px;
+    height: 6px;
+  }
+  :global(#fixp *::-webkit-scrollbar-track) {
+    background: transparent;
+  }
+  :global(#fixp *::-webkit-scrollbar-thumb) {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+  }
+  :global(#fixp *::-webkit-scrollbar-thumb:hover) {
+    background: rgba(255, 255, 255, 0.22);
+  }
+
+  /* :global — rows are injected via innerHTML; Astro scope won't reach them otherwise */
+  :global(#fixp-drop.dragover) {
+    outline: 1px dashed color-mix(in srgb, #ffc436 50%, transparent);
+    outline-offset: -4px;
+  }
+  :global(#fixp-timeline tr[data-id]) {
+    cursor: pointer;
+  }
+  :global(#fixp-timeline tr[data-id] td) {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    white-space: nowrap;
+    transition: background 0.12s ease, box-shadow 0.12s ease, color 0.12s ease;
+  }
+  :global(#fixp-timeline tr[data-id] td:first-child) {
+    padding-left: 1.15rem;
+  }
+  :global(#fixp-timeline tr[data-id] td:last-child) {
+    padding-right: 1.15rem;
+  }
+  :global(#fixp-timeline tr[data-id]:hover td) {
+    background: rgba(255, 196, 54, 0.16) !important;
+    color: #fff;
+  }
+  :global(#fixp-timeline tr[data-id]:hover td:first-child) {
+    box-shadow: inset 3px 0 0 #ffc436;
+  }
+  :global(#fixp-timeline tr[data-id].selected td) {
+    background: rgba(255, 196, 54, 0.22) !important;
+    color: #fff;
+  }
+  :global(#fixp-timeline tr[data-id].selected td:first-child) {
+    box-shadow: inset 3px 0 0 #ffc436;
+  }
+  :global(#fixp-timeline tr[data-id]:active td) {
+    background: rgba(255, 196, 54, 0.28) !important;
+  }
+  :global(#fixp-detail td) {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    white-space: nowrap;
+  }
+  :global(#fixp-detail td:first-child) {
+    padding-left: 1.15rem;
+  }
+  :global(#fixp-detail td:last-child) {
+    padding-right: 1.15rem;
+    white-space: normal;
+    word-break: break-all;
+  }
+</style>
+
+<script>
+  import { parseFixLog, messageMatchesQuery, type FixMessage } from '../../lib/fix-parse';
+
+  const root = document.getElementById('fixp');
+  if (root) {
+    const L = JSON.parse(root.dataset.strings || '{}') as Record<string, string>;
+    const sample = root.dataset.sample || '';
+
+    const rawEl = document.getElementById('fixp-raw') as HTMLTextAreaElement;
+    const timelineEl = document.getElementById('fixp-timeline') as HTMLTableSectionElement;
+    const detailEl = document.getElementById('fixp-detail') as HTMLTableSectionElement;
+    const timelineEmpty = document.getElementById('fixp-timeline-empty') as HTMLElement;
+    const detailEmpty = document.getElementById('fixp-detail-empty') as HTMLElement;
+    const countEl = document.getElementById('fixp-count') as HTMLElement;
+    const searchEl = document.getElementById('fixp-search') as HTMLInputElement;
+    const dropEl = document.getElementById('fixp-drop') as HTMLElement;
+    const fileEl = document.getElementById('fixp-file') as HTMLInputElement;
+    const shareBtn = document.getElementById('fixp-share') as HTMLButtonElement;
+
+    let messages: FixMessage[] = [];
+    let selectedId: number | null = null;
+
+    function esc(s: string): string {
+      return s
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderTimeline() {
+      const q = searchEl.value;
+      const rows = messages.filter((m) => messageMatchesQuery(m, q));
+      timelineEl.innerHTML = rows
+        .map(
+          (m) => `
+        <tr data-id="${m.id}" class="${m.id === selectedId ? 'selected' : ''}" title="Click to view detail">
+          <td>${esc(m.time || '—')}</td>
+          <td>${esc(m.sender || '—')}</td>
+          <td>${esc(m.msgTypeLabel)}${m.symbol ? ` · ${esc(m.symbol)}` : ''}</td>
+          <td>${esc(m.clOrdId || '—')}</td>
+          <td>${esc(m.sideLabel)}</td>
+        </tr>`,
+        )
+        .join('');
+      timelineEmpty.style.display = rows.length ? 'none' : 'block';
+      countEl.textContent = messages.length
+        ? `${rows.length}${rows.length !== messages.length ? ` / ${messages.length}` : ''} ${L.count}`
+        : '';
+    }
+
+    function renderDetail() {
+      const msg = messages.find((m) => m.id === selectedId);
+      if (!msg) {
+        detailEl.innerHTML = '';
+        detailEmpty.style.display = 'block';
+        return;
+      }
+      detailEmpty.style.display = 'none';
+      const q = searchEl.value.trim().toLowerCase();
+      const fields = q
+        ? msg.fields.filter(
+            (f) =>
+              String(f.tag).includes(q) ||
+              f.name.toLowerCase().includes(q) ||
+              f.value.toLowerCase().includes(q),
+          )
+        : msg.fields;
+      detailEl.innerHTML = fields
+        .map(
+          (f) => `
+        <tr>
+          <td class="text-[#ffc436]/80">${f.tag}</td>
+          <td class="text-white/60">${esc(f.name)}</td>
+          <td>${esc(f.value)}</td>
+        </tr>`,
+        )
+        .join('');
+    }
+
+    function process() {
+      messages = parseFixLog(rawEl.value);
+      selectedId = messages.length ? messages[0].id : null;
+      renderTimeline();
+      renderDetail();
+    }
+
+    document.getElementById('fixp-process')!.addEventListener('click', process);
+    document.getElementById('fixp-clear')!.addEventListener('click', () => {
+      rawEl.value = '';
+      messages = [];
+      selectedId = null;
+      renderTimeline();
+      renderDetail();
+    });
+    document.getElementById('fixp-sample')!.addEventListener('click', () => {
+      rawEl.value = sample;
+      process();
+    });
+
+    searchEl.addEventListener('input', () => {
+      renderTimeline();
+      renderDetail();
+    });
+
+    timelineEl.addEventListener('click', (e) => {
+      const tr = (e.target as HTMLElement).closest('tr[data-id]');
+      if (!tr) return;
+      selectedId = Number(tr.getAttribute('data-id'));
+      renderTimeline();
+      renderDetail();
+    });
+
+    async function readFile(file: File) {
+      const text = await file.text();
+      rawEl.value = text;
+      process();
+    }
+
+    fileEl.addEventListener('change', () => {
+      const f = fileEl.files?.[0];
+      if (f) void readFile(f);
+      fileEl.value = '';
+    });
+
+    ;['dragenter', 'dragover'].forEach((ev) => {
+      dropEl.addEventListener(ev, (e) => {
+        e.preventDefault();
+        dropEl.classList.add('dragover');
+      });
+    });
+    ;['dragleave', 'drop'].forEach((ev) => {
+      dropEl.addEventListener(ev, (e) => {
+        e.preventDefault();
+        dropEl.classList.remove('dragover');
+      });
+    });
+    dropEl.addEventListener('drop', (e) => {
+      const f = (e as DragEvent).dataTransfer?.files?.[0];
+      if (f) void readFile(f);
+    });
+
+    shareBtn.addEventListener('click', async () => {
+      const url = new URL(window.location.href);
+      url.searchParams.set('sample', '1');
+      try {
+        await navigator.clipboard.writeText(url.toString());
+        shareBtn.textContent = L.copied;
+        setTimeout(() => {
+          shareBtn.textContent = L.share;
+        }, 1500);
+      } catch {
+        /* ignore */
+      }
+    });
+
+    // Deep-link sample
+    if (new URLSearchParams(window.location.search).get('sample') === '1') {
+      rawEl.value = sample;
+      process();
+    }
+
+    renderTimeline();
+    renderDetail();
+  }
+</script>

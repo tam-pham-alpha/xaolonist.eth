@@ -53,6 +53,19 @@ export const TOOLS: Tool[] = [
     status: 'live',
     featured: true,
   },
+  {
+    slug: 'fix-parser',
+    emoji: '📡',
+    name: { vn: 'FIX Parser', en: 'FIX Parser' },
+    description: {
+      vn: 'Dán log FIX, xem timeline lệnh và chi tiết từng tag — chạy hoàn toàn trên trình duyệt',
+      en: 'Paste FIX logs, browse a message timeline and tag detail — runs entirely in the browser',
+    },
+    category: 'finance',
+    runtime: 'client',
+    status: 'live',
+    featured: true,
+  },
 ];
 
 export const FEATURED_TOOLS = TOOLS.filter((t) => t.featured && t.status !== 'soon');

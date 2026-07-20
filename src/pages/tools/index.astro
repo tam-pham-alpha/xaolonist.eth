@@ -1,14 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/Container.astro';
-import { TOOLS, CATEGORY_LABEL, type ToolCategory } from '../../lib/tools';
+import { TOOLS } from '../../lib/tools';
 
-// Group live/beta tools by category for the gallery
-const order: ToolCategory[] = ['media', 'dev', 'ai', 'finance', 'creator', 'life'];
-const byCategory = order
-  .map((cat) => ({ cat, tools: TOOLS.filter((t) => t.category === cat) }))
-  .filter((g) => g.tools.length > 0);
-
+// Flat gallery for now — re-group by category when the list grows.
+const tools = TOOLS;
 const statusLabel: Record<string, string> = { live: '', beta: 'beta', soon: 'sắp có' };
 ---
 
@@ -20,7 +16,7 @@ const statusLabel: Record<string, string> = { live: '', beta: 'beta', soon: 's�
 >
   <div class="bg-darkmode min-h-screen pt-10 pb-20">
     <Container>
-      <div class="max-w-[900px] mx-auto">
+      <div class="max-w-[960px] mx-auto">
         <header class="mb-12">
           <h1 class="text-textColor text-[2rem] font-light tracking-[1px] m-0">
             🧰 tools
@@ -30,46 +26,39 @@ const statusLabel: Record<string, string> = { live: '', beta: 'beta', soon: 's�
           </p>
         </header>
 
-        {byCategory.map((group) => (
-          <section class="mb-10">
-            <h2 class="text-[#ffc436] text-[0.8rem] uppercase tracking-[2px] font-medium mb-4">
-              {CATEGORY_LABEL[group.cat].vn}
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {group.tools.map((tool) => {
-                const soon = tool.status === 'soon';
-                const Tag = soon ? 'div' : 'a';
-                return (
-                  <Tag
-                    href={soon ? undefined : `/tools/${tool.slug}`}
-                    class={`group block rounded-xl border border-white/10 bg-white/[0.03] p-5 transition-all ${
-                      soon
-                        ? 'opacity-50 cursor-default'
-                        : 'hover:border-[#ffc436]/40 hover:bg-white/[0.06]'
-                    }`}
-                  >
-                    <div class="flex items-start gap-3">
-                      <span class="text-[1.6rem] leading-none shrink-0">{tool.emoji}</span>
-                      <div class="min-w-0">
-                        <div class="flex items-center gap-2">
-                          <h3 class="text-white text-[1rem] font-medium m-0">{tool.name.vn}</h3>
-                          {statusLabel[tool.status] && (
-                            <span class="text-[0.65rem] uppercase tracking-wide text-[#ffc436]/80 border border-[#ffc436]/30 rounded px-1.5 py-0.5">
-                              {statusLabel[tool.status]}
-                            </span>
-                          )}
-                        </div>
-                        <p class="text-[#888888] text-[0.85rem] mt-1 leading-relaxed">
-                          {tool.description.vn}
-                        </p>
-                      </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {tools.map((tool) => {
+            const soon = tool.status === 'soon';
+            const Tag = soon ? 'div' : 'a';
+            return (
+              <Tag
+                href={soon ? undefined : `/tools/${tool.slug}`}
+                class={`group block rounded-xl border border-white/10 bg-white/[0.03] p-5 transition-all ${
+                  soon
+                    ? 'opacity-50 cursor-default'
+                    : 'hover:border-[#ffc436]/40 hover:bg-white/[0.06]'
+                }`}
+              >
+                <div class="flex items-start gap-3">
+                  <span class="text-[1.6rem] leading-none shrink-0">{tool.emoji}</span>
+                  <div class="min-w-0">
+                    <div class="flex items-center gap-2">
+                      <h3 class="text-white text-[1rem] font-medium m-0">{tool.name.vn}</h3>
+                      {statusLabel[tool.status] && (
+                        <span class="text-[0.65rem] uppercase tracking-wide text-[#ffc436]/80 border border-[#ffc436]/30 rounded px-1.5 py-0.5">
+                          {statusLabel[tool.status]}
+                        </span>
+                      )}
                     </div>
-                  </Tag>
-                );
-              })}
-            </div>
-          </section>
-        ))}
+                    <p class="text-[#888888] text-[0.85rem] mt-1 leading-relaxed">
+                      {tool.description.vn}
+                    </p>
+                  </div>
+                </div>
+              </Tag>
+            );
+          })}
+        </div>
       </div>
     </Container>
   </div>

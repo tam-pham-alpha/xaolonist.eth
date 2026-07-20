@@ -114,29 +114,30 @@ const chips = [
       ))}
     </div>
 
-    <!-- Featured tools (auto-populates from the tools registry) -->
-    {FEATURED_TOOLS.length > 0 && (
-      <div class="mt-8">
-        <div class="text-center text-[#ffc436]/70 text-[0.7rem] uppercase tracking-[2px] mb-3">
-          {T.featured}
-        </div>
-        <div class="flex flex-wrap justify-center gap-3">
-          {FEATURED_TOOLS.map((tool) => (
-            <a
-              href={`${base}/tools/${tool.slug}`}
-              class="group flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-2.5 max-w-[300px] hover:border-[#ffc436]/40 hover:bg-white/[0.06] hover:no-underline transition-all"
-            >
-              <span class="text-[1.3rem] leading-none shrink-0">{tool.emoji}</span>
-              <span class="min-w-0">
-                <span class="block text-white text-[0.9rem] font-medium truncate">{tool.name[lang]}</span>
-                <span class="block text-[#888] text-[0.78rem] truncate">{tool.description[lang]}</span>
-              </span>
-            </a>
-          ))}
-        </div>
-      </div>
-    )}
   </div>
+
+  <!-- Featured tools — wider than chat column so 3 cards fit one row -->
+  {FEATURED_TOOLS.length > 0 && (
+    <div class="mt-8 max-w-[960px] mx-auto px-1">
+      <div class="text-center text-[#ffc436]/70 text-[0.7rem] uppercase tracking-[2px] mb-3">
+        {T.featured}
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        {FEATURED_TOOLS.map((tool) => (
+          <a
+            href={`${base}/tools/${tool.slug}`}
+            class="group flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-2.5 min-w-0 hover:border-[#ffc436]/40 hover:bg-white/[0.06] hover:no-underline transition-all"
+          >
+            <span class="text-[1.3rem] leading-none shrink-0">{tool.emoji}</span>
+            <span class="min-w-0">
+              <span class="block text-white text-[0.9rem] font-medium truncate">{tool.name[lang]}</span>
+              <span class="block text-[#888] text-[0.78rem] truncate">{tool.description[lang]}</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
 </section>
 
 <script>

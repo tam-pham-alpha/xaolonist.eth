@@ -173,3 +173,4 @@ Reuses the aethery pipeline (see `brain/README.md`), no new secrets:
 - [ ] Turnstile on `nuc` tools if abuse shows up
 - [ ] Job/progress abstraction before the first long-running tool
 - [x] Second tool to validate the "add a tool" flow — **Timezone Planner** (`runtime: client`, `life`, featured) shipped 26-07-19; proves the client-only path (browser `Intl`/IANA TZDB, no worker/brain hop). See `_logs/26-07-19-timezone-planner.md`.
+- [x] Third tool — **FIX Parser** (`runtime: client`, `finance`, featured) built 26-07-20; paste/drop FIX logs → timeline + tag detail, all in-browser. See `_logs/26-07-20-fix-parser.md`.
