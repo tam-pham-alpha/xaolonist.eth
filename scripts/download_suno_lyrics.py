@@ -9,24 +9,43 @@ import urllib.request
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 env_path = os.path.join(project_root, ".env")
 
-def get_session_token():
+def _read_env_value(key: str):
     if not os.path.exists(env_path):
-        print(f"Error: .env configuration file not found at: {env_path}", file=sys.stderr)
         return None
     with open(env_path, "r", encoding="utf-8") as f:
         content = f.read()
-    cookie_str = None
     for line in content.splitlines():
-        if "SUNO_COOKIE" in line:
-            parts = line.split("=", 1)
-            if len(parts) == 2:
-                cookie_str = parts[1].strip().strip('"').strip("'")
-                break
+        if line.strip().startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        if k.strip() == key:
+            return v.strip().strip('"').strip("'")
+    return None
+
+
+def get_session_token():
+    """Prefer SUNO_TOKEN (Bearer JWT from DevTools). Fall back to SUNO_COOKIE __session."""
+    for key in ("SUNO_TOKEN", "SUNO_BEARER"):
+        token = os.environ.get(key) or _read_env_value(key)
+        if token:
+            token = token.strip()
+            if token.lower().startswith("bearer "):
+                token = token[7:].strip()
+            return token
+
+    cookie_str = os.environ.get("SUNO_COOKIE") or _read_env_value("SUNO_COOKIE")
     if not cookie_str:
-        print("Error: SUNO_COOKIE not found in .env", file=sys.stderr)
+        print(
+            "Error: set SUNO_TOKEN (recommended) or SUNO_COOKIE in env/.env.\n"
+            "See .agents/skills/download-suno/SKILL.md for how to copy the Bearer token.",
+            file=sys.stderr,
+        )
         return None
     match = re.search(r'__session=([^;]+)', cookie_str)
     if not match:
+        # Allow SUNO_COOKIE to be the raw JWT as well
+        if cookie_str.startswith("eyJ"):
+            return cookie_str.strip()
         print("Error: __session token not found in SUNO_COOKIE", file=sys.stderr)
         return None
     return match.group(1).strip()

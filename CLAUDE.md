@@ -199,10 +199,13 @@ z.object({
 
 ## Suno Music & Lyrics Downloader
 
-To download a song and its aligned subtitles (JSON/LRC) from a Suno share URL directly into a post folder:
+**Skill:** [`.agents/skills/download-suno/SKILL.md`](.agents/skills/download-suno/SKILL.md) — includes how to copy a fresh Bearer access token from DevTools (screenshot in that folder).
+
 ```bash
+# Preferred auth: export SUNO_TOKEN='eyJ...'  (or set in .env)
 # Usage: python3 scripts/download_suno_lyrics.py <song_id_or_share_url> <output_dir> [vn_or_en]
 python3 scripts/download_suno_lyrics.py "https://suno.com/s/71sjtJMj4f6HCeei" src/content/blog/han-lai-ngua-nghe vn
 ```
-This script requires a valid session cookie stored as `SUNO_COOKIE` in your `.env` file (containing Clerk `__session` token).
+
+Auth order: `SUNO_TOKEN` / `SUNO_BEARER` → legacy `SUNO_COOKIE` (`__session=...`).
 
