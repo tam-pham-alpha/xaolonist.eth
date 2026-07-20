@@ -21,7 +21,7 @@ Nhưng càng quan sát thế giới, hắn càng thấy có lẽ đây không ch
 
 Trong Huyền Không Phi Tinh có khái niệm **Vận 9**, hay còn gọi là **Vận Ly Hỏa**. Người tin vào môn này cho rằng đây là giai đoạn của điện, năng lượng, AI, truyền thông và những ngành công nghệ mới. Hắn không biết điều đó đúng đến đâu. Nhưng điều làm hắn chú ý là, nếu bỏ hoàn toàn yếu tố phong thủy sang một bên, thế giới vẫn đang đổ tiền vào đúng những lĩnh vực ấy.
 
-Tesla đặt cược vào xe điện. NVIDIA đặt cược vào AI. TSMC đặt cược vào chip. BYD đặt cược vào pin. OpenAI đặt cược vào trí tuệ nhân tạo. Những doanh nghiệp rất khác nhau, ở những quốc gia rất khác nhau, nhưng lại cùng nhìn về một hướng. Ở Việt Nam, có lẽ không doanh nghiệp nào đặt cược mạnh hơn Vingroup.
+Tesla đặt cược vào xe điện. NVIDIA đặt cược vào AI. TSMC đặt cược vào chip. BYD đặt cược vào pin. OpenAI/Anthropic đặt cược vào trí tuệ nhân tạo. Những doanh nghiệp rất khác nhau, ở những quốc gia rất khác nhau, nhưng lại cùng nhìn về một hướng. Ở Việt Nam, có lẽ không doanh nghiệp nào đặt cược mạnh hơn Vingroup.
 
 Mười năm trước, người ta xem Vingroup là một tập đoàn bất động sản. Mười năm nữa, rất có thể người ta sẽ nhớ đến họ nhiều hơn bởi công nghiệp và công nghệ. Ít nhất, đó là con đường mà họ đang dồn rất nhiều nguồn lực để theo đuổi.
 
