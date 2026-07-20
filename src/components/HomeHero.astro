@@ -4,8 +4,9 @@
  * and a featured-tools row. Submitting the input navigates to the aethery
  * chat page with the question as `?q=`, which auto-sends it there.
  */
-import { REALMS } from '../lib/realms';
-import { FEATURED_TOOLS } from '../lib/tools';
+import { getCollection } from 'astro:content';
+import { REALMS, type RealmSlug } from '../lib/realms';
+import { FEATURED_TOOLS, TOOLS } from '../lib/tools';
 
 interface Props {
   lang: 'vn' | 'en';
@@ -28,9 +29,34 @@ const T = {
   },
 }[lang];
 
+const published = await getCollection(
+  'blog',
+  ({ data }) => data.status === 'published' && data.lang === lang,
+);
+
+const realmCounts = REALMS.reduce(
+  (acc, r) => {
+    acc[r.slug] = published.filter((p) => p.data.category === r.slug).length;
+    return acc;
+  },
+  {} as Record<RealmSlug, number>,
+);
+
 const chips = [
-  ...REALMS.map((r) => ({ href: `${base}/${r.slug}`, emoji: r.emoji, label: r.name })),
-  { href: `${base}/tools`, emoji: '🧰', label: 'Tools' },
+  ...REALMS.map((r) => ({
+    href: `${base}/${r.slug}`,
+    emoji: r.emoji,
+    label: r.name,
+    total: realmCounts[r.slug],
+    accent: r.accent,
+  })),
+  {
+    href: `${base}/tools`,
+    emoji: '🧰',
+    label: 'Tools',
+    total: TOOLS.length,
+    accent: '#868f97',
+  },
 ];
 ---
 
@@ -69,15 +95,21 @@ const chips = [
     </form>
     <p class="text-center text-[#777] text-[0.82rem] mt-3">{T.hint}</p>
 
-    <!-- Realm + tools chips -->
+    <!-- Realm + tools chips (tinted by realm accent) -->
     <div class="flex flex-wrap justify-center gap-2 mt-6">
       {chips.map((c) => (
         <a
           href={c.href}
-          class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-[0.85rem] text-white/85 hover:border-[#ffc436]/40 hover:text-white hover:no-underline transition-all"
+          class="group inline-flex items-center gap-1.5 rounded-full pl-3.5 pr-2.5 py-1.5 text-[0.85rem] border hover:no-underline transition-all duration-200 hover:brightness-125"
+          style={`color: ${c.accent}; border-color: color-mix(in srgb, ${c.accent} 35%, transparent); background: color-mix(in srgb, ${c.accent} 10%, transparent);`}
         >
           <span aria-hidden="true">{c.emoji}</span>
-          <span>{c.label}</span>
+          <span class="opacity-90 group-hover:opacity-100">{c.label}</span>
+          <span
+            class="min-w-[1.35rem] h-[1.35rem] px-1.5 inline-flex items-center justify-center rounded-full text-[0.68rem] leading-none tabular-nums border"
+            style={`color: ${c.accent}; border-color: color-mix(in srgb, ${c.accent} 40%, transparent); background: color-mix(in srgb, ${c.accent} 14%, transparent);`}
+            aria-label={`${c.total} items`}
+          >{c.total}</span>
         </a>
       ))}
     </div>

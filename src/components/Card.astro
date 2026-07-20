@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
+import { getRealm } from '../lib/realms';
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -9,6 +10,8 @@ interface Props {
 const { post } = Astro.props;
 const { data } = post;
 const postLink = data.lang === 'en' ? `/en/blog/${data.slug}` : `/blog/${data.slug}`;
+const categoryLink = data.lang === 'en' ? `/en/${data.category}` : `/${data.category}`;
+const categoryAccent = getRealm(data.category).accent;
 ---
 
 <div class="max-w-[500px] mb-16 lg:mx-6 lg:w-[calc(33.33%-48px)] lg:mb-9">
@@ -32,6 +35,16 @@ const postLink = data.lang === 'en' ? `/en/blog/${data.slug}` : `/blog/${data.sl
     <p class="mt-3 mb-[0.5em] text-[#b3b3b3] lg:mb-3">{data.summary}</p>
     <div class="text-[12px]">
       {data.date ? <span class="text-[#868f97]">{new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span> : null}
+      {data.category ? (
+        <span class="text-[#868f97]">
+          {' • '}
+          <a
+            href={categoryLink}
+            class="hover:no-underline transition-[filter,opacity] duration-200 opacity-90 hover:opacity-100 hover:brightness-150"
+            style={`color: ${categoryAccent}`}
+          >{data.category}</a>
+        </span>
+      ) : null}
       {data.cowriter ? <span class="text-[#868f97]"> • {data.cowriter}</span> : null}
     </div>
   </div>
