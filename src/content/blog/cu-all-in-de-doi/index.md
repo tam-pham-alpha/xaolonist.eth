@@ -1,6 +1,6 @@
 ---
 slug: "cu-all-in-de-doi"
-title: "Cú All In Để Đời Của Kẻ mà ai cũng biết là ai đấy"
+title: "Cú All In Để Đời Của Kẻ-Mà-Ai-Cũng-Biết-Là-Ai-Đấy"
 summary: "Hey hey, lại là hắn đây. Có một điều làm hắn suy nghĩ khá lâu về Vingroup, VinFast, và câu hỏi ai còn đủ nguồn lực để chờ tương lai đến"
 author: "Tam Pham"
 cowriter: "@aethery"
