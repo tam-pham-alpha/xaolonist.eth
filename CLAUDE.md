@@ -134,7 +134,7 @@ If the user has attached/provided an image in their request, use that image dire
   |---|---|
   | `"oracle"` | **Purple** — soft violet, lavender, indigo washes and outlines |
   | `"pentacles"` | **Yellow / gold** — warm gold, amber, soft yellow luminous tones |
-  | `"forge"` | **Dark / ember** — charcoal, muted copper, low-key warm earth (current default look) |
+  | `"forge"` | **Silver** — muted silver, cool steel, soft grey-white luminous tones on the same dark canvas |
   | `"all-blue"` | **Blue** — soft sky/sea blue, teal-blue washes and outlines |
 - **Texture**: Visible dark rough watercolor paper grain, natural paint bleeds, subtle luminous hand-drawn outlines. Should feel hand-painted, organic, and blend seamlessly with the website's dark mode
 - **Avoid**: Pure white/light backgrounds (which cause harsh contrast blocks in dark mode), photorealistic renders, vibrant/neon colors, cluttered compositions, text overlays, heavy digital effects, futuristic/sci-fi looks

@@ -14,7 +14,7 @@ export const REALMS: Realm[] = [
     slug: 'forge',
     emoji: '⚒️',
     name: 'Forge',
-    accent: '#a89070',
+    accent: '#9aa0a8',
     description: {
       vn: 'Nơi rèn năng lực: kỹ thuật, phần mềm, AI, kiến trúc hệ thống và mọi công cụ giúp con người xây dựng thế giới',
       en: 'Where capability is forged: software, AI, systems architecture, and every tool that helps people build the world',

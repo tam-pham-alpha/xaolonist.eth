@@ -1,6 +1,6 @@
 ---
 slug: "self-auditing-loop"
-title: "Vòng Lặp Tự Vấn"
+title: "The Self-Auditing Loop"
 summary: "Một trong những sai lầm phổ biến khi build AI agent là giao cho nó làm tất cả. Bài này mô tả pattern tách data collection khỏi AI reasoning: collector tạo snapshot deterministic, LLM chỉ đọc và phán, snapshot là hợp đồng giữa hai tầng."
 author: "Tam Pham"
 cowriter: "@aethery"
@@ -11,13 +11,13 @@ cover: "./cover.png"
 lang: "vn"
 ---
 
-Hey, lại là hắn đây.
+Hey hey, lại là hắn đây.
 
-Một trong những sai lầm phổ biến nhất khi build AI agent là giao cho nó làm tất cả: query database, đọc log, gọi API, tự quyết định cần thêm dữ liệu gì, rồi cuối cùng mới kết luận. Nghe rất "agentic". Nhưng càng làm hắn càng thấy đây không phải một architecture tốt. Không phải vì LLM không đủ thông minh, mà vì nó đang làm hai công việc hoàn toàn khác nhau: thu thập dữ liệu và diễn giải dữ liệu.
+Có một điều khá thú vị khi làm việc với AI. Rất nhiều người muốn AI trở thành một nhân viên toàn năng. Họ giao cho nó quyền query database, đọc log, gọi API, SSH vào server, tự quyết định còn thiếu dữ liệu gì rồi cuối cùng mới đưa ra kết luận. Nghe rất thông minh, rất "agentic". Nhưng càng xây nhiều hệ thống, hắn càng thấy đây không phải một kiến trúc tốt. Không phải vì AI không đủ giỏi, mà vì chúng ta đang giao cho nó hai công việc hoàn toàn khác nhau. Một việc là đi tìm sự thật. Một việc là diễn giải sự thật.
 
-Hai việc này có yêu cầu gần như trái ngược nhau. Thu thập cần deterministic, reproducible, nhanh, rẻ. Diễn giải cần reasoning, flexibility, contextual understanding. Nếu trộn hai việc này vào cùng một agent, bạn sẽ mất gần như mọi lợi ích của cả hai.
+Hai việc này nhìn qua tưởng giống nhau, nhưng bản chất lại gần như đối lập. Thu thập dữ liệu cần nhanh, chính xác, lần nào chạy cũng phải cho cùng một kết quả. Diễn giải dữ liệu thì ngược lại, nó cần khả năng suy luận, liên hệ và chấp nhận nhiều góc nhìn khác nhau. Nếu ép một agent làm cả hai cùng lúc, bạn sẽ rất khó biết một kết luận sai xuất phát từ reasoning của AI, hay đơn giản chỉ vì dữ liệu đầu vào đã sai ngay từ đầu.
 
-Nên trong hệ thống audit market-making của Djao Trading, hắn cố tình tách chúng thành hai pipeline hoàn toàn độc lập. Collector chỉ chịu trách nhiệm tạo ra một **snapshot**. LLM chỉ chịu trách nhiệm đọc snapshot đó. Không hơn. Không kém. Kiến trúc trông như thế này:
+Đó là lý do trong hệ thống audit market making của Djao Trading, hắn cố tình tách hai việc này thành hai pipeline hoàn toàn độc lập. Collector chỉ làm đúng một việc: chụp lại một bức ảnh của hệ thống tại một thời điểm. LLM cũng chỉ làm đúng một việc: đọc bức ảnh đó rồi đưa ra nhận định. Không hơn. Không kém.
 
 ```mermaid
 flowchart TD
@@ -26,10 +26,9 @@ flowchart TD
   LLM --> Report
 ```
 
+## Kiến trúc tổng thể
 
-## Kiến trúc chi tiết
-
-Zoom vào, cùng một vòng lặp trông như thế này:
+Nếu nhìn kỹ hơn, toàn bộ một vòng audit trông như thế này.
 
 ```mermaid
 flowchart TD
@@ -42,36 +41,19 @@ flowchart TD
   Git --> Discord[Discord]
 ```
 
-Bốn tầng, bốn trách nhiệm tách bạch:
+Thoạt nhìn sơ đồ này khá bình thường. Nhưng điều quan trọng nhất lại không nằm ở Claude, GPT hay Gemini. Điều đáng giữ lại chính là ranh giới giữa các tầng. Cron chỉ trả lời câu hỏi "khi nào chạy". Request trả lời "muốn kiểm tra điều gì". Collector trả lời "hệ thống hiện đang như thế nào". LLM chỉ trả lời "vậy điều đó có ổn không". Mỗi tầng chỉ có một trách nhiệm duy nhất, và giao tiếp với nhau bằng một snapshot cố định.
 
-| Tầng | Câu hỏi nó trả lời | Bản chất |
-|------|--------------------|----------|
-| **Cron** | *Khi nào chạy?* | lịch, sống trong file config |
-| **Request `.md`** | *Soi cái gì?* | khai báo (declarative), không phải code |
-| **Collector `.sh`** | *Hiện trạng ra sao?* | deterministic, không có AI |
-| **LLM** | *Vậy có ổn không, vì sao?* | phán đoán, không tự đi lấy data |
+## Collector chỉ được phép quan sát
 
-Insight nằm ở chỗ **tách**, không phải ở chỗ gọi được AI.
+Đây có lẽ là quyết định quan trọng nhất của cả hệ thống. Bản năng đầu tiên của rất nhiều người là đưa cho AI toàn quyền hành động. Muốn xem log thì tự xem. Muốn query database thì tự query. Thiếu dữ liệu thì tự gọi thêm API. Càng chủ động càng tốt. Nhưng hắn lại đi theo hướng ngược lại. Collector không được phép suy nghĩ. Nó chỉ được phép quan sát.
 
-## Design Decision #1 — Collector phải hoàn toàn deterministic
+Lý do rất đơn giản. Khi AI tự đi lấy dữ liệu, bạn sẽ mất khả năng tái lập. Lần chạy lúc tám giờ sáng và lần chạy lúc mười hai giờ trưa có thể nhìn hệ thống theo hai cách khác nhau. Nếu báo cáo sai, bạn gần như không thể biết chính xác AI đã nhìn thấy điều gì. Mỗi lần reasoning cũng kéo theo thêm token, thêm thời gian và thêm chi phí, trong khi phần lấy dữ liệu vốn nên nhanh và rẻ. Quan trọng hơn cả, lỗi thu thập và lỗi diễn giải sẽ bị trộn lẫn với nhau. Có khi bạn mất cả buổi chỉ để phát hiện ra AI chẳng hiểu sai gì cả, chỉ là một câu SQL viết nhầm.
 
-Bản năng đầu tiên của ai cũng là đưa cho AI cái quyền chạy lệnh, để nó tự đi query DB, tự gọi API, tự đọc log, rồi tự kết luận. Một agent làm tất, nghe gọn, nhưng hỏng ở ba chỗ:
-
-- **Không tái lập được.** Lần chạy 8 giờ sáng và lần chạy 12 giờ trưa hỏi DB theo hai cách hơi khác nhau, và bạn không bao giờ biết chính xác nó đã nhìn thấy gì. Khi báo cáo sai, bạn không có tang chứng
-- **Đắt và chậm.** Mỗi vòng suy luận "để tôi query thử cái này… à chưa đủ, query thêm cái kia" là token và là thời gian. Phần lấy data vốn *nên* rẻ và cố định
-- **Trộn hai loại lỗi.** Lỗi thu thập (query sai bảng) và lỗi diễn giải (đọc sai ý nghĩa) lẫn vào nhau, gỡ mãi không ra
-
-Quyết định: kẻ một đường thẳng giữa **deterministic** và **non-deterministic**.
-
-> Shell script lo phần *sự thật*: chụp một tấm ảnh cố định, in ra JSON, lưu thành file. LLM lo phần *ý nghĩa*: đọc đúng tấm ảnh đó và phán.
-
-Với mỗi request, scheduler gọi đúng một shell script và bảo nó đổ kết quả ra file. Tuyệt đối không có AI ở tầng này, chỉ query, gom, in JSON:
+Vì vậy hắn kẻ một đường rất rõ giữa deterministic và non deterministic. Collector chỉ chụp lại sự thật rồi đóng gói thành một file JSON.
 
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
-# collect-snapshot.sh --request <file.md> --output <snapshot.json>
-# Không suy luận. Chỉ lấy sự thật và đóng gói.
 
 request="$2"; out="$4"
 account=$(parse-audit-request.sh "$request" account)
@@ -86,24 +68,25 @@ jq -n \
   > "$out"
 ```
 
-Bên phía scheduler, việc gọi nó có timeout riêng, và nếu file không hiện ra thì dừng luôn, không có ảnh thì không có gì để đọc:
+Scheduler chỉ việc gọi collector, chờ snapshot xuất hiện rồi dừng lại nếu không có kết quả.
 
 ```ts
 this.exec(
   `bash "${script}" --request "${req.path}" --output "${snapshotPath}"`,
   typeDef.collectorTimeoutMs,
 );
+
 if (!existsSync(snapshotPath)) {
   this.logger.error(`Snapshot missing: ${snapshotPath}`);
   return;
 }
 ```
 
-Vì phần thu thập là code thuần, nó chạy trong một giây, không tốn một token nào.
+Ở tầng này hoàn toàn không có AI. Chỉ có code, database và API. Chạy nhanh, rẻ và lần nào cũng cho cùng một kết quả.
 
-## Design Decision #2 — Audit request là data, không phải code
+## Audit request chính là prompt
 
-Mỗi thứ cần kiểm là **một file markdown**, không phải một nhánh `if` trong code. Đây là declarative configuration: cùng họ với Kubernetes manifest, GitHub Actions workflow, Terraform module. Request chỉ mô tả audit gì, account nào, gửi đâu, hỏi gì. Scheduler không cần biết nội dung chi tiết.
+Có một điều hắn rất thích trong kiến trúc này. Prompt không nằm trong code. Nó cũng không bị hardcode trong một chuỗi string dài hàng trăm dòng. Mỗi cuộc audit chỉ đơn giản là một file Markdown.
 
 ```markdown
 ---
@@ -111,145 +94,108 @@ id: mm-health-pavn
 enabled: true
 account: pavn-main
 audit_type: mm_health
-server: pavn
-discord_channel_id: "123456789012345678"
 ---
 
-# Sức khỏe market-making — pavn
+# Market Making Health
 
-Soi 4 tiếng một lần. Cần trả lời:
+Hãy kiểm tra:
 
-- Spread có bám target không? Lệch bao nhiêu bps, ở symbol nào?
-- Inventory skew có vượt ngưỡng ở đâu không?
-- Có symbol nào ngừng quote quá 5 phút?
-- Funding sắp tới có phối hợp với vị thế thành rủi ro không?
+- Spread có bám target không?
+- Inventory skew có vượt ngưỡng không?
+- Funding sắp tới có tạo thêm rủi ro không?
 ```
 
-Phần frontmatter là *máy đọc* (bật/tắt, tài khoản nào, loại nào, gửi kênh Discord nào). Phần thân là *người viết cho AI đọc*, chính là những câu hỏi bạn muốn được trả lời, viết bằng tiếng người. Cái `enabled: true` nhỏ xíu đó là một cái van: muốn tạm ngắt một audit thì đổi thành `false`, muốn thêm mối quan tâm mới thì thả một file `.md` nữa vào thư mục. Scheduler chỉ nhặt những request đang bật và đúng `audit_type` của cron vừa nổ:
+Thoạt nhìn, đây chỉ giống như một file cấu hình bình thường. Phần frontmatter giúp scheduler biết audit này chạy khi nào, cho tài khoản nào và gửi báo cáo về đâu. Nhưng phần quan trọng nhất lại nằm bên dưới. Chính những dòng chữ mà con người viết ra mới là thứ AI sẽ đọc. Nói cách khác, audit request thực chất là một prompt được lưu trong git.
 
-```ts
-const requests = this.listEnabledRequests()
-  .filter((req) => (req.audit_type ?? 'v4_health') === auditType);
-```
+Điều này làm hắn thích hơn rất nhiều so với việc nhét prompt vào source code. Muốn AI quan tâm thêm funding thì chỉ cần sửa vài dòng Markdown. Muốn bỏ inventory hay thay đổi cách đánh giá spread cũng chỉ cần sửa đúng file đó. Không cần build lại ứng dụng, không cần deploy, cũng chẳng cần mở IDE. Prompt đã trở thành dữ liệu, và cũng giống như source code, nó có lịch sử thay đổi, có diff, có review và có thể quay về bất kỳ phiên bản nào.
 
-Người vận hành thêm/bớt thứ cần soi mà không bao giờ phải mở IDE. **Thứ cần kiểm là dữ liệu, không phải mã.**
+Hắn nghĩ đây mới là điểm thú vị nhất của cả hệ thống. Rất nhiều người xem prompt chỉ là một đoạn string truyền vào LLM. Còn trong kiến trúc này, prompt được xem như một tài liệu chính thức của hệ thống. Collector chịu trách nhiệm tạo ra sự thật. Prompt quyết định AI phải quan tâm điều gì. Template quyết định AI phải trình bày như thế nào. Khi ba mảnh ghép đó được tách riêng, mỗi phần đều có thể tiến hóa độc lập mà không ảnh hưởng đến phần còn lại.
 
-## Design Decision #3 — Snapshot phải được version
+## Snapshot là nhân chứng
 
-Snapshot không chỉ là input cho LLM. Nó còn là **evidence**. Nếu ba tuần sau AI kết luận "inventory skew bất thường", hắn mở đúng cái snapshot của hôm đó ra kiểm chứng, không cần dựng lại quá khứ. Đổi model, chạy lại prompt trên cùng snapshot, so sánh output. Đó mới là reproducibility.
+Nhiều người nghĩ snapshot chỉ là input cho AI. Với hắn thì không. Snapshot còn là nhân chứng.
 
-Snapshot được ghi vào một đường dẫn có ngày tháng (`reports/2026/07/19/…snapshot.json`) và commit vào git. Cấu trúc thư mục gọn gàng để cả người lẫn máy đều lần ra:
+Ba tuần sau nếu AI kết luận rằng inventory skew đã vượt ngưỡng bất thường, hắn không cần dựng lại database, không cần replay log, cũng không cần đoán xem AI đã nhìn thấy gì. Chỉ cần mở đúng snapshot của ngày hôm đó. AI chỉ được phép nhìn đúng những gì đã được chụp lại. Không hơn. Không kém.
+
+Vì vậy snapshot được lưu cùng với báo cáo và được commit vào git.
 
 ```text
 _audit/
-├── cron-jobs.json                  # lịch: cron expr → audit_type
+├── cron-jobs.json
 ├── requests/
-│   ├── mm-health-pavn.md           # 1 file = 1 mối quan tâm (enabled)
-│   └── funding-scan.md
-└── reports/
-    ├── _templates/                 # khung output cho LLM
-    └── 2026/07/19/
-        ├── mm-health-pavn.snapshot.json   # tang chứng (git-tracked)
-        └── mm-health-pavn.md              # báo cáo LLM viết
-
-.claude/skills/ops/mm-*-audit/
-├── collect-snapshot.sh             # thu thập → JSON
-├── parse-audit-request.sh          # đọc frontmatter request
-└── post-mm-audit-discord.sh        # gửi Discord
+├── reports/
+│   └── 2026/07/19/
+│       ├── mm-health-pavn.snapshot.json
+│       └── mm-health-pavn.md
 ```
 
-Snapshot là hợp đồng giữa collector và LLM: collector cam kết "đây là sự thật tại thời điểm T", LLM cam kết "tôi chỉ suy luận trên tấm ảnh này".
+Collector cam kết rằng đây là toàn bộ sự thật tại thời điểm T. LLM cam kết rằng mọi kết luận của nó đều dựa trên đúng bức ảnh đó. Snapshot trở thành hợp đồng giữa hai tầng của hệ thống.
 
-## Design Decision #4 — LLM chỉ đọc
+## AI chỉ được phép đọc
 
-LLM không được phép query database, gọi API, ssh hay đọc log. Nó chỉ đọc đúng một snapshot, cộng thêm template và request. Nghe hạn chế, nhưng đổi lại bạn có deterministic input, predictable cost, reproducible output, và dễ debug hơn nhiều. Quan trọng nhất: bạn có thể thay Claude bằng GPT, hay GPT bằng Gemini, mà collector không cần đổi một dòng code.
-
-AI nhận đúng ba thứ: tấm snapshot vừa chụp, một cái **template** quy định hình dạng báo cáo, và bản request (những câu hỏi tiếng người). Từ ba thứ đó dựng một prompt, gọi model, lấy `stdout`:
+Sau khi snapshot được tạo ra, AI mới bắt đầu xuất hiện. Nhưng ngay cả lúc này, hắn vẫn giới hạn quyền của nó rất chặt. AI không được query database. Không được gọi API. Không được SSH vào server. Nó chỉ nhận đúng ba thứ: snapshot, template và audit request.
 
 ```ts
 const snapshot = readFileSync(snapshotPath, 'utf8');
-const template = readFileSync(templatePath, 'utf8');   // khung output
+const template = readFileSync(templatePath, 'utf8');
 
 const prompt = typeDef.buildPrompt({
-  req, snapshotJson: snapshot, template, repoDir: this.repoDir,
+  req,
+  snapshotJson: snapshot,
+  template,
 });
 
 const result = await this.aiExecutor.execute(
-  prompt, 'claude', AUDIT_TIMEOUT_MS, { truncateOutput: false },
+  prompt,
+  'claude',
+  AUDIT_TIMEOUT_MS,
 );
-if (result.exitCode !== 0 || !result.stdout.trim()) {
-  this.logger.error(`Claude audit failed (exit=${result.exitCode})`);
-  return;
-}
 ```
 
-Cái template quan trọng hơn vẻ ngoài của nó. Không có khung, mỗi lần LLM lại viết một kiểu: hôm nay là bảng, mai là văn xuôi, mốt lại bịa thêm một mục `# MM Audit` trùng với header hắn tự gắn. Có template, đầu ra ổn định đủ để máy khác đọc tiếp. (Hắn còn phải cắt cái tiêu đề LLM hay tự nhân đôi, `stripDuplicateReportHeader`, nhưng đó là chuyện nhỏ.) Đầu ra được bọc thêm metadata rồi ghi thành báo cáo, có link ngược về đúng cái request và snapshot đã sinh ra nó:
+Template cũng quan trọng không kém snapshot. Không có template, hôm nay AI viết bảng, ngày mai viết văn xuôi, hôm sau lại tự nghĩ ra thêm vài mục mới. Có template, đầu ra đủ ổn định để những hệ thống khác tiếp tục xử lý. Báo cáo cuối cùng luôn chứa link ngược về request và snapshot đã sinh ra nó. Nếu thấy một kết luận đáng ngờ, chỉ cần mở snapshot là biết AI đã nhìn thấy điều gì.
+
+## Phần còn lại chỉ là vận hành
+
+Sau khi báo cáo được sinh ra, hệ thống commit vào git, push lên repository rồi gửi sang Discord. Nghe đơn giản nhưng vẫn còn một bài toán rất đời thường: chống chạy chồng. Nếu một vòng audit chạy lâu hơn chu kỳ của nó, rất dễ có hai process cùng ghi vào một chỗ.
 
 ```ts
-const metadata =
-  `# MM Audit — ${collectedAt}\n\n` +
-  `**Request:** [${requestFilename}](${relRequest})\n` +
-  `**Snapshot:** [JSON](${relSnapshot})\n` +
-  `**Account:** ${req.account} · **Request ID:** \`${req.id}\`\n\n`;
-
-writeFileSync(reportPath, header + metadata + body + '\n', 'utf8');
-```
-
-Mỗi báo cáo tự mang theo nguồn gốc của nó. Đọc kết luận thấy nghi ngờ? Bấm vào link snapshot, xem tận mắt AI đã nhìn thấy gì.
-
-## Vận hành: git, Discord, và chống chạy chồng
-
-Xong bốn design decision, còn phần đuôi vận hành: báo cáo được commit + push (để có lịch sử, diff được theo ngày), rồi đẩy vào Discord cho người nhận. Một mảnh nhỏ mà ai làm cron cũng sớm muộn phải học là **chống chạy chồng**: hai cron nổ gần nhau, hoặc một mẻ chạy lâu hơn chu kỳ, và bỗng dưng có hai lần audit cùng ghi đè lên nhau. Hắn khóa hai lớp, một cờ trong process, một file PID trên đĩa:
-
-```ts
-if (this.running) return;                        // cùng process này
-if (this.isLockHeldByOtherLiveProcess()) return; // process khác còn sống
+if (this.running) return;
+if (this.isLockHeldByOtherLiveProcess()) return;
 
 this.running = true;
-writeFileSync(LOCK_FILE, String(process.pid), 'utf8');
+writeFileSync(LOCK_FILE, String(process.pid));
+
 try {
-  /* ... chạy mẻ audit ... */
+  // run audit
 } finally {
   this.running = false;
   execSync(`rm -f ${LOCK_FILE}`);
 }
 ```
 
-Điểm tinh tế là *lock chết* (stale lock): process cầm khóa lăn ra chết mà chưa kịp dọn, khóa nằm lại vĩnh viễn, audit tắc luôn. Mẹo là hỏi hệ điều hành xem cái PID trong khóa còn sống không:
+Điều thú vị hơn nằm ở stale lock. Nếu process chết giữa chừng, file lock vẫn còn đó và cả hệ thống sẽ đứng yên mãi mãi. Hắn dùng một mẹo rất nhỏ.
 
 ```ts
-process.kill(pid, 0);   // không giết ai — chỉ ném lỗi nếu pid đã chết
-                        // ném → chủ khóa đã chết → xoá khóa, đi tiếp
+process.kill(pid, 0);
 ```
 
-`kill(pid, 0)` không thực sự giết gì; nó chỉ kiểm tra "process này còn đó không". Còn sống thì nhường; đã chết thì dọn cái khóa mồ côi và chạy tiếp. Một dòng, nhưng là ranh giới giữa một hệ tự phục hồi và một hệ treo cứng lúc 3 giờ sáng.
+Dòng code này không giết process nào cả. Nó chỉ hỏi hệ điều hành xem PID đó còn sống hay không. Nếu còn thì nhường. Nếu đã chết thì dọn khóa rồi tiếp tục chạy. Chỉ một dòng nhưng đủ để biến một hệ thống dễ treo thành một hệ thống có khả năng tự phục hồi.
 
-## Vài cái hố hắn đã giẫm
+## Pattern này không dành riêng cho trading
 
-- **Timeout ở mọi tầng.** Collector có timeout, lời gọi AI có timeout, mỗi lệnh git có timeout. Thiếu một cái, cả vòng lặp treo và các chu kỳ sau dồn ứ
-- **Đừng để AI đi lấy data.** Nhắc lại vì nó quan trọng: khoảnh khắc bạn cho AI tự query, bạn mất tính tái lập và ví tiền bắt đầu rỉ. Snapshot trước, phán sau
-- **Template không phải trang trí.** Nó là hợp đồng về hình dạng đầu ra. Không có nó, không có gì downstream đọc được báo cáo một cách đáng tin
-- **Báo cáo phải tự mang nguồn gốc.** Link ngược về request + snapshot biến một lời khẳng định mơ hồ thành một thứ kiểm chứng được
-- **Enabled là một cái van, không phải xoá file.** Tắt một audit bằng cách sửa cờ, đừng xoá, bạn sẽ muốn bật lại, và git giữ lịch sử giúp bạn
+Ví dụ trong bài viết là market making, nhưng thật ra bộ khung này có thể dùng ở rất nhiều nơi. Collector có thể query database, đọc log, gọi API, chạy `kubectl get`, hay `terraform plan`. Audit request có thể nói về SLA, chi phí cloud, chất lượng dữ liệu hay bảo mật. LLM có thể là Claude, GPT hay bất kỳ model nào khác. Discord cũng có thể đổi thành Slack, email hay PagerDuty.
 
-## Pattern có thể áp dụng rộng
+Bất kỳ công việc nào mà mỗi ngày bạn đều phải mở dashboard lên, đọc dữ liệu rồi tự đưa ra nhận định, đều có thể đưa vào mô hình này.
 
-Ví dụ trên là market-making, nhưng không có gì trong bộ xương này dính riêng vào trading. Nó là một architectural pattern cho bất kỳ hệ thống nào cần AI audit:
+## Kết
 
-| Trong ví dụ | Đổi thành của bạn |
-|-------------|-------------------|
-| `cron-jobs.json` | cron, systemd timer, GitHub Actions, hay hàng đợi bất kỳ |
-| `collect-snapshot.sh` | query DB · gọi API · đọc log · `kubectl get` · `terraform plan` |
-| `request.md` | thứ cần soi: SLA, chi phí cloud, lỗ hổng bảo mật, chất lượng dữ liệu |
-| `claude` | model bất kỳ, với prompt + template của bạn |
-| Discord | Slack · email · PagerDuty · một issue tự mở |
+Sau khi hoàn thành hệ thống này, hắn nhận ra AI không cần trở thành một operating system. Nó cũng không cần thay con người đi tìm sự thật.
 
-Bất cứ hệ thống nào mà bạn thấy mình phải *ngồi đọc rồi phán mỗi ngày*, chi phí AWS trườn lên, migration dữ liệu có toàn vẹn không, một dịch vụ có bám SLA không, đều vừa cái khuôn này.
+AI giỏi nhất ở một việc khác. Đó là tìm ra ý nghĩa của những sự thật đã có. Đi tìm sự thật là việc của collector, database và những đoạn code chạy đều đặn mỗi ngày. Đi tìm ý nghĩa mới là nơi AI thật sự phát huy giá trị.
 
-## Kết luận
+Khi tách hai việc đó ra, mọi thứ bỗng trở nên đơn giản hơn rất nhiều. Collector hôm nay viết bằng Bash, ngày mai có thể đổi sang Go hay Rust. Claude vài năm nữa có thể được thay bằng một model hoàn toàn mới. Nhưng snapshot vẫn ở đó.
 
-Sau khi tách collector khỏi reasoning, hắn nhận ra AI không cần trở thành một operating system, nó chỉ cần trở thành một compiler: collector compile thế giới thực thành snapshot, LLM compile snapshot thành insight. Hai tầng độc lập, có thể thay thế, test riêng và scale riêng.
+Nó là lời cam kết giữa hai tầng của hệ thống. Một bên nói: "Đây là toàn bộ sự thật mà tôi nhìn thấy." Bên còn lại trả lời: "Vậy để tôi kể cho bạn nghe, bức ảnh này đang nói lên điều gì."
 
-Điều hắn mang đi không phải tên file hay lịch cron, mà là ranh giới: thu thập deterministic, suy luận tách riêng, snapshot làm hợp đồng giữa hai phía. Phần còn lại — model nào, kênh Discord hay Slack, script viết bằng gì — có thể đổi từng mảnh mà không đụng vào insight đó.
 
 *❤️ cowriter aethery*

@@ -11,13 +11,13 @@ cover: "./cover.png"
 lang: "en"
 ---
 
-Hey, it's him again.
+Hey hey, it's him again.
 
-One of the most common mistakes when building an AI agent is giving it everything to do: query the database, read logs, call APIs, decide what extra data it needs, and only then conclude. Sounds very "agentic." But the more he built this way, the more he felt it wasn't good architecture. Not because the LLM isn't smart enough, but because it's doing two completely different jobs: collecting data and interpreting data.
+There is something interesting about working with AI. A lot of people want AI to become an all-purpose employee. They give it permission to query databases, read logs, call APIs, SSH into servers, decide what data is still missing, and only then produce a conclusion. Sounds very smart, very "agentic". But the more systems he builds, the more he feels this is not good architecture. Not because AI is not capable enough, but because we are asking it to do two completely different jobs. One is finding the truth. The other is interpreting the truth.
 
-Those two jobs have almost opposite requirements. Collection needs to be deterministic, reproducible, fast, and cheap. Interpretation needs reasoning, flexibility, and contextual understanding. Mix both into one agent and you lose nearly all the benefits of each.
+Those two jobs look similar at first glance, but their natures are almost opposite. Collecting data needs to be fast, precise, and produce the same result every run. Interpreting data is the opposite: it needs reasoning, connection-making, and room for different angles. If you force one agent to do both at once, it becomes very hard to know whether a wrong conclusion came from the AI's reasoning, or simply because the input data was already wrong.
 
-So in Djao Trading's market-making audit system, he deliberately split them into two fully independent pipelines. The collector is only responsible for producing a **snapshot**. The LLM is only responsible for reading that snapshot. Nothing more. Nothing less. The architecture looks like this:
+That is why, in Djao Trading's market-making audit system, he deliberately split these into two fully independent pipelines. The collector does exactly one thing: take a photo of the system at a moment in time. The LLM also does exactly one thing: read that photo and form a judgment. Nothing more. Nothing less.
 
 ```mermaid
 flowchart TD
@@ -26,9 +26,9 @@ flowchart TD
   LLM --> Report
 ```
 
-## Detailed architecture
+## Overall architecture
 
-Zoom in, and the same loop looks like this:
+Look closer, and a full audit loop looks like this.
 
 ```mermaid
 flowchart TD
@@ -41,36 +41,19 @@ flowchart TD
   Git --> Discord[Discord]
 ```
 
-Four layers, four cleanly separated responsibilities:
+At first glance the diagram looks ordinary. But the most important part is not Claude, GPT, or Gemini. What is worth keeping is the boundary between layers. Cron only answers "when to run". The request answers "what to check". The collector answers "what the system looks like right now". The LLM only answers "is that okay". Each layer has a single responsibility, and they talk to each other through one fixed snapshot.
 
-| Layer | The question it answers | Its nature |
-|-------|-------------------------|------------|
-| **Cron** | *When does it run?* | schedule, lives in a config file |
-| **Request `.md`** | *What to check?* | declarative, not code |
-| **Collector `.sh`** | *What's the current state?* | deterministic, no AI |
-| **LLM** | *Is it okay, and why?* | judgment, never fetches data itself |
+## The collector is only allowed to observe
 
-The insight is in the **separation**, not in being able to call an AI.
+This is probably the most important decision in the whole system. Most people's first instinct is to give AI full agency. Want logs? Go read them. Want a database query? Run it. Missing data? Call another API. The more autonomous, the better. He went the opposite way. The collector is not allowed to think. It is only allowed to observe.
 
-## Design Decision #1 — The collector must be fully deterministic
+The reason is simple. When AI fetches data itself, you lose reproducibility. An 8am run and a noon run can look at the system in two different ways. If the report is wrong, you almost cannot know exactly what the AI saw. Every reasoning loop also burns more tokens, more time, and more cost, while the data-fetching part should be fast and cheap. More important still, collection errors and interpretation errors get tangled together. Sometimes you waste half a day only to discover the AI misunderstood nothing: someone just wrote the wrong SQL.
 
-Everyone's first instinct is to give the AI permission to run commands, let it query the DB, call APIs, read logs, and conclude on its own. One agent does everything, sounds tidy, but it breaks in three places:
-
-- **Not reproducible.** The 8am run and the noon run query the DB slightly differently, and you never know exactly what it saw. When a report is wrong, you have no evidence
-- **Expensive and slow.** Every reasoning loop of "let me try this query… not enough, let me query that too" is tokens and time. The data-fetching part *should* be cheap and fixed
-- **Two error classes tangled together.** Collection errors (queried the wrong table) and interpretation errors (misread the meaning) blur into each other, impossible to debug
-
-The decision: draw a hard line between **deterministic** and **non-deterministic**.
-
-> The shell script owns the *facts*: take one fixed photo, print JSON, save it to a file. The LLM owns the *meaning*: read exactly that photo and judge.
-
-For each request, the scheduler calls exactly one shell script and tells it to dump the result to a file. Absolutely no AI in this layer, just query, gather, print JSON:
+So he drew a hard line between deterministic and non-deterministic. The collector only photographs the truth and packages it into a JSON file.
 
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
-# collect-snapshot.sh --request <file.md> --output <snapshot.json>
-# No reasoning. Just grab the facts and package them.
 
 request="$2"; out="$4"
 account=$(parse-audit-request.sh "$request" account)
@@ -85,24 +68,25 @@ jq -n \
   > "$out"
 ```
 
-On the scheduler side, the call has its own timeout, and if the file never appears it stops right there, no photo, nothing to read:
+The scheduler only calls the collector, waits for the snapshot to appear, and stops if there is no result.
 
 ```ts
 this.exec(
   `bash "${script}" --request "${req.path}" --output "${snapshotPath}"`,
   typeDef.collectorTimeoutMs,
 );
+
 if (!existsSync(snapshotPath)) {
   this.logger.error(`Snapshot missing: ${snapshotPath}`);
   return;
 }
 ```
 
-Because collection is plain code, it runs in a second and burns zero tokens.
+There is no AI in this layer at all. Only code, databases, and APIs. Fast, cheap, and the same result every time.
 
-## Design Decision #2 — Audit requests are data, not code
+## The audit request is the prompt
 
-Each thing to check is **a markdown file**, not an `if` branch in code. This is declarative configuration: same family as a Kubernetes manifest, a GitHub Actions workflow, a Terraform module. A request only describes what to audit, which account, where to send it, and what to ask. The scheduler doesn't need to know the details.
+There is something he really likes about this architecture. The prompt does not live in code. It is not hardcoded into a string hundreds of lines long. Each audit is simply a Markdown file.
 
 ```markdown
 ---
@@ -110,145 +94,107 @@ id: mm-health-pavn
 enabled: true
 account: pavn-main
 audit_type: mm_health
-server: pavn
-discord_channel_id: "123456789012345678"
 ---
 
-# Market-making health — pavn
+# Market Making Health
 
-Check every 4 hours. Answer:
+Please check:
 
-- Is the spread tracking target? Off by how many bps, on which symbol?
-- Does inventory skew breach the threshold anywhere?
-- Did any symbol stop quoting for more than 5 minutes?
-- Does upcoming funding combine with the current position into a risk?
+- Is the spread tracking target?
+- Is inventory skew above threshold?
+- Does upcoming funding add more risk?
 ```
 
-The frontmatter is *machine-read* (on/off, which account, which type, which Discord channel). The body is *human-written for the AI to read*, literally the questions you want answered, in plain language. That tiny `enabled: true` is a valve: flip it to `false` to pause an audit, drop another `.md` into the folder to add a new concern. The scheduler only picks up requests that are on and match the `audit_type` of the cron that just fired:
+At first glance it looks like an ordinary config file. The frontmatter helps the scheduler know when this audit runs, for which account, and where to send the report. But the important part is below. The lines a human writes are what the AI will read. In other words, an audit request is really a prompt stored in git.
 
-```ts
-const requests = this.listEnabledRequests()
-  .filter((req) => (req.audit_type ?? 'v4_health') === auditType);
-```
+He likes this far more than stuffing prompts into source code. Want the AI to care more about funding? Edit a few lines of Markdown. Want to drop inventory or change how spread is judged? Edit that same file. No rebuild, no deploy, no IDE. The prompt has become data, and like source code it has history, diffs, reviews, and can roll back to any version.
 
-An operator adds or removes what gets checked without ever opening an IDE. **The thing to check is data, not code.**
+He thinks this is the most interesting point in the whole system. Many people treat a prompt as just a string passed into an LLM. In this architecture, the prompt is treated as an official system document. The collector is responsible for producing the truth. The prompt decides what the AI must care about. The template decides how the AI must present it. When those three pieces are separated, each can evolve independently without breaking the others.
 
-## Design Decision #3 — Snapshots must be versioned
+## The snapshot is a witness
 
-A snapshot isn't just input for the LLM. It's also **evidence**. If three weeks later the AI concludes "inventory skew looks abnormal," he opens that day's exact snapshot to verify, no need to reconstruct the past. Swap the model, rerun the prompt on the same snapshot, compare the output. That's reproducibility.
+Many people think a snapshot is only input for the AI. For him, it is also a witness.
 
-The snapshot is written to a dated path (`reports/2026/07/19/…snapshot.json`) and committed to git. The directory layout stays tidy so both humans and machines can trace it:
+Three weeks later, if the AI concludes that inventory skew crossed an abnormal threshold, he does not need to rebuild the database, replay logs, or guess what the AI saw. He only opens that day's exact snapshot. The AI is only allowed to see what was photographed. Nothing more. Nothing less.
+
+So the snapshot is stored with the report and committed to git.
 
 ```text
 _audit/
-├── cron-jobs.json                  # schedule: cron expr → audit_type
+├── cron-jobs.json
 ├── requests/
-│   ├── mm-health-pavn.md           # 1 file = 1 concern (enabled)
-│   └── funding-scan.md
-└── reports/
-    ├── _templates/                 # output shape for the LLM
-    └── 2026/07/19/
-        ├── mm-health-pavn.snapshot.json   # evidence (git-tracked)
-        └── mm-health-pavn.md              # report the LLM wrote
-
-.claude/skills/ops/mm-*-audit/
-├── collect-snapshot.sh             # collect → JSON
-├── parse-audit-request.sh          # read request frontmatter
-└── post-mm-audit-discord.sh        # send to Discord
+├── reports/
+│   └── 2026/07/19/
+│       ├── mm-health-pavn.snapshot.json
+│       └── mm-health-pavn.md
 ```
 
-The snapshot is the contract between collector and LLM: the collector commits to "this is the truth at time T," the LLM commits to "I only reason over this photo."
+The collector commits that this is the full truth at time T. The LLM commits that every conclusion is based on exactly that photo. The snapshot becomes the contract between the two layers of the system.
 
-## Design Decision #4 — The LLM only reads
+## AI is only allowed to read
 
-The LLM is not allowed to query the database, call APIs, ssh, or read logs. It only reads one snapshot, plus a template and a request. Sounds restrictive, but in exchange you get deterministic input, predictable cost, reproducible output, and much easier debugging. Most importantly: you can swap Claude for GPT, or GPT for Gemini, without changing a single line of collector code.
-
-The AI receives exactly three things: the snapshot just taken, a **template** that dictates the report's shape, and the request (the human questions). From those three it builds a prompt, calls the model, takes `stdout`:
+Only after the snapshot exists does AI appear. Even then, he keeps its permissions very tight. AI may not query the database. May not call APIs. May not SSH into a server. It receives exactly three things: the snapshot, the template, and the audit request.
 
 ```ts
 const snapshot = readFileSync(snapshotPath, 'utf8');
-const template = readFileSync(templatePath, 'utf8');   // output shape
+const template = readFileSync(templatePath, 'utf8');
 
 const prompt = typeDef.buildPrompt({
-  req, snapshotJson: snapshot, template, repoDir: this.repoDir,
+  req,
+  snapshotJson: snapshot,
+  template,
 });
 
 const result = await this.aiExecutor.execute(
-  prompt, 'claude', AUDIT_TIMEOUT_MS, { truncateOutput: false },
+  prompt,
+  'claude',
+  AUDIT_TIMEOUT_MS,
 );
-if (result.exitCode !== 0 || !result.stdout.trim()) {
-  this.logger.error(`Claude audit failed (exit=${result.exitCode})`);
-  return;
-}
 ```
 
-The template matters more than it looks. Without a shape, the LLM writes differently every time: a table today, prose tomorrow, an invented `# MM Audit` heading the next day that collides with the one he attaches himself. With a template, the output is stable enough for another machine to keep reading. (He still has to trim the header the LLM likes to duplicate, `stripDuplicateReportHeader`, but that's a footnote.) The output is wrapped in metadata and written as a report, with links back to the exact request and snapshot that produced it:
+The template matters as much as the snapshot. Without a template, today the AI writes a table, tomorrow prose, the day after it invents new sections. With a template, the output is stable enough for other systems to keep processing. The final report always links back to the request and snapshot that produced it. If a conclusion looks suspicious, open the snapshot and you know what the AI saw.
+
+## The rest is just operations
+
+After the report is produced, the system commits to git, pushes to the repository, then sends it to Discord. Sounds simple, but there is still a very ordinary problem: preventing overlapping runs. If one audit loop runs longer than its cycle, two processes can easily write to the same place.
 
 ```ts
-const metadata =
-  `# MM Audit — ${collectedAt}\n\n` +
-  `**Request:** [${requestFilename}](${relRequest})\n` +
-  `**Snapshot:** [JSON](${relSnapshot})\n` +
-  `**Account:** ${req.account} · **Request ID:** \`${req.id}\`\n\n`;
-
-writeFileSync(reportPath, header + metadata + body + '\n', 'utf8');
-```
-
-Every report carries its own provenance. Suspicious of a conclusion? Click the snapshot link and see exactly what the AI saw.
-
-## Operations: git, Discord, and preventing overlap
-
-After the four design decisions comes the operational tail: the report is committed and pushed (for history, diffable by day), then pushed into Discord for whoever's watching. One small piece everyone who writes cron eventually learns is **prevent overlapping runs**: two crons fire close together, or one batch runs longer than the cycle, and suddenly two audits are overwriting each other. He locks two layers, an in-process flag and a PID file on disk:
-
-```ts
-if (this.running) return;                        // this same process
-if (this.isLockHeldByOtherLiveProcess()) return; // another process, still alive
+if (this.running) return;
+if (this.isLockHeldByOtherLiveProcess()) return;
 
 this.running = true;
-writeFileSync(LOCK_FILE, String(process.pid), 'utf8');
+writeFileSync(LOCK_FILE, String(process.pid));
+
 try {
-  /* ... run the audit batch ... */
+  // run audit
 } finally {
   this.running = false;
   execSync(`rm -f ${LOCK_FILE}`);
 }
 ```
 
-The subtle part is the *stale lock*: the process holding the lock dies before cleaning up, the lock stays forever, and audits jam. The trick is to ask the OS whether the PID in the lock is still alive:
+The more interesting part is the stale lock. If a process dies mid-run, the lock file stays and the whole system sits forever. He uses a tiny trick.
 
 ```ts
-process.kill(pid, 0);   // kills nobody — just throws if the pid is dead
-                        // throws → lock owner is dead → remove it, carry on
+process.kill(pid, 0);
 ```
 
-`kill(pid, 0)` doesn't actually kill anything; it only checks "is this process still there." Alive → yield; dead → clear the orphaned lock and continue. One line, but it's the line between a self-healing system and one wedged solid at 3am.
+This line kills no process. It only asks the OS whether that PID is still alive. If it is, yield. If it is dead, clear the lock and continue. One line, but enough to turn a system that hangs easily into one that can heal itself.
 
-## A few holes he stepped in
+## This pattern is not only for trading
 
-- **Timeouts at every layer.** The collector has a timeout, the AI call has a timeout, every git command has a timeout. Miss one and the whole loop hangs, and later cycles pile up behind it
-- **Don't let the AI fetch data.** Repeating it because it matters: the moment you let the AI query freely, you lose reproducibility and your wallet starts leaking. Snapshot first, judge second
-- **The template isn't decoration.** It's a contract on output shape. Without it, nothing downstream can trust-read the report
-- **A report must carry its own provenance.** Links back to the request + snapshot turn a vague claim into something verifiable
-- **Enabled is a valve, not a delete.** Turn an audit off by flipping the flag, don't delete the file, you'll want it back, and git keeps the history for you
+The example in this post is market making, but the skeleton works in many places. A collector can query a database, read logs, call APIs, run `kubectl get`, or `terraform plan`. An audit request can talk about SLAs, cloud cost, data quality, or security. The LLM can be Claude, GPT, or any other model. Discord can become Slack, email, or PagerDuty.
 
-## A pattern you can apply broadly
+Any job where every day you open a dashboard, read data, and form a judgment yourself can fit this model.
 
-The example is market-making, but nothing in this skeleton is trading-specific. It's an architectural pattern for any system that needs AI audit:
+## Closing
 
-| In the example | Swap for your own |
-|----------------|-------------------|
-| `cron-jobs.json` | cron, systemd timer, GitHub Actions, or any queue |
-| `collect-snapshot.sh` | query a DB · call an API · read logs · `kubectl get` · `terraform plan` |
-| `request.md` | what to check: SLAs, cloud cost, security holes, data quality |
-| `claude` | any model, with your prompt + template |
-| Discord | Slack · email · PagerDuty · an auto-opened issue |
+After finishing this system, he realized AI does not need to become an operating system. It also does not need to replace humans in the search for truth.
 
-Any system where you find yourself having to *read and judge it every day*, AWS cost creeping up, whether a data migration stayed intact, whether a service is holding its SLA, fits this mold.
+AI is best at something else: finding meaning in truths that already exist. Finding the truth belongs to the collector, the database, and the code that runs every day. Finding meaning is where AI actually earns its keep.
 
-## Conclusion
+Once those two jobs are split, everything becomes much simpler. Today's collector can be Bash; tomorrow it can be Go or Rust. In a few years Claude can be replaced by a completely new model. But the snapshot remains.
 
-After splitting the collector from reasoning, he realized the AI doesn't need to become an operating system. It only needs to become a compiler: the collector compiles the real world into a snapshot, the LLM compiles the snapshot into insight. Two independent layers, swappable, testable separately, scalable separately.
-
-What he carries away isn't a filename or a cron schedule, but a boundary: collection stays deterministic, reasoning stays separate, and the snapshot is the contract between the two. Everything else — which model, Discord or Slack, bash or Python — can be swapped piece by piece without touching that insight.
+It is the pledge between the two layers of the system. One side says: "This is the full truth I saw." The other answers: "Then let me tell you what this photo is saying."
 
 *❤️ cowriter aethery*
