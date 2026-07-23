@@ -31,7 +31,7 @@ const L = {
     colRank: '#',
     colSymbol: 'Mã',
     colName: 'Công ty',
-    colCap: 'Market cap',
+    colCap: 'Cap',
     colNote: 'Ngành / ghi chú',
     disclaimer:
       'Không phải lời khuyên đầu tư. Mapping ngành → ngũ hành mang tính minh họa văn hóa. Cap là snapshot, không realtime.',
@@ -47,7 +47,7 @@ const L = {
     colRank: '#',
     colSymbol: 'Ticker',
     colName: 'Company',
-    colCap: 'Market cap',
+    colCap: 'Cap',
     colNote: 'Sector / note',
     disclaimer:
       'Not investment advice. Element mapping is cultural illustration. Caps are a snapshot, not live.',
@@ -56,6 +56,19 @@ const L = {
 }[lang];
 
 const allInHref = lang === 'en' ? '/en/blog/cu-all-in-de-doi' : '/blog/cu-all-in-de-doi';
+
+function stockRows(stocks: typeof PERIOD9_STOCKS) {
+  return stocks.map((s, i) => ({
+    rank: i + 1,
+    symbol: s.symbol,
+    name: s.name,
+    note: s.note,
+    cap: formatCapT(s.marketCapT),
+  }));
+}
+
+const period9Rows = stockRows(PERIOD9_STOCKS);
+const defaultRows = stockRows(defaultElement.stocks);
 
 const payload = {
   elements: ELEMENTS,
@@ -82,28 +95,33 @@ const payload = {
         </p>
       </div>
     </div>
-    <div class="nhs-table-wrap">
+    <div class="nhs-table-wrap" role="region" aria-label={L.period9Title} tabindex="0">
       <table class="nhs-table">
         <thead>
           <tr>
-            <th>{L.colRank}</th>
-            <th>{L.colSymbol}</th>
-            <th>{L.colName}</th>
-            <th class="nhs-num">{L.colCap}</th>
-            <th>{L.colNote}</th>
+            <th class="nhs-col-rank">{L.colRank}</th>
+            <th class="nhs-col-sym">{L.colSymbol}</th>
+            <th class="nhs-col-name">{L.colName}</th>
+            <th class="nhs-col-cap nhs-num">{L.colCap}</th>
+            <th class="nhs-col-note">{L.colNote}</th>
           </tr>
         </thead>
         <tbody>
           {
-            PERIOD9_STOCKS.map((s, i) => (
+            period9Rows.map((r) => (
               <tr>
-                <td>{i + 1}</td>
-                <td>
-                  <span class="nhs-sym">{s.symbol}</span>
+                <td class="nhs-col-rank">{r.rank}</td>
+                <td class="nhs-col-sym">
+                  <span class="nhs-sym">{r.symbol}</span>
+                  <span class="nhs-mobile-meta">
+                    {r.name}
+                    <span class="nhs-dot">·</span>
+                    {r.note}
+                  </span>
                 </td>
-                <td>{s.name}</td>
-                <td class="nhs-num">{formatCapT(s.marketCapT)}</td>
-                <td>{s.note}</td>
+                <td class="nhs-col-name">{r.name}</td>
+                <td class="nhs-col-cap nhs-num">{r.cap}</td>
+                <td class="nhs-col-note">{r.note}</td>
               </tr>
             ))
           }
@@ -144,28 +162,33 @@ const payload = {
         {L.sectorsPrefix}: {defaultElement.sectors}
       </p>
     </div>
-    <div class="nhs-table-wrap">
+    <div class="nhs-table-wrap" role="region" aria-label={L.classicTitle} tabindex="0">
       <table class="nhs-table">
         <thead>
           <tr>
-            <th>{L.colRank}</th>
-            <th>{L.colSymbol}</th>
-            <th>{L.colName}</th>
-            <th class="nhs-num">{L.colCap}</th>
-            <th>{L.colNote}</th>
+            <th class="nhs-col-rank">{L.colRank}</th>
+            <th class="nhs-col-sym">{L.colSymbol}</th>
+            <th class="nhs-col-name">{L.colName}</th>
+            <th class="nhs-col-cap nhs-num">{L.colCap}</th>
+            <th class="nhs-col-note">{L.colNote}</th>
           </tr>
         </thead>
         <tbody id="nhs-classic-body">
           {
-            defaultElement.stocks.map((s, i) => (
+            defaultRows.map((r) => (
               <tr>
-                <td>{i + 1}</td>
-                <td>
-                  <span class="nhs-sym">{s.symbol}</span>
+                <td class="nhs-col-rank">{r.rank}</td>
+                <td class="nhs-col-sym">
+                  <span class="nhs-sym">{r.symbol}</span>
+                  <span class="nhs-mobile-meta">
+                    {r.name}
+                    <span class="nhs-dot">·</span>
+                    {r.note}
+                  </span>
                 </td>
-                <td>{s.name}</td>
-                <td class="nhs-num">{formatCapT(s.marketCapT)}</td>
-                <td>{s.note}</td>
+                <td class="nhs-col-name">{r.name}</td>
+                <td class="nhs-col-cap nhs-num">{r.cap}</td>
+                <td class="nhs-col-note">{r.note}</td>
               </tr>
             ))
           }
@@ -208,17 +231,12 @@ const payload = {
     margin-bottom: 0.35rem;
   }
 
+  /* Desktop: 5 equal columns. Mobile: horizontal snap strip (all 5 reachable). */
   .nhs-glyphs {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 0.65rem;
     margin-bottom: 1.75rem;
-  }
-
-  @media (max-width: 640px) {
-    .nhs-glyphs {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
   }
 
   .nhs-glyph {
@@ -347,25 +365,26 @@ const payload = {
 
   .nhs-table-wrap {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border-top: 1px solid var(--nhs-line);
     border-bottom: 1px solid var(--nhs-line);
   }
 
-  .nhs-table {
+  .nhs :global(.nhs-table) {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.92rem;
   }
 
-  .nhs-table th,
-  .nhs-table td {
+  .nhs :global(.nhs-table th),
+  .nhs :global(.nhs-table td) {
     padding: 0.7rem 0.55rem;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     vertical-align: top;
   }
 
-  .nhs-table th {
+  .nhs :global(.nhs-table th) {
     color: var(--nhs-dim);
     font-weight: 500;
     font-size: 0.72rem;
@@ -373,29 +392,34 @@ const payload = {
     letter-spacing: 0.08em;
   }
 
-  .nhs-table td {
+  .nhs :global(.nhs-table td) {
     color: rgba(255, 255, 255, 0.82);
   }
 
-  .nhs-table .nhs-num,
-  .nhs-table td.nhs-num {
+  .nhs :global(.nhs-table .nhs-num),
+  .nhs :global(.nhs-table td.nhs-num) {
     text-align: right;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
 
-  .nhs-table tbody tr {
+  .nhs :global(.nhs-table tbody tr) {
     transition: background 0.15s ease;
   }
 
-  .nhs-table tbody tr:hover {
+  .nhs :global(.nhs-table tbody tr:hover) {
     background: rgba(255, 255, 255, 0.03);
   }
 
-  .nhs-sym {
+  .nhs :global(.nhs-sym) {
     font-weight: 600;
     letter-spacing: 0.04em;
     color: #fff;
+  }
+
+  /* Desktop: hide mobile-only meta under ticker */
+  .nhs :global(.nhs-mobile-meta) {
+    display: none;
   }
 
   .nhs-inline-link {
@@ -420,6 +444,102 @@ const payload = {
     line-height: 1.5;
     color: var(--nhs-dim);
     max-width: 52rem;
+  }
+
+  @media (max-width: 640px) {
+    .nhs-period9-hero {
+      gap: 0.75rem;
+    }
+
+    .nhs-period9-hero .nhs-han {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.45rem;
+    }
+
+    .nhs-title {
+      font-size: 1.2rem;
+    }
+
+    .nhs-hint,
+    .nhs-sectors {
+      font-size: 0.82rem;
+    }
+
+    /* Glyph strip: all 5 in one row, swipe horizontally */
+    .nhs-glyphs {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      padding: 0.15rem 0.15rem 0.65rem;
+      margin-left: -0.15rem;
+      margin-right: -0.15rem;
+      scrollbar-width: none;
+    }
+
+    .nhs-glyphs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nhs-glyph {
+      flex: 0 0 4.6rem;
+      scroll-snap-align: start;
+      padding: 0.7rem 0.35rem 0.6rem;
+    }
+
+    .nhs-han {
+      width: 2.6rem;
+      height: 2.6rem;
+      font-size: 1.25rem;
+    }
+
+    .nhs-label {
+      font-size: 0.78rem;
+    }
+
+    /* Stock list: 3 columns — applies to SSR + JS-rendered ngũ hành rows */
+    .nhs-table-wrap {
+      overflow-x: visible;
+    }
+
+    .nhs :global(.nhs-col-name),
+    .nhs :global(.nhs-col-note) {
+      display: none;
+    }
+
+    .nhs :global(.nhs-mobile-meta) {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.72rem;
+      line-height: 1.35;
+      color: var(--nhs-dim);
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .nhs :global(.nhs-dot) {
+      margin: 0 0.25em;
+      opacity: 0.7;
+    }
+
+    .nhs :global(.nhs-table th),
+    .nhs :global(.nhs-table td) {
+      padding: 0.65rem 0.4rem;
+    }
+
+    .nhs :global(.nhs-col-rank) {
+      width: 1.75rem;
+    }
+
+    .nhs :global(.nhs-col-cap) {
+      width: 4.75rem;
+    }
+
+    .nhs :global(.nhs-table) {
+      font-size: 0.88rem;
+    }
   }
 </style>
 
@@ -448,11 +568,14 @@ const payload = {
       .map(
         (s, i) => `
       <tr>
-        <td>${i + 1}</td>
-        <td><span class="nhs-sym">${s.symbol}</span></td>
-        <td>${s.name}</td>
-        <td class="nhs-num">${formatCap(s.marketCapT)}</td>
-        <td>${s.note}</td>
+        <td class="nhs-col-rank">${i + 1}</td>
+        <td class="nhs-col-sym">
+          <span class="nhs-sym">${s.symbol}</span>
+          <span class="nhs-mobile-meta">${s.name}<span class="nhs-dot">·</span>${s.note}</span>
+        </td>
+        <td class="nhs-col-name">${s.name}</td>
+        <td class="nhs-col-cap nhs-num">${formatCap(s.marketCapT)}</td>
+        <td class="nhs-col-note">${s.note}</td>
       </tr>`,
       )
       .join('');
@@ -468,12 +591,19 @@ const payload = {
   const titleEl = document.getElementById('nhs-classic-title')!;
   const sectorsEl = document.getElementById('nhs-classic-sectors')!;
   const glyphBtns = root.querySelectorAll<HTMLButtonElement>('.nhs-glyph');
+  const glyphsStrip = root.querySelector<HTMLElement>('.nhs-glyphs');
 
   function syncUrl() {
     const url = new URL(window.location.href);
     url.searchParams.set('hanh', elementId);
     url.searchParams.delete('mode');
     history.replaceState(null, '', url);
+  }
+
+  function scrollActiveGlyphIntoView() {
+    if (!glyphsStrip) return;
+    const active = glyphsStrip.querySelector<HTMLElement>('.nhs-glyph.is-active');
+    active?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
   }
 
   function renderClassic() {
@@ -487,6 +617,7 @@ const payload = {
       btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
     syncUrl();
+    scrollActiveGlyphIntoView();
   }
 
   glyphBtns.forEach((btn) => {
