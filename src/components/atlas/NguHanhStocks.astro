@@ -1,0 +1,506 @@
+---
+/**
+ * Ngũ hành × CK VN — single scroll page:
+ * 1) Vận Ly Hỏa basket (20)
+ * 2) Ngũ hành — pick element → top 10
+ */
+import {
+  ELEMENTS,
+  PERIOD9_STOCKS,
+  SNAPSHOT_NOTE,
+  formatCapT,
+  getElement,
+  type ElementId,
+} from '../../lib/ngu-hanh-stocks';
+
+interface Props {
+  lang?: 'vn' | 'en';
+}
+
+const { lang = 'vn' } = Astro.props;
+const defaultElement = getElement('kim');
+
+const L = {
+  vn: {
+    period9Title: 'Vận Ly Hỏa',
+    period9Hint:
+      'Hai mươi mã kể chuyện điện · năng lượng · AI · truyền thông · công nghệ mới.',
+    period9Lead: 'Neo VIC — dòng tiền cũ nuôi canh bạc điện hóa',
+    classicTitle: 'Ngũ hành',
+    pickHint: 'Chọn một hành — xem mười mã lớn nhất theo market cap trong bucket ngành',
+    colRank: '#',
+    colSymbol: 'Mã',
+    colName: 'Công ty',
+    colCap: 'Market cap',
+    colNote: 'Ngành / ghi chú',
+    disclaimer:
+      'Không phải lời khuyên đầu tư. Mapping ngành → ngũ hành mang tính minh họa văn hóa. Cap là snapshot, không realtime.',
+    sectorsPrefix: 'Bucket',
+  },
+  en: {
+    period9Title: 'Period 9 / Li Fire',
+    period9Hint:
+      'Twenty names for electricity, energy, AI, media, and new technology.',
+    period9Lead: 'VIC as anchor — old cash flow funding the electrification bet',
+    classicTitle: 'Five elements',
+    pickHint: 'Pick an element — see the ten largest names by market cap in that sector bucket',
+    colRank: '#',
+    colSymbol: 'Ticker',
+    colName: 'Company',
+    colCap: 'Market cap',
+    colNote: 'Sector / note',
+    disclaimer:
+      'Not investment advice. Element mapping is cultural illustration. Caps are a snapshot, not live.',
+    sectorsPrefix: 'Bucket',
+  },
+}[lang];
+
+const allInHref = lang === 'en' ? '/en/blog/cu-all-in-de-doi' : '/blog/cu-all-in-de-doi';
+
+const payload = {
+  elements: ELEMENTS,
+  snapshot: SNAPSHOT_NOTE,
+  strings: { sectorsPrefix: L.sectorsPrefix },
+  defaultElement: 'kim' as ElementId,
+};
+---
+
+<div
+  id="nhs"
+  class="nhs w-full"
+  data-payload={JSON.stringify(payload)}
+>
+  <!-- 1. Vận Ly Hỏa -->
+  <section class="nhs-panel" id="nhs-period9">
+    <div class="nhs-period9-hero">
+      <span class="nhs-han nhs-han-fire" data-el="hoa">火</span>
+      <div>
+        <h2 class="nhs-title">{L.period9Title}</h2>
+        <p class="nhs-sectors">
+          {L.period9Hint}{' '}
+          <a class="nhs-inline-link" href={allInHref}>{L.period9Lead}</a>
+        </p>
+      </div>
+    </div>
+    <div class="nhs-table-wrap">
+      <table class="nhs-table">
+        <thead>
+          <tr>
+            <th>{L.colRank}</th>
+            <th>{L.colSymbol}</th>
+            <th>{L.colName}</th>
+            <th class="nhs-num">{L.colCap}</th>
+            <th>{L.colNote}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            PERIOD9_STOCKS.map((s, i) => (
+              <tr>
+                <td>{i + 1}</td>
+                <td>
+                  <span class="nhs-sym">{s.symbol}</span>
+                </td>
+                <td>{s.name}</td>
+                <td class="nhs-num">{formatCapT(s.marketCapT)}</td>
+                <td>{s.note}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="nhs-divider" />
+
+  <!-- 2. Ngũ hành -->
+  <section class="nhs-panel" id="nhs-classic">
+    <h2 class="nhs-title nhs-section-title">{L.classicTitle}</h2>
+    <p class="nhs-hint">{L.pickHint}</p>
+    <div class="nhs-glyphs" role="list">
+      {
+        ELEMENTS.map((el) => (
+          <button
+            type="button"
+            class:list={['nhs-glyph', el.id === 'kim' && 'is-active']}
+            data-element={el.id}
+            role="listitem"
+            aria-pressed={el.id === 'kim' ? 'true' : 'false'}
+          >
+            <span class="nhs-han" data-el={el.id}>
+              {el.han}
+            </span>
+            <span class="nhs-label">{el.label}</span>
+          </button>
+        ))
+      }
+    </div>
+    <div class="nhs-meta">
+      <h3 id="nhs-classic-title" class="nhs-subtitle">
+        {defaultElement.han} {defaultElement.label}
+      </h3>
+      <p id="nhs-classic-sectors" class="nhs-sectors">
+        {L.sectorsPrefix}: {defaultElement.sectors}
+      </p>
+    </div>
+    <div class="nhs-table-wrap">
+      <table class="nhs-table">
+        <thead>
+          <tr>
+            <th>{L.colRank}</th>
+            <th>{L.colSymbol}</th>
+            <th>{L.colName}</th>
+            <th class="nhs-num">{L.colCap}</th>
+            <th>{L.colNote}</th>
+          </tr>
+        </thead>
+        <tbody id="nhs-classic-body">
+          {
+            defaultElement.stocks.map((s, i) => (
+              <tr>
+                <td>{i + 1}</td>
+                <td>
+                  <span class="nhs-sym">{s.symbol}</span>
+                </td>
+                <td>{s.name}</td>
+                <td class="nhs-num">{formatCapT(s.marketCapT)}</td>
+                <td>{s.note}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <p class="nhs-snapshot">{SNAPSHOT_NOTE}</p>
+  <p class="nhs-disclaimer">{L.disclaimer}</p>
+</div>
+
+<style>
+  .nhs {
+    --nhs-line: rgba(255, 255, 255, 0.1);
+    --nhs-muted: rgba(255, 255, 255, 0.55);
+    --nhs-dim: rgba(255, 255, 255, 0.35);
+    --nhs-accent: #d4a574;
+    --nhs-kim: #c5cdd8;
+    --nhs-moc: #8fbc8f;
+    --nhs-thuy: #7eb6d9;
+    --nhs-hoa: #e8a060;
+    --nhs-tho: #c4a484;
+  }
+
+  .nhs-divider {
+    border: 0;
+    border-top: 1px solid var(--nhs-line);
+    margin: 2.5rem 0;
+  }
+
+  .nhs-hint {
+    color: var(--nhs-muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0.5rem 0 1.25rem;
+  }
+
+  .nhs-section-title {
+    margin-bottom: 0.35rem;
+  }
+
+  .nhs-glyphs {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin-bottom: 1.75rem;
+  }
+
+  @media (max-width: 640px) {
+    .nhs-glyphs {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .nhs-glyph {
+    appearance: none;
+    border: 1px solid var(--nhs-line);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 1rem 0.5rem 0.85rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
+    transition:
+      border-color 0.2s ease,
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .nhs-glyph:hover {
+    border-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-2px);
+  }
+
+  .nhs-glyph.is-active {
+    border-color: color-mix(in srgb, var(--nhs-active, var(--nhs-accent)) 70%, transparent);
+    background: color-mix(in srgb, var(--nhs-active, var(--nhs-accent)) 12%, transparent);
+  }
+
+  .nhs-glyph[data-element='kim'] {
+    --nhs-active: var(--nhs-kim);
+  }
+  .nhs-glyph[data-element='moc'] {
+    --nhs-active: var(--nhs-moc);
+  }
+  .nhs-glyph[data-element='thuy'] {
+    --nhs-active: var(--nhs-thuy);
+  }
+  .nhs-glyph[data-element='hoa'] {
+    --nhs-active: var(--nhs-hoa);
+  }
+  .nhs-glyph[data-element='tho'] {
+    --nhs-active: var(--nhs-tho);
+  }
+
+  .nhs-han {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    font-size: 1.55rem;
+    font-weight: 500;
+    line-height: 1;
+    border: 1px solid var(--nhs-line);
+    color: #f5f5f5;
+  }
+
+  .nhs-han[data-el='kim'] {
+    color: var(--nhs-kim);
+  }
+  .nhs-han[data-el='moc'] {
+    color: var(--nhs-moc);
+  }
+  .nhs-han[data-el='thuy'] {
+    color: var(--nhs-thuy);
+  }
+  .nhs-han[data-el='hoa'],
+  .nhs-han-fire {
+    color: var(--nhs-hoa);
+  }
+  .nhs-han[data-el='tho'] {
+    color: var(--nhs-tho);
+  }
+
+  .nhs-glyph.is-active .nhs-han {
+    border-color: color-mix(in srgb, var(--nhs-active) 55%, transparent);
+    background: color-mix(in srgb, var(--nhs-active) 14%, transparent);
+  }
+
+  .nhs-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.06em;
+  }
+
+  .nhs-meta {
+    margin-bottom: 1rem;
+  }
+
+  .nhs-title {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #f7f8f8;
+  }
+
+  .nhs-subtitle {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #f7f8f8;
+  }
+
+  .nhs-sectors {
+    margin: 0.4rem 0 0;
+    color: var(--nhs-dim);
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+
+  .nhs-period9-hero {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .nhs-period9-hero .nhs-han {
+    width: 3.75rem;
+    height: 3.75rem;
+    font-size: 1.85rem;
+    flex-shrink: 0;
+  }
+
+  .nhs-table-wrap {
+    overflow-x: auto;
+    border-top: 1px solid var(--nhs-line);
+    border-bottom: 1px solid var(--nhs-line);
+  }
+
+  .nhs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+
+  .nhs-table th,
+  .nhs-table td {
+    padding: 0.7rem 0.55rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    vertical-align: top;
+  }
+
+  .nhs-table th {
+    color: var(--nhs-dim);
+    font-weight: 500;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .nhs-table td {
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .nhs-table .nhs-num,
+  .nhs-table td.nhs-num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .nhs-table tbody tr {
+    transition: background 0.15s ease;
+  }
+
+  .nhs-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .nhs-sym {
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  .nhs-inline-link {
+    color: var(--nhs-accent);
+    text-decoration: none;
+  }
+
+  .nhs-inline-link:hover {
+    text-decoration: underline;
+  }
+
+  .nhs-snapshot {
+    margin: 1.5rem 0 0.35rem;
+    font-size: 0.75rem;
+    color: var(--nhs-dim);
+    letter-spacing: 0.04em;
+  }
+
+  .nhs-disclaimer {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--nhs-dim);
+    max-width: 52rem;
+  }
+</style>
+
+<script>
+  type ElementId = 'kim' | 'moc' | 'thuy' | 'hoa' | 'tho';
+  type StockRow = { symbol: string; name: string; marketCapT: number; note: string };
+  type ElementDef = {
+    id: ElementId;
+    label: string;
+    han: string;
+    sectors: string;
+    stocks: StockRow[];
+  };
+  type Payload = {
+    elements: ElementDef[];
+    strings: { sectorsPrefix: string };
+    defaultElement: ElementId;
+  };
+
+  function formatCap(t: number): string {
+    return `${t.toLocaleString('vi-VN')} T`;
+  }
+
+  function rowsHtml(stocks: StockRow[]): string {
+    return stocks
+      .map(
+        (s, i) => `
+      <tr>
+        <td>${i + 1}</td>
+        <td><span class="nhs-sym">${s.symbol}</span></td>
+        <td>${s.name}</td>
+        <td class="nhs-num">${formatCap(s.marketCapT)}</td>
+        <td>${s.note}</td>
+      </tr>`,
+      )
+      .join('');
+  }
+
+  const root = document.getElementById('nhs');
+  if (!root) throw new Error('nhs root missing');
+
+  const payload = JSON.parse(root.dataset.payload || '{}') as Payload;
+  let elementId: ElementId = payload.defaultElement;
+
+  const classicBody = document.getElementById('nhs-classic-body')!;
+  const titleEl = document.getElementById('nhs-classic-title')!;
+  const sectorsEl = document.getElementById('nhs-classic-sectors')!;
+  const glyphBtns = root.querySelectorAll<HTMLButtonElement>('.nhs-glyph');
+
+  function syncUrl() {
+    const url = new URL(window.location.href);
+    url.searchParams.set('hanh', elementId);
+    url.searchParams.delete('mode');
+    history.replaceState(null, '', url);
+  }
+
+  function renderClassic() {
+    const el = payload.elements.find((e) => e.id === elementId) ?? payload.elements[0];
+    titleEl.textContent = `${el.han} ${el.label}`;
+    sectorsEl.textContent = `${payload.strings.sectorsPrefix}: ${el.sectors}`;
+    classicBody.innerHTML = rowsHtml(el.stocks);
+    glyphBtns.forEach((btn) => {
+      const active = btn.dataset.element === el.id;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    syncUrl();
+  }
+
+  glyphBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      elementId = (btn.dataset.element as ElementId) || 'kim';
+      renderClassic();
+    });
+  });
+
+  const qHanh = new URLSearchParams(window.location.search).get('hanh');
+  if (qHanh && payload.elements.some((e) => e.id === qHanh)) {
+    elementId = qHanh as ElementId;
+    renderClassic();
+  } else {
+    syncUrl();
+  }
+</script>

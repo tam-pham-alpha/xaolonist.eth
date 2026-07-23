@@ -66,6 +66,24 @@ export const TOOLS: Tool[] = [
     status: 'live',
     featured: true,
   },
+  /**
+   * TEMP: Atlas / Oracle micro-module parked in tools gallery for discoverability.
+   * Canonical product home is still Atlas (see `_logs/00-00-00-interactive-architecture-atlas.md`).
+   * Move out of TOOLS[] when atlas shell exists.
+   */
+  {
+    slug: 'ngu-hanh',
+    emoji: '🔥',
+    name: { vn: 'Ngũ hành × CK VN', en: 'Five Elements × VN Stocks' },
+    description: {
+      vn: 'Vận Ly Hỏa (20 mã) rồi Ngũ hành — chọn hành xem mười mã HOSE theo market cap',
+      en: 'Period-9 Fire basket (20), then Five Elements — pick one for ten HOSE names by market cap',
+    },
+    category: 'finance',
+    runtime: 'client',
+    status: 'live',
+    featured: false,
+  },
 ];
 
 export const FEATURED_TOOLS = TOOLS.filter((t) => t.featured && t.status !== 'soon');

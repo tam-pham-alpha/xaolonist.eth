@@ -1,0 +1,92 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Container from '../../components/Container.astro';
+import NguHanhStocks from '../../components/atlas/NguHanhStocks.astro';
+import { getTool } from '../../lib/tools';
+
+const tool = getTool('ngu-hanh')!;
+---
+
+<Layout
+  title={`${tool.name.vn} — anh4gs tools`}
+  description={tool.description.vn}
+  url="https://anh4gs.xyz/tools/ngu-hanh"
+  lang="vn"
+>
+  <div class="nhs-page bg-darkmode min-h-screen pt-10 pb-24">
+    <div class="nhs-atmosphere" aria-hidden="true"></div>
+    <Container>
+      <div class="relative max-w-[920px] mx-auto">
+        <a
+          href="/tools"
+          class="text-[#888] text-[0.85rem] hover:text-[#d4a574] transition-colors"
+        >
+          ← tất cả tools
+        </a>
+
+        <header class="mt-5 mb-10">
+          <p class="nhs-kicker">Atlas · micro-module</p>
+          <h1 class="nhs-hero-title">
+            Ngũ hành
+            <span class="nhs-hero-x">×</span>
+            Chứng khoán VN
+          </h1>
+          <p class="nhs-hero-sub">
+            {tool.description.vn}. Minh họa văn hóa — không phải tín hiệu mua bán.
+          </p>
+        </header>
+
+        <NguHanhStocks lang="vn" />
+      </div>
+    </Container>
+  </div>
+</Layout>
+
+<style>
+  .nhs-page {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nhs-atmosphere {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(232, 160, 96, 0.09), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 85% 30%, rgba(126, 182, 217, 0.05), transparent 50%),
+      radial-gradient(ellipse 50% 35% at 10% 60%, rgba(143, 188, 143, 0.04), transparent 45%);
+  }
+
+  .nhs-kicker {
+    margin: 0 0 0.65rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .nhs-hero-title {
+    margin: 0;
+    font-size: clamp(1.85rem, 4.5vw, 2.65rem);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    color: #f7f8f8;
+  }
+
+  .nhs-hero-x {
+    display: inline-block;
+    margin: 0 0.15em;
+    color: #d4a574;
+    font-weight: 200;
+  }
+
+  .nhs-hero-sub {
+    margin: 0.85rem 0 0;
+    max-width: 36rem;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.55);
+  }
+</style>

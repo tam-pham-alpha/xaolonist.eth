@@ -1,0 +1,7 @@
+---
+/**
+ * Temporary alias: canonical surface is /tools/ngu-hanh while the module
+ * parks in the tools gallery. Preserve query (?mode=&hanh=).
+ */
+return Astro.redirect(`/tools/ngu-hanh${Astro.url.search}`);
+---

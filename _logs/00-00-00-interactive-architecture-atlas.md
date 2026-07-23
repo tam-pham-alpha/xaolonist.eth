@@ -1,8 +1,10 @@
-# Interactive Architecture Atlas — product concept note
+# Interactive Architecture Atlas — Architecture North-Star
 
-> **Status: IDEA / north-star candidate.** Not a build plan yet. Captures positioning so future Forge / tools work can reference it. Related: tools platform (`00-00-00-tools-platform-architecture.md`) is for small utilities; this note is a **different product shape** — interactive system-design learning, closer to ⚒️ Forge than to QR/resizer-style tools.
+> **Status: IDEA / north-star.** Evergreen direction (`00-00-00` = not a dated build log). Captures positioning so future Forge / Oracle / atlas work can reference it. Related: tools platform (`00-00-00-tools-platform-architecture.md`) is for small utilities; this note is a **different product shape** — interactive system-design learning and exploratory atlases, closer to ⚒️ Forge / 🔮 Oracle than to QR/resizer-style tools.
 >
-> Date: 2026-07-19
+> Formerly: `_logs/26-07-19-interactive-architecture-atlas.md` (promoted to `00-00-00`).
+>
+> Date opened: 2026-07-19 · updated: 2026-07-23
 
 ## Why this fits better than generic utilities
 
@@ -19,6 +21,8 @@ Hoặc gần tinh thần blog hơn:
 > **See the architecture. Follow the data. Understand the trade-offs.**
 
 Nhánh tự nhiên của **⚒️ Forge**: không chỉ dạy cách dùng công nghệ, mà trực quan hóa những nền móng tạo nên hệ thống hiện đại.
+
+Một số module có thể nghiêng **Oracle** (văn hóa / thị trường / ngũ hành) — vẫn cùng “atlas” interaction model, không phải tool registry.
 
 ## Concept tiềm năng nhất
 
@@ -117,6 +121,16 @@ Sau đó mới mở rộng:
 - Feature flag system
 - Distributed scheduler
 
+### Micro-modules (nhỏ, trong cùng atlas)
+
+Cùng interaction spirit (chọn → xem → so sánh), nhưng **không** phải system-design diagram đầy đủ. Đây là satellite entries — detail sống ở file riêng khi cần:
+
+| Module | Việc | Doc chi tiết |
+|--------|------|--------------|
+| **Ngũ hành × CK VN** | Vận Ly Hỏa (20 mã) rồi Ngũ hành (chọn hành → top 10) | [`26-07-23-ngu-hanh-vn-stocks.md`](./26-07-23-ngu-hanh-vn-stocks.md) · **TEMP** `/tools/ngu-hanh` |
+
+Ngũ hành là **một phần nhỏ** của Atlas — prototype UX / Oracle flavor — không thay thế catalog kiến trúc phần mềm ở trên.
+
 ## MVP nên nhỏ đến mức nào?
 
 MVP đầu chỉ cần **một kiến trúc duy nhất**, làm thật tốt.
@@ -137,6 +151,8 @@ Mỗi architecture chỉ cần:
 - Một vài failure scenarios
 
 **Không** cần ở v1: AI, editor, cho user tự vẽ.
+
+**Song song / sớm hơn MVP kiến trúc:** micro-module Ngũ hành × CK VN có thể ship như artifact riêng để thử interaction “chọn biểu tượng → xem 10 kết quả”, rồi gắn vào atlas shell sau.
 
 ## Ba lớp sản phẩm (sau khi có library)
 
@@ -165,11 +181,11 @@ Nền tảng kỹ thuật gần gũi: real-time pricing, event-driven systems, D
 
 ## Ranh giới với Tools Platform
 
-| | Tools (`/tools`) | Architecture Atlas (Forge) |
-|--|------------------|----------------------------|
-| Việc | Giải một annoyance nhỏ, nhanh | Hiểu / so sánh / chọn kiến trúc |
-| Runtime | client / edge / nuc utilities | Interactive educational product |
-| Ví dụ | Image resizer, timezone planner | Notification / market-data atlas |
+| | Tools (`/tools`) | Architecture Atlas (Forge / Oracle) |
+|--|------------------|-------------------------------------|
+| Việc | Giải một annoyance nhỏ, nhanh | Hiểu / so sánh / chọn kiến trúc (và micro-atlas liên quan) |
+| Runtime | client / edge / nuc utilities | Interactive educational / exploratory product |
+| Ví dụ | Image resizer, timezone planner | Notification atlas; Ngũ hành × CK VN (module nhỏ) |
 | Không làm | — | Diagram editor (Mermaid/Excalidraw đã đủ) |
 
 Hai hướng có thể cùng tồn tại trên anh4gs.xyz; **đừng** nhét atlas vào registry utility như một “tool vẽ sơ đồ”.
@@ -179,4 +195,5 @@ Hai hướng có thể cùng tồn tại trên anh4gs.xyz; **đừng** nhét atl
 - [ ] Chọn MVP architecture: Notification vs Market-data pipeline
 - [ ] Quyết định surface: `/forge/atlas`, `/atlas`, hay subdomain
 - [ ] Tech sketch: client-only graph + sim vs edge for shareable states
-- [ ] Viết dated implementation plan (`yy-mm-dd-…`) riêng — note này chỉ là concept
+- [ ] Gắn micro-module Ngũ hành vào atlas shell (nav / catalog entry) — **hiện TEMP trong `TOOLS[]` / `/tools/ngu-hanh`; gỡ khỏi registry khi atlas shell có**
+- [ ] Viết dated implementation plan (`yy-mm-dd-…`) riêng — note này chỉ là north-star
