@@ -68,12 +68,16 @@ Key properties:
 
 ```text
 src/
-  lib/tools.ts                      # registry: Tool[] { slug, runtime, category, status, ... }
+  lib/tools.ts                      # registry: Tool[] { slug, runtime, category, status, cover, ... }
   pages/tools/
-    index.astro                     # gallery — renders from registry, grouped by category
-    image-resizer.astro             # one page per tool
+    index.astro                     # gallery — renders from registry; Layout cover = TOOLS_INDEX_COVER
+    image-resizer.astro             # one page per tool (must set Layout cover)
   components/tools/
     ImageResizer.astro              # interactive island (dropzone, options, download zip)
+
+public/images/tools/
+  index.jpg                         # /tools gallery OG
+  <slug>.jpg                        # per-tool OG (required for every live tool)
 
 worker/index.ts                     # TOOL_ROUTES allow-list → proxy /api/tools/:id → brain
 
@@ -93,14 +97,15 @@ brain/src/
 
 ## Adding a new tool
 
-1. **Add a registry entry** in `src/lib/tools.ts` (`slug`, `runtime`, `category`, `status`). The gallery picks it up automatically.
-2. **Add the page** `src/pages/tools/<slug>.astro` (+ an island component if interactive).
-3. If `runtime: 'nuc'`:
+1. **Add a registry entry** in `src/lib/tools.ts` (`slug`, `runtime`, `category`, `status`, **`cover`**). The gallery picks it up automatically.
+2. **Add an OG cover** at `public/images/tools/<slug>.jpg` (~1200×630, dark site aesthetic). Every live tool page **must** pass `cover={absoluteCover(tool.cover)}` to `Layout` (VN + EN). Gallery uses `TOOLS_INDEX_COVER` → `/images/tools/index.jpg`.
+3. **Add the page** `src/pages/tools/<slug>.astro` (+ EN twin + an island component if interactive).
+4. If `runtime: 'nuc'`:
    - add a controller/service under `brain/src/tools/<slug>/`, register in `tools.module.ts`;
    - allow-list the route in `worker/index.ts` `TOOL_ROUTES` (with its own `maxBytes`).
    - reuse `WorkspaceService` + `RateLimitService` from `common/`.
-4. If `runtime: 'edge'`: handle it inside the Worker (no brain hop).
-5. If `runtime: 'client'`: everything lives in the page/island — no backend.
+5. If `runtime: 'edge'`: handle it inside the Worker (no brain hop).
+6. If `runtime: 'client'`: everything lives in the page/island — no backend.
 
 ## First vertical slice — batch image-resizer (`runtime: nuc`)
 

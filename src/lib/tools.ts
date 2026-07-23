@@ -1,7 +1,8 @@
 /**
  * Registry of utility tools hosted under /tools.
  *
- * Adding a tool = one entry here + a page under src/pages/tools/. The gallery
+ * Adding a tool = one entry here + a page under src/pages/tools/ + an OG cover
+ * at `public/images/tools/<slug>.jpg` (1200×630-ish). The gallery
  * (src/pages/tools/index.astro) renders from this list. `runtime` documents
  * where the work happens, which decides the wiring:
  *   - client → runs entirely in the browser (no backend)
@@ -22,9 +23,23 @@ export type Tool = {
   category: ToolCategory;
   runtime: ToolRuntime;
   status: ToolStatus;
+  /**
+   * Social / OG cover path under `public/` (e.g. `/images/tools/fix-parser.jpg`).
+   * Required for every live tool — Layout uses this for og:image / twitter:image.
+   */
+  cover: string;
   /** Surface this tool in the home-page "featured tools" row. */
   featured?: boolean;
 };
+
+/** Absolute OG image URL for a public path or already-absolute URL. */
+export function absoluteCover(coverPath: string, origin = 'https://anh4gs.xyz'): string {
+  if (coverPath.startsWith('http://') || coverPath.startsWith('https://')) return coverPath;
+  return `${origin}${coverPath.startsWith('/') ? '' : '/'}${coverPath}`;
+}
+
+/** Gallery `/tools` index cover. */
+export const TOOLS_INDEX_COVER = '/images/tools/index.jpg';
 
 export const TOOLS: Tool[] = [
   {
@@ -38,6 +53,7 @@ export const TOOLS: Tool[] = [
     category: 'media',
     runtime: 'nuc',
     status: 'live',
+    cover: '/images/tools/image-resizer.jpg',
     featured: true,
   },
   {
@@ -51,6 +67,7 @@ export const TOOLS: Tool[] = [
     category: 'life',
     runtime: 'client',
     status: 'live',
+    cover: '/images/tools/timezone-planner.jpg',
     featured: true,
   },
   {
@@ -64,6 +81,7 @@ export const TOOLS: Tool[] = [
     category: 'finance',
     runtime: 'client',
     status: 'live',
+    cover: '/images/tools/fix-parser.jpg',
     featured: true,
   },
   /**
@@ -82,6 +100,7 @@ export const TOOLS: Tool[] = [
     category: 'finance',
     runtime: 'client',
     status: 'live',
+    cover: '/images/tools/ngu-hanh.jpg',
     featured: false,
   },
 ];

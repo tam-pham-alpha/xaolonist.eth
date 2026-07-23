@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/Container.astro';
-import { TOOLS } from '../../lib/tools';
+import { TOOLS, TOOLS_INDEX_COVER, absoluteCover } from '../../lib/tools';
 
 // Flat gallery for now — re-group by category when the list grows.
 const tools = TOOLS;
@@ -11,6 +11,7 @@ const statusLabel: Record<string, string> = { live: '', beta: 'beta', soon: 's�
 <Layout
   title="tools — anh4gs"
   description="Bộ công cụ nhỏ tiện dụng: resize ảnh hàng loạt và nhiều hơn nữa"
+  cover={absoluteCover(TOOLS_INDEX_COVER)}
   url="https://anh4gs.xyz/tools"
   lang="vn"
 >

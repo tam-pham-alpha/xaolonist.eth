@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/Container.astro';
 import NguHanhStocks from '../../components/atlas/NguHanhStocks.astro';
-import { getTool } from '../../lib/tools';
+import { getTool, absoluteCover } from '../../lib/tools';
 
 const tool = getTool('ngu-hanh')!;
 ---
@@ -10,6 +10,7 @@ const tool = getTool('ngu-hanh')!;
 <Layout
   title={`${tool.name.vn} — anh4gs tools`}
   description={tool.description.vn}
+  cover={absoluteCover(tool.cover)}
   url="https://anh4gs.xyz/tools/ngu-hanh"
   lang="vn"
 >
