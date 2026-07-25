@@ -72,7 +72,7 @@ Read the full `index.md` of the relevant exemplar before drafting a new post to 
 
 All new posts must adopt the third-person narrator using "hắn" and "@aethery", omit em-dashes (use commas or colons instead), and avoid ending lines/bullet points with a period. However, we maintain a clear stylistic split based on category:
 - **Forge posts (category: "forge")**: Focus on software engineering, tech stack, and logic. They should NOT use mystical, Zen-heavy, or overly philosophical words. Use clear, simple, and scientific language.
-- **Oracle posts (category: "oracle")**: Focus on life reflections, memories, and thoughts. They can adopt the mystical, Zen-philosophical style modeled after the book "Đạo Trading" (using words like "Thị", "tánh biết", "như thị", etc.).
+- **The Way posts (category: "the-way")**: Focus on inner cultivation, life reflections, karma, awakening, and contemplative writing. They can adopt the mystical, Zen-philosophical style modeled after the book "Đạo Trading" (using words like "Thị", "tánh biết", "như thị", etc.).
 
 Before writing or generating new articles, review and follow the instructions in [styleguide.md](file:///Users/phamtam/projects/xaolonist.eth/content/styleguide/styleguide.md). Additionally, any posts written/co-written by the LLM must set `cowriter: "@aethery"` in the frontmatter, and append the signature `*❤️ cowriter aethery*` on a new line at the very end of the markdown body.
 
@@ -108,7 +108,7 @@ title: "My Post Title"
 summary: "A brief summary of the post."
 author: "Tam Pham"
 cowriter: "@aethery"      # (Optional) "@aethery" if co-written by LLM
-category: "forge"         # "forge" | "pentacles" | "oracle" | "all-blue"
+category: "forge"         # "forge" | "pentacles" | "the-way" | "all-blue"
 status: "published"       # "published" or "draft"
 date: "2026-05-30"        # YYYY-MM-DD
 cover: "./cover.jpg"      # Relative path to cover image
@@ -132,7 +132,7 @@ If the user has attached/provided an image in their request, use that image dire
 - **Palette by category** (accent the luminous subject / washes; keep the canvas dark):
   | Category | Accent mood |
   |---|---|
-  | `"oracle"` | **Purple** — soft violet, lavender, indigo washes and outlines |
+  | `"the-way"` | **Jade / sage** — soft green-gray, muted jade washes and outlines |
   | `"pentacles"` | **Yellow / gold** — warm gold, amber, soft yellow luminous tones |
   | `"forge"` | **Silver + soft accents** — dominant muted silver / cool steel on the dark canvas, with light secondary washes only (soft ice-blue, pale graphite, faint warm ash). Keep accents quiet; never neon, never saturated gold/purple |
   | `"all-blue"` | **Blue** — soft sky/sea blue, teal-blue washes and outlines |
@@ -147,7 +147,7 @@ If the user has attached/provided an image in their request, use that image dire
 |---|---|---|
 | `"forge"` | `/forge` | Create |
 | `"pentacles"` | `/pentacles` | Accumulate |
-| `"oracle"` | `/oracle` | Understand |
+| `"the-way"` | `/the-way` | Awaken |
 | `"all-blue"` | `/all-blue` | Transcend |
 
 Homepage (`/`) shows all published posts as a unified timeline. `/music` lists posts with audio across all realms.
@@ -160,7 +160,7 @@ src/content.config.ts   # Content collection schema definition
 src/pages/index.astro   # Homepage — unified timeline of all posts
 src/pages/forge.astro   # Forge room
 src/pages/pentacles.astro
-src/pages/oracle.astro
+src/pages/the-way.astro
 src/pages/all-blue.astro
 src/pages/music.astro   # Cross-cutting music playlist
 src/pages/aethery.astro # Aethery profile page
@@ -185,7 +185,7 @@ z.object({
   summary: z.string(),
   author: z.string().default('Tam Pham'),
   cowriter: z.string().optional(),
-  category: z.enum(['forge', 'pentacles', 'oracle', 'all-blue']),
+  category: z.enum(['forge', 'pentacles', 'the-way', 'all-blue']),
   status: z.enum(['published', 'draft']).default('published'),
   date: z.string(),
   cover: image(),      // Astro image optimization

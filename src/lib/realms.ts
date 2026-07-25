@@ -1,4 +1,4 @@
-export type RealmSlug = 'forge' | 'pentacles' | 'oracle' | 'all-blue';
+export type RealmSlug = 'forge' | 'pentacles' | 'the-way' | 'all-blue';
 
 export type Realm = {
   slug: RealmSlug;
@@ -32,13 +32,13 @@ export const REALMS: Realm[] = [
     },
   },
   {
-    slug: 'oracle',
-    emoji: '🔮',
-    name: 'Oracle',
-    accent: '#9088a0',
+    slug: 'the-way',
+    emoji: '☯️',
+    name: 'The Way',
+    accent: '#8f9688',
     description: {
-      vn: 'Nơi mở rộng nhận thức: hội thoại với LLM, giả thuyết, triết học và những câu hỏi kỳ lạ',
-      en: 'Where cognition expands: LLM dialogues, hypotheses, philosophy, and strange questions',
+      vn: 'Con đường tu dưỡng nội lực: tu tâm, nhân quả, tỉnh thức, năng lượng và hành trình trở thành người đủ sáng để nhìn mọi việc rõ ràng',
+      en: 'The path of inner cultivation: mindfulness, karma, awakening, energy, and becoming clear-eyed enough to see things as they are',
     },
   },
   {

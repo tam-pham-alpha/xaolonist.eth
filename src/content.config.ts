@@ -18,7 +18,7 @@ const blog = defineCollection({
       summary: z.string(),
       author: z.string().default('Tam Pham'),
       cowriter: z.string().optional(),
-      category: z.enum(['forge', 'pentacles', 'oracle', 'all-blue']),
+      category: z.enum(['forge', 'pentacles', 'the-way', 'all-blue']),
       status: z.enum(['published', 'draft']).default('published'),
       date: z.string(),
       cover: image(),

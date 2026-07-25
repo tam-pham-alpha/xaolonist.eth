@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import RealmPage from '../../components/RealmPage.astro';
 
 const allPosts = await getCollection('blog', ({ data }) =>
-  data.status === 'published' && data.category === 'oracle' && data.lang === 'en'
+  data.status === 'published' && data.category === 'the-way' && data.lang === 'en'
 );
 
 const posts = allPosts.sort(
@@ -11,4 +11,4 @@ const posts = allPosts.sort(
 );
 ---
 
-<RealmPage realm="oracle" lang="en" posts={posts} />
+<RealmPage realm="the-way" lang="en" posts={posts} />
