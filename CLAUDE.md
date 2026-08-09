@@ -138,6 +138,7 @@ If the user has attached/provided an image in their request, use that image dire
   | `"all-blue"` | **Blue** — soft sky/sea blue, teal-blue washes and outlines |
 - **Texture**: Visible dark rough watercolor paper grain, natural paint bleeds, subtle luminous hand-drawn outlines. Should feel hand-painted, organic, and blend seamlessly with the website's dark mode
 - **Avoid**: Pure white/light backgrounds (which cause harsh contrast blocks in dark mode), photorealistic renders, vibrant/neon colors, cluttered compositions, text overlays, heavy digital effects, futuristic/sci-fi looks
+- **Aspect ratio**: Prefer landscape **~3:2**, target **1536×1024**. Forge posts almost always use this ratio. Do **not** default to square `1:1` when generating covers. If the image tool only offers nearby ratios (`4:3`, `16:9`), pick the closest landscape option, then verify the saved file is ~3:2 before committing. Square covers are only OK when the user supplies the image or explicitly asks for square
 - **Format**: Save as `cover.jpg` or `cover.png` in the post directory
 - **Full save path**: `src/content/blog/<slug>/cover.jpg` (or `.png`)
 
