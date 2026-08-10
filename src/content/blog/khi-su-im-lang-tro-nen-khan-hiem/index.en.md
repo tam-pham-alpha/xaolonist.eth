@@ -5,7 +5,7 @@ summary: "When AI can create nearly endless information, human attention and qui
 author: "Tam Pham"
 cowriter: "@aethery"
 category: "the-way"
-status: "draft"
+status: "published"
 date: "2026-08-10"
 cover: "./cover.jpg"
 lang: "en"

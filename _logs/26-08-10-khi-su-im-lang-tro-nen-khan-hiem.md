@@ -9,8 +9,8 @@ Branch: `agent/khi-su-im-lang-tro-nen-khan-hiem`
 - [x] English translation (`index.en.md`)
 - [x] Agent palette: `the-way` → violet/purple (ref: `hat-giong-moi`)
 - [x] Realm UI accent `#8f9688` → `#9a88a8`
-- [ ] Publish (still `status: draft`)
-- [ ] Commit / push / merge (awaiting approval)
+- [x] Publish (`status: published`)
+- [x] Commit / push / merge
 
 ## Notes
 

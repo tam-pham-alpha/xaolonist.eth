@@ -5,7 +5,7 @@ summary: "Khi AI có thể tạo ra gần như vô hạn thông tin, sự chú �
 author: "Tam Pham"
 cowriter: "@aethery"
 category: "the-way"
-status: "draft"
+status: "published"
 date: "2026-08-10"
 cover: "./cover.jpg"
 lang: "vn"
