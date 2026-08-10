@@ -3,9 +3,11 @@ slug: "khi-su-im-lang-tro-nen-khan-hiem"
 title: "Khi sự im lặng trở nên khan hiếm"
 summary: "Khi AI có thể tạo ra gần như vô hạn thông tin, sự chú ý và những khoảng lặng của con người lại trở thành thứ ngày càng khan hiếm"
 author: "Tam Pham"
+cowriter: "@aethery"
 category: "the-way"
 status: "draft"
 date: "2026-08-10"
+cover: "./cover.jpg"
 lang: "vn"
 ---
 
@@ -24,3 +26,5 @@ Có lẽ sự bình an trong thời đại AI không đến từ việc tìm đ�
 Thế giới phía trước có lẽ sẽ không bao giờ bớt ồn ào. Máy móc sẽ tiếp tục viết, nói, hát và tạo ra những điều mới kể cả khi chúng ta đang ngủ. Chỉ có sự chú ý của mỗi người vẫn hữu hạn như từ ngàn năm trước
 
 Và biết đâu, giữa một thế giới có thể tạo ra gần như mọi thứ, thứ xa xỉ nhất lại chỉ là một buổi chiều chẳng có gì xảy ra
+
+*❤️ cowriter aethery*

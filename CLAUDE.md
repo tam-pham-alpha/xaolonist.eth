@@ -132,7 +132,7 @@ If the user has attached/provided an image in their request, use that image dire
 - **Palette by category** (accent the luminous subject / washes; keep the canvas dark):
   | Category | Accent mood |
   |---|---|
-  | `"the-way"` | **Jade / sage** — soft green-gray, muted jade washes and outlines |
+  | `"the-way"` | **Violet / purple** — soft muted violet washes and luminous purple outlines (see `hat-giong-moi`) |
   | `"pentacles"` | **Yellow / gold** — warm gold, amber, soft yellow luminous tones |
   | `"forge"` | **Silver + soft accents** — dominant muted silver / cool steel on the dark canvas, with light secondary washes only (soft ice-blue, pale graphite, faint warm ash). Keep accents quiet; never neon, never saturated gold/purple |
   | `"all-blue"` | **Blue** — soft sky/sea blue, teal-blue washes and outlines |

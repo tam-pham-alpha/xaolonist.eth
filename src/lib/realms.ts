@@ -35,7 +35,8 @@ export const REALMS: Realm[] = [
     slug: 'the-way',
     emoji: '☯️',
     name: 'The Way',
-    accent: '#8f9688',
+    // Soft muted violet — matches the-way cover accent (hat-giong-moi)
+    accent: '#9a88a8',
     description: {
       vn: 'Con đường tu dưỡng nội lực: tu tâm, nhân quả, tỉnh thức, năng lượng và hành trình trở thành người đủ sáng để nhìn mọi việc rõ ràng',
       en: 'The path of inner cultivation: mindfulness, karma, awakening, energy, and becoming clear-eyed enough to see things as they are',
