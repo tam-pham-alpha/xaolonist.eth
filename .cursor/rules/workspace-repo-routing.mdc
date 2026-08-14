@@ -1,0 +1,48 @@
+---
+description: Identify which of the 3 workspace repos a request belongs to before editing or running commands
+alwaysApply: true
+---
+
+# Workspace repo routing
+
+This Cursor window is a **3-root workspace**. Before any file edit, git, or shell `cd`, pick **exactly one** target repo. Do not mix trees.
+
+## Priority (first match wins)
+
+1. **File / path mention** (strongest) — `@` mention, backtick path, relative or absolute path. Map to the repo whose tree contains that path.
+2. **Explicit repo name** — `djao-trading`, `xaolonist.eth` / anh4gs / blog, `date-society`.
+3. **Focused / recently viewed files** in the IDE.
+4. **Topic fingerprints** below.
+5. **Ambiguous** — ask which repo. Do not guess. Do not edit two repos unless the user named both.
+
+If files from **two repos** are mentioned, treat it as cross-repo: state the split, then edit each tree separately.
+
+## Repos
+
+| Repo | Root | Strong path prefixes |
+|------|------|----------------------|
+| **djao-trading** | `/Users/phamtam/projects/djao-trading` | `trading-bot/`, `dashboard/`, `backtest/`, `backtest-py/`, `market-data/`, `.claude/skills/ops/` |
+| **xaolonist.eth** | `/Users/phamtam/projects/xaolonist.eth` | `src/content/blog/`, `content/styleguide/`, `brain/`, `_logs/`, `.agents/` |
+| **date-society** | `/Users/phamtam/projects/date-society` | `api/`, `web/`, `agent-bot/`, `health-monitor/` (this monorepo only) |
+
+### Fingerprints (only if no path)
+
+- **djao-trading**: MM / V2 ladder, Bybit, OHLCV, Grafana/Mimir, PAVN trading shards, `@djao-trading/*`, Discord trading (`!status`, `!trade`)
+- **xaolonist.eth**: blog post, cover, styleguide, Suno, forge / the-way / pentacles / all-blue, `@aethery`, anh4gs.xyz
+- **date-society**: dating society, invite / match / KYC, datesociety.xyz, `@date-society/*`, Meet fewer
+
+`_docs/` and `shared/` exist in **djao-trading** and **date-society** — never route on those alone. Use the filename, `@djao-trading/shared` vs `@date-society/shared`, or topic. Astro = xaolonist blog **or** date-society `web/`. NestJS / Discord = djao `trading-bot` **or** date-society `api`.
+
+## After picking a repo
+
+- All reads / writes / shell / git use that root (`working_directory` or absolute paths).
+- Follow **that** repo's `AGENTS.md` / `CLAUDE.md` / skills.
+- Ignore other repos' always-applied procedures when they conflict (GitNexus, MM north-star, `trading-bot` jest paths apply **only** to djao-trading).
+- If the target was not named explicitly, say the chosen repo in one short clause before working.
+
+## Examples
+
+- `sửa trading-bot/src/trading/position-reload.ts` → **djao-trading**
+- `xem _docs/26-08-13-order-flow-monitor-metrics-plan.md` → **djao-trading** (unique filename)
+- `viết post the-way, cover.jpg trong src/content/blog/` → **xaolonist.eth**
+- `update api Discord module` + no trading-bot files → **date-society**; if also MM / `!trade` → ask
