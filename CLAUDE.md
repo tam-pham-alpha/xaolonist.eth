@@ -50,9 +50,8 @@ _logs/
 
 Read these files before writing any new post:
 
-- **[styleguide.md](content/styleguide/styleguide.md)** — Voice, tone, vocabulary and LLM execution rules. Read before writing ANY post
-- **[DaoTrading.txt](content/styleguide/DaoTrading.txt)** — Source book for the dvvv (anh4gs) writing style. Before writing a dvvv post, grep this file for 2–3 passages related to the post's core theme and use them as tonal inspiration
-- **[PerfectTrading.txt](content/styleguide/PerfectTrading.txt)** — Secondary reference text, same purpose as DaoTrading.txt
+- **[styleguide.md](content/styleguide/styleguide.md)** — @aethery writing voice. Read before writing ANY post
+- **[DaoTrading.txt](content/styleguide/DaoTrading.txt)** and **[PerfectTrading.txt](content/styleguide/PerfectTrading.txt)** — rhythm only. Do not quote, retell, or lift passages into a new post
 
 ## Exemplar Posts (Read Before Writing)
 
@@ -70,11 +69,9 @@ Read the full `index.md` of the relevant exemplar before drafting a new post to 
 
 ### Writing Style & Voice
 
-All new posts must adopt the third-person narrator using "hắn" and "@aethery", omit em-dashes (use commas or colons instead), and avoid ending lines/bullet points with a period. However, we maintain a clear stylistic split based on category:
-- **Forge posts (category: "forge")**: Focus on software engineering, tech stack, and logic. They should NOT use mystical, Zen-heavy, or overly philosophical words. Use clear, simple, and scientific language.
-- **The Way posts (category: "the-way")**: Focus on inner cultivation, life reflections, karma, awakening, and contemplative writing. They can adopt the mystical, Zen-philosophical style modeled after the book "Đạo Trading" (using words like "Thị", "tánh biết", "như thị", etc.).
+Follow [styleguide.md](content/styleguide/styleguide.md) as the source of @aethery voice. Write a complete Vietnamese essay: full paragraphs, one central idea, everyday opening, open ending. No bullets, no em-dashes, no period at the end of a paragraph, no poetry line-breaks. Realm only changes the topic (forge = tools/systems, the-way = life/era), not the persona.
 
-Before writing or generating new articles, review and follow the instructions in [styleguide.md](file:///Users/phamtam/projects/xaolonist.eth/content/styleguide/styleguide.md). Additionally, any posts written/co-written by the LLM must set `cowriter: "@aethery"` in the frontmatter, and append the signature `*❤️ cowriter aethery*` on a new line at the very end of the markdown body.
+LLM-written posts set `cowriter: "@aethery"` in frontmatter and end with `*❤️ cowriter aethery*` on its own line.
 
 ### Slug Naming Rules
 
