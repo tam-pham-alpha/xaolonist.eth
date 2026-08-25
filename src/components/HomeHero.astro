@@ -1,12 +1,12 @@
 ---
 /**
- * Home-page hero: a prominent chat entry for @aethery, the realm/tools chips,
- * and a featured-tools row. Submitting the input navigates to the aethery
- * chat page with the question as `?q=`, which auto-sends it there.
+ * Home-page hero: a prominent chat entry for @aethery, the realm chips,
+ * and a featured-tools row (heading links to /tools). Submitting the
+ * input navigates to the aethery chat page with the question as `?q=`.
  */
 import { getCollection } from 'astro:content';
 import { REALMS, type RealmSlug } from '../lib/realms';
-import { FEATURED_TOOLS, TOOLS } from '../lib/tools';
+import { FEATURED_TOOLS } from '../lib/tools';
 
 interface Props {
   lang: 'vn' | 'en';
@@ -42,22 +42,13 @@ const realmCounts = REALMS.reduce(
   {} as Record<RealmSlug, number>,
 );
 
-const chips = [
-  ...REALMS.map((r) => ({
-    href: `${base}/${r.slug}`,
-    emoji: r.emoji,
-    label: r.name,
-    total: realmCounts[r.slug],
-    accent: r.accent,
-  })),
-  {
-    href: `${base}/tools`,
-    emoji: '🧰',
-    label: 'Tools',
-    total: TOOLS.length,
-    accent: '#868f97',
-  },
-];
+const chips = REALMS.map((r) => ({
+  href: `${base}/${r.slug}`,
+  emoji: r.emoji,
+  label: r.name,
+  total: realmCounts[r.slug],
+  accent: r.accent,
+}));
 ---
 
 <section class="pt-10 pb-8 lg:pt-16 lg:pb-12">
@@ -95,7 +86,7 @@ const chips = [
     </form>
     <p class="text-center text-[#777] text-[0.82rem] mt-3">{T.hint}</p>
 
-    <!-- Realm + tools chips (tinted by realm accent) -->
+    <!-- Realm chips (tinted by realm accent) -->
     <div class="flex flex-wrap justify-center gap-2 mt-6">
       {chips.map((c) => (
         <a
@@ -119,8 +110,13 @@ const chips = [
   <!-- Featured tools — wider than chat column so 3 cards fit one row -->
   {FEATURED_TOOLS.length > 0 && (
     <div class="mt-8 max-w-[960px] mx-auto px-1">
-      <div class="text-center text-[#ffc436]/70 text-[0.7rem] uppercase tracking-[2px] mb-3">
-        {T.featured}
+      <div class="text-center mb-3">
+        <a
+          href={`${base}/tools`}
+          class="text-[#ffc436]/70 text-[0.7rem] uppercase tracking-[2px] no-underline hover:underline underline-offset-4 decoration-[#ffc436]/40 transition-colors"
+        >
+          {T.featured} →
+        </a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {FEATURED_TOOLS.map((tool) => (
