@@ -1,7 +1,7 @@
 ---
 slug: "lam-viec-giu-phuc-khi"
 title: "Làm Việc Để Giữ Phúc Khí"
-summary: "Hắn làm việc không chỉ để kiếm tiền, mà để tinh thần được sắc bén và dòng phúc khí vẫn còn lưu chuyển"
+summary: "Hắn làm việc không chỉ để kiếm tiền, mà để giữ tinh thần sắc bén, một nhịp sống có trật tự và thứ hắn vẫn thích gọi là phúc khí"
 author: "Tam Pham"
 cowriter: "@aethery"
 category: "the-way"
@@ -11,14 +11,14 @@ cover: "./cover.png"
 lang: "vn"
 ---
 
-Buổi sáng, hắn vẫn mở máy, pha một cốc cà phê rồi bắt đầu làm những việc quen thuộc. Có lúc hắn cũng tự hỏi, nếu một ngày tiền không còn là vấn đề nữa, liệu hắn có còn muốn làm việc hay không. Câu trả lời của hắn lúc này là có
+Hắn càng ngày càng thấy, làm việc không chỉ để kiếm tiền. Tiền là phần dễ nhìn thấy nhất, còn thứ âm thầm tích lại phía sau là một tinh thần sắc bén, một nhịp sống có trật tự, và thứ mà hắn vẫn thích gọi là phúc khí
 
-Hắn càng ngày càng thấy, công việc giống như một viên đá mài. Mỗi vấn đề cần giải quyết, mỗi quyết định phải đưa ra, mỗi lần sai rồi sửa lại đều khiến đầu óc bớt cùn đi một chút. Không làm gì quá lâu, con người ta dễ trôi vào những suy nghĩ không có điểm tựa. Còn khi vẫn làm ra một thứ gì đó hữu ích, tinh thần như được giữ ở trạng thái tỉnh táo hơn
+Con người nếu nhàn rỗi quá lâu rất dễ cùn đi. Không phải vì thiếu kiến thức, mà vì thiếu những va chạm buộc mình phải suy nghĩ, quyết định, chịu trách nhiệm và sửa sai. Công việc tốt giống như một viên đá mài. Mỗi ngày mài một chút, đầu óc bớt mơ hồ, khả năng phán đoán tốt hơn, con người cũng bớt dễ bị cảm xúc hay những chuyện vụn vặt kéo đi
 
-Hắn không biết phúc khí có thật sự là thứ có thể đo đếm hay không. Nhưng nếu phải gọi tên, hắn nghĩ nó nằm đâu đó trong những việc rất bình thường: giữ lời, làm tốt phần việc của mình, giúp được ai đó, tạo ra giá trị rồi nhận lại sự tin tưởng. Một người còn hữu dụng với thế giới thì giữa họ và thế giới vẫn còn một dòng chảy
+Hắn nghĩ phúc khí cũng có một phần đến từ đó. Khi một người còn làm ra giá trị, còn giúp được ai đó, còn giữ lời hứa, còn hoàn thành những việc mình đã nhận, người đó vẫn đang duy trì một dòng chảy giữa bản thân và thế giới. Tiền bạc, cơ hội, những mối quan hệ tốt hay sự tin tưởng của người khác đôi khi chỉ là những hình thức khác nhau mà dòng chảy ấy quay trở lại
 
-Tất nhiên, làm việc quá nhiều cũng không khiến một người sắc bén hơn. Thanh kiếm mài mãi rồi cũng mỏng. Có lẽ điều hắn muốn giữ không phải là sự bận rộn, mà là cảm giác mình vẫn đang vận động, vẫn học, vẫn tạo ra giá trị, nhưng chưa đánh mất sự thong thả bên trong
+Thế nên hắn vẫn muốn làm việc, kể cả khi một ngày nào đó không còn quá cần tiền. Làm để đầu óc không đóng bụi, để bản thân vẫn còn hữu dụng, để mỗi sáng thức dậy vẫn có một thứ đáng để mình tập trung vào. Không nhất thiết phải làm thật nhiều, chỉ cần vẫn còn tạo ra một chút giá trị, vẫn còn chuyển động, vẫn còn giữ được sự kết nối với cuộc sống
 
-Nếu một ngày không còn phải làm việc để sống, hắn vẫn muốn làm một chút mỗi ngày. Không hẳn để có thêm, mà để những thứ tốt đẹp đang chảy qua đời mình không vì sự nhàn rỗi mà dần trở nên tù đọng
+Chỉ là làm việc cũng giống như luyện kiếm. Luyện vừa đủ thì kiếm sắc, luyện đến kiệt sức thì cả kiếm lẫn người đều mẻ. Có lẽ phúc khí không nằm ở chuyện làm nhiều hay làm ít, mà nằm ở việc mình còn đủ tỉnh táo để biết thứ gì đáng làm, rồi làm nó cho tử tế
 
 *❤️ cowriter aethery*
