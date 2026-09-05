@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { getSeriesPosts, seriesItems, seriesSourceUrl, seriesTitle } from '../lib/series';
+import { getSeriesPosts, seriesItems, seriesSource, seriesTitle } from '../lib/series';
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -14,15 +14,20 @@ const previous = currentIndex > 0 ? siblings[currentIndex - 1] : undefined;
 const next = currentIndex >= 0 && currentIndex < siblings.length - 1 ? siblings[currentIndex + 1] : undefined;
 const showSeries = siblings.length > 1;
 const step = currentIndex >= 0 ? `${currentIndex + 1}/${siblings.length}` : '';
-const name = series ? seriesTitle(series) : '';
-const sourceUrl = series ? seriesSourceUrl(series) : undefined;
+const name = series ? seriesTitle(series, lang) : '';
+const source = series ? seriesSource(series, lang) : undefined;
 const copy = lang === 'en'
-  ? { previous: 'Previous', next: 'Next', label: 'Series navigation', source: 'Read the original' }
-  : { previous: 'Trước', next: 'Tiếp', label: 'Mục lục series', source: 'Đọc bản gốc' };
+  ? { previous: 'Previous', next: 'Next', label: 'Series navigation' }
+  : { previous: 'Trước', next: 'Tiếp', label: 'Mục lục series' };
 ---
 
 {showSeries && (
   <>
+    {source && (
+      <p class="series-origin">
+        <a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a>
+      </p>
+    )}
     <nav class="series-pager" aria-label={copy.label}>
       {previous ? (
         <a class="series-pager-link" href={previous.href}>
@@ -53,9 +58,9 @@ const copy = lang === 'en'
               <li><a href={item.href} aria-current={item.current ? 'page' : undefined}>{item.label}</a></li>
             ))}
           </ol>
-          {sourceUrl && (
-            <a class="series-source" href={sourceUrl} target="_blank" rel="noopener noreferrer">
-              {copy.source}<span aria-hidden="true"> ↗</span>
+          {source && (
+            <a class="series-source" href={source.url} target="_blank" rel="noopener noreferrer">
+              {source.label}<span aria-hidden="true"> ↗</span>
             </a>
           )}
         </div>
@@ -103,7 +108,10 @@ const copy = lang === 'en'
   .series-card .series-source { display: inline-flex; grid-template-columns: none; margin: .7rem .55rem 0; padding: .45rem 0 0; border-radius: 0; border-top: 1px solid #262b33; color: #a78bfa; font-size: .78rem; font-weight: 650; }
   .series-card .series-source::before { content: none; }
   .series-card .series-source:hover { color: #c4b5fd; background: transparent; }
-  .series-pager { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; max-width: 760px; margin: 3rem auto 0; padding-top: 1.5rem; border-top: 1px solid #262b33; }
+  .series-origin { max-width: 760px; margin: 2.25rem auto 0; color: #868f97; font-size: .95rem; line-height: 1.5; }
+  .series-origin a { color: #a78bfa; text-decoration: underline; text-underline-offset: .18em; }
+  .series-origin a:hover { color: #c4b5fd; }
+  .series-pager { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; max-width: 760px; margin: 1.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid #262b33; }
   .series-pager-link { display: flex; flex-direction: column; gap: .2rem; min-height: 4.5rem; padding: .9rem 1rem; border: 1px solid #262b33; border-radius: .75rem; color: rgba(255,255,255,.86); text-decoration: none; }
   .series-pager-link:hover { border-color: rgba(167,139,250,.6); background: rgba(139,92,246,.08); }
   .series-pager-link.next { align-items: flex-end; text-align: right; }

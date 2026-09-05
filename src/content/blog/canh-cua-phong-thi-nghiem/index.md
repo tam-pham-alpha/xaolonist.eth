@@ -7,6 +7,7 @@ cowriter: "@aethery"
 category: "forge"
 status: "published"
 date: "2026-09-05"
+cover: "./cover.png"
 lang: "vn"
 series: "nhan-thuc-tinh-the"
 seriesOrder: 5

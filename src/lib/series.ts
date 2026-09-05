@@ -2,19 +2,37 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 type Post = CollectionEntry<'blog'>;
 
-export const SERIES: Record<string, { title: string; sourceUrl?: string }> = {
+export const SERIES: Record<string, {
+  title: string;
+  titleEn?: string;
+  sourceUrl?: string;
+  sourceLabel?: string;
+  sourceLabelEn?: string;
+}> = {
   'nhan-thuc-tinh-the': {
     title: 'Nhận thức tình thế',
+    titleEn: 'Situational Awareness',
     sourceUrl: 'https://situational-awareness.ai/wp-content/uploads/2024/06/situationalawareness.pdf',
+    sourceLabel: 'Bản Gốc - Situational Awareness',
+    sourceLabelEn: 'Original - Situational Awareness',
   },
 };
 
-export function seriesTitle(id: string): string {
-  return SERIES[id]?.title ?? id;
+export function seriesTitle(id: string, lang: Post['data']['lang'] = 'vn'): string {
+  const series = SERIES[id];
+  if (!series) return id;
+  return lang === 'en' ? (series.titleEn ?? series.title) : series.title;
 }
 
-export function seriesSourceUrl(id: string): string | undefined {
-  return SERIES[id]?.sourceUrl;
+export function seriesSource(id: string, lang: Post['data']['lang'] = 'vn') {
+  const series = SERIES[id];
+  if (!series?.sourceUrl) return undefined;
+  return {
+    url: series.sourceUrl,
+    label: lang === 'en'
+      ? (series.sourceLabelEn ?? series.sourceLabel ?? 'Read the original')
+      : (series.sourceLabel ?? 'Đọc bản gốc'),
+  };
 }
 
 export function navLabel(post: Post): string {

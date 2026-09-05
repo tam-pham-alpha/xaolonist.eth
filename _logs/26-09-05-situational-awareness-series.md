@@ -28,8 +28,8 @@ Mỗi bài dùng `series: "nhan-thuc-tinh-the"`, `seriesOrder` từ 1 đến 9 v
 
 Trang bài viết có một nút mục lục nổi ở cạnh phải trên desktop và góc dưới trên mobile. Nút hiển thị vị trí hiện tại, ví dụ `2/9`. Hover, focus hoặc chạm sẽ mở toàn bộ mục lục; bài hiện tại được tô tím. Cuối bài có liên kết tới bài trước và bài tiếp theo. Navigation chỉ xuất hiện khi series đã có ít nhất hai bài được xuất bản cùng ngôn ngữ.
 
-Mỗi bài trong series đều dẫn về tài liệu gốc tại `https://situational-awareness.ai/wp-content/uploads/2024/06/situationalawareness.pdf` thông qua liên kết “Đọc bản gốc” trong bảng mục lục.
+Mỗi bài trong series đều dẫn về tài liệu gốc tại `https://situational-awareness.ai/wp-content/uploads/2024/06/situationalawareness.pdf` qua liên kết “Bản Gốc - Situational Awareness” ngay dưới thân bài, và lặp lại trong bảng mục lục.
 
 ## Nội dung và hình ảnh
 
-Series gồm chín bài tiếng Việt hoàn chỉnh. Theo lựa chọn biên tập, các bài không dùng cover riêng; trường `cover` trong content schema được chuyển thành tùy chọn và giao diện tự bỏ qua vùng ảnh khi bài không có cover. Các bài hiện hữu vẫn hiển thị như trước.
+Series gồm chín bài tiếng Việt và chín bản tiếng Anh (`index.en.md`). Trường `cover` trong content schema là tùy chọn; giao diện bỏ qua vùng ảnh khi bài không có cover. Các bài series hiện có cover riêng. Tên series tiếng Anh trong mục lục là **Situational Awareness**.
