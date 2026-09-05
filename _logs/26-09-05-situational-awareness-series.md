@@ -27,3 +27,5 @@ Mỗi bài dùng `series: "nhan-thuc-tinh-the"`, `seriesOrder` từ 1 đến 9 v
 ## Giao diện
 
 Trang bài viết có một nút mục lục nổi ở cạnh phải trên desktop và góc dưới trên mobile. Nút hiển thị vị trí hiện tại, ví dụ `2/9`. Hover, focus hoặc chạm sẽ mở toàn bộ mục lục; bài hiện tại được tô tím. Cuối bài có liên kết tới bài trước và bài tiếp theo. Navigation chỉ xuất hiện khi series đã có ít nhất hai bài được xuất bản cùng ngôn ngữ.
+
+Mỗi bài trong series đều dẫn về tài liệu gốc tại `https://situational-awareness.ai/wp-content/uploads/2024/06/situationalawareness.pdf` thông qua liên kết “Đọc bản gốc” trong bảng mục lục.
