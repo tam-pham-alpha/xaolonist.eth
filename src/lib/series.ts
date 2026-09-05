@@ -2,12 +2,19 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 type Post = CollectionEntry<'blog'>;
 
-export const SERIES: Record<string, { title: string }> = {
-  'nhan-thuc-tinh-the': { title: 'Nhận thức tình thế' },
+export const SERIES: Record<string, { title: string; sourceUrl?: string }> = {
+  'nhan-thuc-tinh-the': {
+    title: 'Nhận thức tình thế',
+    sourceUrl: 'https://situational-awareness.ai/wp-content/uploads/2024/06/situationalawareness.pdf',
+  },
 };
 
 export function seriesTitle(id: string): string {
   return SERIES[id]?.title ?? id;
+}
+
+export function seriesSourceUrl(id: string): string | undefined {
+  return SERIES[id]?.sourceUrl;
 }
 
 export function navLabel(post: Post): string {
