@@ -24,6 +24,9 @@ const blog = defineCollection({
       cover: image(),
       music: z.string().optional(),
       lang: z.enum(['vn', 'en']).default('vn'),
+      series: z.string().optional(),
+      seriesOrder: z.number().int().positive().optional(),
+      navTitle: z.string().optional(),
     }),
 });
 
