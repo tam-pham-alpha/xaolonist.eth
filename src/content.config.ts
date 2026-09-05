@@ -21,9 +21,12 @@ const blog = defineCollection({
       category: z.enum(['forge', 'pentacles', 'the-way', 'all-blue']),
       status: z.enum(['published', 'draft']).default('published'),
       date: z.string(),
-      cover: image(),
+      cover: image().optional(),
       music: z.string().optional(),
       lang: z.enum(['vn', 'en']).default('vn'),
+      series: z.string().optional(),
+      seriesOrder: z.number().int().positive().optional(),
+      navTitle: z.string().optional(),
     }),
 });
 
