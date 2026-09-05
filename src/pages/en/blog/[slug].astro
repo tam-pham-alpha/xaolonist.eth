@@ -27,8 +27,10 @@ const siteUrl = 'https://anh4gs.xyz';
 const postUrl = `${siteUrl}/en/blog/${data.slug}/`;
 
 // Generate a JPEG version of the cover for social sharing (OG/Twitter)
-const ogImage = await getImage({ src: data.cover, width: 1200, format: 'jpg', quality: 80 });
-const ogCover = `${siteUrl}${ogImage.src}`;
+const ogImage = data.cover
+  ? await getImage({ src: data.cover, width: 1200, format: 'jpg', quality: 80 })
+  : undefined;
+const ogCover = ogImage ? `${siteUrl}${ogImage.src}` : undefined;
 
 const formattedDate = new Date(data.date).toLocaleDateString('en-US', {
   year: 'numeric',

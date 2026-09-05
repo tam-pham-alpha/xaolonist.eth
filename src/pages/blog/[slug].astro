@@ -28,8 +28,10 @@ const postUrl = `${siteUrl}/blog/${data.slug}/`;
 
 // Generate a JPEG version of the cover for social sharing (OG/Twitter)
 // Social crawlers often don't support WebP
-const ogImage = await getImage({ src: data.cover, width: 1200, format: 'jpg', quality: 80 });
-const ogCover = `${siteUrl}${ogImage.src}`;
+const ogImage = data.cover
+  ? await getImage({ src: data.cover, width: 1200, format: 'jpg', quality: 80 })
+  : undefined;
+const ogCover = ogImage ? `${siteUrl}${ogImage.src}` : undefined;
 
 const formattedDate = new Date(data.date).toLocaleDateString('en-US', {
   year: 'numeric',

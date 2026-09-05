@@ -70,18 +70,20 @@ function getLyrics(slug: string, lang: string) {
             return (
               <div class="flex flex-col md:flex-row gap-6 p-4 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all">
                 {/* Cover Thumbnail */}
-                <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 relative self-center md:self-start">
-                  <a href={postLink} class="block w-full h-full">
-                    <Image
-                      src={post.data.cover}
-                      alt={post.data.title}
-                      class="object-cover w-full h-full"
-                      width={200}
-                      quality={80}
-                      format="webp"
-                    />
-                  </a>
-                </div>
+                {post.data.cover && (
+                  <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 relative self-center md:self-start">
+                    <a href={postLink} class="block w-full h-full">
+                      <Image
+                        src={post.data.cover}
+                        alt={post.data.title}
+                        class="object-cover w-full h-full"
+                        width={200}
+                        quality={80}
+                        format="webp"
+                      />
+                    </a>
+                  </div>
+                )}
                 
                 {/* Details & Player */}
                 <div class="flex-1 min-w-0">
