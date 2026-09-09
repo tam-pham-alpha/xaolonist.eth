@@ -6,6 +6,7 @@ author: "Tam Pham"
 category: "forge"
 status: "published"
 date: "2026-09-09"
+cover: "./cover.jpg"
 lang: "vn"
 ---
 
