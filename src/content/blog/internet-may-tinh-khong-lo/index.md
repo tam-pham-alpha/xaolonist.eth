@@ -7,6 +7,7 @@ cowriter: "@aethery"
 category: "forge"
 status: "published"
 date: "2026-09-12"
+cover: "./cover.jpg"
 lang: "vn"
 ---
 
