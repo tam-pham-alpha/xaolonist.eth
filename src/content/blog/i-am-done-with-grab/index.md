@@ -7,6 +7,7 @@ cowriter: "@aethery"
 category: "pentacles"
 status: "published"
 date: "2026-09-21"
+cover: "./cover.jpg"
 lang: "vn"
 ---
 
