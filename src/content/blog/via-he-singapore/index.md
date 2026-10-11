@@ -1,6 +1,6 @@
 ---
 slug: "via-he-singapore"
-title: "Một vỉa hè không thể đẹp một mình"
+title: "Vỉa hè - tư duy của cả xã hội"
 summary: "Từ những viên gạch ở Singapore, hắn nhận ra sự đồng bộ của một thành phố không chỉ đến từ thiết kế đẹp, mà từ những quy tắc được giữ gìn qua nhiều lần xây dựng và sửa chữa"
 author: "Tam Pham"
 cowriter: "@aethery"
