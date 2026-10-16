@@ -7,6 +7,7 @@ cowriter: "@aethery"
 category: "the-way"
 status: "published"
 date: "2026-10-14"
+cover: "./cover.jpg"
 lang: "en"
 ---
 
