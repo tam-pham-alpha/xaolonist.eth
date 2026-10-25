@@ -48,8 +48,8 @@ export const REALMS: Realm[] = [
     name: "All Blue",
     accent: "#788ea0",
     description: {
-      vn: "Đích đến cuối cùng: tân thế giới - Đông Hải Đại Đồ - Tiểu thuyết",
-      en: "The final destination: new world - The East Sea Grand Order - Fiction",
+      vn: "Tân Thế Giới - Đông Hải Đại Đồ",
+      en: "The New World - The East Sea Grand Order",
     },
   },
 ];
