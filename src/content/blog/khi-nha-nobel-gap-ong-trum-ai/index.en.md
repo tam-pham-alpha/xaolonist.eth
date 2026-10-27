@@ -6,6 +6,7 @@ author: "Tam Pham"
 category: "forge"
 status: "draft"
 date: "2026-10-27"
+cover: "./cover.jpg"
 lang: "en"
 ---
 
