@@ -2,6 +2,16 @@
 
 This is an Astro 5 blog that sources content from local Markdown files. It is deployed to Cloudflare Pages via `git push`.
 
+## All Blue / Đông Hải Đại Đồ — Creative Direction
+
+For any work on **All Blue / Đông Hải Đại Đồ** (worldbuilding, naming, geography, factions, magic, characters, or lore), **read [`_logs/26-11-02-all-blue-creative-direction.md`](_logs/26-11-02-all-blue-creative-direction.md) before proposing or writing changes**.
+
+- Treat its agreed creative principles as the current direction: a colorful, multicultural fictional world; English, Hán Việt, Japanese-inspired and invented names may coexist when grounded in each region's history.
+- Prefer evocative, story-bearing, spoken names and epithets over rigid stacks of Sino-Vietnamese terminology. An entity can have formal, everyday, and taboo names.
+- Distinguish **established canon**, **agreed direction**, and **exploratory examples**. Names and scenes marked illustrative are **not canon**; get approval before renaming existing entities or establishing new lore.
+- `Aethery` as an All Blue public pen name or in-world observer remains a **proposal**, not an established identity. Do not overwrite the existing `@aethery` digital cowriter and `hắn` narrator definitions in `content/styleguide/styleguide.md`.
+- Preserve the foundation described in [PR #11](https://github.com/tam-pham-alpha/xaolonist.eth/pull/11) while it remains in draft, and record new canon decisions explicitly. For public posts, still follow the blog's styleguide.
+
 ## ⚠️ Critical Rule: Commit & Deploy Require Approval
 
 **Never `git commit`, `git push`, or deploy without the user's explicit approval for that specific change.** Pushing to `main` auto-deploys the site (Workers Builds), and persona/brain changes go live on the NUC via `git pull` — so a push IS a production deploy. Workflow: implement → verify (typecheck/build/local test) → summarize the change → **stop and wait for approval** → then commit + push + deploy. Approval for an earlier change does not carry over to the next one.
